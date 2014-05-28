@@ -39,7 +39,8 @@ public:
 
 class Pin{					//do later
 	public:
-	int x, y;
+	int x, y, n;
+	void printPin(ostream&);
 };
 
 istream& parseWire(istream&, vector<Wire>&);
@@ -62,4 +63,5 @@ class Component{
 	Attribute attrs[2];
 	Design des;
 	vector<Pin> pins;
+	void makePin(istream&);
 };
