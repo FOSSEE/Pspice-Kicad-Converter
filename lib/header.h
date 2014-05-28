@@ -10,15 +10,19 @@ using namespace std;
 
 const int MULT=10;
 
+string readDate(string);				//Do later.
+string skipTo(istream&, string);
+
 class Line{
 	public:
 	int x1, y1, x2, y2;
-	void read(istream& in);
+	Line(istream& in);
 };
 
 class Design{
 	public:
 	vector<Line> lines;
+	Design(istream& in);
 };
 
 class Wire{
@@ -37,6 +41,9 @@ class Pin{					//do later
 	public:
 	int x, y;
 };
+
+istream& parseWire(istream&, vector<Wire>&);
+istream& parseConn(istream&, vector<Connector>&);
 
 class Attribute{			//stores one attribute of a component
 	public:

@@ -1,0 +1,217 @@
+*version 8.0 375427922
+@index
+symloc c 0 695
+symloc l 695 670
+symloc r 1365 685
+symloc R_var 2050 609
+symloc C_var 2659 543
+symloc copyright 3202 568
+*symbol c
+d Capacitor
+@type p
+@attributes
+a 0 u 13 0 15 25 hln 100 VALUE=1n
+a 0 s 9 0 15 0 hln 100 REFDES=C?
+a 0 u 0 0 0 0 hln 100 IC=
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TC/TC=@TC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 u 0 0 0 10 hln 100 TC=
+a 0 u 13 0 16 40 hlb 100 TOLERANCE=
+@pins
+p 0 10 10 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=1
+p 0 20 10 hln 100 2 n 30 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 30 20 0 10 11
+v 0 10 10
+13 10
+;
+v 0 13 5
+13 15
+;
+v 0 17 5
+17 15
+;
+v 0 17 10
+20 10
+;
+s 26 2 8 hln 100 1
+s 26 24 8 hln 100 2
+*symbol l
+d inductor
+@type p
+@attributes
+a 0 u 13 0 15 25 hln 100 VALUE=10uH
+a 0 u 0 0 0 0 hln 100 IC=
+a 0 s 9 0 15 0 hln 100 REFDES=L?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=L^@REFDES %1 %2 ?TOLERANCE|L^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model L^@REFDES IND L=1 DEV=@TOLERANCE%|
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 u 13 0 16 40 hlb 100 TOLERANCE=
+@pins
+p 0 5 10 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=1
+p 0 35 10 hln 100 2 n 60 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 60 20 0 10 10
+a 0 20 10 15 5 10 10
+a 0 30 10 25 5 20 10
+a 0 40 10 35 5 30 10
+a 0 50 10 45 5 40 10
+s 26 2 8 hln 100 1
+s 26 54 8 hln 100 2
+*symbol r
+d resistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model r^@REFDES RES R=1 DEV=@TOLERANCE%|
+a 0 s 9 0 15 0 hln 100 REFDES=R?
+a 0 u 13 0 15 25 hln 100 VALUE=1k
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 u 0 0 14 36 hln 100 TOLERANCE=
+@pins
+p 0 30 10 hln 100 2 n 40 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+p 0 10 10 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=1
+@graphics 40 20 0 10 10
+v 0 10 10
+11 10
+;
+v 0 11 10
+13 6
+;
+v 0 13 6
+16 14
+;
+v 0 16 14
+19 6
+;
+v 0 19 6
+22 14
+;
+v 0 22 14
+25 6
+;
+v 0 25 6
+28 14
+;
+v 0 28 14
+30 10
+;
+s 26 2 8 hln 100 1
+s 26 36 8 hln 100 2
+*symbol R_var
+d Variable resistor
+@type p
+@attributes
+a 0 sp 9 0 15 0 hln 100 REFDES=R?
+a 0 u 13 0 15 25 hln 100 VALUE=1k
+a 0 u 0 0 0 20 hln 100 SET=0.5
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=R^@REFDES %1 %2 {@VALUE*@SET+.001}
+@pins
+p 2 32 8 hln 100 2 n 40 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+p 2 2 8 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=1
+@graphics 40 20 0 10 10
+v 0 11 10
+13 6
+;
+v 0 13 6
+16 14
+;
+v 0 16 14
+19 6
+;
+v 0 19 6
+22 14
+;
+v 0 22 14
+25 6
+;
+v 0 25 6
+28 14
+;
+v 0 28 14
+30 10
+;
+v 0 10 10
+11 10
+;
+v 0 10 0
+30 20
+;
+v 0 30 15
+30 20
+;
+v 0 30 20
+25 20
+;
+*symbol C_var
+d Variable capacitor
+@type p
+@attributes
+a 0 sp 9 0 -1 0 hln 100 REFDES=C?
+a 0 u 13 0 -1 21 hln 100 VALUE=1n
+a 0 u 0 0 0 20 hln 100 SET=0.5
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=C^@REFDES %1 %2 {@VALUE*@SET+.001p}
+@pins
+p 2 2 8 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=1
+p 2 22 8 hln 100 2 n 30 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 30 20 0 10 11
+v 0 10 10
+13 10
+;
+v 0 13 15
+13 5
+;
+v 0 17 15
+17 5
+;
+v 0 17 10
+20 10
+;
+v 0 10 5
+20 15
+;
+v 0 20 15
+20 13
+;
+v 0 20 15
+18 15
+;
+*symbol copyright
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with

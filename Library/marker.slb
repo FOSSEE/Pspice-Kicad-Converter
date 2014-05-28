@@ -1,0 +1,382 @@
+*version 9.1 2321922247
+@index
+symloc vdb 0 384
+symloc idb 384 386
+symloc vphase 770 378
+symloc iphase 1148 380
+symloc vgroupdelay 1528 389
+symloc igroupdelay 1917 391
+symloc vreal 2308 381
+symloc ireal 2689 383
+symloc vimaginary 3072 391
+symloc iimaginary 3463 393
+symloc IMARKER 3856 374
+symloc NODEMARKER 4230 341
+symloc VDIFFMARKER 4571 376
+symloc copyright 4947 570 b
+*symbol vdb
+d db magnitude of voltage
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=NODE
+a 0 u 0 0 0 10 hlb 100 FUNCTION=VDB
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 16 12 hln 50 VDB
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol idb
+d db magnitude of current
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=CURRENT
+a 0 u 0 0 0 10 hlb 100 FUNCTION=DB
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 16 12 hln 50 IDB
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol vphase
+d phase of voltage
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=NODE
+a 0 u 0 0 0 10 hlb 100 FUNCTION=VP
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 16 12 hln 50 VP
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol iphase
+d phase of current
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=CURRENT
+a 0 u 0 0 0 10 hlb 100 FUNCTION=P
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 18 12 hln 50 IP
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol vgroupdelay
+d group delay of voltage
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=NODE
+a 0 u 0 0 0 10 hlb 100 FUNCTION=VG
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 16 12 hln 50 VG
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol igroupdelay
+d group delay of current
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=CURRENT
+a 0 u 0 0 0 10 hlb 100 FUNCTION=G
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 18 12 hln 50 IG
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol vreal
+d real part of voltage
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=NODE
+a 0 u 0 0 0 20 hlb 100 FUNCTION=VR
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 16 12 hln 50 VR
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol ireal
+d real part of current
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=CURRENT
+a 0 u 0 0 0 10 hlb 100 FUNCTION=R
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 18 12 hln 50 IR
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol vimaginary
+d imaginary part of voltage
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=NODE
+a 0 u 0 0 0 10 hlb 100 FUNCTION=VI
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 18 12 hln 50 VI
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol iimaginary
+d Imaginary part of current
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=CURRENT
+a 0 u 0 0 0 10 hlb 100 FUNCTION=I
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 18 12 hln 50 II
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol IMARKER
+d Current marker
+@type e
+@attributes
+a 0 s 0 0 6 20 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=CURRENT
+@pins
+p 0 12 34 hln 100 pin1 z 0 30 h
+a 0 u 0 0 1 30 hln 100 pin=1
+a 0 u 0 0 0 32 hln 100 ERC=x
+@graphics 30 30 0 30 10
+c 0 20 10 5
+v 0 20 7
+20 12
+;
+v 0 18 7
+22 7
+;
+v 0 18 12
+22 12
+;
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol NODEMARKER
+d Node marker
+@type e
+@attributes
+a 0 s 0 0 4 22 hlb 100 LABEL=?
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=NODE
+@pins
+p 0 11 31 hln 100 pin1 z 0 30 h
+a 0 u 0 0 0 27 hln 100 pin=1
+a 0 u 0 0 -1 29 hln 100 ERC=x
+@graphics 30 30 0 30 10
+s 26 18 12 hln 75 V
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol VDIFFMARKER
+d Voltage differential marker
+@type e
+@attributes
+a 0 s 0 0 6 20 hlb 100 LABEL=?
+a 0 s 13 0 16 14 hlb 100 NODE=+
+a 0 s 0 0 0 10 hlb 100 MARKERTYPE=VOLTAGEDIFF
+@pins
+p 0 12 33 hln 100 pin1 z 0 30 h
+a 0 u 0 0 1 29 hln 100 pin=1
+a 0 u 0 0 0 31 hln 100 ERC=x
+@graphics 30 30 0 30 10
+c 0 20 10 5
+v 0 0 30
+4 22
+;
+v 0 4 22
+8 26
+;
+v 0 8 26
+0 30
+;
+v 0 6 24
+17 13
+;
+*symbol copyright b
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with

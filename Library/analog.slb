@@ -1,0 +1,925 @@
+*version 9.1 1222730102
+@index
+symloc C 0 618
+symloc C_var 618 577
+symloc E 1195 828
+symloc EPOLY 2023 847
+symloc F 2870 880
+symloc FPOLY 3750 898
+symloc G 4648 806
+symloc GPOLY 5454 825
+symloc H 6279 902
+symloc HPOLY 7181 920
+symloc K_Linear 8101 611
+symloc L 8712 633
+symloc OPAMP 9345 772
+symloc R 10117 648
+symloc R_var 10765 643
+symloc S 11408 976
+symloc T 12384 1023
+symloc TLOSSY 13407 1080
+symloc W 14487 1019
+symloc XFRM_LINEAR 15506 1041
+symloc copyright 16547 568
+*symbol C
+d Capacitor
+@type p
+@attributes
+a 0 u 13 0 15 25 hln 100 VALUE=1n
+a 0 s 9 0 15 0 hln 100 REFDES=C?
+a 0 u 0 0 0 0 hln 100 IC=
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=C^@REFDES %1 %2 ?TOLERANCE|C^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model C^@REFDES CAP C=1 DEV=@TOLERANCE%|
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 u 13 0 16 38 hlb 100 TOLERANCE=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 17 12 hrn 100 2 n 30 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 25 8 hln 100 pin=2
+@graphics 30 20 0 10 11
+v 0 10 10
+13 10
+;
+v 0 13 5
+13 15
+;
+v 0 17 5
+17 15
+;
+v 0 17 10
+20 10
+;
+*symbol C_var
+d Variable capacitor
+@type p
+@attributes
+a 0 sp 9 0 -1 0 hln 100 REFDES=C?
+a 0 u 13 0 -1 21 hln 100 VALUE=1n
+a 0 u 0 0 0 20 hln 100 SET=0.5
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=C^@REFDES %1 %2 {@VALUE*@SET+.001p}
+a 0 s 0 0 0 10 hlb 100 PART=C_VAR
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 17 12 hrn 100 2 n 30 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 25 8 hln 100 pin=2
+@graphics 30 20 0 10 11
+v 0 10 10
+13 10
+;
+v 0 13 15
+13 5
+;
+v 0 17 15
+17 5
+;
+v 0 17 10
+20 10
+;
+v 0 20 5
+18 5
+;
+v 0 20 5
+20 7
+;
+v 0 10 15
+20 5
+;
+*symbol E
+d Voltage-controlled voltage source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=ENOM
+a 1 s 9 0 10 4 hln 100 REFDES=E?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=E^@REFDES %3 %4 %1 %2 @GAIN
+a 0 u 0 0 0 10 hln 100 GAIN=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+c 0 25 15 4
+s 26 23 15 hln 50 +
+s 26 23 19 hln 50 -
+v 0 25 10
+25 11
+;
+v 0 25 20
+25 19
+;
+s 26 10 12 hln 100 +
+s 26 10 24 hln 100 -
+*symbol EPOLY
+d Voltage-controlled voltage source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=EPOLY
+a 1 s 9 0 10 4 hln 100 REFDES=E?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=E^@REFDES %3 %4 POLY(1) %1 %2 0.0 @COEFF
+a 0 u 0 0 0 10 hln 100 COEFF=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+c 0 25 15 4
+s 26 23 15 hln 50 +
+s 26 23 19 hln 50 -
+v 0 25 10
+25 11
+;
+v 0 25 20
+25 19
+;
+s 26 10 12 hln 100 +
+s 26 10 24 hln 100 -
+*symbol F
+d Current-controlled current source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=FNOM
+a 1 s 9 0 10 4 hln 100 REFDES=F?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=F^@REFDES %3 %4 VF^@REFDES @GAIN\nVF^@REFDES %1 %2 0V
+a 0 u 0 0 0 10 hln 100 GAIN=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+v 0 14 10
+14 20
+;
+v 0 14 18
+16 15
+;
+v 0 12 15
+14 18
+;
+v 0 10 10
+14 10
+;
+v 0 10 20
+14 20
+;
+c 0 25 15 4
+v 0 25 18
+27 15
+;
+v 0 23 15
+25 18
+;
+v 0 25 10
+25 20
+;
+*symbol FPOLY
+d Current-controlled current source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=FPOLY
+a 1 s 9 0 10 4 hln 100 REFDES=F?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=F^@REFDES %3 %4 POLY(1) VF^@REFDES @COEFF\nVF^@REFDES %1 %2 DC 0V
+a 0 u 0 0 0 10 hlb 100 COEFF=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+v 0 14 10
+14 20
+;
+v 0 14 18
+16 15
+;
+v 0 12 15
+14 18
+;
+v 0 10 10
+14 10
+;
+v 0 10 20
+14 20
+;
+c 0 25 15 4
+v 0 25 18
+27 15
+;
+v 0 23 15
+25 18
+;
+v 0 25 10
+25 20
+;
+*symbol G
+d Voltage-controlled current source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=GNOM
+a 1 s 9 0 10 4 hln 100 REFDES=G?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=G^@REFDES %3 %4 %1 %2 @GAIN
+a 0 u 0 0 0 10 hln 100 GAIN=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+c 0 25 15 4
+v 0 25 18
+27 15
+;
+v 0 23 15
+25 18
+;
+v 0 25 10
+25 20
+;
+s 26 10 12 hln 100 +
+s 26 10 24 hln 100 -
+*symbol GPOLY
+d Voltage-controlled current source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=GPOLY
+a 1 s 9 0 10 4 hln 100 REFDES=G?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=G^@REFDES %3 %4 POLY(1) %1 %2 0.0 @COEFF
+a 0 u 0 0 0 10 hlb 100 COEFF=1
+a 0 s 0 0 0 20 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+c 0 25 15 4
+v 0 25 18
+27 15
+;
+v 0 23 15
+25 18
+;
+v 0 25 10
+25 20
+;
+s 26 10 12 hln 100 +
+s 26 10 24 hln 100 -
+*symbol H
+d Current-controlled voltage source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=HNOM
+a 1 s 9 0 10 4 hln 100 REFDES=H?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=H^@REFDES %3 %4 VH^@REFDES @GAIN\nVH^@REFDES %1 %2 0V
+a 0 u 0 0 0 10 hln 100 GAIN=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+v 0 14 10
+14 20
+;
+v 0 14 18
+16 15
+;
+v 0 12 15
+14 18
+;
+v 0 10 10
+14 10
+;
+v 0 10 20
+14 20
+;
+c 0 25 15 4
+s 26 23 15 hln 50 +
+s 26 23 19 hln 50 -
+v 0 25 10
+25 11
+;
+v 0 25 20
+25 19
+;
+*symbol HPOLY
+d Current-controlled voltage source
+@type p
+@attributes
+a 0 s 11 0 10 34 hln 100 PART=HPOLY
+a 1 s 9 0 10 4 hln 100 REFDES=H?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=H^@REFDES %3 %4 POLY(1) VH^@REFDES @COEFF\nVH^@REFDES %1 %2 DC 0V
+a 0 u 0 0 0 10 hln 100 COEFF=1
+a 0 s 0 0 0 20 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 u 0 0 2 -10 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 u 0 0 -20 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 u 0 0 -22 -10 hln 100 ERC=x
+a 0 u 0 0 35 18 hln 100 pin=4
+@graphics 40 30 0 10 11
+v 0 30 20
+25 20
+;
+v 0 25 10
+30 10
+;
+r 0 10 5 30 25
+v 0 14 10
+14 20
+;
+v 0 14 18
+16 15
+;
+v 0 12 15
+14 18
+;
+v 0 10 10
+14 10
+;
+v 0 10 20
+14 20
+;
+c 0 25 15 4
+s 26 23 15 hln 50 +
+s 26 23 19 hln 50 -
+v 0 25 10
+25 11
+;
+v 0 25 20
+25 19
+;
+*symbol K_Linear
+d Multi-winding Coupling (with CORE model)
+@type p
+@attributes
+a 1 s 9 0 22 8 hcn 100 refdes=K?
+a 1 sp 0 0 0 0 hcn 100 template=Kn^@REFDES L^@L1 ?L2|L^@L2| ?L3|\n+ L^@L3| ?L4|L^@L4| ?L5|\n+ L^@L5| ?L6|L^@L6| @COUPLING
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 13 0 4 42 hln 100 L1=
+a 0 u 13 0 4 53 hln 100 L2=
+a 0 u 13 0 4 65 hln 100 L3=
+a 0 u 13 0 4 77 hln 100 L4=
+a 0 u 13 0 4 88 hln 100 L5=
+a 0 u 13 0 4 99 hln 100 L6=
+a 0 u 13 13 31 30 hcn 100 COUPLING=1
+a 0 sp 11 0 1 20 hln 100 PART=K_Linear
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+@graphics 40 10 0 10 10
+s 26 2 8 hln 100 K
+r 0 0 0 10 10
+*symbol L
+d inductor
+@type p
+@attributes
+a 0 u 13 0 15 25 hln 100 VALUE=10uH
+a 0 u 0 0 0 0 hln 100 IC=
+a 0 s 9 0 15 0 hln 100 REFDES=L?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=L^@REFDES %1 %2 ?TOLERANCE|L^@REFDES| @VALUE ?IC/IC=@IC/ ?TOLERANCE|\n.model l^@REFDES IND L=1 DEV=@TOLERANCE%|
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 u 13 0 16 38 hln 100 TOLERANCE=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+p 0 47 12 hrn 100 2 n 60 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 55 8 hln 100 pin=2
+@graphics 60 20 0 10 10
+a 0 20 10 15 5 10 10
+a 0 30 10 25 5 20 10
+a 0 40 10 35 5 30 10
+a 0 50 10 45 5 40 10
+*symbol OPAMP
+d 5-connection opamp subcircuit
+@type p 9.1
+@attributes
+a 0 sp 9 0 14 0 hln 100 REFDES=U?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=E^@REFDES %OUT 0 VALUE {LIMIT(V(%+,%-)*@GAIN,@VNEG,@VPOS)}
+a 0 sp 11 0 50 60 hln 100 PART=OPAMP
+a 0 u 0:13 0 20 82 hlb 100 VPOS=+15V
+a 0 u 0:13 0 20 91 hlb 100 VNEG=-15V
+a 0 u 0:13 0 20 72 hlb 100 GAIN=1E6
+@pins
+p 2 13 12 hln 100 + n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=i
+a 0 s 1 0 5 8 hrn 100 PIN=
+a 0 s 0 0 0 0 hln 100 FLOAT=e
+p 2 13 52 hln 100 - n 0 50 h
+a 0 s 0 0 0 0 hln 100 ERC=i
+a 0 s 1 0 5 48 hrn 100 PIN=
+a 0 s 0 0 0 0 hln 100 FLOAT=e
+p 0 67 32 hrn 100 OUT n 80 30 u
+a 0 s 0 0 0 0 hln 100 ERC=o
+a 0 s 1 0 75 28 hln 100 PIN=
+a 0 s 0 0 0 0 hln 100 FLOAT=e
+@graphics 80 60 0 10 10
+v 0 10 60
+70 30
+;
+v 0 70 30
+10 0
+;
+v 0 10 0
+10 60
+;
+*symbol R
+d resistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=R^@REFDES %1 %2 ?TOLERANCE|R^@REFDES| @VALUE  ?TOLERANCE|\n.model R^@REFDES RES R=1 DEV=@TOLERANCE%|
+a 0 s 9 0 15 0 hln 100 REFDES=R?
+a 0 u 13 0 15 25 hln 100 VALUE=1k
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 u 13 0 16 38 hlb 100 TOLERANCE=
+@pins
+p 0 27 12 hrn 100 2 n 40 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=2
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+@graphics 40 20 0 10 10
+v 0 10 10
+11 10
+;
+v 0 11 10
+13 6
+;
+v 0 13 6
+16 14
+;
+v 0 16 14
+19 6
+;
+v 0 19 6
+22 14
+;
+v 0 22 14
+25 6
+;
+v 0 25 6
+28 14
+;
+v 0 28 14
+30 10
+;
+*symbol R_var
+d Variable resistor
+@type p
+@attributes
+a 0 sp 9 0 15 0 hln 100 REFDES=R?
+a 0 u 13 0 15 25 hln 100 VALUE=1k
+a 0 u 0 0 0 20 hln 100 SET=0.5
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=R^@REFDES %1 %2 {@VALUE*@SET+.001}
+a 0 s 0 0 0 10 hlb 100 PART=R_VAR
+@pins
+p 0 27 12 hrn 100 2 n 40 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 35 8 hln 100 pin=2
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 8 hrn 100 pin=1
+@graphics 40 20 0 10 10
+v 0 11 10
+13 6
+;
+v 0 13 6
+16 14
+;
+v 0 16 14
+19 6
+;
+v 0 19 6
+22 14
+;
+v 0 22 14
+25 6
+;
+v 0 25 6
+28 14
+;
+v 0 28 14
+30 10
+;
+v 0 10 10
+11 10
+;
+v 0 10 20
+30 0
+;
+v 0 25 0
+30 0
+;
+v 0 30 0
+30 5
+;
+*symbol S
+d Voltage-controlled switch
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 2 hln 100 REFDES=S?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=S^@REFDES %3 %4 %1 %2 ^@REFDES\nRS^@REFDES %1 %2 1G\n.MODEL ^@REFDES VSWITCH Roff=@ROFF Ron=@RON Voff=@VOFF Von=@VON
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hlb 100 ROFF=1e6
+a 0 u 0 0 0 20 hlb 100 RON=1.0
+a 0 u 13 13 0 46 hlb 100 VOFF=0.0V
+a 0 u 13 13 0 56 hlb 100 VON=1.0V
+a 0 sp 0:11 0 0 40 hln 100 PART=S
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+@graphics 40 30 0 10 10
+r 0 10 5 30 25
+v 0 25 20
+20 12
+;
+v 0 25 10
+30 10
+;
+z 26 12 12 hcn 75 1
++
+z 26 12 22 hcn 75 1
+-
+z 26 24 10 hcn 75 1
++
+z 26 24 24 hln 100 1
+-
+v 0 30 20
+25 20
+;
+*symbol T
+d Transmission Line
+@type p
+@attributes
+a 0 s 9 0 20 10 hln 100 REFDES=T?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=T^@REFDES %A+ %A- %B+ %B- Z0=@Z0 ?TD/TD=@TD/ ?F/F=@F/ ?NL/NL=@NL/
+a 0 u 0 0 0 0 hln 100 Z0=
+a 0 u 0 0 0 0 hln 100 TD=
+a 0 u 0 0 0 0 hln 100 F=
+a 0 u 0 0 0 0 hln 100 NL=
+a 0 sp 0 0 0 10 hlb 100 PART=T
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 A+ n 0 20 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=1
+p 0 13 42 hln 100 A- n 0 40 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 38 hrn 100 pin=2
+p 0 87 22 hrn 100 B+ n 100 20 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 95 18 hln 100 pin=3
+p 0 87 42 hrn 100 B- n 100 40 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 95 38 hln 100 pin=4
+@graphics 100 40 0 20 10
+c 0 20 20 10
+a 0 80 30 90 20 80 10
+v 0 20 20
+10 20
+;
+v 0 20 30
+20 40
+;
+v 0 20 40
+10 40
+;
+v 0 80 30
+80 40
+;
+v 0 80 40
+90 40
+;
+v 0 20 10
+50 10
+;
+v 0 20 30
+50 30
+;
+v 0 60 10
+80 10
+;
+v 0 60 30
+80 30
+;
+a 0 63 5 59 12 60 20
+a 0 53 5 49 12 50 20
+a 0 47 34 50 30 50 20
+a 0 57 34 60 30 60 20
+*symbol TLOSSY
+d Transmission Line
+@type p
+@attributes
+a 0 s 9 0 20 10 hln 100 REFDES=T?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=T^@REFDES %A+ %A- %B+ %B- LEN=@LEN R=@R L=@L G=@G C=@C
+a 0 u 0 0 0 10 hln 100 LEN=1
+a 0 u 0 0 0 20 hln 100 R=1
+a 0 u 0 0 0 30 hln 100 L=1
+a 0 u 0 0 0 40 hln 100 G=1
+a 0 u 0 0 0 50 hln 100 C=1
+a 0 sp 0 0 0 10 hlb 100 PART=TLOSSY
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 A+ n 0 20 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 18 hrn 100 pin=1
+p 0 13 42 hln 100 A- n 0 40 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 38 hrn 100 pin=2
+p 0 87 22 hrn 100 B+ n 100 20 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 95 18 hln 100 pin=3
+p 0 87 42 hrn 100 B- n 100 40 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 95 38 hln 100 pin=4
+@graphics 100 40 0 20 10
+c 0 20 20 10
+a 0 80 30 90 20 80 10
+v 0 20 20
+10 20
+;
+v 0 20 30
+20 40
+;
+v 0 20 40
+10 40
+;
+v 0 80 30
+80 40
+;
+v 0 80 40
+90 40
+;
+v 0 20 10
+50 10
+;
+v 0 20 30
+50 30
+;
+v 0 60 10
+80 10
+;
+v 0 60 30
+80 30
+;
+a 0 63 5 59 12 60 20
+a 0 53 5 49 12 50 20
+a 0 47 34 50 30 50 20
+a 0 57 34 60 30 60 20
+s 26 62 22 hln 80 LOSSY
+*symbol W
+d Current-controlled switch breakout device
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 4 hln 100 REFDES=W?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=W^@REFDES %3 %4 VW^@REFDES ^@REFDES\nVW^@REFDES %1 %2 0V\n.MODEL ^@REFDES ISWITCH Roff=@ROFF Ron=@RON Ioff=@IOFF Ion=@ION
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0:13 0 0 10 hlb 100 ROFF=1e6
+a 0 u 0:13 0 0 20 hlb 100 RON=1.0
+a 0 u 13 13 2 46 hlb 100 IOFF=0mA
+a 0 u 13 13 2 56 hlb 100 ION=1mA
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 s 0 0 2 -10 hln 100 ERC=x
+a 0 s 0 0 7 -5 hln 100 PIN=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 s 0 0 -20 0 hln 100 ERC=x
+a 0 s 0 0 -15 5 hln 100 PIN=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 s 0 0 -22 -10 hln 100 ERC=x
+a 0 s 0 0 -17 -5 hln 100 PIN=4
+@graphics 40 30 0 10 10
+r 0 10 5 30 25
+v 0 25 20
+20 12
+;
+v 0 12 13
+14 18
+16 13
+;
+v 0 25 10
+30 10
+;
+v 0 30 20
+25 20
+;
+z 26 24 10 hcn 75 1
++
+v 0 14 10
+14 20
+;
+v 0 10 10
+14 10
+;
+v 0 10 20
+14 20
+;
+z 26 24 24 hln 100 1
+-
+*symbol XFRM_LINEAR
+d inductor COUPLING (transformer core)
+@type p
+@attributes
+a 0 u 0 0 15 25 hln 100 COUPLING=
+a 0 u 0 0 0 0 hln 100 L1_VALUE=
+a 0 u 0 0 0 0 hln 100 L2_VALUE=
+a 0 s 9 0 12 -4 hln 100 REFDES=TX?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=K^@REFDES L1^@REFDES L2^@REFDES @COUPLING\nL1^@REFDES %1 %2 @L1_VALUE\nL2^@REFDES %3 %4 @L2_VALUE
+a 0 sp 0 0 0 10 hlb 100 PART=XFRM_LINEAR
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 2 hln 100 1 n 0 0 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -2 hrn 100 pin=1
+p 0 13 62 hln 100 2 n 0 60 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 58 hrn 100 pin=2
+p 0 27 2 hrn 100 3 n 40 0 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 35 -2 hln 100 pin=3
+p 0 27 62 hrn 100 4 n 40 60 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 35 58 hln 100 pin=4
+@graphics 40 60 0 0 10
+a 0 10 50 15 45 10 40
+a 0 10 40 15 35 10 30
+a 0 10 30 15 25 10 20
+a 0 10 20 15 15 10 10
+a 0 30 10 25 15 30 20
+a 0 30 20 25 25 30 30
+a 0 30 30 25 35 30 40
+a 0 30 40 25 45 30 50
+v 0 10 0
+10 10
+;
+v 0 10 50
+10 60
+;
+v 0 30 0
+30 10
+;
+v 0 30 50
+30 60
+;
+*symbol copyright
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with

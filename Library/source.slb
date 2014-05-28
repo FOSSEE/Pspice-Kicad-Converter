@@ -1,0 +1,1387 @@
+*version 9.1 375839488
+@index
+symloc DigClock 0 1192
+symloc FileStim 1192 1009
+symloc IAC 2201 674
+symloc IDC 2875 576
+symloc IEXP 3451 738
+symloc IPULSE 4189 805
+symloc IPWL_ENH 4994 986
+symloc IPWL_FILE 5980 836
+symloc IPWL 6816 1089
+symloc ISFFM 7905 692
+symloc ISIN 8597 726
+symloc ISRC 9323 592
+symloc STIM1 9915 1866
+symloc STIM4 11781 1889
+symloc STIM8 13670 1921
+symloc STIM16 15591 1971
+symloc VEXP 17562 738
+symloc VPULSE 18300 805
+symloc VPWL_ENH 19105 986
+symloc VPWL_FILE 20091 839
+symloc VPWL 20930 1195
+symloc VSFFM 22125 692
+symloc VSIN 22817 726
+symloc VSRC 23543 431
+symloc VAC 23974 642
+symloc VDC 24616 524
+symloc IPWL_RE_FOREVER 25140 999
+symloc IPWL_RE_N_TIMES 26139 1083
+symloc VPWL_RE_FOREVER 27222 999
+symloc VPWL_RE_N_TIMES 28221 1077
+symloc IPWL_F_RE_FOREVER 29298 854
+symloc VPWL_F_RE_N_TIMES 30152 935
+symloc VPWL_F_RE_FOREVER 31087 854
+symloc IPWL_F_RE_N_TIMES 31941 936
+symloc copyright 32877 568
+*symbol DigClock
+d Digital Clock Stimulus
+@type s
+@attributes
+a 0 u 0 0 0 10 hln 100 DELAY=
+a 0 u 0 0 0 20 hln 100 ONTIME=.5uS
+a 0 u 0 0 0 30 hln 100 OFFTIME=.5uS
+a 0 u 0 0 0 40 hln 100 STARTVAL=0
+a 0 u 0 0 0 50 hln 100 OPPVAL=1
+a 0 u 0 0 0 20 hln 100 IO_MODEL=IO_STM
+a 0 u 0 0 0 10 hln 100 IO_LEVEL=0
+a 0 u 0 0 0 0 hln 100 ipin(gnd)=$G_DGND
+a 0 u 0 0 0 0 hln 100 ipin(pwr)=$G_DPWR
+a 1 sp 9 0 0 -2 hln 100 REFDES=DSTM?
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=U^@REFDES STIM(1,1) %PWR %GND %1 @IO_MODEL IO_LEVEL=@IO_LEVEL \n+ 0 @STARTVAL\n+ +?DELAY/@DELAY//@OFFTIME/ @OPPVAL\n+REPEAT FOREVER\n+ +@ONTIME @STARTVAL\n+  +@OFFTIME @OPPVAL\n+ ENDREPEAT
+@pins
+p 0 38 3 hln 100 1 n 50 5 u
+a 0 u 0 0 51 -1 hln 100 pin=1
+a 0 u 0 0 50 1 hln 100 ERC=x
+p 0 23 2 hln 100 pwr n 25 -10 d
+a 0 u 0 0 27 -9 hln 100 pin=2
+a 0 u 0 0 25 -10 hln 100 ERC=p
+p 0 28 8 hln 100 gnd n 25 20 v
+a 0 u 0 0 24 19 hln 100 pin=3
+a 0 u 0 0 26 20 hln 100 ERC=p
+@graphics 50 10 50 5 10
+s 26 1 7 hln 70 CLK
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 14 7
+19 7
+;
+v 0 19 7
+19 3
+;
+v 0 19 3
+24 3
+;
+v 0 24 3
+24 7
+;
+v 0 24 7
+29 7
+;
+v 0 29 7
+29 3
+;
+v 0 29 3
+34 3
+;
+*symbol FileStim
+d Digital Stimulus (from a file)
+@type s
+@attributes
+a 0 u 0 0 0 0 hcn 100 FileName=
+a 0 u 0 0 0 0 hcn 100 SigName=
+a 0 u 0 0 0 0 hcn 100 IO_MODEL=IO_STM
+a 0 u 0 0 0 0 hcn 100 IO_LEVEL=0
+a 0 u 0 0 0 0 hln 100 ipin(PWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(GND)=$G_DGND
+a 1 s 9 0 15 -1 hcn 100 REFDES=DSTM?
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=U^@REFDES FSTIM(%#*1) %PWR %GND %*1 @IO_MODEL FILE="@FileName" IO_LEVEL=@IO_LEVEL ?SigName/SIGNAMES=@SigName/
+@pins
+p 0 0 -6 hcn 100 PWR n 30 -10 d
+a 0 u 0 0 0 -6 hln 100 ERC=p
+a 0 u 0 0 5 -1 hln 100 pin=2
+p 0 0 -6 hcn 100 GND n 30 20 v
+a 0 u 0 0 0 -6 hln 100 ERC=p
+a 0 u 0 0 5 -1 hln 100 pin=3
+p 0 0 -6 hcn 100 *1 n 50 5 u
+a 0 u 0 0 0 -6 hln 100 ERC=x
+a 0 u 0 0 0 -6 hln 100 pin=1
+@graphics 50 10 50 5 11
+s 26 1 8 hln 100 F
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 10 7
+15 7
+;
+v 0 15 7
+15 3
+;
+v 0 15 3
+20 3
+;
+v 0 20 3
+20 7
+;
+v 0 20 7
+25 7
+;
+v 0 25 7
+25 3
+;
+v 0 25 3
+30 3
+;
+*symbol IAC
+d Simple AC current source; DC
+@type s 9.1
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| #ACMAG|AC @ACMAG ?ACPHASE/@ACPHASE/|
+a 1 u 0 0 0 0 hcn 100 DC=0A
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0:11 0 0 50 hln 100 PART=IAC
+a 0 u 13 0 -8 22 hcn 100 ACMAG=0A
+a 0 u 0:13 0 0 20 hcn 100 ACPHASE=
+a 0 s 0:13 0 0 10 hlb 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 -5 hln 100 PIN=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=2
+@graphics 20 40 10 0 31
+c 0 10 20 10
+c 0 10 20 10
+a 0 10 20 13 23 16 20 
+a 0 10 20 7 17 4 20 
+*symbol IDC
+d Simple DC current source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| ?TRAN|@TRAN|
+a 1 u 13 0 -9 21 hcn 100 DC=0A
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 10 15
+10 25
+;
+v 0 10 25
+5 20
+;
+v 0 10 25
+15 20
+;
+*symbol IEXP
+d Exponential decay current source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+EXP @I1 @I2 #TD1/@TD1/ #TC1/@TC1/ #TD2/@TD2/ #TC2/@TC2/
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 I1=
+a 1 u 0 0 0 0 hcn 100 I2=
+a 1 u 0 0 0 0 hcn 100 TD1=
+a 1 u 0 0 0 0 hcn 100 TC1=
+a 1 u 0 0 0 0 hcn 100 TD2=
+a 1 u 0 0 0 0 hcn 100 TC2=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 11 17 5 18 2 24
+a 0 11 17 13 22 17 24
+*symbol IPULSE
+d Pulse current source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PULSE @I1 @I2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 I1=
+a 1 u 0 0 0 0 hcn 100 I2=
+a 1 u 0 0 0 0 hcn 100 TD=
+a 1 u 0 0 0 0 hcn 100 TR=
+a 1 u 0 0 0 0 hcn 100 TF=
+a 1 u 0 0 0 0 hcn 100 PW=
+a 1 u 0 0 0 0 hcn 100 PER=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 25
+;
+v 0 6 25
+8 18
+;
+v 0 8 18
+12 18
+;
+v 0 12 18
+14 25
+;
+v 0 14 25
+17 25
+;
+*symbol IPWL_ENH
+d Enhanced piecewise linear current source
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE|\n+ @FIRST_NPAIRS ?SECOND_NPAIRS|\n+ @SECOND_NPAIRS ?THIRD_NPAIRS/\n+ @THIRD_NPAIRS/| ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 0 0 0 10 hcn 100 FIRST_nPAIRS=
+a 0 u 0 0 0 20 hcn 100 SECOND_nPAIRS=
+a 0 u 0 0 0 30 hcn 100 THIRD_nPAIRS=
+a 0 u 0 0 0 10 hcn 100 REPEAT_VALUE=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol IPWL_FILE
+d File-input piecewise linear current source
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE| FILE "@FILE" ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 13 13 26 38 hcn 100 FILE=
+a 1 u 0 0 0 0 hcn 100 REPEAT_VALUE=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol IPWL
+d Piecewise linear current source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PWL @T1 @I1 @T2 @I2 #T3/@T3 @I3/ #T4/@T4 @I4/ #T5/@T5 @I5/ #T6/@T6 @I6/ #T7/@T7 @I7/ #T8/@T8 @I8/ #T9/@T9 @I9/ #T10/@T10 @I10/
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 T1=
+a 1 u 0 0 0 0 hcn 100 I1=
+a 1 u 0 0 0 0 hcn 100 T2=
+a 1 u 0 0 0 0 hcn 100 I2=
+a 1 u 0 0 0 0 hcn 100 T3=
+a 1 u 0 0 0 0 hcn 100 I3=
+a 1 u 0 0 0 0 hcn 100 T4=
+a 1 u 0 0 0 0 hcn 100 I4=
+a 1 u 0 0 0 0 hcn 100 T5=
+a 1 u 0 0 0 0 hcn 100 I5=
+a 1 u 0 0 0 0 hcn 100 T6=
+a 1 u 0 0 0 0 hcn 100 I6=
+a 1 u 0 0 0 0 hcn 100 T7=
+a 1 u 0 0 0 0 hcn 100 I7=
+a 1 u 0 0 0 0 hcn 100 T8=
+a 1 u 0 0 0 0 hcn 100 I8=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol ISFFM
+d Single-Frequency FM current source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+SFFM @IOFF @IAMPL @FC @MOD @FM
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 IOFF=
+a 1 u 0 0 0 0 hcn 100 IAMPL=
+a 1 u 0 0 0 0 hcn 100 FC=
+a 1 u 0 0 0 0 hcn 100 MOD=
+a 1 u 0 0 0 0 hcn 100 FM=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 10 20 7 17 4 20
+a 0 10 20 13 23 16 20
+*symbol ISIN
+d Transient sine current source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+SIN @IOFF @IAMPL @FREQ @TD @DF @PHASE
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 IOFF=
+a 1 u 0 0 0 0 hcn 100 IAMPL=
+a 1 u 0 0 0 0 hcn 100 FREQ=
+a 1 u 0 0 0 0 hcn 100 TD=0
+a 1 u 0 0 0 0 hcn 100 DF=0
+a 1 u 0 0 0 0 hcn 100 PHASE=0
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 10 20 7 17 4 20
+a 0 10 20 13 23 16 20
+*symbol ISRC
+d Simple current source; AC, DC, Tran may be specified
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| ?TRAN|@TRAN|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 TRAN=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 10 15
+10 25
+;
+v 0 10 25
+5 20
+;
+v 0 10 25
+15 20
+;
+*symbol STIM1
+d Digital Stimulus - single node
+@type s
+@attributes
+a 0 u 0 0 0 70 hln 100 TIMESTEP=
+a 0 u 0 0 0 80 hln 100 COMMAND1=0s 0
+a 0 u 0 0 0 90 hln 100 COMMAND2=
+a 0 u 0 0 0 100 hln 100 COMMAND3=
+a 0 u 0 0 0 110 hln 100 COMMAND4=
+a 0 u 0 0 0 120 hln 100 COMMAND5=
+a 0 u 0 0 0 130 hln 100 COMMAND6=
+a 0 u 0 0 0 140 hln 100 COMMAND7=
+a 0 u 0 0 0 150 hln 100 COMMAND8=
+a 0 u 0 0 0 160 hln 100 COMMAND9=
+a 0 u 0 0 0 170 hln 100 COMMAND10=
+a 0 u 0 0 0 180 hln 100 COMMAND11=
+a 0 u 0 0 0 190 hln 100 COMMAND12=
+a 0 u 0 0 0 10 hln 100 COMMAND13=
+a 0 u 0 0 0 20 hln 100 COMMAND14=
+a 0 u 0 0 0 30 hln 100 COMMAND15=
+a 0 u 0 0 0 40 hln 100 COMMAND16=
+a 0 u 0 0 0 30 hln 100 DIG_PWR=$G_DPWR
+a 0 u 0 0 0 40 hln 100 DIG_GND=$G_DGND
+a 0 u 0 0 0 50 hln 100 IO_MODEL=IO_STM
+a 0 u 0 0 0 60 hln 100 IO_LEVEL=0
+a 0 sp 9 0 1 -2 hln 100 REFDES=DSTM?
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=U^@REFDES STIM(@WIDTH,@FORMAT)\n+ @DIG_PWR @DIG_GND\n+ %PIN1 \n+ @IO_MODEL\n+ IO_LEVEL=@IO_LEVEL\n+ ?TIMESTEP|TIMESTEP=@TIMESTEP \n+| ?COMMAND1|@COMMAND1 | #COMMAND2|\n+ @COMMAND2 | #COMMAND3|\n+ @COMMAND3 | #COMMAND4|\n+ @COMMAND4| #COMMAND5|\n+ @COMMAND5 | #COMMAND6|\n+ @COMMAND6 | #COMMAND7|\n+ @COMMAND7 | #COMMAND8|\n+ @COMMAND8 | #COMMAND9|\n+ @COMMAND9 | #COMMAND10|\n+ @COMMAND10 | #COMMAND11|\n+ @COMMAND11 | #COMMAND12|\n+ @COMMAND12| #COMMAND13|\n+ @COMMAND13| #COMMAND14|\n+ @COMMAND14| #COMMAND15|\n+ @COMMAND15| #COMMAND16|\n+ @COMMAND16|
+a 0 u 0 0 0 10 hln 100 WIDTH=1
+a 0 u 0 0 0 20 hln 100 FORMAT=1
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 38 7 hln 100 pin1 n 50 5 u
+a 0 u 0 0 49 11 hln 100 pin=1
+a 0 u 0 0 50 9 hln 100 ERC=x
+@graphics 50 10 50 5 10
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 5 7
+10 7
+;
+v 0 10 7
+10 3
+;
+v 0 10 3
+15 3
+;
+v 0 15 3
+15 7
+;
+v 0 15 7
+20 7
+;
+v 0 20 7
+20 3
+;
+v 0 20 3
+25 3
+;
+*symbol STIM4
+d Digital Stimulus - 4 bit
+@type s
+@attributes
+a 0 u 0 0 0 70 hln 100 TIMESTEP=
+a 0 u 0 0 0 80 hln 100 COMMAND1=0s 0000
+a 0 u 0 0 0 90 hln 100 COMMAND2=
+a 0 u 0 0 0 100 hln 100 COMMAND3=
+a 0 u 0 0 0 110 hln 100 COMMAND4=
+a 0 u 0 0 0 120 hln 100 COMMAND5=
+a 0 u 0 0 0 130 hln 100 COMMAND6=
+a 0 u 0 0 0 140 hln 100 COMMAND7=
+a 0 u 0 0 0 150 hln 100 COMMAND8=
+a 0 u 0 0 0 160 hln 100 COMMAND9=
+a 0 u 0 0 0 170 hln 100 COMMAND10=
+a 0 u 0 0 0 180 hln 100 COMMAND11=
+a 0 u 0 0 0 190 hln 100 COMMAND12=
+a 0 u 0 0 0 10 hln 100 COMMAND13=
+a 0 u 0 0 0 20 hln 100 COMMAND14=
+a 0 u 0 0 0 30 hln 100 COMMAND15=
+a 0 u 0 0 0 40 hln 100 COMMAND16=
+a 0 u 0 0 0 10 hln 100 WIDTH=4
+a 0 u 0 0 0 20 hln 100 FORMAT=1111
+a 0 u 0 0 0 30 hln 100 DIG_PWR=$G_DPWR
+a 0 u 0 0 0 40 hln 100 DIG_GND=$G_DGND
+a 0 u 0 0 0 50 hln 100 IO_MODEL=IO_STM
+a 0 u 0 0 0 60 hln 100 IO_LEVEL=0
+a 0 sp 9 0 1 -2 hln 100 REFDES=DSTM?
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=U^@REFDES STIM(@WIDTH,@FORMAT)\n+ @DIG_PWR @DIG_GND\n+ %PIN0 %PIN1 %PIN2 %PIN3 \n+ @IO_MODEL\n+ IO_LEVEL=@IO_LEVEL\n+ ?TIMESTEP|TIMESTEP=@TIMESTEP \n+| ?COMMAND1|@COMMAND1 | #COMMAND2|\n+ @COMMAND2 | #COMMAND3|\n+ @COMMAND3 | #COMMAND4|\n+ @COMMAND4| #COMMAND5|\n+ @COMMAND5 | #COMMAND6|\n+ @COMMAND6 | #COMMAND7|\n+ @COMMAND7 | #COMMAND8|\n+ @COMMAND8 | #COMMAND9|\n+ @COMMAND9 | #COMMAND10|\n+ @COMMAND10 | #COMMAND11|\n+ @COMMAND11 | #COMMAND12|\n+ @COMMAND12| #COMMAND13|\n+ @COMMAND13| #COMMAND14|\n+ @COMMAND14| #COMMAND15|\n+ @COMMAND15| #COMMAND16|\n+ @COMMAND16|
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 38 12 hln 100 pin[0-3] n 50 5 u
+a 0 u 0 0 49 11 hln 100 pin=1
+a 0 u 0 0 50 9 hln 100 ERC=x
+@graphics 50 10 50 5 10
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 5 7
+10 7
+;
+v 0 10 7
+10 3
+;
+v 0 10 3
+15 3
+;
+v 0 15 3
+15 7
+;
+v 0 15 7
+20 7
+;
+v 0 20 7
+20 3
+;
+v 0 20 3
+25 3
+;
+*symbol STIM8
+d Digital Stimulus - 8 bit
+@type s
+@attributes
+a 0 u 0 0 0 70 hln 100 TIMESTEP=
+a 0 u 0 0 0 80 hln 100 COMMAND1=0s 00000000
+a 0 u 0 0 0 90 hln 100 COMMAND2=
+a 0 u 0 0 0 100 hln 100 COMMAND3=
+a 0 u 0 0 0 110 hln 100 COMMAND4=
+a 0 u 0 0 0 120 hln 100 COMMAND5=
+a 0 u 0 0 0 130 hln 100 COMMAND6=
+a 0 u 0 0 0 140 hln 100 COMMAND7=
+a 0 u 0 0 0 150 hln 100 COMMAND8=
+a 0 u 0 0 0 160 hln 100 COMMAND9=
+a 0 u 0 0 0 170 hln 100 COMMAND10=
+a 0 u 0 0 0 180 hln 100 COMMAND11=
+a 0 u 0 0 0 190 hln 100 COMMAND12=
+a 0 u 0 0 0 10 hln 100 COMMAND13=
+a 0 u 0 0 0 20 hln 100 COMMAND14=
+a 0 u 0 0 0 30 hln 100 COMMAND15=
+a 0 u 0 0 0 40 hln 100 COMMAND16=
+a 0 u 0 0 0 10 hln 100 WIDTH=8
+a 0 u 0 0 0 20 hln 100 FORMAT=11111111
+a 0 u 0 0 0 30 hln 100 DIG_PWR=$G_DPWR
+a 0 u 0 0 0 40 hln 100 DIG_GND=$G_DGND
+a 0 u 0 0 0 50 hln 100 IO_MODEL=IO_STM
+a 0 u 0 0 0 60 hln 100 IO_LEVEL=0
+a 0 sp 9 0 1 -2 hln 100 REFDES=DSTM?
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=U^@REFDES STIM(@WIDTH,@FORMAT)\n+ @DIG_PWR @DIG_GND\n+ %PIN0 %PIN1 %PIN2 %PIN3 %PIN4 %PIN5 %PIN6 %PIN7 \n+ @IO_MODEL\n+ IO_LEVEL=@IO_LEVEL\n+ ?TIMESTEP|TIMESTEP=@TIMESTEP \n+| ?COMMAND1|@COMMAND1 | #COMMAND2|\n+ @COMMAND2 | #COMMAND3|\n+ @COMMAND3 | #COMMAND4|\n+ @COMMAND4| #COMMAND5|\n+ @COMMAND5 | #COMMAND6|\n+ @COMMAND6 | #COMMAND7|\n+ @COMMAND7 | #COMMAND8|\n+ @COMMAND8 | #COMMAND9|\n+ @COMMAND9 | #COMMAND10|\n+ @COMMAND10 | #COMMAND11|\n+ @COMMAND11 | #COMMAND12|\n+ @COMMAND12| #COMMAND13|\n+ @COMMAND13| #COMMAND14|\n+ @COMMAND14| #COMMAND15|\n+ @COMMAND15| #COMMAND16|\n+ @COMMAND16|
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 38 12 hln 100 pin[0-7] n 50 5 u
+a 0 u 0 0 49 11 hln 100 pin=1
+a 0 u 0 0 50 9 hln 100 ERC=x
+@graphics 50 10 50 5 10
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 5 7
+10 7
+;
+v 0 10 7
+10 3
+;
+v 0 10 3
+15 3
+;
+v 0 15 3
+15 7
+;
+v 0 15 7
+20 7
+;
+v 0 20 7
+20 3
+;
+v 0 20 3
+25 3
+;
+*symbol STIM16
+d Digital Stimulus - 16 bit
+@type s
+@attributes
+a 0 u 0 0 0 70 hln 100 TIMESTEP=
+a 0 u 0 0 0 80 hln 100 COMMAND1=0s 0000
+a 0 u 0 0 0 90 hln 100 COMMAND2=
+a 0 u 0 0 0 100 hln 100 COMMAND3=
+a 0 u 0 0 0 110 hln 100 COMMAND4=
+a 0 u 0 0 0 120 hln 100 COMMAND5=
+a 0 u 0 0 0 130 hln 100 COMMAND6=
+a 0 u 0 0 0 140 hln 100 COMMAND7=
+a 0 u 0 0 0 150 hln 100 COMMAND8=
+a 0 u 0 0 0 160 hln 100 COMMAND9=
+a 0 u 0 0 0 170 hln 100 COMMAND10=
+a 0 u 0 0 0 180 hln 100 COMMAND11=
+a 0 u 0 0 0 190 hln 100 COMMAND12=
+a 0 u 0 0 0 10 hln 100 COMMAND13=
+a 0 u 0 0 0 20 hln 100 COMMAND14=
+a 0 u 0 0 0 30 hln 100 COMMAND15=
+a 0 u 0 0 0 40 hln 100 COMMAND16=
+a 0 u 0 0 0 10 hln 100 WIDTH=16
+a 0 u 0 0 0 20 hln 100 FORMAT=4444
+a 0 u 0 0 0 30 hln 100 DIG_PWR=$G_DPWR
+a 0 u 0 0 0 40 hln 100 DIG_GND=$G_DGND
+a 0 u 0 0 0 50 hln 100 IO_MODEL=IO_STM
+a 0 u 0 0 0 60 hln 100 IO_LEVEL=0
+a 0 sp 9 0 1 -2 hln 100 REFDES=DSTM?
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=U^@REFDES STIM(@WIDTH,@FORMAT)\n+ @DIG_PWR @DIG_GND\n+ %PIN0 %PIN1 %PIN2 %PIN3 %PIN4 %PIN5 %PIN6 %PIN7 %PIN8 %PIN9 %PIN10 %PIN11 %PIN12 %PIN13 %PIN14 %PIN15 \n+ @IO_MODEL\n+ IO_LEVEL=@IO_LEVEL\n+ ?TIMESTEP|TIMESTEP=@TIMESTEP \n+| ?COMMAND1|@COMMAND1 | #COMMAND2|\n+ @COMMAND2 | #COMMAND3|\n+ @COMMAND3 | #COMMAND4|\n+ @COMMAND4| #COMMAND5|\n+ @COMMAND5 | #COMMAND6|\n+ @COMMAND6 | #COMMAND7|\n+ @COMMAND7 | #COMMAND8|\n+ @COMMAND8 | #COMMAND9|\n+ @COMMAND9 | #COMMAND10|\n+ @COMMAND10 | #COMMAND11|\n+ @COMMAND11 | #COMMAND12|\n+ @COMMAND12| #COMMAND13|\n+ @COMMAND13| #COMMAND14|\n+ @COMMAND14| #COMMAND15|\n+ @COMMAND15| #COMMAND16|\n+ @COMMAND16|
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 38 12 hln 100 pin[0-15] n 50 5 u
+a 0 u 0 0 49 11 hln 100 pin=1
+a 0 u 0 0 50 9 hln 100 ERC=x
+@graphics 50 10 50 5 10
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 5 7
+10 7
+;
+v 0 10 7
+10 3
+;
+v 0 10 3
+15 3
+;
+v 0 15 3
+15 7
+;
+v 0 15 7
+20 7
+;
+v 0 20 7
+20 3
+;
+v 0 20 3
+25 3
+;
+*symbol VEXP
+d Exponential decay voltage source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+EXP @V1 @V2 #TD1/@TD1/ #TC1/@TC1/ #TD2/@TD2/ #TC2/@TC2/
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 V1=
+a 1 u 0 0 0 0 hcn 100 V2=
+a 1 u 0 0 0 0 hcn 100 TD1=
+a 1 u 0 0 0 0 hcn 100 TC1=
+a 1 u 0 0 0 0 hcn 100 TD2=
+a 1 u 0 0 0 0 hcn 100 TC2=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 11 17 5 18 2 24
+a 0 11 17 13 22 17 24
+*symbol VPULSE
+d Pulse voltage source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PULSE @V1 @V2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 V1=
+a 1 u 0 0 0 0 hcn 100 V2=
+a 1 u 0 0 0 0 hcn 100 TD=
+a 1 u 0 0 0 0 hcn 100 TR=
+a 1 u 0 0 0 0 hcn 100 TF=
+a 1 u 0 0 0 0 hcn 100 PW=
+a 1 u 0 0 0 0 hcn 100 PER=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 25
+;
+v 0 6 25
+8 18
+;
+v 0 8 18
+12 18
+;
+v 0 12 18
+14 25
+;
+v 0 14 25
+17 25
+;
+*symbol VPWL_ENH
+d Enhanced piecewise linear voltage source
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE|\n+ @FIRST_NPAIRS ?SECOND_NPAIRS|\n+ @SECOND_NPAIRS ?THIRD_NPAIRS/\n+ @THIRD_NPAIRS/| ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 0 0 0 10 hcn 100 FIRST_nPAIRS=
+a 0 u 0 0 0 20 hcn 100 SECOND_nPAIRS=
+a 0 u 0 0 0 30 hcn 100 THIRD_nPAIRS=
+a 0 u 0 0 0 10 hcn 100 REPEAT_VALUE=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VPWL_FILE
+d File-input piecewise linear voltage source
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE|\n+ FILE "@FILE" ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 13 13 26 38 hcn 100 FILE=
+a 1 u 0 0 0 0 hcn 100 REPEAT_VALUE=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VPWL
+d Piecewise linear voltage source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PWL @T1 @V1 @T2 @V2 #T3/@T3 @V3/ #T4/@T4 @V4/ #T5/@T5 @V5/ #T6/@T6 @V6/ #T7/@T7 @V7/ #T8/@T8 @V8/ #T9/@T9 @V9/ #T10/@T10 @V10/
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 T1=
+a 1 u 0 0 0 0 hcn 100 V1=
+a 1 u 0 0 0 0 hcn 100 T2=
+a 1 u 0 0 0 0 hcn 100 V2=
+a 1 u 0 0 0 0 hcn 100 T3=
+a 1 u 0 0 0 0 hcn 100 V3=
+a 1 u 0 0 0 0 hcn 100 T4=
+a 1 u 0 0 0 0 hcn 100 V4=
+a 1 u 0 0 0 0 hcn 100 T5=
+a 1 u 0 0 0 0 hcn 100 V5=
+a 1 u 0 0 0 0 hcn 100 T6=
+a 1 u 0 0 0 0 hcn 100 V6=
+a 1 u 0 0 0 0 hcn 100 T7=
+a 1 u 0 0 0 0 hcn 100 V7=
+a 1 u 0 0 0 0 hcn 100 T8=
+a 1 u 0 0 0 0 hcn 100 V8=
+a 1 u 0 0 0 0 hcn 100 T9=
+a 1 u 0 0 0 0 hcn 100 V9=
+a 1 u 0 0 0 0 hcn 100 T10=
+a 1 u 0 0 0 0 hcn 100 V10=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VSFFM
+d Single-Frequency FM voltage source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+SFFM @VOFF @VAMPL @FC @MOD @FM
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 VOFF=
+a 1 u 0 0 0 0 hcn 100 VAMPL=
+a 1 u 0 0 0 0 hcn 100 FC=
+a 1 u 0 0 0 0 hcn 100 MOD=
+a 1 u 0 0 0 0 hcn 100 FM=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 10 20 7 17 4 20
+a 0 10 20 13 23 16 20
+*symbol VSIN
+d Transient sine voltage source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+SIN @VOFF @VAMPL @FREQ @TD @DF @PHASE
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 VOFF=
+a 1 u 0 0 0 0 hcn 100 VAMPL=
+a 1 u 0 0 0 0 hcn 100 FREQ=
+a 1 u 0 0 0 0 hcn 100 TD=0
+a 1 u 0 0 0 0 hcn 100 DF=0
+a 1 u 0 0 0 0 hcn 100 PHASE=0
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 10 20 7 17 4 20
+a 0 10 20 13 23 16 20
+*symbol VSRC
+d Simple voltage source; AC, DC, Transient may be specified
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| ?TRAN|@TRAN|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 TRAN=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 16 hcn 75 + n 10 0 d
+p 2 10 28 hcn 75 - n 10 40 v
+@graphics 20 40 10 0 10
+c 0 10 20 10
+*symbol VAC
+d Simple AC voltage source
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| #ACMAG|AC @ACMAG ?ACPHASE/@ACPHASE/|
+a 1 u 0 0 0 0 hcn 100 DC=0V
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 0 50 hln 100 PART=VAC
+a 0 u 13 0 -9 23 hcn 100 ACMAG=0V
+a 0 u 0 0 0 20 hcn 100 ACPHASE=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+a 0 10 20 7 17 4 20
+a 0 10 20 13 23 16 20
+*symbol VDC
+d Simple DC voltage source
+@type s
+@attributes
+a 1 s 9 0 24 7 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- @DC
+a 1 u 13 0 -11 18 hcn 100 DC=0V
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 4 7 hcn 75 + n 10 0 d
+p 2 5 37 hcn 75 - n 10 40 v
+a 0 u 1 0 11 38 hln 100 pin=
+a 0 u 0 0 0 0 hln 100 ERC=x
+@graphics 20 40 10 0 10
+v 0 0 14
+20 14
+;
+v 0 5 17
+15 17
+;
+v 0 20 20
+0 20
+;
+v 0 5 24
+15 24
+;
+v 0 10 9
+10 14
+;
+v 0 10 30
+10 24
+;
+*symbol IPWL_RE_FOREVER
+d Enhanced piecewise linear current source that repeat forever
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| \n+ REPEAT FOREVER \n+ @FIRST_NPAIRS ?SECOND_NPAIRS|\n+ @SECOND_NPAIRS ?THIRD_NPAIRS/\n+ @THIRD_NPAIRS/| \n+ ENDREPEAT
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 0 0 0 10 hcn 100 FIRST_nPAIRS=
+a 0 u 0 0 0 20 hcn 100 SECOND_nPAIRS=
+a 0 u 0 0 0 30 hcn 100 THIRD_nPAIRS=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol IPWL_RE_N_TIMES
+d Enhanced piecewise linear current source that repeat for n periods
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE|\n+ @FIRST_NPAIRS ?SECOND_NPAIRS|\n+ @SECOND_NPAIRS ?THIRD_NPAIRS/\n+ @THIRD_NPAIRS/| ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 0 0 0 10 hcn 100 FIRST_nPAIRS=
+a 0 u 0 0 0 20 hcn 100 SECOND_nPAIRS=
+a 0 u 0 0 0 30 hcn 100 THIRD_nPAIRS=
+a 0 u 0 0 0 10 hcn 100 REPEAT_VALUE=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VPWL_RE_FOREVER
+d Enhanced piecewise linear voltage source that repeat forever
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| \n+ REPEAT FOREVER \n+ @FIRST_NPAIRS ?SECOND_NPAIRS|\n+ @SECOND_NPAIRS ?THIRD_NPAIRS/\n+ @THIRD_NPAIRS/| \n+ ENDREPEAT
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 0 0 0 10 hcn 100 FIRST_nPAIRS=
+a 0 u 0 0 0 20 hcn 100 SECOND_nPAIRS=
+a 0 u 0 0 0 30 hcn 100 THIRD_nPAIRS=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VPWL_RE_N_TIMES
+d Enhanced piecewise linear voltage source that repeat n times
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE|\n+ @FIRST_NPAIRS ?SECOND_NPAIRS|\n+ @SECOND_NPAIRS ?THIRD_NPAIRS/\n+ @THIRD_NPAIRS/| ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 0 0 0 10 hcn 100 FIRST_nPAIRS=
+a 0 u 0 0 0 20 hcn 100 SECOND_nPAIRS=
+a 0 u 0 0 0 30 hcn 100 THIRD_nPAIRS=
+a 0 u 0 0 0 10 hcn 100 REPEAT_VALUE=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol IPWL_F_RE_FOREVER
+d File-input piecewise linear current source that repeat forever
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| \n+ REPEAT FOREVER \n+ FILE "@FILE" \n+ ENDREPEAT
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 13 13 26 38 hcn 100 FILE=
+a 0 sp 0:11 0 0 10 hcn 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VPWL_F_RE_N_TIMES
+d File-input piecewise linear voltage source that repeat for n times
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE|\n+ FILE "@FILE" ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 13 13 26 38 hcn 100 FILE=
+a 1 u 0 0 0 0 hcn 100 REPEAT_VALUE=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol VPWL_F_RE_FOREVER
+d File-input piecewise linear voltage source that repeat forever
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| \n+ REPEAT FOREVER \n+ FILE "@FILE" \n+ ENDREPEAT
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 13 13 26 38 hcn 100 FILE=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol IPWL_F_RE_N_TIMES
+d File-input piecewise linear current source that repeat for n times
+@type s
+@attributes
+a 1 ap 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| PWL ?TSF|TIME_SCALE_FACTOR=@TSF| ?VSF|VALUE_SCALE_FACTOR=@VSF| ?REPEAT_VALUE| \n+ REPEAT FOR @REPEAT_VALUE| \n+ FILE "@FILE" ?REPEAT_VALUE| \n+ ENDREPEAT|
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 sp 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 60 hcn 100 TSF=
+a 0 u 0 0 0 70 hcn 100 VSF=
+a 0 u 13 13 26 38 hcn 100 FILE=
+a 1 u 0 0 0 0 hcn 100 REPEAT_VALUE=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 15
+;
+v 0 6 15
+9 21
+;
+v 0 9 21
+13 21
+;
+v 0 13 21
+16 13
+;
+*symbol copyright
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with

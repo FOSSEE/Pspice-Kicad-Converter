@@ -1,0 +1,443 @@
+*version 8.0 407933151
+@index
+symloc diode 0 130
+symloc npn 130 143
+symloc pnp 273 237
+symloc zener_diode 510 264
+symloc mosfet_n_3 774 384
+symloc mosfet_n_4 1158 384
+symloc mosfet_p_3 1542 384
+symloc mosfet_p_4 1926 384
+symloc opamp5 2310 259
+symloc opamp6 2569 295
+symloc opamp7 2864 331
+symloc GaAsFET 3195 177
+symloc IGBT 3372 243
+symloc JFET_N 3615 316
+symloc JFET_P 3931 316
+*symbol diode
+d 
+@type p
+@attributes
+@pins
+@graphics 30 20 0 10 10
+v 0 20 5
+20 15
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+v 0 10 10
+12 10
+;
+*symbol npn
+d 
+@type p
+@attributes
+@pins
+@graphics 20 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+10 15
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+*symbol pnp
+d 
+@type p
+@attributes
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 20 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+10 15
+;
+v 0 10 25
+20 30
+;
+v 0 19 27
+12 26
+17 31
+;
+*symbol zener_diode
+d 
+@type p
+@attributes
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 30 20 0 10 10
+v 0 17 3
+20 5
+;
+v 0 20 15
+23 17
+;
+v 0 20 5
+20 15
+;
+v 0 10 10
+12 10
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+*symbol mosfet_n_3
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 30 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+30 20
+;
+v 0 30 20
+30 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 29 22
+23 20
+29 18
+;
+*symbol mosfet_n_4
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 29 22
+23 20
+29 18
+;
+*symbol mosfet_p_3
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 30 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+30 20
+;
+v 0 30 20
+30 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 23 18
+29 20
+23 22
+;
+*symbol mosfet_p_4
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 23 18
+29 20
+23 22
+;
+*symbol opamp5
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 80 60 0 10 10
+v 0 40 10
+40 15
+;
+v 0 40 50
+40 45
+;
+v 0 10 0
+70 30
+10 60
+10 0
+;
+*symbol opamp6
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 80 60 0 10 10
+v 0 40 10
+40 15
+;
+v 0 40 50
+40 45
+;
+v 0 70 50
+60 50
+;
+v 0 60 50
+50 40
+;
+v 0 10 0
+70 30
+10 60
+10 0
+;
+*symbol opamp7
+d 
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 80 60 0 10 10
+v 0 40 10
+40 15
+;
+v 0 40 50
+40 45
+;
+v 0 60 10
+50 20
+;
+v 0 50 40
+60 50
+;
+v 0 60 10
+70 10
+;
+v 0 60 50
+70 50
+;
+v 0 10 0
+70 30
+10 60
+10 0
+;
+*symbol GaAsFET
+d gaasfet (enhancement) breakout device
+@type p
+@attributes
+@pins
+@graphics 30 40 0 20 10
+v 0 20 30
+30 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 10
+30 10
+;
+v 0 10 20
+20 20
+;
+*symbol IGBT
+d 
+@type p
+@attributes
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 30 40 0 30 10
+v 0 20 10
+20 30
+;
+v 0 17 10
+17 30
+;
+v 0 10 30
+17 30
+;
+v 0 30 10
+20 15
+;
+v 0 20 25
+30 30
+;
+v 0 21 28
+28 29
+23 24
+;
+*symbol JFET_N
+d N channel (Depletion) JFET
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 30 40 0 20 10
+v 0 10 20
+20 20
+;
+v 0 20 30
+30 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 10
+30 10
+;
+v 0 11 18
+17 20
+11 22
+;
+*symbol JFET_P
+d P channel (Depletion) JFET
+@type p
+@attributes
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+@pins
+@graphics 30 40 0 20 10
+v 0 10 20
+20 20
+;
+v 0 20 7
+20 33
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 17 22
+11 20
+17 18
+;

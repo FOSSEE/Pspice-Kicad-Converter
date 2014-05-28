@@ -1,0 +1,137 @@
+*version 8.0 3962193883
+@index
+symloc ISTIM 0 637
+symloc VSTIM 637 471
+symloc DigStim 1108 983
+symloc copyright 2091 568
+*symbol ISTIM
+d Current source for StmEd
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| STIMULUS=@STIMULUS
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 u 13 13 14 38 hln 70 STIMULUS=
+a 0 u 0 0 0 20 hcn 100 STIMTYPE=ANALOG
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 10 15
+10 25
+;
+v 0 10 25
+5 20
+;
+v 0 10 25
+15 20
+;
+s 26 2 20 hln 100 S
+*symbol VSTIM
+d Voltage source for StmEd
+@type s
+@attributes
+a 1 s 9 0 20 10 hcn 100 REFDES=V?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=V^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| STIMULUS=@STIMULUS
+a 1 u 0 0 0 0 hcn 100 DC=
+a 1 u 0 0 0 0 hcn 100 AC=
+a 0 u 13 13 12 38 hln 70 STIMULUS=
+a 0 u 0 0 0 20 hcn 100 STIMTYPE=ANALOG
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 2 10 16 hcn 75 + n 10 0 d
+p 2 10 28 hcn 75 - n 10 40 v
+@graphics 20 40 10 0 10
+c 0 10 20 10
+s 26 2 24 hln 100 S
+*symbol DigStim
+d Digital Stimulus source for StmEd
+@type s
+@attributes
+a 1 s 9 0 13 -1 hcn 100 REFDES=DSTM?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=U^@REFDES STIM(%#*OUT,0) %PWR %GND %*OUT @IOMODEL STIMULUS=@STIMULUS
+a 0 s 13 13 4 19 hln 70 STIMULUS=
+a 0 u 0 0 0 20 hcn 100 IOMODEL=IO_STM
+a 0 s 0 0 0 20 hcn 100 STIMTYPE=DIGITAL
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 0 hln 100 ipin(PWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(GND)=$G_DGND
+@pins
+p 0 0 -6 hcn 100 PWR n 30 -10 d
+a 0 s 0 0 0 -6 hln 100 ERC=p
+a 0 s 0 0 5 -1 hln 100 PIN=2
+p 0 0 -6 hcn 100 GND n 30 20 v
+a 0 s 0 0 0 -6 hln 100 ERC=p
+a 0 s 0 0 5 -1 hln 100 PIN=3
+p 0 0 -6 hcn 100 *OUT n 50 5 u
+a 0 s 0 0 0 -6 hln 100 ERC=x
+a 0 s 0 0 0 -6 hln 100 PIN=1
+a 0 s 0:13 0 0 0 hln 100 FLOAT=n
+@graphics 50 10 50 5 31
+s 26 1 8 hln 100 S
+v 0 0 0
+0 10
+;
+v 0 0 10
+30 10
+;
+v 0 30 10
+40 5
+;
+v 0 40 5
+30 0
+;
+v 0 30 0
+0 0
+;
+v 0 10 7
+15 7
+;
+v 0 15 7
+15 3
+;
+v 0 15 3
+20 3
+;
+v 0 20 3
+20 7
+;
+v 0 20 7
+25 7
+;
+v 0 25 7
+25 3
+;
+v 0 25 3
+30 3
+;
+*symbol copyright
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with

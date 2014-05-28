@@ -1,0 +1,331 @@
+*version 8.0 545515308
+@index
+symloc AGND 0 252
+symloc EGND 252 250
+symloc +5V 502 228
+symloc -5V 730 228
+symloc BUBBLE 958 228
+symloc GLOBAL 1186 243
+symloc OFFPAGE 1429 217
+symloc IF_IN 1646 586
+symloc IF_OUT 2232 593
+symloc INTERFACE 2825 489
+symloc HI 3314 439
+symloc LO 3753 439
+symloc NoConnect 4192 235
+symloc X 4427 276
+symloc GND_ANALOG:AGND 4703 52
+symloc GND_EARTH:EGND 4755 50
+symloc copyright 4805 568
+*symbol AGND
+d analog ground
+@type g
+@attributes
+a 1 s 3 0 14 20 hln 100 LABEL=0
+@pins
+p 0 15 7 hln 100 AGND n 10 0 d
+a 0 u 0 0 0 -10 hln 100 pin=1
+a 1 u 0 0 0 0 hln 100 ERC=x
+@graphics 20 20 10 0 10
+v 0 5 10
+15 10
+;
+v 0 5 10
+10 15
+;
+v 0 10 15
+15 10
+;
+*symbol EGND
+d earth ground
+@type g
+@attributes
+a 1 s 0 0 10 28 hcn 100 LABEL=0
+@pins
+p 0 15 7 hcn 100 EGND n 10 0 d
+a 0 u 0 0 0 -10 hln 100 pin=1
+a 1 u 0 0 0 0 hcn 100 erc=x
+@graphics 20 20 10 0 10
+v 0 5 10
+15 10
+;
+v 0 7 12
+13 12
+;
+v 0 9 14
+11 14
+;
+*symbol +5V
+d Connection bubble
+@type g
+@attributes
+a 1 s 3 0 0 0 hcn 100 LABEL=+5v
+@pins
+p 0 10 20 hln 100 1 n 10 20 v
+a 0 u 0 0 0 -10 hln 100 pin=1
+a 0 u 0 0 0 -10 hln 100 ERC=x
+@graphics 20 20 10 20 10
+c 0 10 10 0
+c 0 10 7 3
+*symbol -5V
+d Connection bubble
+@type g
+@attributes
+a 1 s 3 0 0 0 hcn 100 LABEL=-5v
+@pins
+p 0 10 20 hln 100 1 n 10 20 v
+a 0 u 0 0 0 -10 hln 100 pin=1
+a 0 u 0 0 0 -10 hln 100 ERC=x
+@graphics 20 20 10 20 10
+c 0 10 10 0
+c 0 10 7 3
+*symbol BUBBLE
+d Connection bubble
+@type g
+@attributes
+a 1 s 3 0 0 0 hcn 100 LABEL=
+@pins
+p 0 10 20 hln 100 1 n 10 20 v
+a 0 u 0 0 0 -10 hln 100 pin=1
+a 0 u 0 0 0 -10 hln 100 ERC=x
+@graphics 20 20 10 20 10
+c 0 10 10 0
+c 0 10 7 3
+*symbol GLOBAL
+d Global connector
+@type g 8.0
+@attributes
+a 0 sr 3 0 20 8 hcn 100 LABEL=
+@pins
+p 0 0 -6 hcn 100 1 n 50 5 u
+a 0 s 0 0 0 -6 hln 100 ERC=x
+a 0 s 0 0 0 -6 hln 100 PIN=1
+@graphics 50 10 50 5 12
+r 0 0 0 40 10 d_info:,,1,,,,,,,,,,,, 
+*symbol OFFPAGE
+d Offpage connector
+@type o
+@attributes
+a 1 sr 3 0 23 8 hcn 100 LABEL=
+@pins
+p 0 0 -6 hcn 100 1 n 50 5 u
+a 0 u 0 0 0 -6 hln 100 ERC=x
+a 0 u 0 0 0 -6 hln 100 pin=1
+@graphics 50 10 50 5 11
+r 0 0 0 40 10
+*symbol IF_IN
+d Interface input port
+@type h 8.0
+@attributes
+a 1 sr 3 0 19 8 hcn 100 LABEL=
+@pins
+p 0 0 -6 hcn 100 1 n 50 5 u
+a 0 s 0 0 0 -6 hln 100 ERC=i
+a 0 s 0 0 0 -6 hln 100 PIN=
+@graphics 50 10 50 5 12
+v 0 0 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 10
+;
+v 0 30 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+40 5
+;
+v 0 40 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+30 10
+;
+v 0 36 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+26 10
+;
+v 0 26 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+36 5
+;
+v 0 10 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+0 5
+;
+v 0 10 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+30 10
+;
+v 0 10 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+30 0
+;
+*symbol IF_OUT
+d Interface output port
+@type h 8.0
+@attributes
+a 1 sr 3 0 31 8 hcn 100 LABEL=
+@pins
+p 0 50 -6 hcn 100 1 n 0 5 h
+a 0 s 0 0 -10 -6 hln 100 ERC=o
+a 0 s 0 0 -10 -6 hln 100 PIN=
+@graphics 50 10 0 5 12
+v 0 50 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+40 10
+;
+v 0 20 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 5
+;
+v 0 10 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+20 10
+;
+v 0 46 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+36 10
+;
+v 0 36 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+46 5
+;
+v 0 40 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+50 5
+;
+v 0 40 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+20 10
+;
+v 0 40 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+20 0
+;
+*symbol INTERFACE
+d Interface port
+@type h 8.0
+@attributes
+a 1 sr 3 0 19 8 hcn 100 LABEL=
+@pins
+p 0 0 -6 hcn 100 1 n 50 5 u
+a 0 s 0 0 0 -6 hln 100 ERC=b
+a 0 s 0 0 0 -6 hln 100 PIN=
+@graphics 50 10 50 5 12
+v 0 0 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 10
+;
+v 0 30 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+40 5
+;
+v 0 40 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+30 10
+;
+v 0 10 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+0 5
+;
+v 0 10 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+30 10
+;
+v 0 10 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+30 0
+;
+*symbol HI
+d Digital HI port
+@type g 8.0
+@attributes
+a 1 s 0 0 5 12 hln 100 LABEL=$D_HI
+@pins
+p 2 2 8 hln 100 HI n 30 5 u
+a 0 s 0 0 0 -6 hln 100 ERC=x
+a 0 s 0 0 0 -6 hln 100 PIN=1
+@graphics 30 10 30 5 12
+v 0 10 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+20 5
+;
+v 0 20 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 0
+;
+v 0 0 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 10
+;
+v 0 10 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+0 0
+;
+v 0 0 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+0 10
+;
+*symbol LO
+d Digital LO port
+@type g 8.0
+@attributes
+a 1 s 0 0 5 12 hln 100 LABEL=$D_LO
+@pins
+p 2 2 8 hln 100 LO n 30 5 u
+a 0 s 0 0 0 -6 hln 100 ERC=x
+a 0 s 0 0 0 -6 hln 100 PIN=1
+@graphics 30 10 30 5 12
+v 0 10 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+20 5
+;
+v 0 20 5 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 0
+;
+v 0 0 10 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+10 10
+;
+v 0 10 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+0 0
+;
+v 0 0 0 d_info:,,1,,4/1/6/6,,,,,,,,,, 
+0 10
+;
+*symbol NoConnect
+d No-connect
+@type c
+@attributes
+a 0 s 0 0 0 10 hlb 100 PART=
+@pins
+p 0 22 12 hln 100 pin1 z 10 10 h
+a 0 u 0 0 19 8 hrn 100 PIN=1
+a 0 u 0 0 10 10 hln 100 ERC=x
+@graphics 15 15 10 10 10
+v 0 15 5
+5 15
+;
+v 0 5 5
+15 15
+;
+*symbol X
+d Digital X port
+@type g
+@attributes
+a 1 s 0 0 5 12 hln 100 LABEL=$D_X
+@pins
+p 2 2 8 hln 100 X n 30 5 u
+a 0 u 0 0 0 -6 hln 100 ERC=x
+a 0 u 0 0 0 -6 hln 100 pin=1
+@graphics 30 10 30 5 11
+v 0 0 0
+0 10
+;
+v 0 0 10
+10 10
+;
+v 0 10 10
+20 5
+;
+v 0 20 5
+10 0
+;
+v 0 10 0
+0 0
+;
+*symbol GND_ANALOG ako AGND
+d analog ground
+@type g
+*symbol GND_EARTH ako EGND
+d earth ground
+@type g
+*symbol copyright
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with
