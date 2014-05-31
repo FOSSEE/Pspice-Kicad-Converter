@@ -13,15 +13,54 @@ class Design{
 Line::Line(istream& in, int shiftx, int shifty){
 	char temp;
 	in>>x1>>y1>>x2>>y2>>temp;
+	x1*=MULT; y1*=MULT; x2*=MULT; y2*=MULT;
 	x1-=shiftx; x2-=shiftx; y1-=shifty; y2-=shifty;
 	if(temp!=';')cerr<<"Error! ; not found"<<endl;
 }
 
-Design::Design(){
+Rectangle::Rectangle(istream& in, int shiftx, int shifty){
+	in>>x1>>y1>>x2>>y2;
+	x1*=MULT; y1*=MULT; x2*=MULT; y2*=MULT;
+	x1-=shiftx; x2-=shiftx; y1-=shifty; y2-=shifty;
 }
 
+Circle::Circle(istream& in, int shiftx, int shifty){
+	in>>x>>y>>r;
+	x*=MULT; y*=MULT; r*=MULT;
+	x-=shiftx; y-=shifty;
+}
+
+Arc::Arc(istream& in, int shiftx, int shifty){
+	float xA,xB,xC,xmAB,xmBC, yA,yB,yC,ymAB,ymBC; 
+	in>>xA>>yA>>xB>>yB>>xC>>yC;
+	xmAB=(xA+xB)/2;
+	ymAB=(yA+yB)/2;
+	xmBC=(xC+xB)/2;
+	ymBC=(yC+yB)/2;
+	float mperpAB, mperpBC;
+	mperpAB= -(xB-xA)/(yB-yA);
+	mperpBC= -(xB-xC)/(yB-yC);
+	
+	x=(ymBC-ymAB+mperpBC*xmBC-mperpAB*xmAB)/(mperpBC-mperpAB);
+	y=(xmBC-xmAB + (ymAB/mperpAB)-(ymBC/mperpBC))/((1.0/mperpAB)-(1.0/mperpBC));
+	
+	//x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty); 
+	
+	r=sqrt((x-xA)*(x-xA) + (y-yA)*(y-yA));
+	
+	sa=(atan2(y-yA, x-xA)*10.0*180.0/M_PI);
+	ea=(atan2(y-yC, x-xC)*10.0*180.0/M_PI);
+	
+	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty); 
+		
+	x*=MULT; y*=MULT; r*=MULT;
+	x-=shiftx; y-=shifty;
+}
+
+Design::Design(){}
+
 Design::Design(istream& in){
-	int shiftx, shifty, g, tint;
+	int g, tint;
 	string tmp;
 	char t;
 	in>>tmp;
@@ -30,15 +69,35 @@ Design::Design(istream& in){
 		return;
 	}
 	in>>tint>>tint>>shiftx>>shifty;
-	getline(in, tmp);	//read the last number, (which is useless?)
+	shiftx*=MULT; shifty*=MULT;
+	//cerr<<shiftx<<" "<<shifty<<endl;		///DEBUG
+	getline(in, tmp);	//read the last number, (which is useless(?))
 	while(t!='*'){
 		g=in.tellg();
 		in>>t>>tint;
 		if(t=='v'){
 			Line l(in, shiftx, shifty);
 			lines.push_back(l);
+			//l.print(cerr);					///DEBUG
 		}
+		else if(t=='r'){
+			Rectangle r(in, shiftx, shifty);
+			rects.push_back(r);
+			//l.print(cerr);					///DEBUG
+		}
+		else if(t=='c'){
+			Circle c(in, shiftx, shifty);
+			circles.push_back(c);
+			//l.print(cerr);					///DEBUG
+		}
+		else if(t=='a'){
+			Arc a(in, shiftx, shifty);
+			arcs.push_back(a);
+			//l.print(cerr);					///DEBUG
+		}
+		else getline(in, tmp);
 	}
+	//cerr<<"While exited"<<endl;		///DEBUG
 	in.seekg(g);
 }
 
@@ -46,8 +105,29 @@ void Line::print(ostream& out){
 	out<<"P 2 0 1 0  "<<x1<<" "<<y1<<"  "<<x2<<" "<<y2<<" N"<<endl;
 }
 
+void Rectangle::print(ostream& out){
+	out<<"S "<<x1<<" "<<y1<<" "<<x2<<" "<<y2<<" 0 1 0 N"<<endl;
+}
+
+void Circle::print(ostream& out){
+	out<<"C "<<x<<" "<<y<<" "<<r<<" 0 1 0 N"<<endl;
+}
+
+void Arc::print(ostream& out){
+	out<<"A "<<x<<" "<<y<<" "<<r<<" "<<sa<<" "<<ea<<" "<<" 0 1 0 N "<<x1<<" "<<y1<<" "<<x2<<" "<<y2<<" "<<endl;
+}
+
 void Design::print(ostream& out){
 	for(int i=0; i<lines.size(); i++){
 		lines[i].print(out);
+	}
+	for(int i=0; i<rects.size(); i++){
+		rects[i].print(out);
+	}
+	for(int i=0; i<circles.size(); i++){
+		circles[i].print(out);
+	}
+	for(int i=0; i<arcs.size(); i++){
+		arcs[i].print(out);
 	}
 }

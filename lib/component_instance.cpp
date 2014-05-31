@@ -12,9 +12,16 @@ ComponentInstance::ComponentInstance(istream& in){
 	int g;
 	g=in.tellg();
 	getline(in, line);
+	getline(in, line);
+	
+	//cout<<"***"<<line<<endl;			///DEBUG
+	
 	while(line[0]=='a'){
 		Attribute attr(line);
-		if(attr.name=="PKGREF") attrs[0]=attr;
+		if(attr.name=="PKGREF") {
+			attrs[0]=attr;
+			//cout<<"**"<<attr.value<<endl;			///DEBUG
+		}
 		if(attr.name=="VALUE" || attr.name=="DC" || attr.name=="GAIN") attrs[1]=attr;
 		g=in.tellg();
 		getline(in, line);
@@ -30,11 +37,17 @@ ComponentInstance::ComponentInstance(istream& in){
 }
 
 void ComponentInstance::print(ostream& out){
-	out<<"$Comp"<<endl<<"L "<<type<<" "<<attrs[0].value<<endl;
-	out<<"U 1 1 00000000"<<endl;
+	out<<"$Comp"<<endl<<"L "<<type+"_PSPICE"<<" "<<attrs[0].value<<endl;
+	out<<"U 1 1 "<<rand()%90000000+10000000<<endl;
 	out<<"P "<<x<<" "<<y<<endl;
+	out<<"F 0";
+	attrs[0].print(out);
+	out<<"F 1";
+	attrs[1].print(out);
 	out<<"\t1    "<<x<<" "<<y<<endl;
-	if(orient=="h") out<<"\t0    -1    -1    0"<<endl;
-	if(orient=="v") out<<"\t1    0    0    -1"<<endl;
+	if(orient=="v") out<<"\t0    1    -1    0"<<endl;
+	if(orient=="h") out<<"\t1    0    0    1"<<endl;
+	if(orient=="u") out<<"\t-1    0    0    -1"<<endl;
+	if(orient=="d") out<<"\t0    -1    1    0"<<endl;
 	out<<"$EndComp"<<endl;
 }
