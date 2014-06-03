@@ -8,7 +8,8 @@ void Attribute::print(ostream& out){
 	//cout<<bool(isShown)<<endl;
 }
 
-Attribute::Attribute(){}
+Attribute::Attribute(){
+}
 
 Attribute::Attribute(string line){
 	stringstream ss;

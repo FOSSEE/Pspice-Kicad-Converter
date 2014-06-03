@@ -43,7 +43,7 @@ class Circle{
 
 class Arc{
 	public:
-	float x, y, r, sa, ea, x1, y1, x2, y2;
+	int x, y, r, sa, ea, x1, y1, x2, y2;
 	Arc(istream& in, int shiftx, int shifty);
 	void print(ostream& out);
 };

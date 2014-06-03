@@ -44,14 +44,25 @@ Arc::Arc(istream& in, int shiftx, int shifty){
 	x=(ymBC-ymAB+mperpBC*xmBC-mperpAB*xmAB)/(mperpBC-mperpAB);
 	y=(xmBC-xmAB + (ymAB/mperpAB)-(ymBC/mperpBC))/((1.0/mperpAB)-(1.0/mperpBC));
 	
-	//x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty); 
+	float a=(atan2(y-yA, x-xA)*10.0*180.0/M_PI), b=(atan2(y-yB, x-xB)*10.0*180.0/M_PI), c=(atan2(y-yC, x-xC)*10.0*180.0/M_PI);
 	
 	r=sqrt((x-xA)*(x-xA) + (y-yA)*(y-yA));
 	
-	sa=(atan2(y-yA, x-xA)*10.0*180.0/M_PI);
-	ea=(atan2(y-yC, x-xC)*10.0*180.0/M_PI);
+	if(b<max(a,c) && b>min(a,c)){		//b is between a and c
+		sa=min(a,c); ea=max(a,c);
+	}
 	
-	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty); 
+	if(b>max(a,c)){		//b is largest
+		sa=max(a,c); ea=min(a,c)+3600.0;
+	}
+	
+	if(b>max(a,c)){		//b is smallest
+		sa=max(a,c)-3600.0; ea=min(a,c);
+	}
+	
+	//scale and shift:
+	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty);
+	//startx, starty, endx, endy are redundant. May not even be in use. Haven't been fixed.
 		
 	x*=MULT; y*=MULT; r*=MULT;
 	x-=shiftx; y-=shifty;

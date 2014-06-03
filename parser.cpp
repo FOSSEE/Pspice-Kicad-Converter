@@ -40,12 +40,37 @@ int main(int argc, char* argv[]){
 	
 	flib<<libDescription;
 	
-	//Parts (Components)
-	skipTo(file, "@parts");
+	//Ports
+	skipTo(file, "@ports");
 	vector<ComponentInstance> componentInstances;
 	map<string, Component> components;
 			//Create components and instances
 	int g=file.tellg();
+	getline(file, textline);
+	while(textline.substr(0, 4)=="port"){
+		file.seekg(g);
+		ComponentInstance ci(file);
+		//cout<<(components.find(ci.type)==components.end())<<endl;
+		if(components.find(ci.type)==components.end()){
+			string libName=findLibrary(ci.type);
+			//cout<<libName<<endl;		///DEBUG
+			ifstream PLib(libName.c_str());
+			//cout<<"Lib opened "<<libName<<endl;		///DEBUG
+			Component c(PLib, ci.type);
+			//cout<<"Comp created "<<ci.type<<endl;		///DEBUG
+			components[ci.type]=c;
+		}
+		componentInstances.push_back(ci);
+		//cout<<ci.type<<endl;			///DEBUG
+		g=file.tellg();
+		getline(file, textline);
+		//cerr<<textline<<endl;						///DEBUG
+	}
+	file.seekg(g);
+	
+	//Parts (Components)
+	skipTo(file, "@parts");
+	g=file.tellg();
 	getline(file, textline);
 	while(textline.substr(0, 4)=="part"){
 		file.seekg(g);

@@ -27,6 +27,15 @@ ComponentInstance::ComponentInstance(istream& in){
 		getline(in, line);
 	}
 	in.seekg(g);
+	if(attrs[0].name==""){
+		attrs[0].name="PKGREF";
+		attrs[0].value=type;
+		attrs[0].orient='h';
+		attrs[0].x=x; attrs[0].y=y;
+		attrs[0].isHidden=true;
+		attrs[0].hjust='l';
+		attrs[0].vjust='n';
+	}
 	if(attrs[1].name==""){
 		attrs[1]=attrs[0];
 		attrs[1].value=type;

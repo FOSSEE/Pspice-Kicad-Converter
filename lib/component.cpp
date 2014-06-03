@@ -73,7 +73,17 @@ Component::Component(){}
 
 Component::Component(istream& in, string t){
 	type=t;
-	string waste=skipTo(in, "*symbol "+t);
+	
+	int g=in.tellg();
+	string line=skipTo(in, "*symbol "+t);
+	
+	if(line.find("ako")!=line.npos){
+		int a=line.rfind(" ")+1;
+		t=line.substr(a, line.length()-a);
+		in.seekg(g);
+		string line=skipTo(in, "*symbol "+t);
+	}
+	
 	//cout<<waste<<endl;			///DEBUG
 	skipTo(in, "@pins");
 	makePins(in);

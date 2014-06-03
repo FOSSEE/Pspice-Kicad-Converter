@@ -46,7 +46,7 @@ string skipTo(istream& input, string s){
 }
 
 string findLibrary(string s){
-    string cmd="grep -l ^\"*symbol "+s+"\"$ lib/Library/*";
+    string cmd="grep -wl ^\"*symbol "+s+"\" lib/Library/*";
     string ret=exec(cmd.c_str());
     ret=ret.substr(0, ret.length()-1);		//ignore the last character, which is \n
     return ret;
