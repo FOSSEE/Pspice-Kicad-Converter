@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
 	fsch.open(fname.c_str());
 	flib.open(flname.c_str());
 	
-	cout<<fname<<endl<<flname<<endl;
+	cout<<"Schematic file name: "<<fname<<endl<<"Library file name: "<<flname<<endl;
 	
 	string textline;
 	skipTo(file, "@status");
@@ -75,38 +75,39 @@ int main(int argc, char* argv[]){
 	while(textline.substr(0, 4)=="part"){
 		file.seekg(g);
 		ComponentInstance ci(file);
-		//cout<<(components.find(ci.type)==components.end())<<endl;
-		if(ci.type!="titleblk"){
-			if(components.find(ci.type)==components.end()){
-				string libName=findLibrary(ci.type);
+		if(components.find(ci.type)==components.end()){
+			string libName=findLibrary(ci.type);
+			if(libName!=""){
 				//cout<<libName<<endl;		///DEBUG
 				ifstream PLib(libName.c_str());
 				//cout<<"Lib opened"<<endl;		///DEBUG
 				Component c(PLib, ci.type);
 				//cout<<"Comp created "<<ci.type<<endl;		///DEBUG
 				components[ci.type]=c;
+				componentInstances.push_back(ci);
 			}
-			componentInstances.push_back(ci);
-			//cout<<ci.type<<endl;			///DEBUG
+			else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
+		else componentInstances.push_back(ci);
+		//cout<<ci.type<<endl;			///DEBUG
 		g=file.tellg();
 		getline(file, textline);
 		//cerr<<textline<<endl;						///DEBUG
 	}
 	file.seekg(g);
 	
-	cout<<"Read Done"<<endl;			///DEBUG
+	//cerr<<"Read Done"<<endl;			///DEBUG
 	
 			//Print component instances to schematic
 	for(int i=0; i<componentInstances.size(); i++){
 		componentInstances[i].print(fsch);
 	}
-	cout<<"Components instances written"<<endl;			///DEBUG
+	//cerr<<"Components instances written"<<endl;			///DEBUG
 			//Print components to -cache.lib file
 	for(map<string, Component>::iterator i=components.begin(); i!=components.end(); i++){
 		(i->second).print(flib);
 	}
-	cout<<"Components written"<<endl;			///DEBUG
+	//cerr<<"Components written"<<endl;			///DEBUG
 	
 	//Connections (Wires)
 	skipTo(file, "@conn");

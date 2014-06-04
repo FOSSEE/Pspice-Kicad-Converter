@@ -8,10 +8,11 @@ void Attribute::print(ostream& out){
 	//cout<<bool(isShown)<<endl;
 }
 
-Attribute::Attribute(){
+Attribute::Attribute(){//Default constructor
 }
 
-Attribute::Attribute(string line){
+Attribute::Attribute(string line){//Constructor of Attribute
+	//see the sample in the "header.h"
 	stringstream ss;
 	ss.str(line);
 	char a;
@@ -20,10 +21,12 @@ Attribute::Attribute(string line){
 	ss>>a>>t>>temp>>vis>>x0>>y0>>temp>>orient>>hjust>>vjust>>t>>temp;
 	x=x0* MULT;
 	y=y0* MULT;
-	t=temp.find('=');
+	t=temp.find('=');	//see the sample in the "header.h"
 	name=temp.substr(0, t);
+	value=temp.substr(t+1, temp.size()-t-1);
+	//everything in temp occuring before the '=' is the "name", and everything after it is the "value".
 	if(vis.find("13")!=vis.npos)isHidden=false;
+	//it has been observed that if vis contains "13", the value gets displayed
 	else isHidden=true;
 	//cout<<"***"<<name<<endl;		///DEBUG
-	value=temp.substr(t+1, temp.size()-t-1);
 }

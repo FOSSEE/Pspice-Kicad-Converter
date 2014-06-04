@@ -1,6 +1,6 @@
 #include "header.h"
 
-string exec(const char* cmd) {
+string exec(const char* cmd) {		//Function to execute a shell command.
     FILE* pipe = popen(cmd, "r");
     if (!pipe) return "ERROR";
     char buffer[128];
@@ -14,7 +14,6 @@ string exec(const char* cmd) {
 }
 
 string readDate(string line){
-	//return "Wednesday 21 May 2014 05:11:08 PM IST";
 	int n=line.find(';');
 	string datetemp=line.substr(n+1, 10);
 	string cmd;
@@ -25,7 +24,6 @@ string readDate(string line){
 }
 
 string readShortDate(string line){
-	//return "Wednesday 21 May 2014 05:11:08 PM IST";
 	int n=line.find(';');
 	string datetemp=line.substr(n+1, 10);
 	string cmd;
@@ -35,7 +33,8 @@ string readShortDate(string line){
 	return ret;
 }
 
-string skipTo(istream& input, string s){
+string skipTo(istream& input, string s){		/*Find the line containing the 
+first occurence (after the current position) of string s in istream& in and read it and then return it*/
 	string tmp="";
 	//cout<<s<<"*"<<endl;
 	while(tmp.find(s)==string::npos){
@@ -45,11 +44,9 @@ string skipTo(istream& input, string s){
 	return tmp;
 }
 
-string findLibrary(string s){
+string findLibrary(string s){		//Returns the filename of the Pspice library that contains the description of the component whose name is the string s
     string cmd="grep -wl ^\"*symbol "+s+"\" lib/Library/*";
     string ret=exec(cmd.c_str());
     ret=ret.substr(0, ret.length()-1);		//ignore the last character, which is \n
     return ret;
 }
-
-//grep -l ^"*symbol R"$ *
