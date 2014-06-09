@@ -8,6 +8,7 @@ ofstream flib;
 int main(int argc, char* argv[]){
 	ifstream file(argv[1]);
 	
+	//Generate the output files
 	string fname=string(argv[2])+string(".sch");
 	string flname=string(argv[2])+string("-cache.lib");
 	
@@ -19,7 +20,8 @@ int main(int argc, char* argv[]){
 	string textline;
 	skipTo(file, "@status");
 	getline(file, textline);
-	///cout<<textline<<endl;
+	///cerr<<textline<<endl;
+	//Get the date from the Pspice schematic
 	string date=readDate(textline);
 	string shortDate=readShortDate(textline);
 	
@@ -44,29 +46,35 @@ int main(int argc, char* argv[]){
 	skipTo(file, "@ports");
 	vector<ComponentInstance> componentInstances;
 	map<string, Component> components;
-			//Create components and instances
+			//Create components and instances (ports)
+	
+	//"Safely" read a line using getline, so that we can go back to it later:
 	int g=file.tellg();
 	getline(file, textline);
-	while(textline.substr(0, 4)=="port"){
-		file.seekg(g);
+	
+	while(textline.substr(0, 4)=="port"){		//while the line starts with the word "port", it is the description of a port.
+		file.seekg(g);							//"Put that line back" and make the port ComponentInstance
 		ComponentInstance ci(file);
-		//cout<<(components.find(ci.type)==components.end())<<endl;
 		if(components.find(ci.type)==components.end()){
-			string libName=findLibrary(ci.type);
-			//cout<<libName<<endl;		///DEBUG
+		//If the Component that the ComponentInstance ci is an instance of has not already been made, make it.
+			string libName=findLibrary(ci.type);					//Find the Pspice library file
+			///cerr<<libName<<endl;						///DEBUG
 			ifstream PLib(libName.c_str());
-			//cout<<"Lib opened "<<libName<<endl;		///DEBUG
-			Component c(PLib, ci.type);
-			//cout<<"Comp created "<<ci.type<<endl;		///DEBUG
-			components[ci.type]=c;
+			///cerr<<"Lib opened "<<libName<<endl;		///DEBUG
+			Component c(PLib, ci.type);								//Make the Component
+			///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
+			components[ci.type]=c;									//Store the component
 		}
 		componentInstances.push_back(ci);
-		//cout<<ci.type<<endl;			///DEBUG
+		///cerr<<ci.type<<endl;			///DEBUG
+		
+		//Read "Safely":
 		g=file.tellg();
 		getline(file, textline);
-		//cerr<<textline<<endl;						///DEBUG
+		///cerr<<textline<<endl;		///DEBUG
 	}
-	file.seekg(g);
+	file.seekg(g);						/*The while loop exited because the first word of the line wasn't "port".
+	Put the line back into the stream, it shouldn't have been read. */
 	
 	//Parts (Components)
 	skipTo(file, "@parts");
@@ -78,36 +86,36 @@ int main(int argc, char* argv[]){
 		if(components.find(ci.type)==components.end()){
 			string libName=findLibrary(ci.type);
 			if(libName!=""){
-				//cout<<libName<<endl;		///DEBUG
+				///cerr<<libName<<endl;						///DEBUG
 				ifstream PLib(libName.c_str());
-				//cout<<"Lib opened"<<endl;		///DEBUG
+				///cerr<<"Lib opened"<<endl;				///DEBUG
 				Component c(PLib, ci.type);
-				//cout<<"Comp created "<<ci.type<<endl;		///DEBUG
+				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
 				components[ci.type]=c;
 				componentInstances.push_back(ci);
 			}
 			else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
 		else componentInstances.push_back(ci);
-		//cout<<ci.type<<endl;			///DEBUG
+		///cerr<<ci.type<<endl;			///DEBUG
 		g=file.tellg();
 		getline(file, textline);
-		//cerr<<textline<<endl;						///DEBUG
+		///cerr<<textline<<endl;		///DEBUG
 	}
 	file.seekg(g);
 	
-	//cerr<<"Read Done"<<endl;			///DEBUG
+	///cerr<<"Read Done"<<endl;			///DEBUG
 	
 			//Print component instances to schematic
 	for(int i=0; i<componentInstances.size(); i++){
 		componentInstances[i].print(fsch);
 	}
-	//cerr<<"Components instances written"<<endl;			///DEBUG
+	///cerr<<"Components instances written"<<endl;		///DEBUG
 			//Print components to -cache.lib file
 	for(map<string, Component>::iterator i=components.begin(); i!=components.end(); i++){
 		(i->second).print(flib);
 	}
-	//cerr<<"Components written"<<endl;			///DEBUG
+	///cerr<<"Components written"<<endl;				///DEBUG
 	
 	//Connections (Wires)
 	skipTo(file, "@conn");
@@ -124,7 +132,7 @@ int main(int argc, char* argv[]){
 		conns[i].print(fsch);
 	}
 	//Write schematic file footer:
-	fsch<<"$EndSCHEMATIC"<<endl;
+	fsch<<"$EndSCHEMATC"<<endl;
 	
 	//Write -cache.lib file footer:
 	flib<<"#\n#End Library"<<endl;

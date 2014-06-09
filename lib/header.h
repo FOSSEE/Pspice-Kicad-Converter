@@ -67,27 +67,27 @@ class Design{		//This class holds vectors of lines, rectangles, circles and arcs
 
 class Wire{
 public:
-	int x1, y1, x2, y2;
-	void print(ostream&);
+	int x1, y1, x2, y2;		//start and end co-ordinates of the wire
+	void print(ostream&);	//function to print the co-ordintes in required format 
 };
 
 class Connector{
 public:
-	int x, y;
-	void print(ostream&);
+	int x, y;				//co-ordinates of the junction
+	void print(ostream&);	//function to print the co-ordintes in required format
 };
 
 class Pin{
 	public:
-	int x, y, length;
-	string n, etype;
-	string orient;
-	Pin(istream& in);
-	void print(ostream&, int, int);
+	int x, y, length;					//position of pin and lentgh of the pin
+	string n, etype;					//n is the pin number and etype is the electrical type
+	string orient;						//to store the orientation of pin
+	Pin(istream& in);					//Pin constructor to set the values
+	void print(ostream&, int, int);		//to print in output cache lib file
 };
 
-istream& parseWire(istream&, vector<Wire>&);
-istream& parseConn(istream&, vector<Connector>&);
+istream& parseWire(istream&, vector<Wire>&);					//parseWire funciton to get the positions of wire
+istream& parseConn(istream&, vector<Connector>&);				//parseConn function to get the positions of junctions
 
 class Attribute{			//stores one attribute of a component
 /* Sample attribute line in a Pspice library:
@@ -114,19 +114,18 @@ class Component{
 	public:
 	string type; //annotation;
 	vector<Pin> pins;
-	Design des;
-	Component();
-	Component(istream&, string);
-	void makePins(istream&);
-	void print(ostream& out);
+	Design des;							//create object of design class to access its method
+	Component();						//default constructor of Component class
+	Component(istream&, string);		//parameterized constructor to set the components value
+	void makePins(istream&);			//function to create pins 
+	void print(ostream& out);			//function to write the component to output's -cache.lib file
 };
 
 class ComponentInstance{
 	public:
-	int x, y;
-	string type, orient; //annotation;
+	int x, y;							//store the position of the component
+	string type, orient; 				//annotation;
 	vector<Attribute> attrs;
-	Design des;
-	ComponentInstance(istream& in);
+	ComponentInstance(istream& in);		//parameterized constructor to create instances
 	void print(ostream& out);
 };

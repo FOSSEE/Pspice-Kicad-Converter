@@ -1,5 +1,6 @@
 #include "header.h"
 
+//ComponentInstance class constructor to create instance
 ComponentInstance::ComponentInstance(istream& in){
 	attrs.resize(2);
 	string tmp;		//discard
@@ -11,22 +12,25 @@ ComponentInstance::ComponentInstance(istream& in){
 	string line;
 	int g;
 	g=in.tellg();
-	getline(in, line);
-	getline(in, line);
+	getline(in, line);  // to discard that line
+	getline(in, line);  // to get next line to read attributes
 	
 	//cout<<"***"<<line<<endl;			///DEBUG
 	
+	
 	while(line[0]=='a'){
-		Attribute attr(line);
-		if(attr.name=="PKGREF") {
-			attrs[0]=attr;
+		Attribute attr(line);        // creating attributes by calling its constructor 
+		if(attr.name=="PKGREF") {  
+			attrs[0]=attr;         //assigning attributes of PKGREF to the component    
 			//cout<<"**"<<attr.value<<endl;			///DEBUG
 		}
-		if(attr.name=="VALUE" || attr.name=="DC" || attr.name=="GAIN") attrs[1]=attr;
-		g=in.tellg();
+		if(attr.name=="VALUE" || attr.name=="DC" || attr.name=="GAIN")
+	        attrs[1]=attr;      //assigning attributes of above cases to the component
+ 		g=in.tellg();
 		getline(in, line);
 	}
 	in.seekg(g);
+// setting default values for components not having PKGREF. (Mostly components in ports library of pspice)
 	if(attrs[0].name==""){
 		attrs[0].name="PKGREF";
 		attrs[0].value=type;
@@ -36,25 +40,27 @@ ComponentInstance::ComponentInstance(istream& in){
 		attrs[0].hjust='l';
 		attrs[0].vjust='n';
 	}
+	//if the above cases like VALUE,DC,GAIN doesn't exist then giving attributes of PKGREF to it
 	if(attrs[1].name==""){
 		attrs[1]=attrs[0];
 		attrs[1].value=type;
 		attrs[1].y+=80;
 	}
+	//shifting the attributes 
 	attrs[0].x+=x; attrs[1].x+=x;
 	attrs[0].y+=y; attrs[1].y+=y;
 }
-
+//print all the components in output schematic file as per kikad format
 void ComponentInstance::print(ostream& out){
 	out<<"$Comp"<<endl<<"L "<<type+"_PSPICE"<<" "<<attrs[0].value<<endl;
 	out<<"U 1 1 "<<rand()%90000000+10000000<<endl;
-	out<<"P "<<x<<" "<<y<<endl;
-	out<<"F 0";
-	attrs[0].print(out);
-	out<<"F 1";
-	attrs[1].print(out);
-	out<<"\t1    "<<x<<" "<<y<<endl;
-	if(orient=="v") out<<"\t0    1    -1    0"<<endl;
+	out<<"P "<<x<<" "<<y<<endl;      //printing the postion of component
+	out<<"F 0";						//upto F0 printed
+	attrs[0].print(out);			// print the attributes by calling attributes print function
+	out<<"F 1";						//upto F1 printed
+	attrs[1].print(out);			// print the attributes by calling attributes print function
+	out<<"\t1    "<<x<<" "<<y<<endl;      //printing the postions of the component again
+	if(orient=="v") out<<"\t0    1    -1    0"<<endl;		//rotation matrix corresponding to kikad
 	if(orient=="h") out<<"\t1    0    0    1"<<endl;
 	if(orient=="u") out<<"\t-1    0    0    -1"<<endl;
 	if(orient=="d") out<<"\t0    -1    1    0"<<endl;
