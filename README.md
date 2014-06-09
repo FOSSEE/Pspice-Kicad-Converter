@@ -4,7 +4,7 @@ It requires that all the PSPICE libraries (only .slb files) be present in lib/Li
 
 USAGE:
 To compile:
-$ ./install.sh
+$ ./compile.sh
 
 To execute:
 $ ./converter path/to/pspice-schematic.sch path/to/output-filename-without-extension
