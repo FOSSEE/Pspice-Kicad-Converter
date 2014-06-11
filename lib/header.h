@@ -20,9 +20,12 @@ string readShortDate(string);
 string skipTo(istream&, string);
 string exec(char*);
 
+const string nameAppend="_PSPICE";
+
 class Line{					//The line class
 	public:
-	int x1, y1, x2, y2;		//(x1, y1) and (x2, y2) are the coordinates of the start and end positions respectively. 
+	int npoints;
+	vector<int> x, y;		//(x[i], y[i]) are the coordinates of the start and end positions respectively. 
 	Line(istream& in, int shiftx, int shifty);	//Constructor of the Line class. Takes an ifstream& as an input. (Reads from the Pspice library directly)
 	void print(ostream& out);					//Function that writes the "P" record, which describes a line in the Draw section of a component.
 };

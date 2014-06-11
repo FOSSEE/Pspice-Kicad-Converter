@@ -7,11 +7,23 @@
 Line::Line(istream& in, int shiftx, int shifty){	//Constructor of Line.
 	//This gets called when the first character of a line is "v".
 	//This function assumes "v" and the next character (usually 0) have already been read and are NOT in the stream.
-	char temp;
-	in>>x1>>y1>>x2>>y2>>temp;
-	x1*=MULT; y1*=MULT; x2*=MULT; y2*=MULT;			//Scale up.
-	x1-=shiftx; x2-=shiftx; y1-=shifty; y2-=shifty;
-	if(temp!=';')cerr<<"Error! \";\" not found"<<endl;		//The last character in the description of a line is ";"
+	int t;
+	string temp;
+	in>>temp;
+	npoints=0;
+	while(temp!=";"){
+		stringstream ss;
+		ss.str(temp);
+		ss>>t;
+		x.push_back(t);
+		in>>t>>temp;
+		y.push_back(t);
+		x[npoints]*=MULT; y[npoints]*=MULT;			//Scale up.
+		x[npoints]-=shiftx; y[npoints]-=shifty;
+		npoints++;
+	}
+	
+	if(temp!=";")cerr<<"Error! \";\" not found"<<endl;		//The last character in the description of a line is ";"
 }
 
 Rectangle::Rectangle(istream& in, int shiftx, int shifty){	//Constructor of Rectangle.
@@ -108,7 +120,7 @@ Design::Design(istream& in){		//Constructor of Design.
 		g=in.tellg();			//Get the position of the read head, so that we can go back to this position if we read something that's not supposed to be read.
 		in>>t>>tint;			//Get the first character of the description, store in "t". This character gives what shape it is.
 		//The second character is useless.
-		if(t=='v'){				//If the character is 'v' then it's the description of a Line. Create the line and then store it.
+		if(t=='v'){				//If the character is 'v' then it's the description of a (poly)Line. Create the line and then store it.
 			Line l(in, shiftx, shifty);
 			lines.push_back(l);
 			//l.print(cerr);					///DEBUG
@@ -136,7 +148,11 @@ Design::Design(istream& in){		//Constructor of Design.
 }
 
 void Line::print(ostream& out){			//Write the "P" record of the DRAW section. The P record describes a line segment.
-	out<<"P 2 0 1 0  "<<x1<<" "<<y1<<"  "<<x2<<" "<<y2<<" N"<<endl;
+	out<<"P "<<npoints<<" 0 1 0  ";
+	for(int i=0; i<npoints; i++){
+		out<<x[i]<<" "<<y[i]<<" ";
+	}
+	out<<"N"<<endl;
 }
 
 void Rectangle::print(ostream& out){	//Just like Line::print

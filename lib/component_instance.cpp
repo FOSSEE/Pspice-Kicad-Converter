@@ -11,11 +11,11 @@ ComponentInstance::ComponentInstance(istream& in){
 	y=y0* MULT;
 	string line;
 	int g;
+	getline(in, line);  // to discard that (empty) line
 	g=in.tellg();
-	getline(in, line);  // to discard that line
 	getline(in, line);  // to get next line to read attributes
 	
-	//cout<<"***"<<line<<endl;			///DEBUG
+	///cerr<<"***"<<line<<endl;			///DEBUG
 	
 	
 	while(line[0]=='a'){
@@ -28,6 +28,7 @@ ComponentInstance::ComponentInstance(istream& in){
 	        attrs[1]=attr;      //assigning attributes of above cases to the component
  		g=in.tellg();
 		getline(in, line);
+		///cerr<<"***"<<line<<endl;			///DEBUG
 	}
 	in.seekg(g);
 // setting default values for components not having PKGREF. (Mostly components in ports library of pspice)
@@ -52,7 +53,7 @@ ComponentInstance::ComponentInstance(istream& in){
 }
 //print all the components in output schematic file as per kikad format
 void ComponentInstance::print(ostream& out){
-	out<<"$Comp"<<endl<<"L "<<type+"_PSPICE"<<" "<<attrs[0].value<<endl;
+	out<<"$Comp"<<endl<<"L "<<type+nameAppend<<" "<<attrs[0].value<<endl;
 	out<<"U 1 1 "<<rand()%90000000+10000000<<endl;
 	out<<"P "<<x<<" "<<y<<endl;      //printing the postion of component
 	out<<"F 0";						//upto F0 printed
@@ -60,9 +61,13 @@ void ComponentInstance::print(ostream& out){
 	out<<"F 1";						//upto F1 printed
 	attrs[1].print(out);			// print the attributes by calling attributes print function
 	out<<"\t1    "<<x<<" "<<y<<endl;      //printing the postions of the component again
-	if(orient=="v"||orient=="V") out<<"\t0    1    -1    0"<<endl;		//rotation matrix corresponding to kikad
-	if(orient=="h"||orient=="H") out<<"\t1    0    0    1"<<endl;
-	if(orient=="u"||orient=="U") out<<"\t-1    0    0    -1"<<endl;
-	if(orient=="d"||orient=="D") out<<"\t0    -1    1    0"<<endl;
+	if(orient=="v") out<<"\t0    1    -1    0"<<endl;		//rotation matrix corresponding to kikad
+	if(orient=="V") out<<"\t0    1    1    0"<<endl;		//rotation matrix corresponding to kikad
+	if(orient=="h") out<<"\t1    0    0    1"<<endl;
+	if(orient=="H") out<<"\t-1    0    0    1"<<endl;
+	if(orient=="u") out<<"\t-1    0    0    -1"<<endl;
+	if(orient=="U") out<<"\t1    0    0    -1"<<endl;
+	if(orient=="d") out<<"\t0    -1    1    0"<<endl;
+	if(orient=="D") out<<"\t0    -1    -1    0"<<endl;
 	out<<"$EndComp"<<endl;
 }

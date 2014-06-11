@@ -54,24 +54,29 @@ int main(int argc, char* argv[]){
 	
 	while(textline.substr(0, 4)=="port"){		//while the line starts with the word "port", it is the description of a port.
 		file.seekg(g);							//"Put that line back" and make the port ComponentInstance
+		///cerr<<"*1 "<<textline<<endl;		///DEBUG
 		ComponentInstance ci(file);
 		if(components.find(ci.type)==components.end()){
 		//If the Component that the ComponentInstance ci is an instance of has not already been made, make it.
 			string libName=findLibrary(ci.type);					//Find the Pspice library file
 			///cerr<<libName<<endl;						///DEBUG
-			ifstream PLib(libName.c_str());
-			///cerr<<"Lib opened "<<libName<<endl;		///DEBUG
-			Component c(PLib, ci.type);								//Make the Component
-			///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
-			components[ci.type]=c;									//Store the component
+			if(libName!=""){
+				ifstream PLib(libName.c_str());
+				///cerr<<"Lib opened "<<libName<<endl;		///DEBUG
+				Component c(PLib, ci.type);								//Make the Component
+				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
+				components[ci.type]=c;									//Store the component
+				componentInstances.push_back(ci);
+			}
+			else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
-		componentInstances.push_back(ci);
-		///cerr<<ci.type<<endl;			///DEBUG
+		else componentInstances.push_back(ci);
+		///cerr<<"Inst created "<<ci.type<<endl;			///DEBUG
 		
 		//Read "Safely":
 		g=file.tellg();
 		getline(file, textline);
-		///cerr<<textline<<endl;		///DEBUG
+		///cerr<<"*2 "<<textline<<endl;		///DEBUG
 	}
 	file.seekg(g);						/*The while loop exited because the first word of the line wasn't "port".
 	Put the line back into the stream, it shouldn't have been read. */
@@ -88,7 +93,7 @@ int main(int argc, char* argv[]){
 			if(libName!=""){
 				///cerr<<libName<<endl;						///DEBUG
 				ifstream PLib(libName.c_str());
-				///cerr<<"Lib opened"<<endl;				///DEBUG
+				///cerr<<"Lib opened "<<libName<<" to create "<<ci.type<<endl;				///DEBUG
 				Component c(PLib, ci.type);
 				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
 				components[ci.type]=c;
