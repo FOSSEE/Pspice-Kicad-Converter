@@ -62,12 +62,12 @@ void ComponentInstance::print(ostream& out){
 	attrs[1].print(out);			// print the attributes by calling attributes print function
 	out<<"\t1    "<<x<<" "<<y<<endl;      //printing the postions of the component again
 	if(orient=="v") out<<"\t0    1    -1    0"<<endl;		//rotation matrix corresponding to kikad
-	if(orient=="V") out<<"\t0    1    1    0"<<endl;		//rotation matrix corresponding to kikad
+	if(orient=="V") out<<"\t0    -1    -1    0"<<endl;		//rotation matrix corresponding to kikad
 	if(orient=="h") out<<"\t1    0    0    1"<<endl;
 	if(orient=="H") out<<"\t-1    0    0    1"<<endl;
 	if(orient=="u") out<<"\t-1    0    0    -1"<<endl;
 	if(orient=="U") out<<"\t1    0    0    -1"<<endl;
 	if(orient=="d") out<<"\t0    -1    1    0"<<endl;
-	if(orient=="D") out<<"\t0    -1    -1    0"<<endl;
+	if(orient=="D") out<<"\t0    1    1    0"<<endl;
 	out<<"$EndComp"<<endl;
 }

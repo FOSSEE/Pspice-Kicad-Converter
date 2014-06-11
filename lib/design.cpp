@@ -69,28 +69,23 @@ Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	
 	if(b<max(a,c) && b>min(a,c)){	//b is between a and c
 		sa=min(a,c); ea=max(a,c);
-		if(sa==c){
-			int tmp;
-			tmp=xA; xA=xC; xC=tmp;
-			tmp=yA; yA=yC; yC=tmp;
-		}
 	}
 	if(b>max(a,c)){					//b is largest
 		sa=max(a,c); ea=min(a,c)+3600.0;
-		if(sa==c){
-			int tmp;
-			tmp=xA; xA=xC; xC=tmp;
-			tmp=yA; yA=yC; yC=tmp;
-		}
 	}
 	if(b<min(a,c)){					//b is smallest
 		sa=max(a,c)-3600.0; ea=min(a,c);
-		if(ea==a){
-			int tmp;
-			tmp=xA; xA=xC; xC=tmp;
-			tmp=yA; yA=yC; yC=tmp;
-		}
 	}
+	
+	int t;
+	t=sa; sa=ea; ea=t;
+	
+	sa+=1; ea-=1;
+	
+	xA = x + r*cos(sa*M_PI/1800.0);
+	yA = y + r*sin(sa*M_PI/1800.0);
+	xC = x + r*cos(ea*M_PI/1800.0);
+	yC = y + r*sin(ea*M_PI/1800.0);
 	
 	//scale and shift:
 	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty);
