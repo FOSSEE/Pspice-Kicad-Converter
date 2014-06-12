@@ -1,0 +1,219 @@
+*version 8.0 2594348529
+u 150
+C? 3
+R? 4
+X? 2
+V? 3
+PM? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1ms
++1 20ms
+.STEP 0 3 4
++ 0 RDUTY
++ -1 1K 2.2K 3.3K  4.7K  9.99K
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 3374 
+@status
+n 0 99:07:19:18:27:43;935067463 e 
+s 0 99:07:19:18:27:48;935067468 e 
+*page 1 0 970 720 iA
+@ports
+port 85 EGND 370 420 h
+port 86 GND_EARTH 390 250 h
+port 87 EGND 450 380 h
+@parts
+part 77 C 300 390 d
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 u 13 0 27 -1 hln 100 VALUE=0.01u
+a 0 a 0 0 0 0 hln 100 PKGREF=C1
+a 0 ap 9 0 15 0 hln 100 REFDES=C1
+part 81 R 450 340 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=R2
+a 0 a 0 0 0 0 hln 100 PKGREF=R2
+part 83 C 260 370 d
+a 0 u 13 0 25 49 hln 100 VALUE=0.22u
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 a 0 0 0 0 hln 100 PKGREF=C2
+a 0 ap 9 0 15 0 hln 100 REFDES=C2
+part 82 VDC 370 290 u
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 ap 9 0 24 7 hcn 100 REFDES=V1
+a 1 u 13 0 -11 18 hcn 100 DC=15V
+a 0 a 0 0 0 0 hln 100 PKGREF=V1
+part 139 R 260 260 d
+a 0 u 13 0 31 55 hln 100 VALUE={RDUTY}
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 a 0 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 25 2 hln 100 REFDES=R3
+part 148 PARAM 470 280 h
+a 0 a 0 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 0 20 hln 100 NAME1=RDUTY
+a 0 u 13 0 50 22 hlb 100 VALUE1=4.7K
+part 80 555D 320 330 h
+a 0 s 11 0 66 100 hlb 100 PART=555D
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP8
+a 0 s 0 0 0 0 hln 100 GATE=
+a 1 a 9 0 70 8 hln 100 REFDES=X1
+a 0 a 0 0 0 0 hln 100 PKGREF=X1
+part 79 R 260 350 v
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 ap 9 0 23 2 hln 100 REFDES=R1
+a 0 a 0 0 0 0 hln 100 PKGREF=R1
+a 0 u 13 0 1 7 hln 100 VALUE={20K-RDUTY}
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 21
+s 300 390 300 350 20
+s 300 350 320 350 23
+w 73
+s 390 250 370 250 72
+w 76
+s 450 340 430 340 75
+s 430 340 420 340 149
+w 6
+s 310 330 320 330 50
+s 310 330 310 360 126
+s 310 360 320 360 128
+s 260 350 260 360 14
+s 260 360 260 370 132
+s 310 360 260 360 130
+w 125
+s 260 260 330 260 140
+s 370 290 330 290 56
+s 300 340 300 290 68
+s 370 290 370 300 53
+s 320 340 300 340 62
+s 330 290 300 290 144
+s 330 260 330 290 142
+w 54
+s 260 310 280 310 133
+s 280 310 280 370 135
+s 280 370 320 370 137
+s 260 300 260 310 145
+w 27
+s 260 400 260 420 29
+s 260 420 300 420 26
+s 370 400 370 420 32
+s 300 420 370 420 78
+@junction
+j 300 390
++ p 77 1
++ w 21
+j 260 400
++ p 83 2
++ w 27
+j 300 420
++ p 77 2
++ w 27
+j 370 250
++ p 82 -
++ w 73
+j 390 250
++ s 86
++ w 73
+j 450 340
++ p 81 1
++ w 76
+j 450 380
++ p 81 2
++ s 87
+j 370 420
++ s 85
++ w 27
+j 260 310
++ p 79 2
++ w 54
+j 260 350
++ p 79 1
++ w 6
+j 260 370
++ p 83 1
++ w 6
+j 260 360
++ w 6
++ w 6
+j 310 360
++ w 6
++ w 6
+j 260 260
++ p 139 1
++ w 125
+j 370 290
++ p 82 +
++ w 125
+j 330 290
++ w 125
++ w 125
+j 260 300
++ p 139 2
++ w 54
+j 320 350
++ p 80 CONTROL
++ w 21
+j 430 340
++ p 80 OUTPUT
++ w 76
+j 320 330
++ p 80 TRIGGER
++ w 6
+j 320 360
++ p 80 THRESHOLD
++ w 6
+j 320 340
++ p 80 RESET
++ w 125
+j 370 300
++ p 80 VCC
++ w 125
+j 320 370
++ p 80 DISCHARGE
++ w 54
+j 370 400
++ p 80 GND
++ w 27
+@attributes
+a 0 s 0 0 0 0 hln 100 PAGETITLE=
+a 0 s 0 0 0 0 hln 100 PAGENO=1
+a 0 s 0 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 0 t 5 210 465 500 450 0 55
+IC-555 AS ASTABLE MULTIVIBRATOR WITH DUTY CYCLE CONTROL

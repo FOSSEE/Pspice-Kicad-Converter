@@ -1,0 +1,271 @@
+*version 8.0 3129342325
+u 182
+D? 7
+V? 4
+R? 2
+PM? 2
+? 5
+L? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.01MS
++1 40MS
++2 0
++3 0.01MS
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 4572 
+@status
+n 0 100:02:07:19:12:18;952436538 e 
+s 0 100:02:07:19:12:31;952436551 e 
+c 100:02:07:19:15:38;952436738
+*page 1 0 970 720 iA
+@ports
+port 106 EGND 330 320 h
+@parts
+part 3 D1N914 570 300 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D2
+a 0 ap 9 0 15 0 hln 100 REFDES=D2
+a 0 sp 13 0 -1 9 hln 100 MODEL=D1N914
+part 4 D1N914 640 300 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D3
+a 0 ap 9 0 15 0 hln 100 REFDES=D3
+a 0 sp 13 0 1 9 hln 100 MODEL=D1N914
+part 7 D1N914 640 370 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D6
+a 0 ap 9 0 15 0 hln 100 REFDES=D6
+a 0 sp 13 0 1 5 hln 100 MODEL=D1N914
+part 6 D1N914 570 370 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D5
+a 0 ap 9 0 15 0 hln 100 REFDES=D5
+a 0 sp 13 0 -1 7 hln 100 MODEL=D1N914
+part 5 D1N914 510 370 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D4
+a 0 ap 9 0 15 0 hln 100 REFDES=D4
+a 0 sp 13 0 -1 7 hln 100 MODEL=D1N914
+part 58 VSIN 410 320 d
+a 1 u 0 0 0 0 hcn 100 PHASE=-120
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 ap 9 0 -12 14 hcn 100 REFDES=V2
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/PERIOD}
+part 59 VSIN 410 370 d
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/PERIOD}
+a 1 u 0 0 0 0 hcn 100 PHASE=+120
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V3
+a 1 ap 9 0 -10 14 hcn 100 REFDES=V3
+part 57 VSIN 410 270 d
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 -14 14 hcn 100 REFDES=V1
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/PERIOD}
+part 2 D1N914 510 300 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D1
+a 0 ap 9 0 17 -12 hln 100 REFDES=D1
+a 0 sp 13 0 1 3 hln 100 MODEL=D1N914
+part 109 R 680 270 d
+a 0 u 13 0 33 3 hln 100 VALUE=100
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+part 176 L 680 320 d
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=L2012C
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=L1
+a 0 ap 9 0 15 0 hln 100 REFDES=L1
+a 0 u 13 0 37 -1 hln 100 VALUE=50mH
+part 118 PARAM 780 250 h
+a 0 u 13 0 48 38 hlb 100 VALUE2=20ms
+a 0 u 13 0 56 26 hlb 100 VALUE1=100
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 0 36 hln 100 NAME2=PERIOD
+a 0 u 13 0 -2 24 hln 100 NAME1=VIN_AMPL
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 92
+a 0 sr 0 0 0 0 hln 100 LABEL=B
+s 640 330 430 330 124
+a 0 sr 3 0 649 332 hcn 100 LABEL=B
+s 430 330 430 370 87
+s 430 370 410 370 89
+s 640 300 640 330 40
+s 640 330 640 340 151
+w 20
+a 0 sr 0 0 0 0 hln 100 LABEL=Y
+s 410 320 570 320 122
+a 0 sr 3 0 580 322 hcn 100 LABEL=Y
+s 570 300 570 320 37
+s 570 320 570 340 154
+w 70
+a 0 sr 0 0 0 0 hln 100 LABEL=R
+s 430 310 510 310 120
+a 0 sr 3 0 518 314 hcn 100 LABEL=R
+s 430 270 430 310 71
+s 410 270 430 270 69
+s 510 300 510 310 34
+s 510 310 510 340 159
+w 61
+s 370 320 340 320 66
+s 340 320 330 320 162
+s 340 320 340 370 103
+s 340 270 340 320 68
+s 340 370 370 370 64
+s 370 270 340 270 60
+w 9
+a 0 sr 0:3 0 660 258 hcn 100 LABEL=DC+
+s 640 260 680 260 110
+a 0 sr 3 0 660 258 hcn 100 LABEL=DC+
+s 510 270 510 260 8
+s 640 260 640 270 12
+s 510 260 570 260 16
+s 570 260 640 260 145
+s 570 260 570 270 14
+s 680 260 680 270 168
+w 178
+s 680 310 680 320 177
+w 24
+a 0 sr 0 0 0 0 hln 100 LABEL=DC-
+s 640 390 680 390 114
+a 0 sr 3 0 660 388 hcn 100 LABEL=DC-
+s 510 370 510 390 23
+s 640 390 640 370 27
+s 510 390 570 390 31
+s 570 390 640 390 138
+s 570 370 570 390 29
+s 680 380 680 390 179
+@junction
+j 570 260
++ w 9
++ w 9
+j 510 270
++ p 2 2
++ w 9
+j 640 270
++ p 4 2
++ w 9
+j 570 270
++ p 3 2
++ w 9
+j 410 370
++ p 59 +
++ w 92
+j 640 340
++ p 7 2
++ w 92
+j 640 300
++ p 4 1
++ w 92
+j 640 330
++ w 92
++ w 92
+j 570 340
++ p 6 2
++ w 20
+j 570 300
++ p 3 1
++ w 20
+j 410 320
++ p 58 +
++ w 20
+j 570 320
++ w 20
++ w 20
+j 410 270
++ p 57 +
++ w 70
+j 510 340
++ p 5 2
++ w 70
+j 510 300
++ p 2 1
++ w 70
+j 510 310
++ w 70
++ w 70
+j 330 320
++ s 106
++ w 61
+j 370 320
++ p 58 -
++ w 61
+j 340 320
++ w 61
++ w 61
+j 370 370
++ p 59 -
++ w 61
+j 370 270
++ p 57 -
++ w 61
+j 510 370
++ p 5 1
++ w 24
+j 640 370
++ p 7 1
++ w 24
+j 570 370
++ p 6 1
++ w 24
+j 570 390
++ w 24
++ w 24
+j 640 390
++ w 24
++ w 24
+j 680 270
++ p 109 1
++ w 9
+j 640 260
++ w 9
++ w 9
+j 680 310
++ p 109 2
++ w 178
+j 680 320
++ p 176 1
++ w 178
+j 680 380
++ p 176 2
++ w 24
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 166 t 5 370 482 680 450 0 30 d_info:,,,,,,,,,,,,,17, 
+3-PHASE DIODE BRIDGE RECTIFIER
+t 181 t 5 340 415 390 440 0 9
+Fig. 13.4

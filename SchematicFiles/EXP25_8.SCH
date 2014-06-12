@@ -1,0 +1,504 @@
+*version 8.0 463105670
+u 240
+U? 2
+E? 9
+R? 9
+V? 3
+? 15
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.01ms
++1 2ms
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+DIGINITSTATE 0
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 8395 
+@status
+n 0 99:07:15:20:58:15;934730895 e 
+s 2832 99:07:15:20:58:16;934730896 e 
+*page 1 0 970 720 iA
+@ports
+port 81 EGND 290 520 h
+port 82 EGND 400 140 h
+port 83 EGND 400 200 h
+port 84 EGND 400 260 h
+port 85 EGND 400 320 h
+port 91 EGND 400 380 h
+port 92 EGND 400 440 h
+port 95 EGND 400 500 h
+port 97 EGND 260 30 h
+port 96 EGND 170 100 h
+port 4 +5V 600 350 u
+port 3 EGND 620 330 v
+port 7 EGND 540 370 H
+@parts
+part 26 R 250 100 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R2
+a 0 ap 9 0 15 0 hln 100 REFDES=R2
+part 25 R 250 160 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+part 27 R 250 230 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 15 0 hln 100 REFDES=R3
+part 28 R 250 290 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R4
+a 0 ap 9 0 15 0 hln 100 REFDES=R4
+part 29 R 250 350 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R5
+a 0 ap 9 0 15 0 hln 100 REFDES=R5
+part 30 R 250 410 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R6
+a 0 ap 9 0 15 0 hln 100 REFDES=R6
+part 31 R 250 460 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R7
+a 0 ap 9 0 15 0 hln 100 REFDES=R7
+part 32 R 250 520 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 11 31 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R8
+a 0 ap 9 0 15 0 hln 100 REFDES=R8
+part 8 ETABLE 350 130 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E1
+a 1 ap 9 0 10 2 hln 100 REFDES=E1
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+part 9 ETABLE 350 190 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E2
+a 1 ap 9 0 10 2 hln 100 REFDES=E2
+part 10 ETABLE 350 250 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E3
+a 1 ap 9 0 10 2 hln 100 REFDES=E3
+part 11 ETABLE 350 310 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E4
+a 1 ap 9 0 10 2 hln 100 REFDES=E4
+part 12 ETABLE 350 370 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E5
+a 1 ap 9 0 10 2 hln 100 REFDES=E5
+part 13 ETABLE 350 430 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E6
+a 1 ap 9 0 10 2 hln 100 REFDES=E6
+part 14 ETABLE 350 490 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.001,0) (0.001,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E7
+a 1 ap 9 0 10 2 hln 100 REFDES=E7
+part 2 74148 540 270 h
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP16
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
+a 0 ap 9 0 40 -2 hln 100 REFDES=U1
+a 0 sp 11 0 18 114 hln 100 PART=74148
+part 34 VDC 230 70 u
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 u 13 0 -11 18 hcn 100 DC=10V
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VREF
+a 1 xp 9 0 34 29 hcn 100 REFDES=VREF
+part 33 VPWL 170 60 h
+a 1 u 0 0 0 0 hcn 100 T1=0
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 T2=1ms
+a 1 u 0 0 0 0 hcn 100 V2=10
+a 1 u 0 0 0 0 hcn 100 T3=1.00001MS
+a 1 u 0 0 0 0 hcn 100 V3=0
+a 1 u 0 0 0 0 hcn 100 T4=2MS
+a 1 u 0 0 0 0 hcn 100 V4=10V
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VIN
+a 1 xp 9 0 -20 26 hcn 100 REFDES=VIN
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+@conn
+w 36
+s 230 70 230 100 35
+s 230 100 250 100 37
+w 99
+s 230 30 260 30 98
+w 40
+s 250 160 250 140 39
+s 250 110 290 110 41
+s 290 110 290 100 43
+s 250 140 250 110 102
+s 250 140 350 140 100
+w 46
+s 290 160 290 170 45
+s 290 170 250 170 47
+s 250 170 250 200 49
+s 250 200 250 230 105
+s 250 200 350 200 103
+w 52
+s 290 230 290 240 51
+s 290 240 250 240 53
+s 250 240 250 260 55
+s 250 260 250 290 108
+s 250 260 350 260 106
+w 58
+s 290 290 290 300 57
+s 290 300 250 300 59
+s 250 300 250 320 61
+s 250 320 250 350 111
+s 250 320 350 320 109
+w 64
+s 290 350 290 360 63
+s 290 360 250 360 65
+s 250 360 250 380 67
+s 250 380 250 410 114
+s 250 380 350 380 112
+w 70
+s 290 410 290 420 69
+s 290 420 250 420 71
+s 250 420 250 440 73
+s 250 440 250 460 117
+s 250 440 350 440 115
+w 76
+s 290 460 290 470 75
+s 290 470 250 470 77
+s 250 470 250 500 79
+s 250 500 250 520 120
+s 250 500 350 500 118
+w 6
+s 600 330 620 330 5
+w 215
+s 540 370 540 350 147
+w 150
+s 500 280 500 130 151
+s 500 130 400 130 212
+s 500 280 540 280 230
+w 156
+s 490 290 490 190 157
+s 490 190 400 190 210
+s 490 290 540 290 228
+w 162
+s 480 300 480 250 163
+s 480 250 400 250 208
+s 480 300 540 300 226
+w 174
+s 400 310 540 310 206
+w 176
+s 470 320 470 370 177
+s 470 370 400 370 179
+s 540 320 470 320 214
+w 182
+s 480 330 480 430 183
+s 480 430 400 430 185
+s 540 330 480 330 193
+w 188
+s 490 340 490 490 189
+s 490 490 400 490 199
+s 540 340 490 340 187
+w 122
+a 0 sr 0 0 0 0 hln 100 LABEL=Analog
+s 170 60 200 60 236
+a 0 sr 3 0 159 52 hcn 100 LABEL=Analog
+s 200 60 200 130 123
+s 200 130 200 190 128
+s 200 130 350 130 126
+s 200 190 200 250 131
+s 200 190 350 190 129
+s 200 250 200 310 134
+s 200 250 350 250 132
+s 200 310 200 370 137
+s 200 310 350 310 135
+s 200 370 200 430 140
+s 200 370 350 370 138
+s 200 430 200 490 143
+s 200 430 350 430 141
+s 200 490 350 490 144
+@junction
+j 250 100
++ p 26 1
++ w 36
+j 250 160
++ p 25 1
++ w 40
+j 290 100
++ p 26 2
++ w 40
+j 290 160
++ p 25 2
++ w 46
+j 250 230
++ p 27 1
++ w 46
+j 290 230
++ p 27 2
++ w 52
+j 250 290
++ p 28 1
++ w 52
+j 290 290
++ p 28 2
++ w 58
+j 250 350
++ p 29 1
++ w 58
+j 290 350
++ p 29 2
++ w 64
+j 250 410
++ p 30 1
++ w 64
+j 290 410
++ p 30 2
++ w 70
+j 250 460
++ p 31 1
++ w 70
+j 290 460
++ p 31 2
++ w 76
+j 250 520
++ p 32 1
++ w 76
+j 290 520
++ s 81
++ p 32 2
+j 400 140
++ s 82
++ p 8 OUT-
+j 400 200
++ s 83
++ p 9 OUT-
+j 400 260
++ s 84
++ p 10 OUT-
+j 400 320
++ s 85
++ p 11 OUT-
+j 400 380
++ s 91
++ p 12 OUT-
+j 400 440
++ s 92
++ p 13 OUT-
+j 400 500
++ s 95
++ p 14 OUT-
+j 260 30
++ s 97
++ w 99
+j 350 140
++ p 8 IN-
++ w 40
+j 250 140
++ w 40
++ w 40
+j 350 200
++ p 9 IN-
++ w 46
+j 250 200
++ w 46
++ w 46
+j 350 260
++ p 10 IN-
++ w 52
+j 250 260
++ w 52
++ w 52
+j 350 320
++ p 11 IN-
++ w 58
+j 250 320
++ w 58
++ w 58
+j 350 380
++ p 12 IN-
++ w 64
+j 250 380
++ w 64
++ w 64
+j 350 440
++ p 13 IN-
++ w 70
+j 250 440
++ w 70
++ w 70
+j 350 500
++ p 14 IN-
++ w 76
+j 250 500
++ w 76
++ w 76
+j 170 100
++ p 33 -
++ s 96
+j 170 60
++ p 33 +
++ w 122
+j 350 130
++ p 8 IN+
++ w 122
+j 200 130
++ w 122
++ w 122
+j 350 190
++ p 9 IN+
++ w 122
+j 200 190
++ w 122
++ w 122
+j 350 250
++ p 10 IN+
++ w 122
+j 200 250
++ w 122
++ w 122
+j 350 310
++ p 11 IN+
++ w 122
+j 200 310
++ w 122
++ w 122
+j 350 370
++ p 12 IN+
++ w 122
+j 200 370
++ w 122
++ w 122
+j 350 430
++ p 13 IN+
++ w 122
+j 200 430
++ w 122
++ w 122
+j 350 490
++ p 14 IN+
++ w 122
+j 400 130
++ p 8 OUT+
++ w 150
+j 400 190
++ p 9 OUT+
++ w 156
+j 400 250
++ p 10 OUT+
++ w 162
+j 400 310
++ p 11 OUT+
++ w 174
+j 400 370
++ p 12 OUT+
++ w 176
+j 400 430
++ p 13 OUT+
++ w 182
+j 400 490
++ p 14 OUT+
++ w 188
+j 600 350
++ p 2 EO
++ s 4
+j 540 310
++ p 2 IN4
++ w 174
+j 540 330
++ p 2 IN6
++ w 182
+j 540 340
++ p 2 IN7
++ w 188
+j 540 320
++ p 2 IN5
++ w 176
+j 600 330
++ p 2 GS
++ w 6
+j 620 330
++ s 3
++ w 6
+j 540 350
++ p 2 EI
++ w 215
+j 540 300
++ p 2 IN3
++ w 162
+j 540 290
++ p 2 IN2
++ w 156
+j 540 280
++ p 2 IN1
++ w 150
+j 540 370
++ s 7
++ w 215
+j 230 70
++ p 34 +
++ w 36
+j 230 30
++ p 34 -
++ w 99
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 237 t 5 390 32 750 60 0 28 d_info:,,,,,,,,,,,,,19, 
+ADC_PARALLEL COMPARATOR TYPE
+t 238 t 5 60 94 152 112 0 13
+ANALOG SIGNAL
+t 239 t 5 810 280 620 300 0 14 d_info:,,,,,,,,,,,,,14, 
+DIGITAL OUTPUT

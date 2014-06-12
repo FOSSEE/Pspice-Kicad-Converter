@@ -1,0 +1,365 @@
+*version 8.0 1008179856
+u 289
+V? 10
+R? 5
+U? 6
+E? 6
+PM? 3
+? 4
+X? 7
+L? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1MS
++1 40MS
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 6324 
+@status
+n 0 100:02:06:20:54:33;952356273 e 
+s 2832 100:02:06:20:54:34;952356274 e 
+*page 1 0 970 720 iA
+@ports
+port 66 EGND 80 430 h
+port 63 EGND 150 400 h
+port 71 EGND 200 400 h
+port 76 EGND 200 520 h
+port 96 EGND 150 510 d
+port 80 EGND 270 480 h
+port 201 EGND 420 290 h
+port 204 EGND 440 550 h
+port 269 EGND 530 380 h
+@parts
+part 2 VSIN 80 390 h
+a 1 u 0 0 0 0 hcn 100 PHASE={-(ALPHA)}
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 20 10 hcn 100 REFDES=V1
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL=5
+a 1 u 0 0 0 0 hcn 100 FREQ={FREQ}
+part 79 VPULSE 270 440 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V6
+a 1 ap 9 0 20 10 hcn 100 REFDES=V6
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TD=0
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PER=1M
+a 1 u 0 0 0 0 hcn 100 PW=300U
+part 77 7408 330 390 h
+a 0 s 11 0 40 50 hln 100 PART=7408
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U4
+a 0 a 9 0 40 0 hln 100 REFDES=U4A
+part 74 ETABLE 150 510 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.01,0) (0.01,5)
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E3
+a 1 ap 9 0 10 2 hln 100 REFDES=E3
+part 69 ETABLE 150 390 h
+a 0 sp 11 0 10 34 hln 100 PART=ETABLE
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E1
+a 1 ap 9 0 10 2 hln 100 REFDES=E1
+a 0 u 0 0 0 10 hln 100 TABLE=(-0.01,0) (0.01,5)
+part 78 7408 330 490 h
+a 0 s 11 0 40 50 hln 100 PART=7408
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U5
+a 0 a 9 0 40 0 hln 100 REFDES=U5A
+part 187 E 440 540 h
+a 0 s 11 0 10 34 hln 100 PART=E
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E5
+a 1 ap 9 0 10 4 hln 100 REFDES=E5
+part 186 E 420 280 h
+a 0 s 11 0 10 34 hln 100 PART=E
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E4
+a 1 ap 9 0 10 4 hln 100 REFDES=E4
+part 254 Scr 530 320 h
+a 0 sp 11 0 29 30 hrn 100 PART=Scr
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=X1
+a 0 xp 9 0 15 0 hln 100 REFDES=X1
+part 255 Scr 530 450 h
+a 0 sp 11 0 29 30 hrn 100 PART=Scr
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=X2
+a 0 xp 9 0 15 0 hln 100 REFDES=X2
+part 127 PARAM 240 300 h
+a 0 u 13 0 0 20 hln 100 NAME1=VIN_AMPL
+a 0 u 13 0 0 30 hln 100 NAME2=FREQ
+a 0 u 13 0 0 40 hln 100 NAME3=ALPHA
+a 0 u 13 0 50 32 hlb 100 VALUE2=50Hz
+a 0 u 13 0 50 42 hlb 100 VALUE3=45
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
+a 0 u 13 0 82 22 hlb 100 VALUE1=282
+part 126 VSIN 480 390 h
+a 1 xp 9 0 32 6 hcn 100 REFDES=VIN2
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 FREQ={FREQ}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VIN2
+part 281 L 550 380 h
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=L2012C
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=L1
+a 0 ap 9 0 15 0 hln 100 REFDES=L1
+a 0 u 13 0 15 25 hln 100 VALUE=1h
+part 134 R 630 320 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=RL
+a 0 xp 9 0 15 0 hln 100 REFDES=RL
+a 0 u 13 0 15 25 hln 100 VALUE=100
+part 112 VSIN 480 330 h
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 FREQ={FREQ}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VIN1
+a 1 xp 9 0 34 12 hcn 100 REFDES=VIN1
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 35
+s 120 520 150 520 100
+s 120 390 120 520 97
+s 120 390 150 390 99
+s 80 390 120 390 34
+w 93
+s 330 510 200 510 231
+w 82
+s 330 390 200 390 232
+w 84
+s 270 440 270 410 83
+s 270 410 300 410 85
+s 300 490 330 490 90
+s 300 410 330 410 253
+s 300 410 300 490 87
+w 190
+a 0 sr 0 0 0 0 hln 100 LABEL=TRIG_1
+s 400 280 400 400 191
+a 0 sr 3 0 402 340 hln 100 LABEL=TRIG_1
+s 420 280 400 280 189
+w 194
+a 0 sr 0 0 0 0 hln 100 LABEL=TRIG_2
+s 400 500 400 540 193
+a 0 sr 3 0 390 552 hln 100 LABEL=TRIG_2
+s 400 540 440 540 195
+w 161
+s 580 340 580 280 162
+s 560 340 580 340 160
+s 580 280 460 280 147
+w 117
+s 480 320 530 320 118
+s 480 330 480 320 116
+w 198
+s 480 540 560 540 197
+s 560 540 560 470 199
+w 123
+s 480 450 530 450 124
+s 480 430 480 450 122
+w 261
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT
+s 590 320 630 320 135
+a 0 sr 3 0 610 318 hcn 100 LABEL=OUT
+s 480 550 580 550 260
+s 460 290 590 290 256
+s 590 450 580 450 132
+s 590 320 590 450 130
+s 570 320 590 320 128
+s 590 290 590 320 258
+s 580 450 570 450 264
+s 580 550 580 450 262
+w 280
+s 480 370 480 380 225
+s 480 380 480 390 284
+s 480 380 530 380 282
+s 530 380 550 380 288
+w 121
+s 630 380 630 360 287
+s 610 380 630 380 285
+@junction
+j 150 400
++ p 69 IN-
++ s 63
+j 200 400
++ p 69 OUT-
++ s 71
+j 200 520
++ p 74 OUT-
++ s 76
+j 150 510
++ p 74 IN+
++ s 96
+j 150 520
++ p 74 IN-
++ w 35
+j 150 390
++ p 69 IN+
++ w 35
+j 120 390
++ w 35
++ w 35
+j 80 430
++ p 2 -
++ s 66
+j 80 390
++ p 2 +
++ w 35
+j 270 480
++ p 79 -
++ s 80
+j 420 290
++ p 186 2
++ s 201
+j 440 550
++ p 187 2
++ s 204
+j 330 510
++ p 78 B
++ w 93
+j 200 510
++ p 74 OUT+
++ w 93
+j 330 390
++ p 77 A
++ w 82
+j 200 390
++ p 69 OUT+
++ w 82
+j 460 280
++ p 186 3
++ w 161
+j 400 500
++ p 78 Y
++ w 194
+j 440 540
++ p 187 1
++ w 194
+j 480 540
++ p 187 3
++ w 198
+j 590 320
++ w 261
++ w 261
+j 420 280
++ p 186 1
++ w 190
+j 400 400
++ p 77 Y
++ w 190
+j 330 410
++ p 77 B
++ w 84
+j 270 440
++ p 79 +
++ w 84
+j 330 490
++ p 78 A
++ w 84
+j 300 410
++ w 84
++ w 84
+j 560 340
++ p 254 G
++ w 161
+j 530 320
++ p 254 A
++ w 117
+j 560 470
++ p 255 G
++ w 198
+j 530 450
++ p 255 A
++ w 123
+j 480 550
++ p 187 4
++ w 261
+j 460 290
++ p 186 4
++ w 261
+j 630 320
++ p 134 1
++ w 261
+j 570 320
++ p 254 K
++ w 261
+j 570 450
++ p 255 K
++ w 261
+j 580 450
++ w 261
++ w 261
+j 630 360
++ p 134 2
++ w 121
+j 480 430
++ p 126 -
++ w 123
+j 480 330
++ p 112 +
++ w 117
+j 480 390
++ p 126 +
++ w 280
+j 480 370
++ p 112 -
++ w 280
+j 550 380
++ p 281 1
++ w 280
+j 480 380
++ w 280
++ w 280
+j 610 380
++ p 281 2
++ w 121
+j 530 380
++ s 269
++ w 280
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 227 t 5 160 434 188 452 0 3
+ZCD
+t 229 t 5 200 454 250 472 0 7
+CARRIER
+t 230 t 5 267 474 200 490 0 9
+GENERATOR
+t 228 t 5 160 544 188 562 0 3
+ZCD
+t 205 t 5 120 612 610 590 0 52 d_info:,,,,,,,,,,,,,14, 
+SCR TRIGGERING CIRCUIT FOR FULLY CONTROLLED RECTFIER

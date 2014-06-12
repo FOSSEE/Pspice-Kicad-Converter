@@ -1,0 +1,251 @@
+*version 8.0 1591310482
+u 173
+U? 3
+DSTM? 8
+? 8
+R? 3
+V? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1U
++1 500UU
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+DIGINITSTATE 2
+DIGIOLVL 4
+DIGMNTYMX 2
+.STMLIB C:\vlab\DIPLOMA\SE_4(DIG_TECH)\J_K_FF.stl
++ C:\ANU_RAJ\SUB7\J_K_FF.stl
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 3890 
+@status
+n 0 99:06:17:12:12:38;932193758 e 
+s 2833 99:06:17:12:12:40;932193760 e 
+c 99:06:17:12:14:29;932193869
+*page 1 0 970 720 iA
+@ports
+port 87 EGND 570 220 h
+@parts
+part 102 DigClock 80 280 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=DSTM6
+a 1 ap 9 0 0 -2 hln 100 REFDES=DSTM6
+a 0 u 0 0 0 20 hln 100 ONTIME=5uS
+a 0 u 0 0 0 30 hln 100 OFFTIME=5uS
+part 81 VDC 570 190 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 24 7 hcn 100 REFDES=V1
+a 1 u 13 0 -11 18 hcn 100 DC=5V
+part 46 DigStim 80 220 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=DSTM4
+a 1 ap 9 0 13 -1 hcn 100 REFDES=DSTM4
+a 0 s 13 13 4 19 hln 70 STIMULUS=DSTM4
+part 2 7476 150 260 h
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP16
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
+a 0 s 11 0 72 100 hln 100 PART=7476
+a 0 a 9 0 52 -6 hln 100 REFDES=U1A
+a 0 s 13 0 70 100 hln 100 MODEL=7476
+part 153 7476 320 260 h
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP16
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 s 11 0 72 100 hln 100 PART=7476
+a 0 s 13 0 70 100 hln 100 MODEL=7476
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U2
+a 0 a 9 0 52 -6 hln 100 REFDES=U2A
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+part 88 nodeMarker 130 280 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=4
+part 93 nodeMarker 230 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=7
+part 155 nodeMarker 400 260 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=6
+part 156 nodeMarker 400 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=7
+part 154 nodeMarker 300 280 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=4
+part 92 nodeMarker 230 260 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=6
+part 90 nodeMarker 140 220 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=5
+@conn
+w 35
+s 210 300 230 300 51
+w 68
+s 80 280 130 280 75
+s 130 280 150 280 89
+w 101
+s 570 220 570 230 100
+w 129
+s 380 260 400 260 128
+w 131
+s 380 300 400 300 130
+w 169
+s 230 280 300 280 161
+s 230 260 230 280 159
+s 320 280 300 280 163
+s 210 260 230 260 52
+w 168
+s 310 260 290 260 148
+s 320 260 310 260 144
+s 310 220 310 260 146
+s 310 220 350 220 140
+s 350 220 350 230 142
+s 150 260 140 260 77
+s 120 260 120 300 79
+s 120 300 150 300 58
+s 570 190 140 190 82
+s 140 220 180 220 91
+s 180 220 180 230 66
+s 80 220 140 220 118
+s 140 190 140 220 84
+s 140 260 120 260 123
+s 140 220 140 260 122
+s 120 300 120 330 124
+s 290 300 320 300 138
+s 290 300 290 330 149
+s 290 330 350 330 151
+s 120 330 180 330 157
+s 290 260 290 300 170
+s 180 330 290 330 172
+@junction
+j 130 280
++ p 88 pin1
++ w 68
+j 230 300
++ p 93 pin1
++ w 35
+j 80 280
++ p 102 1
++ w 68
+j 140 260
++ w 168
++ w 168
+j 570 230
++ p 81 -
++ w 101
+j 570 220
++ s 87
++ w 101
+j 120 300
++ w 168
++ w 168
+j 310 260
++ w 168
++ w 168
+j 400 260
++ p 155 pin1
++ w 129
+j 400 300
++ p 156 pin1
++ w 131
+j 290 330
++ w 168
++ w 168
+j 230 260
++ p 92 pin1
++ w 169
+j 300 280
++ p 154 pin1
++ w 169
+j 570 190
++ p 81 +
++ w 168
+j 140 220
++ p 90 pin1
++ w 168
+j 80 220
++ p 46 *OUT
++ w 168
+j 290 300
++ w 168
++ w 168
+j 210 300
++ p 2 \Q\
++ w 35
+j 150 280
++ p 2 CLK
++ w 68
+j 210 260
++ p 2 Q
++ w 169
+j 180 230
++ p 2 \PRE\
++ w 168
+j 150 260
++ p 2 J
++ w 168
+j 150 300
++ p 2 K
++ w 168
+j 180 330
++ p 2 \CLR\
++ w 168
+j 380 260
++ p 153 Q
++ w 129
+j 380 300
++ p 153 \Q\
++ w 131
+j 320 280
++ p 153 CLK
++ w 169
+j 350 230
++ p 153 \PRE\
++ w 168
+j 320 260
++ p 153 J
++ w 168
+j 320 300
++ p 153 K
++ w 168
+j 350 330
++ p 153 \CLR\
++ w 168
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 61 t 5 90 364 257 382 0 29
+STUDY OF IC J-K M-S FLIP FLOP

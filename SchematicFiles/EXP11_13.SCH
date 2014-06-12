@@ -1,0 +1,295 @@
+*version 8.0 3948452149
+u 266
+D? 7
+V? 5
+R? 2
+PM? 4
+? 9
+L? 3
+U? 13
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1MS
++1 40MS
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 5831 
+@status
+n 0 100:02:07:22:18:46;952447726 e 
+s 0 100:02:07:22:18:54;952447734 e 
+c 100:02:07:23:02:28;952450348
+*page 1 0 970 720 iA
+@ports
+port 106 EGND 330 320 h
+@parts
+part 233 PARAM 830 320 h
+a 0 u 13 0 84 48 hlb 100 VALUE2=100V
+a 0 u 13 0 6 60 hln 100 NAME3=PI_BY_6
+a 0 u 13 0 4 30 hln 100 NAME1=PERIOD
+a 0 u 13 0 84 34 hlb 100 VALUE1=20ms
+a 0 u 13 0 2 44 hln 100 NAME2=VIN_AMPL
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM3
+a 0 u 13 0 80 62 hlb 100 VALUE3={PERIOD/12}
+part 109 R 710 270 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+a 0 u 13 0 33 3 hln 100 VALUE=100
+part 242 L 710 310 d
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=L2012C
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=L2
+a 0 ap 9 0 15 0 hln 100 REFDES=L2
+a 0 u 13 0 33 -3 hln 100 VALUE=50mH
+a 0 u 0 0 0 0 hln 100 IC=
+part 57 VSIN 410 270 d
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 -14 14 hcn 100 REFDES=V1
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/PERIOD}
+part 58 VSIN 410 320 d
+a 1 u 0 0 0 0 hcn 100 PHASE=-120
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 ap 9 0 -12 14 hcn 100 REFDES=V2
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/PERIOD}
+part 59 VSIN 410 370 d
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/PERIOD}
+a 1 u 0 0 0 0 hcn 100 PHASE=+120
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V3
+a 1 ap 9 0 -10 14 hcn 100 REFDES=V3
+part 232 PARAM 820 220 h
+a 0 u 13 0 4 52 hln 100 NAME3=ALPHA
+a 0 u 13 0 4 38 hln 100 NAME2=TALPHA
+a 0 a 0 0 0 0 hln 100 PKGREF=PM2
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
+a 0 u 13 0 2 24 hln 100 NAME1=PULSE_WIDTH
+a 0 u 13 0 96 22 hlb 100 VALUE1=10ms
+a 0 u 13 0 54 38 hlb 100 VALUE2={PERIOD*ALPHA/360}
+a 0 u 13 0 76 54 hlb 100 VALUE3=30
+part 261 SCR2T 630 300 v
+a 0 sp 13 0 8 62 hln 100 MODEL=SCR2T
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U5
+a 0 xp 9 0 36 -4 hln 100 REFDES=U5
+a 0 u 0:13 0 0 0 hln 100 TDLY={{PI_BY_6}+{8*PI_BY_6}+TALPHA},
+part 262 SCR2T 630 410 v
+a 0 sp 13 0 -14 6 hln 100 MODEL=SCR2T
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U2
+a 0 xp 9 0 36 -4 hln 100 REFDES=U2
+a 0 u 0:13 0 0 0 hln 100 TDLY={{PI_BY_6}+{2*PI_BY_6}+TALPHA},
+part 259 SCR2T 510 300 v
+a 0 sp 13 0 6 -6 hln 100 MODEL=SCR2T
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U1
+a 0 xp 9 0 36 -4 hln 100 REFDES=U1
+a 0 u 0:13 0 0 0 hln 100 TDLY={PI_BY_6+TALPHA},
+part 260 SCR2T 570 300 v
+a 0 sp 13 0 -6 56 hln 100 MODEL=SCR2T
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U3
+a 0 xp 9 0 36 -4 hln 100 REFDES=U3
+a 0 u 0:13 0 0 0 hln 100 TDLY={{PI_BY_6}+{4*PI_BY_6}+TALPHA},
+part 264 SCR2T 510 410 v
+a 0 sp 13 0 -14 -10 hln 100 MODEL=SCR2T
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U6
+a 0 xp 9 0 36 -4 hln 100 REFDES=U6
+a 0 u 0:13 0 0 0 hln 100 TDLY={{PI_BY_6}+{6*PI_BY_6}+TALPHA},
+part 263 SCR2T 570 410 v
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U4
+a 0 xp 9 0 36 -4 hln 100 REFDES=U4
+a 0 u 0:13 0 0 0 hln 100 TDLY={{PI_BY_6}+{10*PI_BY_6}+TALPHA},
+a 0 sp 13 0 -14 6 hln 100 MODEL=SCR2T
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 61
+s 370 320 340 320 66
+s 340 320 330 320 162
+s 340 320 340 370 103
+s 340 270 340 320 68
+s 340 370 370 370 64
+s 370 270 340 270 60
+w 198
+a 0 sr 0:3 0 660 258 hcn 100 LABEL=DC+
+s 630 210 710 210 238
+a 0 sr 3 0 675 208 hcn 100 LABEL=DC+
+s 510 210 570 210 196
+s 510 230 510 210 187
+s 710 210 710 270 168
+s 570 210 630 210 206
+s 570 230 570 210 204
+s 630 230 630 210 207
+w 92
+a 0 sr 0:3 0 644 332 hcn 100 LABEL=B
+s 630 330 430 330 124
+a 0 sr 3 0 644 332 hcn 100 LABEL=B
+s 430 330 430 370 87
+s 430 370 410 370 89
+s 630 300 630 330 216
+s 630 330 630 340 218
+w 20
+a 0 sr 0 0 0 0 hln 100 LABEL=Y
+s 410 320 570 320 122
+a 0 sr 3 0 580 322 hcn 100 LABEL=Y
+s 570 300 570 320 213
+s 570 320 570 340 215
+w 70
+a 0 sr 0 0 0 0 hln 100 LABEL=R
+s 430 310 510 310 120
+a 0 sr 3 0 518 314 hcn 100 LABEL=R
+s 430 270 430 310 71
+s 410 270 430 270 69
+s 510 300 510 310 210
+s 510 310 510 340 212
+w 221
+a 0 sr 0 0 0 0 hln 100 LABEL=DC-
+s 630 440 710 440 226
+a 0 sr 3 0 675 438 hcn 100 LABEL=DC-
+s 510 410 510 440 220
+s 510 440 570 440 222
+s 630 410 630 440 224
+s 570 440 630 440 229
+s 570 410 570 440 227
+s 710 370 710 440 257
+@junction
+j 410 370
++ p 59 +
++ w 92
+j 410 320
++ p 58 +
++ w 20
+j 330 320
++ s 106
++ w 61
+j 370 320
++ p 58 -
++ w 61
+j 340 320
++ w 61
++ w 61
+j 370 370
++ p 59 -
++ w 61
+j 710 270
++ p 109 1
++ w 198
+j 570 210
++ w 198
++ w 198
+j 630 210
++ w 198
++ w 198
+j 510 310
++ w 70
++ w 70
+j 570 320
++ w 20
++ w 20
+j 630 330
++ w 92
++ w 92
+j 630 440
++ w 221
++ w 221
+j 570 440
++ w 221
++ w 221
+j 410 270
++ p 57 +
++ w 70
+j 370 270
++ p 57 -
++ w 61
+j 710 310
++ p 242 1
++ p 109 2
+j 710 370
++ p 242 2
++ w 221
+j 570 300
++ p 260 A
++ w 20
+j 570 230
++ p 260 K
++ w 198
+j 570 340
++ p 263 K
++ w 20
+j 570 410
++ p 263 A
++ w 221
+j 510 340
++ p 264 K
++ w 70
+j 510 410
++ p 264 A
++ w 221
+j 510 300
++ p 259 A
++ w 70
+j 510 230
++ p 259 K
++ w 198
+j 630 300
++ p 261 A
++ w 92
+j 630 230
++ p 261 K
++ w 198
+j 630 410
++ p 262 A
++ w 221
+j 630 340
++ p 262 K
++ w 92
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 166 t 5 350 510 780 540 0 34 d_info:,,,,,,,,,,,,,14, 
+3-PHASE CONTROLLED BRIDGE RECTFIER
+t 265 t 5 350 474 420 500 0 10
+Fig. 13.11

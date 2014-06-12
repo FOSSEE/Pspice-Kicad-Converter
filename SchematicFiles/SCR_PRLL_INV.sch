@@ -1,0 +1,311 @@
+*version 8.0 3481838853
+u 208
+PM? 4
+X? 2
+U? 2
+V? 2
+L? 3
+C? 2
+R? 7
+D? 3
+TX? 11
+I? 3
+? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1m
++1 200m
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+RELTOL 0.01
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 0
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 5327 
+@status
+n 0 99:06:25:19:10:42;932910042 e 
+s 0 99:06:26:15:27:24;932983044 e 
+c 99:06:25:19:10:40;932910040
+*page 1 0 297 210 ma
+@ports
+port 53 EGND 410 410 h
+@parts
+part 46 PARAM 580 240 h
+a 0 u 13 0 -2 26 hln 100 NAME1=PULSE_WIDTH
+a 0 u 13 0 2 56 hln 100 NAME3=FREQ_OUT
+a 0 u 13 0 56 44 hlb 100 VALUE2={1/(FREQ_OUT)}
+a 0 u 13 0 2 42 hln 100 NAME2=PERIOD
+a 0 u 13 0 76 58 hlb 100 VALUE3=50Hz
+a 0 u 13 0 84 28 hlb 100 VALUE1=1ms
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM3
+part 58 D1N914 500 350 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D2
+a 0 sp 13 0 -3 63 hln 100 MODEL=D1N914
+a 0 ap 9 0 17 38 hln 100 REFDES=D2
+part 49 SCR2T 430 290 d
+a 0 s 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 u 0:13 0 0 0 hln 100 TDLY={TALPHA+PERIOD/2},
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U2
+a 0 x 9 0 36 -4 hln 100 REFDES=U2
+a 0 s 13 0 50 -6 hln 100 MODEL=SCR2T
+part 57 D1N914 280 350 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D1
+a 0 ap 9 0 21 4 hln 100 REFDES=D1
+a 0 sp 13 0 1 -1 hln 100 MODEL=D1N914
+part 50 SCR2T 310 290 d
+a 0 s 11 0 60 30 hrn 100 PART=SCR2T
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=U1
+a 0 x 9 0 36 -4 hln 100 REFDES=U1
+a 0 s 13 0 46 -2 hln 100 MODEL=SCR2T
+part 51 R 220 240 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 u 13 0 15 29 hln 100 VALUE=0.1
+part 47 L 140 240 h
+a 0 u 13 0 15 25 hln 100 VALUE=150u
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=L2012C
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=L1
+a 0 a 0:13 0 0 0 hln 100 PKGREF=L1
+part 48 C 350 240 h
+a 0 u 13 0 7 31 hln 100 VALUE=1u
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=C1
+a 0 a 0:13 0 0 0 hln 100 PKGREF=C1
+part 44 PARAM 610 320 h
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
+a 0 u 13 0 0 20 hln 100 NAME1=TALPHA
+a 0 u 13 0 50 22 hlb 100 VALUE1=0
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
+part 195 COUPLED_INDUCTOR 340 190 v
+a 0 sp 0 0 0 10 hlb 100 PART=COUPLED_INDUCTOR
+a 0 a 0:13 0 0 0 hln 100 PKGREF=TX9
+a 0 ap 9 0 12 -4 hln 100 REFDES=TX9
+a 0 u 0:13 0 0 0 hln 100 PRI_TURNS=33
+a 0 u 0:13 0 0 0 hln 100 SEC_TURNS=530
+part 196 COUPLED_INDUCTOR 430 190 v
+a 0 sp 0 0 0 10 hlb 100 PART=COUPLED_INDUCTOR
+a 0 a 0:13 0 0 0 hln 100 PKGREF=TX10
+a 0 ap 9 0 12 -4 hln 100 REFDES=TX10
+a 0 u 0:13 0 0 0 hln 100 SEC_TURNS=530
+a 0 u 0:13 0 0 0 hln 100 PRI_TURNS=33
+part 159 R 490 200 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 15 0 hln 100 REFDES=R3
+a 0 u 13 0 31 -1 hln 100 VALUE=0.1
+part 201 IDC 390 110 v
+a 1 u 13 0 -9 21 hcn 100 DC=1A
+a 0 sp 11 0 0 50 hln 100 PART=IDC
+a 0 x 0:13 0 0 0 hln 100 PKGREF=I1
+a 1 xp 9 0 20 10 hcn 100 REFDES=I1
+part 45 VDC 120 300 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 ap 9 0 24 7 hcn 100 REFDES=V1
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 u 13 0 -11 38 hcn 100 DC=100V
+part 1 titleblk 1188 840 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A4
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 122
+s 200 240 220 240 121
+w 161
+s 490 190 490 200 160
+w 149
+s 400 150 430 150 165
+w 169
+s 260 240 260 210 141
+s 260 210 420 210 143
+s 400 190 420 190 147
+s 420 190 430 190 173
+s 420 210 420 190 145
+w 110
+s 120 240 140 240 111
+s 120 300 120 240 109
+w 99
+s 280 350 280 380 98
+s 500 380 500 350 71
+s 430 380 500 380 89
+s 430 380 430 360 30
+s 310 380 410 380 92
+s 310 360 310 380 26
+s 280 380 310 380 100
+s 120 410 410 410 115
+s 410 380 430 380 119
+s 410 380 410 410 117
+s 120 340 120 410 113
+w 132
+s 340 190 310 190 131
+s 280 280 280 320 77
+s 310 280 280 280 75
+s 310 290 310 280 73
+s 310 280 310 240 123
+s 310 240 350 240 125
+s 310 190 310 240 133
+w 128
+s 380 240 430 240 127
+s 500 280 500 320 67
+s 430 280 500 280 65
+s 430 290 430 280 63
+s 430 240 430 280 129
+s 430 240 490 240 135
+w 152
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT+
+s 340 150 340 110 151
+a 0 sr 3 0 342 130 hln 100 LABEL=OUT+
+s 340 110 390 110 202
+w 156
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT-
+s 490 110 490 150 166
+a 0 sr 3 0 492 130 hln 100 LABEL=OUT-
+s 430 110 490 110 204
+@junction
+j 430 380
++ w 99
++ w 99
+j 500 350
++ p 58 1
++ w 99
+j 430 360
++ p 49 K
++ w 99
+j 310 380
++ w 99
++ w 99
+j 140 240
++ p 47 1
++ w 110
+j 410 380
++ w 99
++ w 99
+j 220 240
++ p 51 1
++ w 122
+j 200 240
++ p 47 2
++ w 122
+j 500 320
++ p 58 2
++ w 128
+j 430 290
++ p 49 A
++ w 128
+j 430 280
++ w 128
++ w 128
+j 430 240
++ w 128
++ w 128
+j 490 240
++ p 159 2
++ w 128
+j 260 240
++ p 51 2
++ w 169
+j 420 190
++ w 169
++ w 169
+j 490 200
++ p 159 1
++ w 161
+j 310 360
++ p 50 K
++ w 99
+j 310 290
++ p 50 A
++ w 132
+j 280 350
++ p 57 1
++ w 99
+j 280 320
++ p 57 2
++ w 132
+j 310 280
++ w 132
++ w 132
+j 310 240
++ w 132
++ w 132
+j 340 150
++ p 195 3
++ w 152
+j 340 190
++ p 195 1
++ w 132
+j 400 150
++ p 195 4
++ w 149
+j 400 190
++ p 195 2
++ w 169
+j 490 190
++ p 196 2
++ w 161
+j 490 150
++ p 196 4
++ w 156
+j 430 150
++ p 196 3
++ w 149
+j 430 190
++ p 196 1
++ w 169
+j 380 240
++ p 48 2
++ w 128
+j 350 240
++ p 48 1
++ w 132
+j 410 410
++ s 53
++ w 99
+j 120 300
++ p 45 +
++ w 110
+j 120 340
++ p 45 -
++ w 99
+j 390 110
++ p 201 +
++ w 152
+j 430 110
++ p 201 -
++ w 156
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A4
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics

@@ -1,0 +1,504 @@
+*version 8.0 401387468
+u 1063
+X? 24
+V? 10
+R? 12
+PM? 9
+? 17
+L? 3
+D? 5
+LIB? 2
+C? 3
+U? 25
+E? 6
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.0011MS
++1 90MS
++2 0
++3 0.01MS
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+RELTOL 0.001
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 9345 
+@status
+n 0 99:07:21:13:54:38;935223878 e 
+s 2832 99:07:21:13:54:40;935223880 e 
+c 99:07:21:13:54:36;935223876
+*page 1 0 970 720 iA
+@ports
+port 546 EGND 110 450 h
+port 545 EGND 70 410 h
+port 471 EGND 390 320 h
+port 918 EGND 160 410 h
+port 919 EGND 160 380 h
+port 925 EGND 220 400 h
+port 851 EGND 710 400 h
+port 871 EGND 770 410 h
+port 870 EGND 770 380 v
+port 845 EGND 810 450 H
+port 1039 EGND 860 410 H
+@parts
+part 466 PARAM 800 220 h
+a 0 u 13 0 84 48 hlb 100 VALUE2=300V
+a 0 u 13 0 4 30 hln 100 NAME1=PERIOD
+a 0 u 13 0 84 34 hlb 100 VALUE1=20ms
+a 0 u 13 0 2 44 hln 100 NAME2=VIN_AMPL
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM7
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM7
+part 774 VSIN 590 200 v
+a 0 x 0 0 0 0 hln 100 PKGREF=VIN2
+a 1 xp 9 0 28 30 hcn 100 REFDES=VIN2
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/period}
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+part 464 VSIN 220 200 v
+a 0 x 0 0 0 0 hln 100 PKGREF=VIN1
+a 1 xp 9 0 28 30 hcn 100 REFDES=VIN1
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/period}
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+part 462 R 420 170 d
+a 0 u 13 0 27 -1 hln 100 VALUE=100
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 a 0 0 0 0 hln 100 PKGREF=R5
+a 0 ap 9 0 15 0 hln 100 REFDES=R5
+part 781 SCR3T 670 250 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 sp 11 0 9 60 hrn 100 PART=SCR3T
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X22
+a 0 ap 9 0 15 0 hln 100 REFDES=X22
+part 782 SCR3T 550 120 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 sp 11 0 1 0 hrn 100 PART=SCR3T
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X23
+a 0 ap 9 0 15 0 hln 100 REFDES=X23
+part 509 SCR3T 300 150 v
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X13
+a 0 ap 9 0 37 -2 hln 100 REFDES=X13
+a 0 sp 11 0 11 -2 hrn 100 PART=SCR3T
+part 510 SCR3T 180 280 v
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X14
+a 0 ap 9 0 15 0 hln 100 REFDES=X14
+a 0 sp 11 0 9 52 hrn 100 PART=SCR3T
+part 520 VPULSE 110 410 h
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VCYCLO1
+a 1 xp 9 0 -22 42 hcn 100 REFDES=VCYCLO1
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 TD={TDCYCLO}
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PER={PERIOD_CYCLO}
+a 1 u 0 0 0 0 hcn 100 PW={PERIOD_CYCLO/2}
+a 1 u 0 0 0 0 hcn 100 V2=1
+part 511 SCR3T 300 280 v
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X15
+a 0 ap 9 0 15 0 hln 100 REFDES=X15
+a 0 sp 11 0 9 60 hrn 100 PART=SCR3T
+part 508 SCR3T 180 150 v
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X12
+a 0 ap 9 0 15 0 hln 100 REFDES=X12
+a 0 sp 11 0 1 0 hrn 100 PART=SCR3T
+part 917 EMULT 160 370 h
+a 0 sp 11 0 10 34 hln 100 PART=EMULT
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E3
+a 1 ap 9 0 10 2 hln 100 REFDES=E3
+part 519 VPULSE 70 370 h
+a 1 xp 9 0 16 -14 hcn 100 REFDES=VG1P
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VG1P
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 TD={TALPHA}
+a 1 u 0 0 0 0 hcn 100 PW={PULSE_WIDTH}
+a 1 u 0 0 0 0 hcn 100 PER={PERIOD/2}
+part 1038 VPULSE 860 370 H
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 TD={TALPHA}
+a 1 u 0 0 0 0 hcn 100 PW={PULSE_WIDTH}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VG1N
+a 1 xp 9 0 14 -8 hcn 100 REFDES=VG1N
+a 1 u 0 0 0 0 hcn 100 PER={PERIOD/2}
+part 844 VPULSE 810 410 H
+a 1 xp 9 0 44 44 hcn 100 REFDES=VCYCLO2
+a 1 u 0 0 0 0 hcn 100 V2=1
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VCYCLO2
+a 1 u 0 0 0 0 hcn 100 TD={TDCYCLO+(PERIOD_CYCLO/2)}
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PER={PERIOD_CYCLO}
+a 1 u 0 0 0 0 hcn 100 PW={PERIOD_CYCLO/2}
+part 779 SCR3T 550 250 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 sp 11 0 49 52 hrn 100 PART=SCR3T
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X21
+a 0 ap 9 0 15 0 hln 100 REFDES=X21
+part 778 SCR3T 670 120 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 sp 11 0 11 -2 hrn 100 PART=SCR3T
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X20
+a 0 ap 9 0 37 -2 hln 100 REFDES=X20
+part 848 EMULT 770 370 H
+a 0 sp 11 0 10 34 hln 100 PART=EMULT
+a 0 a 0:13 0 0 0 hln 100 PKGREF=E1
+a 1 ap 9 0 10 2 hln 100 REFDES=E1
+part 465 PARAM 800 130 h
+a 0 u 13 0 2 24 hln 100 NAME1=PULSE_WIDTH
+a 0 u 13 0 96 22 hlb 100 VALUE1=1ms
+a 0 u 13 0 4 52 hln 100 NAME3=ALPHA
+a 0 u 13 0 4 38 hln 100 NAME2=TALPHA
+a 0 u 13 0 68 38 hlb 100 VALUE2={PERIOD*ALPHA/360}
+a 0 a 0 0 0 0 hln 100 PKGREF=PM6
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM6
+a 0 u 13 0 76 52 hlb 100 VALUE3=90
+part 521 PARAM 800 300 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM8
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM8
+a 0 u 13 0 2 46 hln 100 NAME2=TDCYCLO
+a 0 u 13 0 78 50 hlb 100 VALUE2=0
+a 0 u 13 0 -2 30 hln 100 NAME1=PERIOD_CYCLO
+a 0 u 13 0 100 32 hlb 100 VALUE1={3*PERIOD}
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 486
+a 0 sr 0:3 0 200 198 hln 100 LABEL=IN+
+a 0 up 0:33 0 0 0 hln 100 V=
+s 220 200 180 200 485
+a 0 sr 3 0 200 198 hln 100 LABEL=IN+
+a 0 up 33 0 200 199 hlt 100 V=
+s 180 150 180 200 549
+s 180 200 180 240 557
+w 492
+a 0 sr 0:3 0 280 198 hln 100 LABEL=IN-
+a 0 up 0:33 0 0 0 hln 100 V=
+s 260 200 300 200 491
+a 0 sr 3 0 280 198 hln 100 LABEL=IN-
+a 0 up 33 0 280 199 hlt 100 V=
+s 300 150 300 200 569
+s 300 200 300 240 571
+w 484
+s 550 320 420 320 514
+s 180 320 300 320 507
+s 180 280 180 320 559
+s 300 320 390 320 574
+s 300 280 300 320 572
+s 550 290 550 320 724
+s 670 290 670 320 726
+s 550 320 670 320 728
+s 420 320 390 320 887
+s 420 210 420 320 846
+w 1035
+a 0 up 0:33 0 0 0 hln 100 V=
+s 70 370 160 370 805
+a 0 up 33 0 115 369 hct 100 V=
+w 897
+a 0 up 0:33 0 0 0 hln 100 V=
+s 860 370 770 370 1036
+a 0 up 33 0 815 369 hct 100 V=
+w 956
+a 0 up 0:33 0 0 0 hln 100 V=
+s 340 230 340 120 959
+s 340 120 320 120 961
+s 200 250 200 230 583
+s 200 230 340 230 957
+a 0 up 33 0 270 229 hct 100 V=
+s 340 230 350 230 973
+s 340 230 340 250 1047
+s 200 170 320 170 579
+s 200 120 200 170 577
+s 320 250 320 170 587
+s 320 250 320 290 976
+s 320 290 220 290 978
+s 220 290 220 380 980
+s 340 250 320 250 1049
+w 1046
+a 0 up 0:33 0 0 0 hln 100 V=
+s 110 400 160 400 921
+a 0 up 33 0 135 399 hct 100 V=
+s 110 400 110 410 524
+w 1011
+a 0 up 0:33 0 0 0 hln 100 V=
+s 770 400 810 400 838
+a 0 up 33 0 790 399 hct 100 V=
+s 810 400 810 410 840
+w 1029
+a 0 up 0:33 0 0 0 hln 100 V=
+s 600 220 530 220 754
+s 530 220 530 150 758
+s 600 280 600 220 752
+s 650 280 600 280 750
+s 650 240 530 240 769
+s 530 240 530 280 860
+s 650 150 650 220 763
+s 650 220 650 240 1032
+s 650 220 710 220 1030
+s 530 220 530 240 1057
+s 710 220 710 380 1059
+a 0 up 33 0 712 300 hlt 100 V=
+w 473
+a 0 sr 0:3 0 360 78 hcn 100 LABEL=LOAD
+a 0 up 0:33 0 0 0 hln 100 V=
+s 300 80 420 80 619
+a 0 sr 3 0 402 94 hcn 100 LABEL=LOAD
+a 0 up 33 0 402 95 hct 100 V=
+s 180 80 180 110 551
+s 180 80 300 80 553
+s 300 80 300 110 555
+s 670 80 670 120 730
+s 550 80 550 120 732
+s 550 80 670 80 734
+s 420 80 550 80 789
+s 420 80 420 170 481
+w 743
+a 0 up 0:33 0 0 0 hln 100 V=
+s 630 200 670 200 742
+s 670 160 670 200 744
+s 670 200 670 250 746
+a 0 up 33 0 672 225 hlt 100 V=
+w 737
+a 0 up 0:33 0 0 0 hln 100 V=
+s 590 200 550 200 736
+s 550 160 550 200 738
+s 550 200 550 250 740
+a 0 up 33 0 552 225 hlt 100 V=
+@junction
+j 220 200
++ p 464 +
++ w 486
+j 180 200
++ w 486
++ w 486
+j 260 200
++ p 464 -
++ w 492
+j 180 150
++ p 508 A
++ w 486
+j 180 240
++ p 510 K
++ w 486
+j 180 110
++ p 508 K
++ w 473
+j 300 110
++ p 509 K
++ w 473
+j 300 80
++ w 473
++ w 473
+j 300 240
++ p 511 K
++ w 492
+j 300 150
++ p 509 A
++ w 492
+j 300 200
++ w 492
++ w 492
+j 300 320
++ w 484
++ w 484
+j 110 450
++ p 520 -
++ s 546
+j 550 200
++ w 737
++ w 737
+j 670 200
++ w 743
++ w 743
+j 670 250
++ p 781 A
++ w 743
+j 550 160
++ p 782 K
++ w 737
+j 550 120
++ p 782 A
++ w 473
+j 550 80
++ w 473
++ w 473
+j 550 320
++ w 484
++ w 484
+j 590 200
++ p 774 +
++ w 737
+j 630 200
++ p 774 -
++ w 743
+j 390 320
++ s 471
++ w 484
+j 180 280
++ p 510 A
++ w 484
+j 300 280
++ p 511 A
++ w 484
+j 670 290
++ p 781 K
++ w 484
+j 420 170
++ p 462 1
++ w 473
+j 420 210
++ p 462 2
++ w 484
+j 420 320
++ w 484
++ w 484
+j 160 410
++ s 918
++ p 917 IN2-
+j 160 380
++ s 919
++ p 917 IN1-
+j 110 410
++ p 520 +
++ w 1046
+j 160 400
++ p 917 IN2+
++ w 1046
+j 220 400
++ s 925
++ p 917 OUT-
+j 320 120
++ p 509 G
++ w 956
+j 200 250
++ p 510 G
++ w 956
+j 340 230
++ w 956
++ w 956
+j 160 370
++ p 917 IN1+
++ w 1035
+j 810 450
++ s 845
++ p 844 -
+j 860 370
++ p 1038 +
++ w 897
+j 860 410
++ s 1039
++ p 1038 -
+j 670 160
++ p 778 K
++ w 743
+j 670 120
++ p 778 A
++ w 473
+j 550 250
++ p 779 A
++ w 737
+j 550 290
++ p 779 K
++ w 484
+j 810 410
++ p 844 +
++ w 1011
+j 710 400
++ p 848 OUT-
++ s 851
+j 770 410
++ p 848 IN2-
++ s 871
+j 770 380
++ p 848 IN1-
++ s 870
+j 770 370
++ p 848 IN1+
++ w 897
+j 770 400
++ p 848 IN2+
++ w 1011
+j 650 280
++ p 781 G
++ w 1029
+j 530 150
++ p 782 G
++ w 1029
+j 650 220
++ w 1029
++ w 1029
+j 200 120
++ p 508 G
++ w 956
+j 320 250
++ p 511 G
++ w 956
+j 220 380
++ p 917 OUT+
++ w 956
+j 70 410
++ p 519 -
++ s 545
+j 70 370
++ p 519 +
++ w 1035
+j 530 280
++ p 779 G
++ w 1029
+j 650 150
++ p 778 G
++ w 1029
+j 530 220
++ w 1029
++ w 1029
+j 530 240
++ w 1029
++ w 1029
+j 710 380
++ p 848 OUT+
++ w 1029
+@attributes
+a 0 s 0 0 0 0 hln 100 PAGETITLE=
+a 0 s 0 0 0 0 hln 100 PAGENO=1
+a 0 s 0 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 461 t 5 270 500 680 470 0 30 d_info:,,,,,,,,,,,,,19, 
+1-PHASE CYCLOCONVERTER BRIDGE 
+t 1061 t 5 240 362 350 340 0 11 d_info:,,,,,,,,,,,,,14, 
+P-CONVERTER
+t 1062 t 5 550 370 660 340 0 11 d_info:,,,,,,,,,,,,,14, 
+N-CONVERTER

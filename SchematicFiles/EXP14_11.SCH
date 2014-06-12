@@ -1,0 +1,420 @@
+*version 8.0 4138255049
+u 291
+U? 6
+DSTM? 5
+R? 6
+V? 10
+? 8
+X? 2
+PM? 2
+S? 5
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 10N
++1 20US
++2 0
++3 0.OO1U
+.STMLIB C:\vlab\DIPLOMA\TE_LINEAR_INT_CKTS\ANALOG_MUX_CD4016B.stl
++ C:\vlab\DIPLOMA\TE_LINEAR_INT_CKTS\ANALOG_MUX_SBREAK.stl
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 0
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 7417 
+@status
+n 0 99:05:22:16:42:18;930049938 e 
+s 0 99:05:22:16:42:23;930049943 e 
+c 99:05:22:16:42:57;930049977
+*page 1 0 297 210 ma
+@ports
+port 78 EGND 160 410 h
+port 36 EGND 390 420 h
+port 106 EGND 290 390 h
+port 130 EGND 390 510 h
+port 131 EGND 290 480 h
+port 154 EGND 390 600 h
+port 155 EGND 290 570 h
+port 178 EGND 390 710 h
+port 179 EGND 290 680 h
+port 129 EGND 160 500 h
+port 153 EGND 160 590 h
+port 177 EGND 160 700 h
+port 235 EGND 270 420 h
+port 236 EGND 270 510 h
+port 237 EGND 270 600 h
+port 238 EGND 270 710 h
+@parts
+part 173 VSIN 160 650 h
+a 1 u 0 0 0 0 hcn 100 FREQ={FREQ}
+a 1 u 0 0 0 0 hcn 100 VOFF={VOFFSET}
+a 1 u 0 0 0 0 hcn 100 VAMPL=2
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V4
+a 1 xp 9 0 20 10 hcn 100 REFDES=V4
+part 183 VPULSE 160 460 h
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TD=0
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=0.25U
+a 1 u 0 0 0 0 hcn 100 PER=0.5U
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 xp 9 0 20 10 hcn 100 REFDES=V2
+part 75 VSIN 160 370 h
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 xp 9 0 20 10 hcn 100 REFDES=V1
+a 1 u 0 0 0 0 hcn 100 FREQ={FREQ}
+a 1 u 0 0 0 0 hcn 100 VOFF={VOFFSET}
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+part 231 VPULSE 270 380 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V6
+a 1 ap 9 0 20 10 hcn 100 REFDES=V6
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=10
+a 1 u 0 0 0 0 hcn 100 TD=0
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=2.5U
+a 1 u 0 0 0 0 hcn 100 PER=10U
+part 232 VPULSE 270 470 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V7
+a 1 ap 9 0 20 10 hcn 100 REFDES=V7
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=10
+a 1 u 0 0 0 0 hcn 100 TD=2.5U
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=2.5U
+a 1 u 0 0 0 0 hcn 100 PER=10U
+part 233 VPULSE 270 560 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V8
+a 1 ap 9 0 20 10 hcn 100 REFDES=V8
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=10
+a 1 u 0 0 0 0 hcn 100 TD=5U
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=2.5U
+a 1 u 0 0 0 0 hcn 100 PER=10U
+part 234 VPULSE 270 670 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V9
+a 1 ap 9 0 20 10 hcn 100 REFDES=V9
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=10
+a 1 u 0 0 0 0 hcn 100 TD=7.5U
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=2.5U
+a 1 u 0 0 0 0 hcn 100 PER=10U
+part 184 VPULSE 160 550 h
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TD=0
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V3
+a 1 xp 9 0 16 10 hcn 100 REFDES=V3
+a 1 u 0 0 0 0 hcn 100 TR=0.2U
+a 1 u 0 0 0 0 hcn 100 TF=0.2U
+a 1 u 0 0 0 0 hcn 100 PW=0.01U
+a 1 u 0 0 0 0 hcn 100 PER=0.41U
+part 82 PARAM 600 390 h
+a 0 u 13 0 0 20 hln 100 NAME1=VIN_AMPL
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 0 40 hln 100 NAME3=FREQ
+a 0 u 13 0 90 34 hlb 100 VALUE2=5
+a 0 u 13 0 0 30 hln 100 NAME2=VOFFSET
+a 0 u 13 0 86 20 hlb 100 VALUE1=1
+a 0 u 13 0 68 48 hlb 100 VALUE3=1MEG
+part 150 R 390 570 d
+a 0 u 13 0 27 3 hln 100 VALUE=10k
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R4
+a 0 ap 9 0 15 0 hln 100 REFDES=R4
+part 126 R 390 480 d
+a 0 u 13 0 27 3 hln 100 VALUE=10k
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 15 0 hln 100 REFDES=R3
+part 127 Sbreak 290 470 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=S2
+a 0 ap 9 0 18 0 hln 100 REFDES=S2
+part 85 Sbreak 290 380 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=S1
+a 0 ap 9 0 18 0 hln 100 REFDES=S1
+part 6 R 390 390 d
+a 0 u 13 0 27 3 hln 100 VALUE=10k
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+part 151 Sbreak 290 560 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=S3
+a 0 ap 9 0 18 0 hln 100 REFDES=S3
+part 174 R 390 680 d
+a 0 u 13 0 27 3 hln 100 VALUE=10k
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R5
+a 0 ap 9 0 15 0 hln 100 REFDES=R5
+part 175 Sbreak 290 670 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=S4
+a 0 ap 9 0 18 0 hln 100 REFDES=S4
+part 261 OP_AMP 520 550 h
+a 0 sp 11 0 86 62 hrn 100 PART=OP_AMP
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U5
+a 0 ap 9 0 10 -2 hln 100 REFDES=U5
+part 1 titleblk 1188 840 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A4
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 0 s 11 0 0 0 hln 100 PART=titleblk
+part 110 nodeMarker 450 390 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=OUT
+a 0 a 0 0 4 22 hlb 100 LABEL=5
+@conn
+w 172
+s 290 670 270 670 171
+w 148
+s 290 560 270 560 147
+w 124
+s 290 470 270 470 123
+w 105
+s 290 380 270 380 104
+w 229
+s 160 690 160 700 227
+w 160
+s 160 650 160 640 159
+s 330 640 330 670 163
+s 160 640 330 640 161
+w 136
+s 330 530 330 560 139
+s 160 530 330 530 137
+s 160 550 160 530 135
+w 112
+s 330 440 330 470 115
+s 160 440 330 440 113
+s 160 460 160 440 111
+w 166
+s 390 710 390 720 165
+w 142
+s 390 600 390 610 141
+w 118
+s 390 510 390 520 117
+w 43
+s 390 420 390 430 42
+w 91
+s 330 350 330 380 98
+s 160 350 330 350 96
+s 160 370 160 350 90
+w 269
+s 450 570 490 570 203
+s 520 550 490 550 268
+s 450 680 450 570 224
+s 390 570 450 570 220
+s 450 480 450 570 207
+s 330 480 390 480 121
+s 390 480 450 480 205
+s 330 390 390 390 100
+s 390 390 450 390 199
+s 450 390 450 480 201
+s 330 570 390 570 157
+s 390 680 450 680 222
+s 330 680 390 680 181
+s 490 550 490 570 270
+w 263
+a 0 sr 0:3 0 732 531 hln 100 LABEL=OUT
+s 690 620 690 560 266
+a 0 sr 3 0 662 553 hln 100 LABEL=OUT
+s 690 560 630 560 275
+s 520 620 690 620 264
+s 520 580 520 620 262
+@junction
+j 290 680
++ p 175 2
++ s 179
+j 290 570
++ p 151 2
++ s 155
+j 290 480
++ p 127 2
++ s 131
+j 290 390
++ p 85 2
++ s 106
+j 160 500
++ p 183 -
++ s 129
+j 160 410
++ p 75 -
++ s 78
+j 270 420
++ p 231 -
++ s 235
+j 270 510
++ p 232 -
++ s 236
+j 270 600
++ p 233 -
++ s 237
+j 270 710
++ p 234 -
++ s 238
+j 160 590
++ p 184 -
++ s 153
+j 290 670
++ p 175 1
++ w 172
+j 270 670
++ p 234 +
++ w 172
+j 290 560
++ p 151 1
++ w 148
+j 270 560
++ p 233 +
++ w 148
+j 290 470
++ p 127 1
++ w 124
+j 270 470
++ p 232 +
++ w 124
+j 450 570
++ w 269
++ w 269
+j 450 480
++ w 269
++ w 269
+j 290 380
++ p 85 1
++ w 105
+j 270 380
++ p 231 +
++ w 105
+j 160 690
++ p 173 -
++ w 229
+j 160 700
++ s 177
++ w 229
+j 160 650
++ p 173 +
++ w 160
+j 330 670
++ p 175 3
++ w 160
+j 330 560
++ p 151 3
++ w 136
+j 160 550
++ p 184 +
++ w 136
+j 330 470
++ p 127 3
++ w 112
+j 160 460
++ p 183 +
++ w 112
+j 390 720
++ p 174 2
++ w 166
+j 390 710
++ s 178
++ w 166
+j 390 610
++ p 150 2
++ w 142
+j 390 600
++ s 154
++ w 142
+j 390 520
++ p 126 2
++ w 118
+j 390 510
++ s 130
++ w 118
+j 390 430
++ p 6 2
++ w 43
+j 390 420
++ s 36
++ w 43
+j 330 380
++ p 85 3
++ w 91
+j 160 370
++ p 75 +
++ w 91
+j 520 550
++ p 261 NON_INV
++ w 269
+j 390 570
++ p 150 1
++ w 269
+j 390 480
++ p 126 1
++ w 269
+j 330 480
++ p 127 4
++ w 269
+j 330 390
++ p 85 4
++ w 269
+j 390 390
++ p 6 1
++ w 269
+j 450 390
++ p 110 pin1
++ w 269
+j 330 570
++ p 151 4
++ w 269
+j 390 680
++ p 174 1
++ w 269
+j 330 680
++ p 175 4
++ w 269
+j 630 560
++ p 261 OUT
++ w 263
+j 520 580
++ p 261 INV
++ w 263
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A4
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 84 t 5 90 800 490 750 0 58 d_info:,,,,,,,,,,,,,17, 
+FOUR  CHANNEL ANALOG MULTIPLEXER USING DISCRETE COMPINENTS
+t 290 t 5 530 654 653 672 0 16
+VOLTAGE FOLLOWER

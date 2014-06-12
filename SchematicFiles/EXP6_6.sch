@@ -1,0 +1,149 @@
+*version 8.0 570561466
+u 152
+U? 2
+DSTM? 8
+? 8
+R? 3
+V? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1U
++1 200U
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+DIGINITSTATE 2
+DIGIOLVL 4
+DIGMNTYMX 2
+.STMLIB C:\vlab\DIPLOMA\SE_4(DIG_TECH)\J_K_FF.stl
++ C:\ANU_RAJ\SUB7\J_K_FF.stl
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 1952 
+@status
+n 0 100:02:04:15:20:56;952163456 e 
+s 0 100:02:04:15:20:58;952163458 e 
+c 100:00:01:21:04:08;946740848
+*page 1 0 970 720 iA
+@ports
+port 87 EGND 210 370 h
+@parts
+part 46 DigStim 160 290 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=DSTM4
+a 1 ap 9 0 13 -1 hcn 100 REFDES=DSTM4
+a 0 s 13 13 4 19 hln 70 STIMULUS=DSTM4
+part 102 DigClock 160 350 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=DSTM6
+a 1 ap 9 0 0 -2 hln 100 REFDES=DSTM6
+a 0 u 0 0 0 20 hln 100 ONTIME=5uS
+a 0 u 0 0 0 30 hln 100 OFFTIME=5uS
+part 81 VDC 210 300 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 -14 19 hcn 100 REFDES=V1
+a 1 u 13 0 -13 40 hcn 100 DC=5V
+part 2 7476 310 330 h
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP16
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
+a 0 s 11 0 72 100 hln 100 PART=7476
+a 0 a 9 0 52 -6 hln 100 REFDES=U1A
+a 0 s 13 0 58 106 hln 100 MODEL=7476
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 103
+s 340 290 340 300 66
+s 160 290 340 290 72
+w 101
+s 210 370 210 340 140
+w 111
+s 300 300 300 330 84
+s 300 330 280 330 117
+s 310 330 300 330 77
+s 280 330 280 370 79
+s 280 370 310 370 58
+s 300 300 240 300 134
+s 240 300 210 300 147
+s 240 300 240 400 145
+s 240 400 340 400 148
+w 68
+s 160 350 310 350 75
+w 33
+s 370 330 390 330 52
+w 35
+s 370 370 390 370 51
+@junction
+j 300 330
++ w 111
++ w 111
+j 160 290
++ p 46 *OUT
++ w 103
+j 210 300
++ p 81 +
++ w 111
+j 210 340
++ p 81 -
++ w 101
+j 210 370
++ s 87
++ w 101
+j 240 300
++ w 111
++ w 111
+j 160 350
++ p 102 1
++ w 68
+j 340 300
++ p 2 \PRE\
++ w 103
+j 310 330
++ p 2 J
++ w 111
+j 310 370
++ p 2 K
++ w 111
+j 340 400
++ p 2 \CLR\
++ w 111
+j 310 350
++ p 2 CLK
++ w 68
+j 370 330
++ p 2 Q
++ w 33
+j 370 370
++ p 2 \Q\
++ w 35
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 61 t 5 220 454 387 472 0 29
+STUDY OF IC J-K M-S FLIP FLOP
+t 151 t 5 140 454 183 472 0 8
+Fig. 6.6

@@ -1,0 +1,497 @@
+*version 8.0 198048792
+u 204
+V? 6
+R? 14
+U? 4
+C? 3
+PM? 3
+? 2
+@libraries
+@analysis
+.AC 1 3 0
++0 101
++1 10
++2 100K
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 0
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 9001 
+@status
+n 0 99:05:23:21:24:08;930153248 e 
+s 0 99:05:23:21:24:11;930153251 e 
+*page 1 0 297 210 ma
+@ports
+port 53 GND_ANALOG 500 230 h
+port 55 GND_ANALOG 420 350 h
+port 56 GND_ANALOG 260 160 h
+port 58 GND_ANALOG 320 360 h
+port 120 GND_ANALOG 520 470 h
+port 122 GND_ANALOG 440 590 h
+port 124 GND_ANALOG 350 600 h
+port 186 GND_ANALOG 630 410 h
+port 188 GND_ANALOG 820 400 h
+port 57 EGND 200 380 h
+port 123 GND_ANALOG 300 420 h
+@parts
+part 43 VDC 430 220 v
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 u 13 0 -1 60 hcn 100 DC=-15V
+a 1 ap 9 0 24 25 hcn 100 REFDES=V1
+a 0 a 0 0 0 0 hln 100 PKGREF=V1
+part 45 R 430 160 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 a 0 0 0 0 hln 100 PKGREF=R1
+part 46 R 290 160 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 ap 9 0 15 0 hln 100 REFDES=R2
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R2
+part 47 uA741 380 280 U
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP8
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 sp 11 0 -2 -16 hcn 100 PART=uA741
+a 0 ap 9 0 -2 -4 hln 100 REFDES=U1
+a 0 a 0 0 0 0 hln 100 PKGREF=U1
+part 48 VDC 420 310 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 u 13 0 33 28 hcn 100 DC=+15v
+a 1 ap 9 0 24 7 hcn 100 REFDES=V3
+a 0 a 0 0 0 0 hln 100 PKGREF=V3
+part 50 R 320 300 d
+a 0 u 13 0 41 -1 hln 100 VALUE={RFH}
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 15 0 hln 100 REFDES=R3
+part 144 R 710 260 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 a 0 0 0 0 hln 100 PKGREF=R9
+a 0 ap 9 0 15 0 hln 100 REFDES=R9
+part 145 R 620 260 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R10
+a 0 ap 9 0 15 0 hln 100 REFDES=R10
+part 111 uA741 400 520 U
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP8
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 sp 11 0 4 -12 hcn 100 PART=uA741
+a 0 ap 9 0 14 0 hln 100 REFDES=U2
+a 0 a 0 0 0 0 hln 100 PKGREF=U2
+part 115 C 350 550 d
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=C2
+a 0 u 13 0 33 -3 hln 100 VALUE={CFL}
+a 0 a 0:13 0 0 0 hln 100 PKGREF=C2
+part 116 VDC 440 550 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 u 13 0 37 26 hcn 100 DC=+15v
+a 0 a 0 0 0 0 hln 100 PKGREF=V5
+a 1 ap 9 0 24 7 hcn 100 REFDES=V5
+part 113 R 450 420 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 a 0 0 0 0 hln 100 PKGREF=R5
+a 0 ap 9 0 15 0 hln 100 REFDES=R5
+part 112 VDC 450 460 v
+a 1 ap 9 0 20 3 hcn 100 REFDES=V4
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 1 u 13 0 -1 60 hcn 100 DC=-15V
+a 0 a 0 0 0 0 hln 100 PKGREF=V4
+part 165 R 610 310 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R11
+a 0 ap 9 0 15 0 hln 100 REFDES=R11
+part 137 OP_AMP 670 370 U
+a 0 sp 11 0 86 62 hrn 100 PART=OP_AMP
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U3
+a 0 ap 9 0 10 -2 hln 100 REFDES=U3
+part 185 R 630 370 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R12
+a 0 ap 9 0 15 0 hln 100 REFDES=R12
+a 0 u 13 0 27 -5 hln 100 VALUE=2.2k
+part 44 VAC 200 320 h
+a 0 sp 0 0 0 50 hln 100 PART=VAC
+a 0 u 13 0 -9 23 hcn 100 ACMAG=1V
+a 1 ap 9 0 20 10 hcn 100 REFDES=V2
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
+part 49 C 270 280 h
+a 0 u 13 0 7 31 hln 100 VALUE={CFH}
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 ap 9 0 15 0 hln 100 REFDES=C1
+a 0 a 0:13 0 0 0 hln 100 PKGREF=C1
+part 114 R 330 420 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R6
+a 0 ap 9 0 15 0 hln 100 REFDES=R6
+part 117 R 290 520 h
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE={RFL}
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R7
+a 0 ap 9 0 15 0 hln 100 REFDES=R7
+part 52 PARAM 150 200 h
+a 0 u 13 0 50 22 hlb 100 VALUE1=10kHz
+a 0 u 13 0 50 42 hlb 100 VALUE3={1/(2*3.14159*CFH*FREQ_L)}
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 0 20 hln 100 NAME1=FREQ_L
+a 0 u 13 0 0 40 hln 100 NAME3=RFH
+a 0 u 13 0 0 30 hln 100 NAME2=CFH
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
+a 0 u 13 0 50 32 hlb 100 VALUE2=0.01uF
+part 118 PARAM 140 530 h
+a 0 u 13 0 50 24 hlb 100 VALUE1=100Hz
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
+a 0 u 13 0 4 52 hln 100 NAME3=RFL
+a 0 u 13 0 50 52 hlb 100 VALUE3={1/(2*3.14159*CFL*FREQ_H)}
+a 0 u 13 0 6 38 hln 100 NAME2=CFL
+a 0 u 13 0 48 38 hlb 100 VALUE2=0.05uF
+a 0 u 13 0 0 24 hln 100 NAME1=FREQ_H
+part 187 R 820 400 v
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 u 13 0 13 37 hln 100 VALUE=10k
+a 0 a 0 0 0 0 hln 100 PKGREF=R13
+a 0 ap 9 0 15 0 hln 100 REFDES=R13
+part 1 titleblk 1188 840 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A4
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+@conn
+w 30
+s 470 220 500 220 31
+s 500 220 500 230 29
+w 26
+s 420 230 420 220 27
+s 420 220 430 220 25
+w 24
+s 260 160 290 160 23
+w 15
+s 360 240 380 240 21
+s 360 240 360 160 18
+s 360 160 430 160 20
+s 330 160 360 160 16
+w 7
+s 300 280 320 280 8
+s 320 280 380 280 70
+s 320 280 320 300 6
+w 5
+s 320 340 320 360 4
+w 3
+s 420 290 420 310 2
+w 141
+s 670 340 670 310 148
+s 670 260 710 260 150
+s 660 260 670 260 146
+s 670 310 670 260 168
+s 670 310 650 310 166
+w 72
+s 490 460 520 460 71
+s 520 460 520 470 73
+w 76
+s 440 530 440 540 81
+s 440 540 440 550 180
+s 440 540 450 540 79
+w 83
+s 440 470 440 460 82
+s 440 460 450 460 84
+w 97
+s 330 520 350 520 102
+s 350 520 400 520 184
+s 350 520 350 550 100
+w 104
+s 350 600 350 580 103
+w 38
+a 0 sr 0:3 0 561 352 hcn 100 LABEL=OUT1
+s 460 260 550 260 37
+a 0 sr 3 0 501 272 hcn 100 LABEL=OUT1
+s 550 260 550 160 41
+s 550 160 470 160 39
+s 550 260 620 260 161
+w 194
+s 670 370 630 370 193
+w 169
+a 0 sr 0:3 0 581 532 hcn 100 LABEL=OUT2
+s 480 500 570 500 105
+a 0 sr 3 0 521 512 hcn 100 LABEL=OUT2
+s 570 420 490 420 109
+s 570 500 570 420 107
+s 570 420 570 310 189
+s 570 310 610 310 191
+w 13
+s 200 380 200 360 12
+w 170
+s 380 420 450 420 173
+s 380 480 380 420 90
+s 380 480 400 480 88
+s 370 420 380 420 131
+w 87
+s 300 420 330 420 86
+w 34
+a 0 sr 0:3 0 320 358 hcn 100 LABEL=IN
+s 200 280 260 280 33
+a 0 sr 3 0 235 278 hcn 100 LABEL=IN
+s 200 280 200 320 35
+s 260 280 270 280 200
+s 260 280 260 520 198
+s 260 520 290 520 201
+w 152
+a 0 sr 0 0 0 0 hln 100 LABEL=OUT
+s 820 360 780 360 155
+a 0 sr 3 0 800 358 hcn 100 LABEL=OUT
+s 820 260 820 360 153
+s 750 260 820 260 151
+@junction
+j 420 350
++ p 48 -
++ s 55
+j 470 160
++ p 45 2
++ w 38
+j 460 260
++ p 47 OUT
++ w 38
+j 470 220
++ p 43 -
++ w 30
+j 500 230
++ s 53
++ w 30
+j 420 230
++ p 47 V-
++ w 26
+j 430 220
++ p 43 +
++ w 26
+j 290 160
++ p 46 1
++ w 24
+j 260 160
++ s 56
++ w 24
+j 380 240
++ p 47 -
++ w 15
+j 430 160
++ p 45 1
++ w 15
+j 330 160
++ p 46 2
++ w 15
+j 360 160
++ w 15
++ w 15
+j 300 280
++ p 49 2
++ w 7
+j 380 280
++ p 47 +
++ w 7
+j 320 300
++ p 50 1
++ w 7
+j 320 280
++ w 7
++ w 7
+j 320 340
++ p 50 2
++ w 5
+j 320 360
++ s 58
++ w 5
+j 420 290
++ p 47 V+
++ w 3
+j 420 310
++ p 48 +
++ w 3
+j 780 360
++ p 137 OUT
++ w 152
+j 750 260
++ p 144 2
++ w 152
+j 670 340
++ p 137 INV
++ w 141
+j 710 260
++ p 144 1
++ w 141
+j 660 260
++ p 145 2
++ w 141
+j 670 260
++ w 141
++ w 141
+j 620 260
++ p 145 1
++ w 38
+j 650 310
++ p 165 2
++ w 141
+j 670 310
++ w 141
++ w 141
+j 440 590
++ p 116 -
++ s 122
+j 450 420
++ p 113 1
++ w 170
+j 400 480
++ p 111 -
++ w 170
+j 490 420
++ p 113 2
++ w 169
+j 480 500
++ p 111 OUT
++ w 169
+j 490 460
++ p 112 -
++ w 72
+j 520 470
++ s 120
++ w 72
+j 440 530
++ p 111 V+
++ w 76
+j 440 550
++ p 116 +
++ w 76
+j 440 540
++ w 76
++ w 76
+j 440 470
++ p 111 V-
++ w 83
+j 450 460
++ p 112 +
++ w 83
+j 330 520
++ p 117 2
++ w 97
+j 400 520
++ p 111 +
++ w 97
+j 350 550
++ p 115 1
++ w 97
+j 350 520
++ w 97
++ w 97
+j 350 580
++ p 115 2
++ w 104
+j 350 600
++ s 124
++ w 104
+j 630 410
++ s 186
++ p 185 2
+j 820 360
++ p 187 2
++ w 152
+j 820 400
++ s 188
++ p 187 1
+j 570 420
++ w 169
++ w 169
+j 610 310
++ p 165 1
++ w 169
+j 670 370
++ p 137 NON_INV
++ w 194
+j 630 370
++ p 185 1
++ w 194
+j 270 280
++ p 49 1
++ w 34
+j 200 320
++ p 44 +
++ w 34
+j 200 360
++ p 44 -
++ w 13
+j 200 380
++ s 57
++ w 13
+j 370 420
++ p 114 2
++ w 170
+j 380 420
++ w 170
++ w 170
+j 330 420
++ p 114 1
++ w 87
+j 300 420
++ s 123
++ w 87
+j 260 280
++ w 34
++ w 34
+j 290 520
++ p 117 1
++ w 34
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A4
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 203 t 5 520 610 900 570 0 33 d_info:,,,,,,,,,,,,,17, 
+ACTIVE NOTCH (BAND-REJECT) FILTER

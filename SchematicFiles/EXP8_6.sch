@@ -1,0 +1,214 @@
+*version 8.0 218148988
+u 254
+U? 5
+? 14
+DSTM? 2
+V? 3
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1U
++1 100U
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+DIGINITSTATE 0
+DIGIOLVL 1
+DIGMNTYMX 1
+.STMLIB C:\vlab\DIPLOMA\SE_4(DIG_TECH)\J_K_FF_NEW.stl
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 3191 
+@status
+n 0 100:02:04:15:24:31;952163671 e 
+s 0 100:02:04:15:24:33;952163673 e 
+c 100:02:04:15:25:40;952163740
+*page 1 0 970 720 iA
+@ports
+port 100 EGND 150 360 h
+port 101 EGND 490 470 h
+@parts
+part 99 VDC 150 320 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 ap 9 0 24 7 hcn 100 REFDES=V2
+a 1 u 13 0 -11 18 hcn 100 DC=5V
+part 97 VDC 490 430 h
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 24 7 hcn 100 REFDES=V1
+a 1 u 13 0 -11 18 hcn 100 DC=5V
+part 78 DigClock 190 440 h
+a 0 u 0 0 0 20 hln 100 ONTIME=5uS
+a 0 u 0 0 0 30 hln 100 OFFTIME=5uS
+a 0 x 0:13 0 0 0 hln 100 PKGREF=DSTM1
+a 1 xp 9 0 0 -2 hln 100 REFDES=DSTM1
+part 2 74107 220 340 h
+a 0 s 11 0 40 70 hln 100 PART=74107
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
+a 1 a 9 0 40 -2 hln 100 REFDES=U1A
+a 0 sp 13 0 50 82 hln 100 MODEL=74107
+part 49 74107 330 340 h
+a 0 s 11 0 40 70 hln 100 PART=74107
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U2
+a 1 a 9 0 40 -2 hln 100 REFDES=U2A
+a 0 sp 13 0 60 72 hln 100 MODEL=74107
+part 114 74107 460 340 h
+a 0 s 11 0 40 70 hln 100 PART=74107
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U3
+a 1 a 9 0 40 -2 hln 100 REFDES=U3A
+a 0 sp 13 0 44 82 hln 100 MODEL=74107
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+@conn
+w 83
+s 210 330 210 340 30
+s 210 340 220 340 32
+s 190 330 190 390 45
+s 190 390 210 390 36
+s 210 390 210 380 24
+s 210 380 220 380 26
+s 190 330 210 330 89
+s 190 310 190 330 86
+s 190 310 150 310 188
+s 320 340 320 310 64
+s 330 340 320 340 58
+s 320 340 320 380 60
+s 320 380 330 380 62
+s 450 310 320 310 66
+s 460 340 450 340 108
+s 450 340 450 380 184
+s 450 310 450 340 110
+s 450 380 460 380 112
+s 320 310 190 310 96
+s 150 310 150 320 165
+w 41
+s 360 430 360 410 81
+s 490 430 490 410 104
+s 360 430 490 430 115
+s 250 430 250 410 40
+s 250 430 360 430 79
+w 52
+s 280 350 300 350 51
+s 300 350 300 360 53
+s 300 360 330 360 55
+w 118
+s 390 350 420 350 117
+s 420 350 420 360 119
+s 420 360 460 360 121
+w 4
+s 200 360 220 360 23
+s 190 440 200 440 5
+s 200 440 200 360 42
+@junction
+j 150 360
++ p 99 -
++ s 100
+j 190 440
++ p 78 1
++ w 4
+j 360 430
++ w 41
++ w 41
+j 320 340
++ w 83
++ w 83
+j 320 310
++ w 83
++ w 83
+j 450 340
++ w 83
++ w 83
+j 190 330
++ w 83
++ w 83
+j 190 310
++ w 83
++ w 83
+j 150 320
++ p 99 +
++ w 83
+j 490 470
++ p 97 -
++ s 101
+j 490 430
++ p 97 +
++ w 41
+j 220 340
++ p 2 J
++ w 83
+j 220 380
++ p 2 K
++ w 83
+j 250 410
++ p 2 \CLR\
++ w 41
+j 280 350
++ p 2 Q
++ w 52
+j 220 360
++ p 2 CLK
++ w 4
+j 460 340
++ p 114 J
++ w 83
+j 460 380
++ p 114 K
++ w 83
+j 490 410
++ p 114 \CLR\
++ w 41
+j 460 360
++ p 114 CLK
++ w 118
+j 330 340
++ p 49 J
++ w 83
+j 330 380
++ p 49 K
++ w 83
+j 360 410
++ p 49 \CLR\
++ w 41
+j 330 360
++ p 49 CLK
++ w 52
+j 390 350
++ p 49 Q
++ w 118
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 250 t 5 190 465 470 500 0 50 d_info:,,,,,,,,,,,,,11, 
+STUDY OF 3-BIT RIPPLE COUNTER USING J-K FLIP-FLOP 
+t 253 t 5 130 464 173 482 0 8
+Fig. 6.8

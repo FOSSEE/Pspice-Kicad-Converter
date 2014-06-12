@@ -1,0 +1,415 @@
+*version 8.0 3158825819
+u 250
+R? 6
+V? 5
+U? 11
+C? 3
+D? 4
+? 6
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1ms
++1 5ms
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+NUMDGT 4
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 0
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 7123 
+@status
+n 0 99:05:24:19:52:28;930234148 e 
+s 2832 99:05:24:19:52:29;930234149 e 
+*page 1 0 970 720 iA
+@ports
+port 193 EGND 640 240 h
+@parts
+part 69 R 350 80 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R2
+a 0 ap 9 0 15 0 hln 100 REFDES=R2
+a 0 u 13 0 33 -5 hln 100 VALUE=10k
+part 70 R 350 170 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 15 0 hln 100 REFDES=R3
+a 0 u 13 0 31 -1 hln 100 VALUE=20k
+part 114 C 440 150 d
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=C1
+a 0 ap 9 0 15 0 hln 100 REFDES=C1
+a 0 u 13 0 29 -3 hln 100 VALUE=0.1uF
+part 132 D1N4002 510 180 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D2
+a 0 ap 9 0 19 46 hln 100 REFDES=D2
+a 0 sp 13 0 1 71 hln 100 MODEL=D1N4002
+part 115 C 470 330 d
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=C2
+a 0 ap 9 0 11 -6 hln 100 REFDES=C2
+a 0 u 13 0 35 -3 hln 100 VALUE=1uF
+part 133 D1N4002 540 360 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D3
+a 0 ap 9 0 27 46 hln 100 REFDES=D3
+a 0 sp 13 0 3 65 hln 100 MODEL=D1N4002
+part 167 VPULSE 60 140 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V3
+a 1 ap 9 0 20 10 hcn 100 REFDES=V3
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=30
+a 1 u 0 0 0 0 hcn 100 TD=5MS
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=0
+a 1 u 0 0 0 0 hcn 100 PER=5MS
+part 168 VPULSE 50 310 h
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=30
+a 1 u 0 0 0 0 hcn 100 TD=5MS
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PW=0
+a 1 u 0 0 0 0 hcn 100 PER=5MS
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V4
+a 1 ap 9 0 20 10 hcn 100 REFDES=V4
+part 97 R 400 270 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 33 -5 hln 100 VALUE=10k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R5
+a 0 ap 9 0 15 0 hln 100 REFDES=R5
+part 96 R 400 340 d
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 31 -1 hln 100 VALUE=20k
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R4
+a 0 ap 9 0 15 0 hln 100 REFDES=R4
+part 124 D1N4002 180 290 v
+a 0 a 0:13 0 0 0 hln 100 PKGREF=D1
+a 0 sp 13 0 -1 5 hln 100 MODEL=D1N4002
+a 0 ap 9 0 19 -12 hln 100 REFDES=D1
+part 215 OP_AMP 310 160 u
+a 0 s 11 0 86 62 hrn 100 PART=OP_AMP
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U7
+a 0 a 9 0 10 -2 hln 100 REFDES=U7
+part 231 OP_AMP 300 280 H
+a 0 s 11 0 86 62 hrn 100 PART=OP_AMP
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U8
+a 0 a 9 0 10 -2 hln 100 REFDES=U8
+part 237 LM7805C 70 80 h
+a 0 s 11 0 130 40 hrn 100 PART=LM7805C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U9
+a 0 a 9 0 10 -2 hln 100 REFDES=U9
+part 239 LM7905C 200 410 u
+a 0 s 11 0 130 40 hrn 100 PART=LM7905C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U10
+a 0 a 9 0 10 -2 hln 100 REFDES=U10
+a 0 sp 13 0 100 -6 hln 100 MODEL=LM7905C
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+part 242 nodeMarker 530 80 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=1
+part 244 nodeMarker 540 410 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=2
+part 245 nodeMarker 540 240 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=3
+part 246 nodeMarker 60 130 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=4
+part 248 nodeMarker 60 280 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=GND
+a 0 a 0 0 4 22 hlb 100 LABEL=5
+@conn
+w 73
+s 350 170 350 160 74
+s 350 160 350 120 230
+s 310 160 350 160 228
+w 91
+s 400 310 400 340 118
+s 300 310 400 310 116
+w 218
+s 300 130 310 130 223
+s 200 200 320 200 59
+s 200 150 200 200 56
+s 140 150 200 150 48
+s 200 150 220 150 58
+s 140 110 140 150 46
+s 320 130 320 200 225
+s 310 130 320 130 240
+w 234
+s 190 290 190 300 233
+s 130 380 130 300 196
+s 180 290 180 300 128
+s 130 300 180 300 198
+s 190 300 180 300 235
+w 182
+s 50 410 60 410 183
+s 50 350 50 410 191
+w 5
+a 0 sr 0:3 0 575 78 hcn 100 LABEL=+15V/1A
+s 640 80 530 80 51
+a 0 sr 3 0 575 78 hcn 100 LABEL=+15V/1A
+s 400 80 350 80 111
+s 400 270 400 80 104
+s 440 80 400 80 136
+s 440 80 440 150 134
+s 510 80 440 80 142
+s 510 80 510 150 140
+s 210 80 350 80 203
+s 530 80 510 80 243
+w 161
+a 0 sr 0 0 0 0 hln 100 LABEL=-15V/1A
+s 540 410 640 410 164
+a 0 sr 3 0 590 408 hcn 100 LABEL=-15V/1A
+s 540 360 540 410 160
+s 470 360 470 410 151
+s 200 410 400 410 65
+s 470 410 400 410 153
+s 400 380 400 410 94
+s 540 410 470 410 162
+w 174
+s 60 80 60 130 175
+s 60 80 70 80 238
+s 70 80 80 80 241
+s 60 130 60 140 247
+w 170
+a 0 sr 0 0 0 0 hln 100 LABEL=GND
+s 540 240 640 240 159
+a 0 sr 3 0 590 238 hcn 100 LABEL=GND
+s 60 180 60 240 169
+s 180 240 320 240 84
+s 350 240 440 240 89
+s 350 210 350 240 87
+s 320 240 350 240 121
+s 320 240 320 280 119
+s 320 280 300 280 122
+s 180 240 180 260 125
+s 440 240 470 240 139
+s 440 180 440 240 137
+s 510 240 540 240 147
+s 510 180 510 240 145
+s 470 240 510 240 150
+s 470 240 470 330 148
+s 540 240 540 330 157
+s 60 240 180 240 171
+s 60 240 60 280 177
+s 60 310 50 310 179
+s 60 280 60 310 249
+@junction
+j 350 240
++ w 170
++ w 170
+j 320 240
++ w 170
++ w 170
+j 180 240
++ w 170
++ w 170
+j 440 240
++ w 170
++ w 170
+j 510 240
++ w 170
++ w 170
+j 470 240
++ w 170
++ w 170
+j 540 240
++ w 170
++ w 170
+j 60 180
++ p 167 -
++ w 170
+j 350 210
++ p 70 2
++ w 170
+j 180 260
++ p 124 2
++ w 170
+j 440 180
++ p 114 2
++ w 170
+j 510 180
++ p 132 1
++ w 170
+j 470 330
++ p 115 1
++ w 170
+j 540 330
++ p 133 2
++ w 170
+j 60 240
++ w 170
++ w 170
+j 640 240
++ s 193
++ w 170
+j 200 150
++ w 218
++ w 218
+j 350 120
++ p 69 2
++ w 73
+j 350 170
++ p 70 1
++ w 73
+j 400 410
++ w 161
++ w 161
+j 540 360
++ p 133 1
++ w 161
+j 470 360
++ p 115 2
++ w 161
+j 400 380
++ p 96 2
++ w 161
+j 470 410
++ w 161
++ w 161
+j 540 410
++ w 161
++ w 161
+j 350 80
++ p 69 1
++ w 5
+j 400 270
++ p 97 1
++ w 5
+j 400 80
++ w 5
++ w 5
+j 440 150
++ p 114 1
++ w 5
+j 440 80
++ w 5
++ w 5
+j 510 150
++ p 132 2
++ w 5
+j 510 80
++ w 5
++ w 5
+j 60 140
++ p 167 +
++ w 174
+j 350 160
++ w 73
++ w 73
+j 400 310
++ p 97 2
++ w 91
+j 400 340
++ p 96 1
++ w 91
+j 180 290
++ p 124 1
++ w 234
+j 180 300
++ w 234
++ w 234
+j 310 160
++ p 215 NON_INV
++ w 73
+j 310 130
++ p 215 INV
++ w 218
+j 200 150
++ p 215 OUT
++ w 218
+j 300 280
++ p 231 NON_INV
++ w 170
+j 300 310
++ p 231 INV
++ w 91
+j 190 290
++ p 231 OUT
++ w 234
+j 140 110
++ p 237 GROUND
++ w 218
+j 70 80
++ p 237 INPUT
++ w 174
+j 210 80
++ p 237 OUTPUT
++ w 5
+j 200 410
++ p 239 INPUT
++ w 161
+j 130 380
++ p 239 GROUND
++ w 234
+j 60 410
++ p 239 OUTPUT
++ w 182
+j 530 80
++ p 242 pin1
++ w 5
+j 540 410
++ p 244 pin1
++ w 161
+j 540 240
++ p 245 pin1
++ w 170
+j 60 130
++ p 246 pin1
++ w 174
+j 60 280
++ p 248 pin1
++ w 170
+j 50 310
++ p 168 +
++ w 170
+j 50 350
++ p 168 -
++ w 182
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 200 t 5 190 480 480 450 0 26 d_info:,,,,,,,,,,,,,17, 
+DUAL TRACKING POWER SUPPLY

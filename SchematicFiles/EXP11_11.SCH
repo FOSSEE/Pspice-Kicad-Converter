@@ -1,0 +1,203 @@
+*version 8.0 206442185
+u 224
+R? 10
+V? 3
+U? 2
+PM? 3
+? 4
+I? 3
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 20ns
++1 4MS
++2 0
++3 0.01MS
+.STEP 0 2 4
++ 0 RL
++ 4 10
++ 5 100K
++ 6 1
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 0
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 3356 
+@status
+n 0 99:05:22:11:28:03;930031083 e 
+s 2832 99:05:22:11:28:04;930031084 e 
+c 99:05:22:11:26:07;930030967
+*page 1 0 970 720 iA
+@ports
+port 10 GND_EARTH 360 250 h
+port 11 GND_EARTH 330 370 h
+port 150 EGND 290 280 h
+port 170 EGND 430 380 h
+port 219 EGND 190 370 h
+@parts
+part 9 uA741 290 280 h
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP8
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 s 11 0 -36 114 hcn 100 PART=uA741
+a 0 a 0 0 0 0 hln 100 PKGREF=U1
+a 0 ap 9 0 -42 100 hln 100 REFDES=U1
+part 3 R 310 420 h
+a 0 u 13 0 11 29 hln 100 VALUE=100
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 x 0 0 0 0 hln 100 PKGREF=RF
+a 0 xp 9 0 15 0 hln 100 REFDES=RF
+part 217 ISIN 190 330 h
+a 1 u 0 0 0 0 hcn 100 IOFF=0
+a 1 u 0 0 0 0 hcn 100 IAMPL={IS_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={FREQ}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=I1
+a 1 xp 9 0 -22 18 hcn 100 REFDES=I1
+part 161 R 430 330 d
+a 0 u 13 0 31 1 hln 100 VALUE={RL}
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=RL
+a 0 xp 9 0 15 0 hln 100 REFDES=RL
+part 4 VDC 330 270 u
+a 1 u 13 0 27 46 hcn 100 DC=15V
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 30 33 hcn 100 REFDES=V1
+part 5 VDC 330 370 u
+a 1 u 13 0 -11 18 hcn 100 DC=15V
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0 0 0 0 hln 100 PKGREF=V2
+a 1 ap 9 0 24 7 hcn 100 REFDES=V2
+part 218 PARAM 610 250 h
+a 0 u 13 0 66 24 hlb 100 VALUE1=20mA
+a 0 u 13 0 2 36 hln 100 NAME2=FREQ
+a 0 u 13 0 66 40 hlb 100 VALUE2=1k
+a 0 u 13 0 2 50 hln 100 NAME3=RL
+a 0 u 13 0 0 20 hln 100 NAME1=IS_AMPL
+a 0 u 13 0 66 54 hlb 100 VALUE3=10K
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+part 179 nodeMarker 440 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=3
+@conn
+w 21
+s 330 230 330 220 20
+s 330 220 360 220 22
+s 360 220 360 250 24
+w 144
+s 430 370 430 380 166
+w 175
+s 280 320 290 320 146
+s 280 320 280 420 14
+s 280 420 310 420 16
+s 190 320 280 320 188
+s 190 330 190 320 215
+w 187
+a 0 sr 0:3 0 420 300 hcn 100 LABEL=OUT
+s 390 300 370 300 210
+a 0 sr 3 0 418 288 hcn 100 LABEL=OUT
+s 440 300 430 300 26
+s 430 300 390 300 207
+s 430 300 430 330 163
+s 390 300 390 420 208
+s 390 420 350 420 211
+@junction
+j 330 270
++ p 4 +
++ p 9 V+
+j 330 330
++ p 5 -
++ p 9 V-
+j 330 370
++ p 5 +
++ s 11
+j 330 230
++ p 4 -
++ w 21
+j 360 250
++ s 10
++ w 21
+j 290 280
++ s 150
++ p 9 +
+j 370 300
++ p 9 OUT
++ w 187
+j 440 300
++ p 179 pin1
++ w 187
+j 430 300
++ w 187
++ w 187
+j 430 380
++ s 170
++ w 144
+j 390 300
++ w 187
++ w 187
+j 350 420
++ p 3 2
++ w 187
+j 290 320
++ p 9 -
++ w 175
+j 280 320
++ w 175
++ w 175
+j 310 420
++ p 3 1
++ w 175
+j 430 330
++ p 161 1
++ w 187
+j 430 370
++ p 161 2
++ w 144
+j 190 330
++ p 217 +
++ w 175
+j 190 370
++ s 219
++ p 217 -
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 221 t 5 520 340 760 370 0 53
+STUDENTS CAN MEASURE THE OUTPUT VOLTAGE BY VARYING RL
+t 220 t 5 520 380 770 410 0 65
+CONCLUSION:  V(OUT)  IS SAME IRRESPECTIVE OF THE LOAD RESISTANCE 
+t 2 t 5 170 520 550 550 0 41 d_info:,,,,,,,,,,,,,14, 
+OP-AMP IC 741 CURRENT VOLTAGE CONVERTER
+
+t 223 t 5 520 442 690 420 0 27
+IS_AMPL SHOULD BE  < = 20mA

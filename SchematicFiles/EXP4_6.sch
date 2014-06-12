@@ -1,0 +1,382 @@
+*version 8.0 777906440
+u 177
+DSTM? 3
+U? 10
+? 10
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1U
++1 50U
+.STMLIB C:\VIRTUAL_LAB\SUB7\EXP4.stl
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 0
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 6767 
+@status
+n 2453 100:02:04:15:13:35;952163015 e 
+s 0 100:02:04:15:15:28;952163128 e 
+c 100:02:04:15:16:41;952163201
+*page 1 0 297 210 ma
+@ports
+@parts
+part 6 DigStim 490 300 h
+a 0 s 13 13 4 19 hln 70 STIMULUS=DSTM2
+a 1 ap 9 0 13 -1 hcn 100 REFDES=DSTM1
+a 0 a 0 0 0 0 hln 100 PKGREF=DSTM1
+part 7 7486 610 200 h
+a 0 sp 11 0 40 50 hln 100 PART=7486
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U1A
+a 0 a 0 0 0 0 hln 100 PKGREF=U1
+part 8 7408 610 350 h
+a 0 sp 11 0 40 50 hln 100 PART=7408
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U2A
+a 0 a 0 0 0 0 hln 100 PKGREF=U2
+part 9 7408 610 270 h
+a 0 sp 11 0 40 50 hln 100 PART=7408
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U3A
+a 0 a 0 0 0 0 hln 100 PKGREF=U3
+part 10 7432 760 280 h
+a 0 sp 11 0 40 50 hln 100 PART=7432
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U4A
+a 0 a 0 0 0 0 hln 100 PKGREF=U4
+part 11 7408 610 430 h
+a 0 sp 11 0 40 50 hln 100 PART=7408
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U5A
+a 0 a 0 0 0 0 hln 100 PKGREF=U5
+part 17 DigStim 490 270 h
+a 0 x 0:13 0 0 0 hln 100 PKGREF=DSTM2
+a 1 xp 9 0 13 -1 hcn 100 REFDES=DSTM2
+a 0 s 13 13 4 19 hln 70 STIMULUS=DSTM2
+part 12 DigStim 750 160 h
+a 0 s 13 13 -18 17 hln 70 STIMULUS=DSTM7
+a 0 x 0 0 0 0 hln 100 PKGREF=DSTM7
+a 1 xp 9 0 13 -1 hcn 100 REFDES=DSTM7
+part 19 DigStim 150 290 h
+a 0 x 0:13 0 0 0 hln 100 PKGREF=DSTM4
+a 1 xp 9 0 13 -1 hcn 100 REFDES=DSTM4
+a 0 s 13 13 4 19 hln 70 STIMULUS=DSTM4
+part 18 DigStim 150 260 h
+a 0 x 0:13 0 0 0 hln 100 PKGREF=DSTM3
+a 1 xp 9 0 13 -1 hcn 100 REFDES=DSTM3
+a 0 s 13 13 4 19 hln 70 STIMULUS=DSTM3
+part 15 7486 230 230 h
+a 0 sp 11 0 40 50 hln 100 PART=7486
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U8A
+a 0 a 0 0 0 0 hln 100 PKGREF=U8
+part 16 7408 230 300 h
+a 0 sp 11 0 40 50 hln 100 PART=7408
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U9A
+a 0 a 0 0 0 0 hln 100 PKGREF=U9
+part 13 7486 780 210 h
+a 0 sp 11 0 40 50 hln 100 PART=7486
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U6A
+a 0 a 0 0 0 0 hln 100 PKGREF=U6
+part 14 7432 820 370 h
+a 0 sp 11 0 40 50 hln 100 PART=7432
+a 0 s 0 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0 0 0 0 hln 100 GATE=A
+a 0 ap 9 0 40 0 hln 100 REFDES=U7A
+a 0 a 0 0 0 0 hln 100 PKGREF=U7
+part 1 titleblk 1188 840 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A4
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+part 157 nodeMarker 150 260 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=1
+part 158 nodeMarker 160 290 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=2
+part 160 nodeMarker 300 240 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=3
+part 161 nodeMarker 300 310 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=4
+part 162 nodeMarker 500 240 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=5
+part 164 nodeMarker 500 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=6
+part 166 nodeMarker 850 220 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=7
+part 168 nodeMarker 890 380 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=8
+part 170 nodeMarker 750 190 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=9
+@conn
+w 30
+s 780 210 680 210 29
+w 34
+s 760 280 680 280 33
+w 36
+s 740 360 740 300 35
+s 740 300 760 300 37
+s 740 360 680 360 39
+w 42
+s 830 290 850 290 41
+s 850 290 850 330 43
+s 850 330 780 330 45
+s 780 330 780 370 47
+s 780 370 820 370 49
+w 52
+s 680 440 790 440 51
+s 790 440 790 390 53
+s 790 390 820 390 55
+w 119
+s 150 260 150 230 118
+s 190 230 230 230 122
+s 190 230 190 320 124
+s 190 320 230 320 126
+s 150 230 190 230 128
+w 131
+s 230 290 230 300 130
+s 150 290 160 290 134
+s 210 290 230 290 138
+s 210 290 210 250 136
+s 210 250 230 250 139
+s 160 290 210 290 159
+w 101
+a 0 sr 0:3 0 530 238 hln 100 LABEL=A
+s 520 240 570 240 100
+a 0 sr 3 0 530 238 hln 100 LABEL=A
+s 570 200 610 200 102
+s 570 200 570 240 104
+s 520 240 520 450 106
+s 520 450 610 450 108
+s 490 270 490 240 110
+s 490 240 500 240 112
+s 570 290 610 290 114
+s 570 240 570 290 116
+s 500 240 520 240 163
+w 58
+a 0 sr 0:3 0 550 268 hln 100 LABEL=B
+s 540 270 590 270 71
+a 0 sr 3 0 550 268 hln 100 LABEL=B
+s 590 220 610 220 59
+s 590 220 590 270 61
+s 590 270 610 270 63
+s 510 300 510 270 65
+s 510 270 540 270 67
+s 540 270 540 370 69
+s 540 370 610 370 72
+s 490 300 500 300 76
+s 500 300 510 300 165
+w 79
+s 610 430 590 430 78
+s 590 320 590 350 80
+s 590 350 610 350 82
+s 590 430 590 350 84
+s 590 320 730 320 86
+s 730 320 730 250 88
+s 730 250 770 250 90
+s 770 230 780 230 92
+s 770 250 770 230 94
+s 750 160 750 190 96
+s 750 230 770 230 98
+s 750 190 750 230 171
+b 150
+s 420 110 420 500 149
+s 420 500 920 500 151
+s 920 500 920 110 153
+s 920 110 420 110 155
+b 142
+s 70 190 400 190 141
+s 400 190 400 400 143
+s 70 400 70 190 147
+s 400 400 70 400 145
+@junction
+j 680 210
++ p 7 Y
++ w 30
+j 780 210
++ p 13 A
++ w 30
+j 680 280
++ p 9 Y
++ w 34
+j 760 280
++ p 10 A
++ w 34
+j 760 300
++ p 10 B
++ w 36
+j 680 360
++ p 8 Y
++ w 36
+j 830 290
++ p 10 Y
++ w 42
+j 820 370
++ p 14 A
++ w 42
+j 680 440
++ p 11 Y
++ w 52
+j 820 390
++ p 14 B
++ w 52
+j 610 220
++ p 7 B
++ w 58
+j 610 270
++ p 9 A
++ w 58
+j 590 270
++ w 58
++ w 58
+j 540 270
++ w 58
++ w 58
+j 610 370
++ p 8 B
++ w 58
+j 490 300
++ p 6 *OUT
++ w 58
+j 610 430
++ p 11 A
++ w 79
+j 610 350
++ p 8 A
++ w 79
+j 590 350
++ w 79
++ w 79
+j 780 230
++ p 13 B
++ w 79
+j 750 160
++ p 12 *OUT
++ w 79
+j 770 230
++ w 79
++ w 79
+j 610 200
++ p 7 A
++ w 101
+j 610 450
++ p 11 B
++ w 101
+j 490 270
++ p 17 *OUT
++ w 101
+j 520 240
++ w 101
++ w 101
+j 610 290
++ p 9 B
++ w 101
+j 570 240
++ w 101
++ w 101
+j 150 260
++ p 18 *OUT
++ w 119
+j 230 230
++ p 15 A
++ w 119
+j 230 320
++ p 16 B
++ w 119
+j 190 230
++ w 119
++ w 119
+j 230 300
++ p 16 A
++ w 131
+j 150 290
++ p 19 *OUT
++ w 131
+j 210 290
++ w 131
++ w 131
+j 230 250
++ p 15 B
++ w 131
+j 150 260
++ p 157 pin1
++ p 18 *OUT
+j 150 260
++ p 157 pin1
++ w 119
+j 160 290
++ p 158 pin1
++ w 131
+j 300 240
++ p 160 pin1
++ p 15 Y
+j 300 310
++ p 161 pin1
++ p 16 Y
+j 500 240
++ p 162 pin1
++ w 101
+j 500 300
++ p 164 pin1
++ w 58
+j 850 220
++ p 166 pin1
++ p 13 Y
+j 890 380
++ p 168 pin1
++ p 14 Y
+j 750 190
++ p 170 pin1
++ w 79
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A4
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 2 t 5 720 228 752 246 0 4
+Cn-!
+t 4 t 5 200 357 341 385 0 10 d_info:,,,,,,,,,,,,,20, 
+HALF_ADDER
+t 5 t 5 260 570 640 620 0 26 d_info:,,,,,,,,,,,,,22, 
+STUDY OF HALF & FULL ADDER
+t 3 t 5 760 457 895 485 0 10 d_info:,,,,,,,,,,,,,20, 
+FULL ADDER
+t 172 t 5 120 574 163 592 0 8
+Fig. 6.4

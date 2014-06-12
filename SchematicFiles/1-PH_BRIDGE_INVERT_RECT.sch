@@ -1,0 +1,325 @@
+*version 8.0 3327980177
+u 856
+X? 21
+V? 10
+R? 7
+PM? 9
+? 18
+L? 4
+D? 5
+LIB? 2
+C? 3
+U? 22
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1ms
++1 60MS
++2 0
++3 0.01
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 ORCAD=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 5965 
+@status
+n 0 100:02:07:21:18:43;952444123 e 
+s 2832 100:02:07:21:18:44;952444124 e 
+c 99:05:15:02:09:40;929392780
+*page 1 0 970 720 iA
+@ports
+port 546 EGND 730 440 H
+port 545 EGND 780 400 H
+port 751 EGND 400 310 H
+@parts
+part 464 VSIN 580 190 v
+a 1 u 0 0 0 0 hcn 100 VAMPL={VIN_AMPL}
+a 1 u 0 0 0 0 hcn 100 FREQ={1/period}
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 0 x 0 0 0 0 hln 100 PKGREF=VIN
+a 1 xp 9 0 28 30 hcn 100 REFDES=VIN
+part 750 L 370 160 D
+a 0 sp 0 0 0 10 hlb 100 PART=L
+a 0 s 0 0 0 0 hln 100 PKGTYPE=L3216C
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 u 13 0 43 -5 hln 100 VALUE=50mh
+a 0 a 0 0 0 0 hln 100 PKGREF=L3
+a 0 ap 9 0 25 -8 hln 100 REFDES=L3
+part 749 R 370 110 D
+a 0 u 13 0 27 -1 hln 100 VALUE=100
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0 0 0 0 hln 100 GATE=
+a 0 a 0 0 0 0 hln 100 PKGREF=R6
+a 0 ap 9 0 15 0 hln 100 REFDES=R6
+part 520 VPULSE 730 400 H
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 PER={PERIOD_CYCLO}
+a 1 u 0 0 0 0 hcn 100 PW={PERIOD_CYCLO/2}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VCYCLO
+a 1 xp 9 0 -22 42 hcn 100 REFDES=VCYCLO
+a 1 u 0 0 0 0 hcn 100 TD={TDCYCLO+(PERIOD_CYCLO/2)}
+part 465 PARAM 120 120 h
+a 0 u 13 0 2 24 hln 100 NAME1=PULSE_WIDTH
+a 0 u 13 0 96 22 hlb 100 VALUE1=1ms
+a 0 u 13 0 4 52 hln 100 NAME3=ALPHA
+a 0 u 13 0 76 52 hlb 100 VALUE3=60d
+a 0 u 13 0 4 38 hln 100 NAME2=TALPHA
+a 0 u 13 0 68 38 hlb 100 VALUE2={PERIOD*ALPHA/360}
+a 0 a 0 0 0 0 hln 100 PKGREF=PM6
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM6
+part 466 PARAM 120 210 h
+a 0 u 13 0 84 48 hlb 100 VALUE2=300V
+a 0 u 13 0 4 30 hln 100 NAME1=PERIOD
+a 0 u 13 0 84 34 hlb 100 VALUE1=20ms
+a 0 u 13 0 2 44 hln 100 NAME2=VIN_AMPL
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM7
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM7
+part 521 PARAM 120 290 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM8
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM8
+a 0 u 13 0 2 46 hln 100 NAME2=TDCYCLO
+a 0 u 13 0 78 50 hlb 100 VALUE2=0
+a 0 u 13 0 -2 30 hln 100 NAME1=PERIOD_CYCLO
+a 0 u 13 0 100 32 hlb 100 VALUE1={3*PERIOD}
+part 519 VPULSE 780 360 H
+a 1 u 0 0 0 0 hcn 100 V1=0
+a 1 u 0 0 0 0 hcn 100 V2=5
+a 1 u 0 0 0 0 hcn 100 TR=0
+a 1 u 0 0 0 0 hcn 100 TF=0
+a 1 u 0 0 0 0 hcn 100 TD={TALPHA}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=VG1
+a 1 xp 9 0 24 10 hcn 100 REFDES=VG1
+a 1 u 0 0 0 0 hcn 100 PW={PULSE_WIDTH}
+a 1 u 0 0 0 0 hcn 100 PER={PERIOD/2}
+part 509 SCR3T 660 110 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X13
+a 0 ap 9 0 37 -2 hln 100 REFDES=X13
+a 0 sp 11 0 11 -2 hrn 100 PART=SCR3T
+part 709 SCR3T 540 240 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X20
+a 0 ap 9 0 15 0 hln 100 REFDES=X20
+a 0 sp 11 0 49 52 hrn 100 PART=SCR3T
+part 522 7408 690 360 H
+a 0 sp 11 0 40 50 hln 100 PART=7408
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=DIP14
+a 0 s 0:13 0 0 0 hln 100 GATE=A
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U18
+a 0 ap 9 0 40 0 hln 100 REFDES=U18A
+part 511 SCR3T 660 240 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X15
+a 0 ap 9 0 15 0 hln 100 REFDES=X15
+a 0 sp 11 0 9 60 hrn 100 PART=SCR3T
+part 508 SCR3T 540 110 d
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=X12
+a 0 ap 9 0 15 0 hln 100 REFDES=X12
+a 0 sp 11 0 1 0 hrn 100 PART=SCR3T
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+part 752 nodeMarker 390 70 H
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=R6:1
+a 0 a 0 0 4 22 hlb 100 LABEL=15
+part 832 vdiffMarker 540 190 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 6 20 hlb 100 LABEL=17
+part 833 vdiffMarker 660 190 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 13 0 16 14 hlb 100 NODE=-
+a 0 a 0 0 6 20 hlb 100 LABEL=17
+@conn
+w 740
+s 370 150 370 160 739
+w 548
+s 780 360 690 360 547
+w 714
+s 540 280 540 310 559
+s 660 280 660 310 572
+s 540 310 660 310 507
+s 370 310 370 220 743
+s 370 310 400 310 741
+s 400 310 540 310 828
+w 473
+s 660 70 660 110 725
+s 540 70 540 110 720
+s 540 70 660 70 568
+s 390 70 370 70 747
+s 370 70 370 110 745
+s 390 70 540 70 830
+w 486
+a 0 sr 0:3 0 200 198 hln 100 LABEL=IN+
+s 580 190 540 190 485
+a 0 sr 3 0 560 188 hln 100 LABEL=IN+
+s 540 150 540 190 557
+s 540 190 540 240 759
+w 515
+a 0 sr 0:3 0 280 198 hln 100 LABEL=in-
+s 620 190 660 190 491
+a 0 sr 3 0 640 188 hln 100 LABEL=in-
+s 660 150 660 190 571
+s 660 190 660 240 762
+w 605
+s 730 380 730 400 524
+s 690 380 710 380 786
+s 710 380 730 380 815
+s 710 380 710 430 532
+w 834
+s 640 140 640 230 775
+s 640 230 620 230 777
+s 520 230 520 270 779
+s 620 230 520 230 842
+s 620 230 620 370 840
+s 470 180 520 180 837
+s 520 210 520 180 804
+s 520 180 520 140 839
+s 590 210 520 210 802
+s 590 270 590 210 800
+s 640 270 590 270 798
+s 470 180 470 370 852
+s 470 370 620 370 854
+@junction
+j 660 110
++ p 509 A
++ w 473
+j 540 110
++ p 508 A
++ w 473
+j 540 280
++ p 709 K
++ w 714
+j 660 280
++ p 511 K
++ w 714
+j 540 150
++ p 508 K
++ w 486
+j 540 240
++ p 709 A
++ w 486
+j 580 190
++ p 464 +
++ w 486
+j 540 190
++ w 486
++ w 486
+j 660 150
++ p 509 K
++ w 515
+j 660 240
++ p 511 A
++ w 515
+j 620 190
++ p 464 -
++ w 515
+j 660 190
++ w 515
++ w 515
+j 370 150
++ p 749 2
++ w 740
+j 370 160
++ p 750 1
++ w 740
+j 780 400
++ p 519 -
++ s 545
+j 690 380
++ p 522 B
++ w 605
+j 710 380
++ w 605
++ w 605
+j 780 360
++ p 519 +
++ w 548
+j 690 360
++ p 522 A
++ w 548
+j 370 220
++ p 750 2
++ w 714
+j 400 310
++ s 751
++ w 714
+j 540 310
++ w 714
++ w 714
+j 390 70
++ p 752 pin1
++ w 473
+j 370 110
++ p 749 1
++ w 473
+j 540 70
++ w 473
++ w 473
+j 540 190
++ p 832 pin1
++ w 486
+j 660 190
++ p 833 pin1
++ w 515
+j 730 440
++ p 520 -
++ s 546
+j 730 400
++ p 520 +
++ w 605
+j 520 180
++ w 834
++ w 834
+j 620 230
++ w 834
++ w 834
+j 640 140
++ p 509 G
++ w 834
+j 520 270
++ p 709 G
++ w 834
+j 620 370
++ p 522 Y
++ w 834
+j 640 270
++ p 511 G
++ w 834
+j 520 140
++ p 508 G
++ w 834
+@attributes
+a 0 s 0 0 0 0 hln 100 PAGETITLE=
+a 0 s 0 0 0 0 hln 100 PAGENO=1
+a 0 s 0 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0 0 0 0 hln 100 PAGECOUNT=1
+@graphics
+t 843 t 5 170 462 630 490 0 36 d_info:,,,,,,,,,,,,,19, 
+1-PHASE CONTROLLED RECTFIER INVERTER
