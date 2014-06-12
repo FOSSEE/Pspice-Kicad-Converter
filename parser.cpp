@@ -15,7 +15,7 @@ int main(int argc, char* argv[]){
 	fsch.open(fname.c_str());
 	flib.open(flname.c_str());
 	
-	cout<<"Schematic file name: "<<fname<<endl<<"Library file name: "<<flname<<endl;
+	///cerr<<"Schematic file name: "<<fname<<endl<<"Library file name: "<<flname<<endl;
 	
 	string textline;
 	skipTo(file, "@status");
@@ -80,6 +80,8 @@ int main(int argc, char* argv[]){
 	}
 	file.seekg(g);						/*The while loop exited because the first word of the line wasn't "port".
 	Put the line back into the stream, it shouldn't have been read. */
+	
+	///cerr<<"Ports Done"<<endl;			///DEBUG
 	
 	//Parts (Components)
 	skipTo(file, "@parts");

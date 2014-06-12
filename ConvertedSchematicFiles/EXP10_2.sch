@@ -1,0 +1,129 @@
+EESchema Schematic File Version 2  date Sunday 27 February 2000 06:54:48 PM IST
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ConvertedSchematicFiles/EXP10_2-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "27 Feb 2000"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND_EARTH_PSPICE GND_EARTH
+U 1 1 14289383
+P 3800 2200
+F 0 "GND_EARTH" H 7600 4400 50  0001 L CNN
+F 1 "GND_EARTH" H 7600 4480 50  0001 L CNN
+	1    3800 2200
+	1    0    0    1
+$EndComp
+$Comp
+L R_PSPICE R1
+U 1 1 46930886
+P 2600 1200
+F 0 "R1" H 2600 1200 50  0001 L CNN
+F 1 "{r}" H 2600 1350 50  0000 L CNN
+	1    2600 1200
+	1    0    0    1
+$EndComp
+$Comp
+L C_PSPICE C1
+U 1 1 71692777
+P 2800 1600
+F 0 "C1" H 2800 1600 50  0001 L CNN
+F 1 "30.4u" H 2800 1550 50  0000 L CNN
+	1    2800 1600
+	1    0    0    1
+$EndComp
+$Comp
+L PARAM_PSPICE PM1
+U 1 1 14636915
+P 4800 1300
+F 0 "PM1" H 4800 1300 50  0001 L CNN
+F 1 "PARAM" H 4800 1380 50  0001 L CNN
+	1    4800 1300
+	1    0    0    1
+$EndComp
+$Comp
+L L_PSPICE L1
+U 1 1 77747793
+P 3000 1200
+F 0 "L1" H 3000 1200 50  0001 L CNN
+F 1 "0.303H" H 3000 1330 50  0000 L CNN
+	1    3000 1200
+	1    0    0    1
+$EndComp
+$Comp
+L VSIN_PSPICE V1
+U 1 1 74238335
+P 3100 2200
+F 0 "V1" H 3100 2200 50  0001 L CNN
+F 1 "VSIN" H 3100 2280 50  0001 L CNN
+	1    3100 2200
+	0    1    -1    0
+$EndComp
+Wire Wire Line
+	2600 2200 3100 2200
+Wire Wire Line
+	2600 1200 2600 1600
+Wire Wire Line
+	2600 1600 2600 2200
+Wire Wire Line
+	2600 1600 2800 1600
+Wire Wire Line
+	3600 1200 3800 1200
+Wire Wire Line
+	3800 2200 3500 2200
+Wire Wire Line
+	3800 1200 3800 1600
+Wire Wire Line
+	3800 1600 3800 2200
+Wire Wire Line
+	3100 1600 3800 1600
+Connection ~ 3100 2200
+Connection ~ 2600 1200
+Connection ~ 3000 1200
+Connection ~ 3600 1200
+Connection ~ 2800 1600
+Connection ~ 2600 1600
+Connection ~ 3800 2200
+Connection ~ 3500 2200
+Connection ~ 3100 1600
+Connection ~ 3800 1600
+$EndSCHEMATC

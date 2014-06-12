@@ -99,8 +99,8 @@ Design::Design(){}
 
 Design::Design(istream& in){		//Constructor of Design.
 //Reads the whole design, makes Line, Circle, etc. objects and stores them in the appropriate container (appropriate vector)
-	int g, tint;
-	string tmp;
+	int g;
+	string tmp, tint;
 	char t=0;
 	in>>tmp;
 	if(tmp!="@graphics") {			//When the pspice library is passed to this function, the @graphics line should be the first line to be read.
@@ -113,31 +113,40 @@ Design::Design(istream& in){		//Constructor of Design.
 	getline(in, tmp);			//read the last number, (which is useless(?))
 	while(t!='*'){				//As long as we haven't reached the description of the next Component continue reading the lib file.
 		g=in.tellg();			//Get the position of the read head, so that we can go back to this position if we read something that's not supposed to be read.
-		in>>t>>tint;			//Get the first character of the description, store in "t". This character gives what shape it is.
+		in>>t;			//Get the first character of the description, store in "t". This character gives what shape it is.
 		//The second character is useless.
 		if(t=='v'){				//If the character is 'v' then it's the description of a (poly)Line. Create the line and then store it.
+			in>>tint;
 			Line l(in, shiftx, shifty);
 			lines.push_back(l);
 			//l.print(cerr);					///DEBUG
 		}
 		else if(t=='r'){
+			in>>tint;
 			Rectangle r(in, shiftx, shifty);
 			rects.push_back(r);
 			//l.print(cerr);					///DEBUG
 		}
 		else if(t=='c'){
+			in>>tint;
 			Circle c(in, shiftx, shifty);
 			circles.push_back(c);
 			//l.print(cerr);					///DEBUG
 		}
 		else if(t=='a'){
+			in>>tint;
 			Arc a(in, shiftx, shifty);
 			arcs.push_back(a);
 			//l.print(cerr);					///DEBUG
 		}
-		else getline(in, tmp);	//If t is neither 'v', 'r', 'c' nor 'a', just read the whole line (to skip it)
+		else {
+			getline(in, tmp);		//If t is neither 'v', 'r', 'c' nor 'a', just read the whole line (to skip it)
+			//cerr<<t<<" "<<tmp<<endl;				///DEBUG
+			//cin.ignore();							///DEBUG
+			g=in.tellg();
+		}
 	}
-	//cerr<<"While exited"<<endl;		///DEBUG
+	///cerr<<"While (of design.cpp) exited"<<endl;		///DEBUG
 	in.seekg(g);	/*Since we've read the char '*' which is actually the beginning of the description of the next component,
 	and hence shouldn't have been read, use seekg to go back one line.*/
 }

@@ -47,6 +47,7 @@ first occurence (after the current position) of string s in istream& in and read
 string findLibrary(string s){		//Returns the filename of the Pspice library that contains the description of the component whose name is the string s
     string cmd="grep -wl ^\"*symbol "+s+"\" lib/Library/*";
     string ret=exec(cmd.c_str());
-    ret=ret.substr(0, ret.length()-1);		//ignore the last character, which is \n
+    int n=ret.find('\n');
+    ret=ret.substr(0, n);		//return the name of the first found library
     return ret;
 }

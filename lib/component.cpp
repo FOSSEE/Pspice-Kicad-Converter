@@ -52,6 +52,8 @@ void Pin::print(ostream& out, int shiftx, int shifty){
 	out<<" 60 60 0 1 ";
 	if(etype=="i")out<<"I"<<endl;
 	else if(etype=="o")out<<"O"<<endl;
+	else if(etype=="h")out<<"P"<<endl;
+	else if(etype=="u")out<<"P"<<endl;
 	else if(etype=="p")out<<"W"<<endl;
 	else if(etype=="x")out<<"P"<<endl;
 	else if(etype=="b")out<<"B"<<endl;
