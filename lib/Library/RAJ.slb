@@ -1,0 +1,648 @@
+*version 8.0 2101396622
+@index
+symloc DX 0 362
+symloc SG1524B 362 2306
+symloc LM723C 2668 1626
+symloc SCR3T 4294 685
+symloc LM7805C 4979 701
+symloc LM7815C 5680 703
+symloc LM7905C 6383 702
+symloc LM7915C 7085 702
+symloc OP-07 7787 786
+symloc OP_AMP 8573 675
+symloc IDEAL_TRAN 9248 1068
+symloc SCR2T 10316 699
+symloc CMOD 11015 578
+symloc Q_PI 11593 458
+symloc COUPLED_INDUCTOR 12051 1203
+symloc Scr 13254 1243
+symloc QM 14497 424
+symloc QN 14921 424
+symloc DXY 15345 364
+*symbol DX
+d diode device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 15 25 hln 100 MODEL=DX
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=D^@REFDES %1 %2 @MODEL ?AREA/@AREA/
+@pins
+p 0 5 10 hln 100 1 n 0 10 h
+p 0 25 10 hln 100 2 n 30 10 u
+@graphics 30 20 0 10 10
+v 0 12 5
+12 15
+20 10
+12 5
+;
+v 0 10 10
+12 10
+;
+v 0 20 5
+20 15
+;
+*symbol SG1524B
+d General Purpose SMPS IC with Current Limit Control
+@type p
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 60 100 hrn 100 PART=SG1524B
+a 0 sp 0 0 0 0 hln 100 MODEL=SG1524B
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %1 %2 %3 %4 %5 %7 %8 %9 %10 %11 %12 %13 %14 %15 %16 @MODEL PARAMS: ?period|period=@period||period=1mS| ?deadtime|deadtime=@deadtime||deadtime=1uS|
+a 0 u 0:13 0 0 0 hln 100 period=1mS
+a 0 u 0:13 0 0 0 hln 100 deadtime=1uS
+@pins
+p 2 13 12 hln 100 1 n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 22 hln 100 2 n 0 20 h
+a 0 s 1 0 5 18 hrn 100 PIN=2
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 32 hln 100 3 n 0 30 h
+a 0 s 1 0 5 28 hrn 100 PIN=3
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 42 hln 100 4 n 0 40 h
+a 0 s 1 0 5 38 hrn 100 PIN=4
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 52 hln 100 5 n 0 50 h
+a 0 s 1 0 5 48 hrn 100 PIN=5
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 62 hln 100 7 n 0 60 h
+a 0 s 1 0 5 58 hrn 100 PIN=6
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 72 hln 100 8 n 0 70 h
+a 0 s 1 0 5 68 hrn 100 PIN=7
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 82 hln 100 9 n 0 80 h
+a 0 s 1 0 5 78 hrn 100 PIN=8
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 12 hrn 100 10 n 70 10 u
+a 0 s 1 0 65 8 hln 100 PIN=9
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 22 hrn 100 11 n 70 20 u
+a 0 s 1 0 65 18 hln 100 PIN=10
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 32 hrn 100 12 n 70 30 u
+a 0 s 1 0 65 28 hln 100 PIN=11
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 42 hrn 100 13 n 70 40 u
+a 0 s 1 0 65 38 hln 100 PIN=12
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 52 hrn 100 14 n 70 50 u
+a 0 s 1 0 65 48 hln 100 PIN=13
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 62 hrn 100 15 n 70 60 u
+a 0 s 1 0 65 58 hln 100 PIN=14
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 72 hrn 100 16 n 70 70 u
+a 0 s 1 0 65 68 hln 100 PIN=15
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+@graphics 70 90 0 10 10
+r 0 10 0 60 90
+*symbol LM723C
+d High Performance Voltag Regulator IC
+@type p
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 60 80 hrn 100 PART=LM723C
+a 0 sp 0 0 0 0 hln 100 MODEL=LM723C
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %2 %3 %4 %5 %6 %7 %9 %10 %11 %12 %13 @MODEL
+@pins
+p 2 13 12 hln 100 2 n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 22 hln 100 3 n 0 20 h
+a 0 s 1 0 5 18 hrn 100 PIN=2
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 32 hln 100 4 n 0 30 h
+a 0 s 1 0 5 28 hrn 100 PIN=3
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 42 hln 100 5 n 0 40 h
+a 0 s 1 0 5 38 hrn 100 PIN=4
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 52 hln 100 6 n 0 50 h
+a 0 s 1 0 5 48 hrn 100 PIN=5
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 62 hln 100 7 n 0 60 h
+a 0 s 1 0 5 58 hrn 100 PIN=6
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 12 hrn 100 9 n 70 10 u
+a 0 s 1 0 65 8 hln 100 PIN=7
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 22 hrn 100 10 n 70 20 u
+a 0 s 1 0 65 18 hln 100 PIN=8
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 32 hrn 100 11 n 70 30 u
+a 0 s 1 0 65 28 hln 100 PIN=9
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 42 hrn 100 12 n 70 40 u
+a 0 s 1 0 65 38 hln 100 PIN=10
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 52 hrn 100 13 n 70 50 u
+a 0 s 1 0 65 48 hln 100 PIN=11
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+@graphics 70 70 0 10 10
+r 0 10 0 60 70
+*symbol SCR3T
+d 3-TERMINAL GENERIC  SCR  MODEL
+@type p 8.0
+@attributes
+a 0 sp 11 0 29 30 hrn 100 PART=SCR3T
+a 0 s 9 0 15 0 hln 100 REFDES=X?
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %A %K %G @MODEL PARAMS: ?ICGATE|ICGATE=@ICGATE||ICGATE=0|
+a 0 u 0:13 0 0 0 hln 100 ICGATE=0
+a 0 sp 0 0 29 30 hrn 100 MODEL=SCR3T
+@pins
+p 0 13 12 hln 100 A n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 8 hrn 100 PIN=1
+p 0 27 12 hrn 100 K n 40 10 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 8 hln 100 PIN=2
+p 0 35 25 hln 100 G n 30 30 v
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 25 32 hcn 100 PIN=3
+@graphics 40 30 0 10 10
+v 0 10 5
+10 15
+20 10
+10 5
+;
+v 0 30 20
+20 10
+;
+v 0 20 5
+20 15
+;
+v 0 30 10
+20 10
+;
+*symbol LM7805C
+d 3-Terminal 5V positive Voltage Regulator
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 130 40 hrn 100 PART=LM7805C
+a 0 sp 13 0 78 40 hln 100 MODEL=LM7805C
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %INPUT %OUTPUT %GROUND @MODEL
+@pins
+p 2 13 12 hln 100 INPUT n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 127 12 hrn 100 OUTPUT n 140 10 u
+a 0 s 1 0 131 22 hln 100 PIN=2
+a 0 s 0 0 140 20 hln 100 ERC=b
+a 0 s 0 0 140 20 hln 100 FLOAT=e
+p 2 88 19 uln 100 GROUND n 70 40 v
+a 0 s 1 0 64 31 vrn 100 PIN=3
+a 0 s 0 0 70 -100 hln 100 ERC=b
+a 0 s 0 0 70 -100 hln 100 FLOAT=e
+@graphics 140 40 0 10 10
+r 0 10 0 130 30
+*symbol LM7815C
+d 3-Terminal 15V Positive Voltage Regulator
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 130 40 hrn 100 PART=LM7815C
+a 0 sp 13 0 46 -4 hln 100 MODEL=LM7815C
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %INPUT %OUTPUT %GROUND @MODEL
+@pins
+p 2 13 12 hln 100 INPUT n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 127 12 hrn 100 OUTPUT n 140 10 u
+a 0 s 1 0 135 16 hln 100 PIN=2
+a 0 s 0 0 140 20 hln 100 ERC=b
+a 0 s 0 0 140 20 hln 100 FLOAT=e
+p 2 104 20 uln 100 GROUND n 70 40 v
+a 0 s 1 0 76 35 vrn 100 PIN=3
+a 0 s 0 0 70 -100 hln 100 ERC=b
+a 0 s 0 0 70 -100 hln 100 FLOAT=e
+@graphics 140 40 0 10 10
+r 0 10 0 130 30
+*symbol LM7905C
+d 3-Terminal 5V Negative Voltage Regulator
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 130 40 hrn 100 PART=LM7905C
+a 0 sp 13 0 44 -4 hln 100 MODEL=LM7905C
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %INPUT %OUTPUT %GROUND @MODEL
+@pins
+p 2 13 12 hln 100 INPUT n 0 10 h
+a 0 s 1 0 9 22 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 127 12 hrn 100 OUTPUT n 140 10 u
+a 0 s 1 0 133 24 hln 100 PIN=2
+a 0 s 0 0 140 20 hln 100 ERC=b
+a 0 s 0 0 140 20 hln 100 FLOAT=e
+p 2 90 19 uln 100 GROUND n 70 40 v
+a 0 s 1 0 64 31 vrn 100 PIN=3
+a 0 s 0 0 70 -100 hln 100 ERC=b
+a 0 s 0 0 70 -100 hln 100 FLOAT=e
+@graphics 140 40 0 10 10
+r 0 10 0 130 30
+*symbol LM7915C
+d 3-Terminal 15V Negative Voltage Regulator
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 130 40 hrn 100 PART=LM7915C
+a 0 sp 13 0 48 -4 hln 100 MODEL=LM7915C
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %INPUT %OUTPUT %GROUND @MODEL
+@pins
+p 2 13 12 hln 100 INPUT n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 127 12 hrn 100 OUTPUT n 140 10 u
+a 0 s 1 0 135 16 hln 100 PIN=2
+a 0 s 0 0 140 20 hln 100 ERC=b
+a 0 s 0 0 140 20 hln 100 FLOAT=e
+p 2 98 20 uln 100 GROUND n 70 40 v
+a 0 s 1 0 76 35 vrn 100 PIN=3
+a 0 s 0 0 70 -100 hln 100 ERC=b
+a 0 s 0 0 70 -100 hln 100 FLOAT=e
+@graphics 140 40 0 10 10
+r 0 10 0 130 30
+*symbol OP-07
+d PRECISION OP AMP
+@type p
+@attributes
+a 0 s 9 0 56 8 hcn 100 REFDES=U?
+a 0 sp 11 0 14 70 hcn 100 PART=OP-07
+a 0 sp 0 0 50 60 hcn 100 MODEL=OP-07
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %+ %- %V+ %V- %OUT @MODEL
+@pins
+p 0 67 32 hrn 100 OUT n 80 30 u
+a 0 s 0 0 0 0 hln 100 ERC=o
+a 0 s 1 0 75 28 hln 100 PIN=1
+p 2 13 12 hln 100 + n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=i
+a 0 s 1 0 5 8 hrn 100 PIN=3
+p 2 13 52 hln 100 - n 0 50 h
+a 0 s 0 0 0 0 hln 100 ERC=i
+a 0 s 1 0 5 48 hrn 100 PIN=2
+p 2 37 22 hcn 100 V+ n 40 0 d
+a 0 s 0 0 0 0 hln 100 ERC=i
+a 0 s 1 0 45 3 hcn 100 PIN=4
+p 2 37 44 hcn 100 V- n 40 60 v
+a 0 s 0 0 0 0 hln 100 ERC=i
+a 0 s 1 0 35 62 hcn 100 PIN=11
+@graphics 80 60 0 10 10
+v 0 70 30
+10 0
+;
+v 0 10 60
+70 30
+;
+v 0 40 50
+40 45
+;
+v 0 10 0
+10 60
+;
+v 0 40 10
+40 15
+;
+*symbol OP_AMP
+d 3-connection OP_AMP EQUIVALENT CIRCUIT
+@type p 8.0
+@attributes
+a 0 sp 9 0 10 -2 hln 100 REFDES=U?
+a 0 sp 11 0 86 62 hrn 100 PART=OP_AMP
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %NON_INV %INV %OUT @MODEL
+a 0 sp 0 0 0 0 hln 100 MODEL=OP_AMP
+@pins
+p 2 13 12 hln 100 NON_INV n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 13 42 hln 100 INV n 0 40 h
+a 0 s 1 0 5 38 hrn 100 PIN=2
+a 0 s 0 0 0 30 hln 100 ERC=b
+a 0 s 0 0 0 30 hln 100 FLOAT=e
+p 2 97 22 hrn 100 OUT n 110 20 u
+a 0 s 1 0 105 18 hln 100 PIN=3
+a 0 s 0 0 -10 20 hln 100 ERC=b
+a 0 s 0 0 -10 20 hln 100 FLOAT=e
+@graphics 110 50 0 10 10
+r 0 10 0 100 50
+*symbol IDEAL_TRAN
+d IDEAL TRANSFOEMER
+@type p
+@attributes
+a 0 sp 9 0 20 0 hln 100 REFDES=TX?
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 s 11 0 0 0 hln 100 PART=IDEAL_TRAN
+a 0 sp 0:13 0 0 68 hln 100 MODEL=IDEAL_TRAN
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %1 %2 %3 %4 @MODEL PARAMS: ?L1|L1=@L1||L1=50UH| ?L2|L2=@L2||L2=50UH| ?COUPLING|COUPLING=@COUPLING||COUPLING=0.9999|
+a 0 u 0:13 0 0 0 hln 100 L1=50UH
+a 0 u 0:13 0 0 0 hln 100 L2=50UH
+a 0 u 0:13 0 0 0 hln 100 COUPLING=0.9999
+@pins
+p 0 13 2 hln 100 1 n 0 0 h
+p 0 13 62 hln 100 2 n 0 60 h
+p 0 27 2 hrn 100 3 n 40 0 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 -2 hln 100 PIN=1
+p 0 27 62 hrn 100 4 n 40 60 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 58 hln 100 PIN=2
+@graphics 40 60 0 0 10
+a 0 30 40 25 45 30 50 
+a 0 10 50 15 45 10 40 
+a 0 10 40 15 35 10 30 
+a 0 10 30 15 25 10 20 
+a 0 10 20 15 15 10 10 
+a 0 30 10 25 15 30 20 
+a 0 30 20 25 25 30 30 
+a 0 30 30 25 35 30 40 
+v 0 10 0
+10 10
+;
+v 0 10 50
+10 60
+;
+v 0 30 0
+30 10
+;
+v 0 30 50
+30 60
+;
+v 0 22 10
+22 50
+;
+v 0 22 50
+22 50
+;
+v 0 18 10
+18 50
+;
+v 0 18 50
+18 50
+;
+*symbol SCR2T
+d 2-TERMINAL SCR SUBCKT (PARAMS: TALPHA,PULSE_WIDTH, PERIOD)
+@type p 8.0
+@attributes
+a 0 sp 9 0 36 -4 hln 100 REFDES=U?
+a 0 sp 11 0 60 30 hrn 100 PART=SCR2T
+a 0 sp 13 0 22 30 hln 100 MODEL=SCR2T
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %A %K @MODEL PARAMS: ?TDLY|TDLY=@TDLY||TDLY={TALPHA},| ?ICGATE|ICGATE=@ICGATE||ICGATE=0V|
+a 0 u 0:13 0 0 0 hln 100 TDLY={TALPHA},
+a 0 u 0:13 0 0 0 hln 100 ICGATE=0V
+@pins
+p 2 13 12 hln 100 A n 0 10 h
+a 0 s 1 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+p 2 57 12 hrn 100 K n 70 10 u
+a 0 s 1 0 65 8 hln 100 PIN=2
+a 0 s 0 0 0 10 hln 100 ERC=b
+a 0 s 0 0 0 10 hln 100 FLOAT=e
+@graphics 70 20 0 10 10
+r 0 10 0 60 20
+*symbol CMOD
+d Multi-winding Coupling (with CORE model)
+@type p
+@attributes
+a 1 s 9 0 22 8 hcn 100 REFDES=K?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=Kn^@REFDES L^@L1 ?L2|L^@L2| ?L3|\n+ L^@L3| ?L4|L^@L4| ?L5|\n+ L^@L5| ?L6|L^@L6| @COUPLING &MODEL
+a 0 u 13 0 4 42 hln 100 L1=
+a 0 u 13 0 4 53 hln 100 L2=
+a 0 u 13 0 4 65 hln 100 L3=
+a 0 u 13 0 4 77 hln 100 L4=
+a 0 u 13 0 4 88 hln 100 L5=
+a 0 u 13 0 4 99 hln 100 L6=
+a 0 u 13 13 31 30 hcn 100 COUPLING=1
+a 0 sp 13 0 1 20 hln 100 MODEL=CMOD
+a 0 sp 0 0 1 20 hln 100 PART=CMOD
+@pins
+@graphics 40 10 0 10 10
+r 0 0 0 10 10
+z 26 2 8 hln 100 1
+K
+*symbol Q_PI
+d TRANSISTOR PI MODEL
+@type p 8.0
+@attributes
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 0 50 hln 100 PART=Q_PI
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %b %c %e @MODEL
+a 0 s 0:13 0 5 40 hln 100 MODEL=Q_PI
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 20 10
+10 15
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+v 0 10 10
+10 30
+;
+*symbol COUPLED_INDUCTOR
+d TRANSFORMER_4_TREMINAL
+@type p 8.0
+@attributes
+a 0 s 9 0 12 -4 hln 100 REFDES=TX?
+a 0 sp 0 0 0 10 hlb 100 PART=COUPLED_INDUCTOR
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %1 %2 %3 %4 @MODEL PARAMS: ?PRI_TURNS|PRI_TURNS=@PRI_TURNS||PRI_TURNS=500| ?SEC_TURNS|SEC_TURNS=@SEC_TURNS||SEC_TURNS=500| ?COUPLING|COUPLING=@COUPLING||COUPLING=0.9999|
+a 0 u 0:13 0 0 0 hln 100 PRI_TURNS=500
+a 0 u 0:13 0 0 0 hln 100 SEC_TURNS=500
+a 0 u 0:13 0 0 0 hln 100 COUPLING=0.9999
+a 0 sp 0:13 0 0 0 hln 100 MODEL=COUPLED_INDUCTOR
+@pins
+p 0 13 2 hln 100 1 n 0 0 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 -2 hrn 100 PIN=1
+p 0 13 62 hln 100 2 n 0 60 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 58 hrn 100 PIN=2
+p 0 27 2 hrn 100 3 n 40 0 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 -2 hln 100 PIN=3
+p 0 27 62 hrn 100 4 n 40 60 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 58 hln 100 PIN=4
+@graphics 40 60 0 0 10
+a 0 30 30 25 35 30 40 
+a 0 10 40 15 35 10 30 
+a 0 10 30 15 25 10 20 
+a 0 10 20 15 15 10 10 
+a 0 30 10 25 15 30 20 
+a 0 30 20 25 25 30 30 
+a 0 10 50 15 45 10 40 
+a 0 30 40 25 45 30 50 
+v 0 30 50
+30 60
+;
+v 0 10 0
+10 10
+;
+v 0 10 50
+10 60
+;
+v 0 30 0
+30 10
+;
+*symbol Scr
+d SCR_EXACT_MODEL
+@type p
+@attributes
+a 0 sp 11 0 29 30 hrn 100 PART=Scr
+a 0 s 9 0 15 0 hln 100 REFDES=X?
+a 0 sp 0 0 29 30 hrn 100 MODEL=Scr
+a 0 s 0:13 0 0 0 hln 100 TEMPLATE=X^@REFDES %A %G %K @MODEL PARAMS: ?Vdrm|Vdrm=@Vdrm||Vdrm=400v| ?Vrrm|Vrrm=@Vrrm||Vrrm=400v| ?Idrm|Idrm=@Idrm||Idrm=10u| ?Ih|Ih=@Ih||Ih=6ma| ?dVdt|dVdt=@dVdt||dVdt=5e7| ?Igt|Igt=@Igt||Igt=5ma| ?Vgt|Vgt=@Vgt||Vgt=0.7v| ?Vtm|Vtm=@Vtm||Vtm=1.7v| ?Itm|Itm=@Itm||Itm=24| ?Ton|Ton=@Ton||Ton=1u| ?Toff|Toff=@Toff||Toff=15u|
+a 0 u 0:13 0 0 0 hln 100 Vdrm=400v
+a 0 u 0:13 0 0 0 hln 100 Vrrm=400v
+a 0 u 0:13 0 0 0 hln 100 Idrm=10u
+a 0 u 0:13 0 0 0 hln 100 Ih=6ma
+a 0 u 0:13 0 0 0 hln 100 dVdt=5e7
+a 0 u 0:13 0 0 0 hln 100 Igt=5ma
+a 0 u 0:13 0 0 0 hln 100 Vgt=0.7v
+a 0 u 0:13 0 0 0 hln 100 Vtm=1.7v
+a 0 u 0:13 0 0 0 hln 100 Itm=24
+a 0 u 0:13 0 0 0 hln 100 Ton=1u
+a 0 u 0:13 0 0 0 hln 100 Toff=15u
+@pins
+p 0 13 12 hln 100 A n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 8 hrn 100 PIN=0
+p 0 27 12 hrn 100 K n 40 10 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 8 hln 100 PIN=0
+p 0 35 25 hln 100 G n 30 30 v
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 25 32 hcn 100 PIN=0
+@graphics 40 30 0 10 10
+v 0 10 5
+10 15
+20 10
+10 5
+;
+v 0 30 20
+20 10
+;
+v 0 20 5
+20 15
+;
+v 0 30 10
+20 10
+;
+*symbol QM
+d npn bipolar transistor device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QM
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e @MODEL ?AREA/@AREA/
+@pins
+p 0 5 20 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 20 10
+10 15
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+v 0 10 10
+10 30
+;
+*symbol QN
+d npn bipolar transistor device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QN
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e @MODEL ?AREA/@AREA/
+@pins
+p 0 5 20 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 20 10
+10 15
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+v 0 10 10
+10 30
+;
+*symbol DXY
+d diode device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 15 25 hln 100 MODEL=DXY
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=D^@REFDES %1 %2 @MODEL ?AREA/@AREA/
+@pins
+p 0 5 10 hln 100 1 n 0 10 h
+p 0 25 10 hln 100 2 n 30 10 u
+@graphics 30 20 0 10 10
+v 0 12 5
+12 15
+20 10
+12 5
+;
+v 0 10 10
+12 10
+;
+v 0 20 5
+20 15
+;

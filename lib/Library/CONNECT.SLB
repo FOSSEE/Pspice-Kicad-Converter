@@ -1,0 +1,1382 @@
+*version 8.0 125748671
+@index
+symloc DB9M-B 0 1284
+symloc DB9F-B 1284 1311
+symloc DB25M-B 2595 2887
+symloc DB25F-B 5482 2885
+symloc EDGE40M-B 8367 4149
+symloc EDGE40F-B 12516 4151
+symloc EDGE62M-B 16667 6299
+symloc EDGE62F-B 22966 6306
+symloc DB9:CONNECTOR 29272 103
+symloc DB9M:male 29375 195
+symloc DB9F:CONNECTOR 29570 102
+symloc DB25:CONNECTOR 29672 116
+symloc DB25M:male 29788 198
+symloc DB25F:CONNECTOR 29986 110
+symloc DIN5 30096 1153
+symloc DIN96:CONNECTOR 31249 105
+symloc EDGE40:CONNECTOR 31354 76
+symloc EDGE62:CONNECTOR 31430 80
+symloc HDR20 31510 424
+symloc HDR50 31934 424
+symloc CONNECTOR 32358 429 b
+symloc male 32787 353
+symloc copyright 33140 583 b
+symloc edge26 33723 443
+*symbol DB9M-B
+d Complete male 9 pin connector
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 0 110 hln 100 PART=DB9M-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+p 2 27 12 hrn 100 1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=9
+a 0 u 0 0 40 90 hln 100 ERC=x
+@graphics 40 100 40 10 10
+v 0 0 10
+0 90
+;
+a 0 20 100 28 97 30 90
+v 0 30 10
+30 90
+;
+v 0 9 100
+16 100
+;
+v 0 16 100
+22 100
+;
+a 0 30 10 25 2 18 0
+v 0 0 10
+0 0
+;
+v 0 0 0
+18 0
+;
+v 0 0 90
+0 100
+;
+v 0 0 100
+9 100
+;
+v 0 4 50
+18 50
+;
+v 0 18 50
+12 46
+;
+v 0 18 50
+12 54
+;
+*symbol DB9F-B
+d Complete female 9 pin connector
+@type p
+@attributes
+a 1 sp 9 0 0 0 hln 100 REFDES=J?
+a 0 sp 11 0 0 110 hln 100 PART=DB9F-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+p 2 27 12 hrn 100 1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=9
+a 0 u 0 0 40 90 hln 100 ERC=x
+@graphics 40 100 40 10 10
+v 0 0 10
+0 90
+;
+v 0 30 10
+30 90
+;
+v 0 9 100
+16 100
+;
+v 0 16 100
+22 100
+;
+v 0 0 10
+0 0
+;
+v 0 0 0
+18 0
+;
+v 0 0 90
+0 100
+;
+v 0 0 100
+9 100
+;
+v 0 8 50
+22 50
+;
+v 0 8 50
+2 46
+;
+v 0 8 50
+2 54
+;
+v 0 20 0
+30 0
+;
+v 0 30 0
+30 10
+;
+v 0 20 100
+30 100
+;
+v 0 30 100
+30 90
+;
+*symbol DB25M-B
+d Complete male 25 pin connector
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 2 276 hln 100 PART=DB25M-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+p 2 27 12 hrn 100 1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=9
+a 0 u 0 0 40 90 hln 100 ERC=x
+p 2 27 102 hrn 100 10 n 40 100 u
+a 0 u 0 0 35 98 hln 100 pin=10
+a 0 u 0 0 40 100 hln 100 ERC=x
+p 2 27 112 hrn 100 11 n 40 110 u
+a 0 u 0 0 35 108 hln 100 pin=11
+a 0 u 0 0 40 110 hln 100 ERC=x
+p 2 27 122 hrn 100 12 n 40 120 u
+a 0 u 0 0 35 118 hln 100 pin=12
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 27 132 hrn 100 13 n 40 130 u
+a 0 u 0 0 35 128 hln 100 pin=13
+a 0 u 0 0 40 130 hln 100 ERC=x
+p 2 27 142 hrn 100 14 n 40 140 u
+a 0 u 0 0 35 138 hln 100 pin=14
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 27 152 hrn 100 15 n 40 150 u
+a 0 u 0 0 35 148 hln 100 pin=15
+a 0 u 0 0 40 150 hln 100 ERC=x
+p 2 27 162 hrn 100 16 n 40 160 u
+a 0 u 0 0 35 158 hln 100 pin=16
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 27 172 hrn 100 17 n 40 170 u
+a 0 u 0 0 35 168 hln 100 pin=17
+a 0 u 0 0 40 170 hln 100 ERC=x
+p 2 27 182 hrn 100 18 n 40 180 u
+a 0 u 0 0 35 178 hln 100 pin=18
+a 0 u 0 0 40 180 hln 100 ERC=x
+p 2 27 192 hrn 100 19 n 40 190 u
+a 0 u 0 0 35 188 hln 100 pin=19
+a 0 u 0 0 40 190 hln 100 ERC=x
+p 2 27 202 hrn 100 20 n 40 200 u
+a 0 u 0 0 35 198 hln 100 pin=20
+a 0 u 0 0 40 200 hln 100 ERC=x
+p 2 27 212 hrn 100 21 n 40 210 u
+a 0 u 0 0 35 208 hln 100 pin=21
+a 0 u 0 0 40 210 hln 100 ERC=x
+p 2 27 222 hrn 100 22 n 40 220 u
+a 0 u 0 0 35 218 hln 100 pin=22
+a 0 u 0 0 40 220 hln 100 ERC=x
+p 2 27 232 hrn 100 23 n 40 230 u
+a 0 u 0 0 35 228 hln 100 pin=23
+a 0 u 0 0 40 230 hln 100 ERC=x
+p 2 27 242 hrn 100 24 n 40 240 u
+a 0 u 0 0 35 238 hln 100 pin=24
+a 0 u 0 0 40 240 hln 100 ERC=x
+p 2 27 252 hrn 100 25 n 40 250 u
+a 0 u 0 0 35 248 hln 100 pin=25
+a 0 u 0 0 40 250 hln 100 ERC=x
+@graphics 40 260 40 10 10
+v 0 0 10
+0 90
+;
+a 0 20 260 28 257 30 250
+v 0 30 10
+30 90
+;
+v 0 9 260
+16 260
+;
+v 0 16 260
+22 260
+;
+a 0 30 10 25 2 18 0
+v 0 0 10
+0 0
+;
+v 0 0 0
+18 0
+;
+v 0 0 250
+0 260
+;
+v 0 0 260
+9 260
+;
+v 0 0 250
+0 90
+;
+v 0 30 90
+30 230
+;
+v 0 30 230
+30 250
+;
+v 0 4 130
+13 130
+;
+v 0 13 130
+10 128
+;
+v 0 13 130
+10 132
+;
+*symbol DB25F-B
+d Complete female 25 pin connector
+@type p
+@attributes
+a 1 sp 9 0 0 0 hln 100 REFDES=J?
+a 0 sp 11 0 2 276 hln 100 PART=DB25F-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+p 2 27 12 hrn 100 1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=9
+a 0 u 0 0 40 90 hln 100 ERC=x
+p 2 27 102 hrn 100 10 n 40 100 u
+a 0 u 0 0 35 98 hln 100 pin=10
+a 0 u 0 0 40 100 hln 100 ERC=x
+p 2 27 112 hrn 100 11 n 40 110 u
+a 0 u 0 0 35 108 hln 100 pin=11
+a 0 u 0 0 40 110 hln 100 ERC=x
+p 2 27 122 hrn 100 12 n 40 120 u
+a 0 u 0 0 35 118 hln 100 pin=12
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 27 132 hrn 100 13 n 40 130 u
+a 0 u 0 0 35 128 hln 100 pin=13
+a 0 u 0 0 40 130 hln 100 ERC=x
+p 2 27 142 hrn 100 14 n 40 140 u
+a 0 u 0 0 35 138 hln 100 pin=14
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 27 152 hrn 100 15 n 40 150 u
+a 0 u 0 0 35 148 hln 100 pin=15
+a 0 u 0 0 40 150 hln 100 ERC=x
+p 2 27 162 hrn 100 16 n 40 160 u
+a 0 u 0 0 35 158 hln 100 pin=16
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 27 172 hrn 100 17 n 40 170 u
+a 0 u 0 0 35 168 hln 100 pin=17
+a 0 u 0 0 40 170 hln 100 ERC=x
+p 2 27 182 hrn 100 18 n 40 180 u
+a 0 u 0 0 35 178 hln 100 pin=18
+a 0 u 0 0 40 180 hln 100 ERC=x
+p 2 27 192 hrn 100 19 n 40 190 u
+a 0 u 0 0 35 188 hln 100 pin=19
+a 0 u 0 0 40 190 hln 100 ERC=x
+p 2 27 202 hrn 100 20 n 40 200 u
+a 0 u 0 0 35 198 hln 100 pin=20
+a 0 u 0 0 40 200 hln 100 ERC=x
+p 2 27 212 hrn 100 21 n 40 210 u
+a 0 u 0 0 35 208 hln 100 pin=21
+a 0 u 0 0 40 210 hln 100 ERC=x
+p 2 27 222 hrn 100 22 n 40 220 u
+a 0 u 0 0 35 218 hln 100 pin=22
+a 0 u 0 0 40 220 hln 100 ERC=x
+p 2 27 232 hrn 100 23 n 40 230 u
+a 0 u 0 0 35 228 hln 100 pin=23
+a 0 u 0 0 40 230 hln 100 ERC=x
+p 2 27 242 hrn 100 24 n 40 240 u
+a 0 u 0 0 35 238 hln 100 pin=24
+a 0 u 0 0 40 240 hln 100 ERC=x
+p 2 27 252 hrn 100 25 n 40 250 u
+a 0 u 0 0 35 248 hln 100 pin=25
+a 0 u 0 0 40 250 hln 100 ERC=x
+@graphics 40 260 40 10 10
+v 0 0 10
+0 90
+;
+a 0 20 260 28 257 30 250
+v 0 30 10
+30 90
+;
+v 0 9 260
+16 260
+;
+v 0 16 260
+22 260
+;
+a 0 30 10 25 2 18 0
+v 0 0 10
+0 0
+;
+v 0 0 0
+18 0
+;
+v 0 0 250
+0 260
+;
+v 0 0 260
+9 260
+;
+v 0 0 250
+0 90
+;
+v 0 30 90
+30 230
+;
+v 0 30 230
+30 250
+;
+v 0 5 130
+14 130
+;
+v 0 5 130
+2 128
+;
+v 0 5 130
+2 132
+;
+*symbol EDGE40M-B
+d Complete 40-pin plug edge connector
+@type p
+@attributes
+a 1 sp 9 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 -8 422 hln 100 PART=EDGE40M-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+a 0 sp 0 0 0 10 hln 100 PKGREF=P?
+@pins
+p 2 27 12 hrn 100 A1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=A1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 A2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=A2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 A3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=A3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 A4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=A4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 A5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=A5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 A6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=A6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 A7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=A7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 A8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=A8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 A9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=A9
+a 0 u 0 0 40 90 hln 100 ERC=x
+p 2 27 102 hrn 100 A10 n 40 100 u
+a 0 u 0 0 35 98 hln 100 pin=A10
+a 0 u 0 0 40 100 hln 100 ERC=x
+p 2 27 112 hrn 100 A11 n 40 110 u
+a 0 u 0 0 35 108 hln 100 pin=A11
+a 0 u 0 0 40 110 hln 100 ERC=x
+p 2 27 122 hrn 100 A12 n 40 120 u
+a 0 u 0 0 35 118 hln 100 pin=A12
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 27 132 hrn 100 A13 n 40 130 u
+a 0 u 0 0 35 128 hln 100 pin=A13
+a 0 u 0 0 40 130 hln 100 ERC=x
+p 2 27 142 hrn 100 A14 n 40 140 u
+a 0 u 0 0 35 138 hln 100 pin=A14
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 27 152 hrn 100 A15 n 40 150 u
+a 0 u 0 0 35 148 hln 100 pin=A15
+a 0 u 0 0 40 150 hln 100 ERC=x
+p 2 27 162 hrn 100 A16 n 40 160 u
+a 0 u 0 0 35 158 hln 100 pin=A16
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 27 172 hrn 100 A17 n 40 170 u
+a 0 u 0 0 35 168 hln 100 pin=A17
+a 0 u 0 0 40 170 hln 100 ERC=x
+p 2 27 182 hrn 100 A18 n 40 180 u
+a 0 u 0 0 35 178 hln 100 pin=A18
+a 0 u 0 0 40 180 hln 100 ERC=x
+p 2 27 192 hrn 100 A19 n 40 190 u
+a 0 u 0 0 35 188 hln 100 pin=A19
+a 0 u 0 0 40 190 hln 100 ERC=x
+p 2 27 202 hrn 100 A20 n 40 200 u
+a 0 u 0 0 35 198 hln 100 pin=A20
+a 0 u 0 0 40 200 hln 100 ERC=x
+p 2 27 212 hrn 100 B1 n 40 210 u
+a 0 u 0 0 35 208 hln 100 pin=B1
+a 0 u 0 0 40 210 hln 100 ERC=x
+p 2 27 222 hrn 100 B2 n 40 220 u
+a 0 u 0 0 35 218 hln 100 pin=B2
+a 0 u 0 0 40 220 hln 100 ERC=x
+p 2 27 232 hrn 100 B3 n 40 230 u
+a 0 u 0 0 35 228 hln 100 pin=B3
+a 0 u 0 0 40 230 hln 100 ERC=x
+p 2 27 242 hrn 100 B4 n 40 240 u
+a 0 u 0 0 35 238 hln 100 pin=B4
+a 0 u 0 0 40 240 hln 100 ERC=x
+p 2 27 252 hrn 100 B5 n 40 250 u
+a 0 u 0 0 35 248 hln 100 pin=B5
+a 0 u 0 0 40 250 hln 100 ERC=x
+p 2 27 262 hrn 100 B6 n 40 260 u
+a 0 u 0 0 35 258 hln 100 pin=B6
+a 0 u 0 0 40 260 hln 100 ERC=x
+p 2 27 272 hrn 100 B7 n 40 270 u
+a 0 u 0 0 35 268 hln 100 pin=B7
+a 0 u 0 0 40 270 hln 100 ERC=x
+p 2 27 282 hrn 100 B8 n 40 280 u
+a 0 u 0 0 35 278 hln 100 pin=B8
+a 0 u 0 0 40 280 hln 100 ERC=x
+p 2 27 292 hrn 100 B9 n 40 290 u
+a 0 u 0 0 35 288 hln 100 pin=B9
+a 0 u 0 0 40 290 hln 100 ERC=x
+p 2 27 302 hrn 100 B10 n 40 300 u
+a 0 u 0 0 35 298 hln 100 pin=B10
+a 0 u 0 0 40 300 hln 100 ERC=x
+p 2 27 312 hrn 100 B11 n 40 310 u
+a 0 u 0 0 35 308 hln 100 pin=B11
+a 0 u 0 0 40 310 hln 100 ERC=x
+p 2 27 322 hrn 100 B12 n 40 320 u
+a 0 u 0 0 35 318 hln 100 pin=B12
+a 0 u 0 0 40 320 hln 100 ERC=x
+p 2 27 332 hrn 100 B13 n 40 330 u
+a 0 u 0 0 35 328 hln 100 pin=B13
+a 0 u 0 0 40 330 hln 100 ERC=x
+p 2 27 342 hrn 100 B14 n 40 340 u
+a 0 u 0 0 35 338 hln 100 pin=B14
+a 0 u 0 0 40 340 hln 100 ERC=x
+p 2 27 352 hrn 100 B15 n 40 350 u
+a 0 u 0 0 35 348 hln 100 pin=B15
+a 0 u 0 0 40 350 hln 100 ERC=x
+p 2 27 362 hrn 100 B16 n 40 360 u
+a 0 u 0 0 35 358 hln 100 pin=B16
+a 0 u 0 0 40 360 hln 100 ERC=x
+p 2 27 372 hrn 100 B17 n 40 370 u
+a 0 u 0 0 35 368 hln 100 pin=B17
+a 0 u 0 0 40 370 hln 100 ERC=x
+p 2 27 382 hrn 100 B18 n 40 380 u
+a 0 u 0 0 35 378 hln 100 pin=B18
+a 0 u 0 0 40 380 hln 100 ERC=x
+p 2 27 392 hrn 100 B19 n 40 390 u
+a 0 u 0 0 35 388 hln 100 pin=B19
+a 0 u 0 0 40 390 hln 100 ERC=x
+p 2 27 402 hrn 100 B20 n 40 400 u
+a 0 u 0 0 35 398 hln 100 pin=B20
+a 0 u 0 0 40 400 hln 100 ERC=x
+@graphics 40 410 40 10 10
+r 0 0 0 30 410
+*symbol EDGE40F-B
+d Complete 40-pin socket edge connector
+@type p
+@attributes
+a 1 sp 9 0 0 0 hln 100 REFDES=J?
+a 0 sp 11 0 -8 422 hln 100 PART=EDGE40F-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+a 0 sp 0 0 0 10 hln 100 PKGREF=P?
+@pins
+p 2 27 12 hrn 100 A1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=A1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 A2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=A2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 A3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=A3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 A4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=A4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 A5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=A5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 A6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=A6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 A7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=A7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 A8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=A8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 A9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=A9
+a 0 u 0 0 40 90 hln 100 ERC=x
+p 2 27 102 hrn 100 A10 n 40 100 u
+a 0 u 0 0 35 98 hln 100 pin=A10
+a 0 u 0 0 40 100 hln 100 ERC=x
+p 2 27 112 hrn 100 A11 n 40 110 u
+a 0 u 0 0 35 108 hln 100 pin=A11
+a 0 u 0 0 40 110 hln 100 ERC=x
+p 2 27 122 hrn 100 A12 n 40 120 u
+a 0 u 0 0 35 118 hln 100 pin=A12
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 27 132 hrn 100 A13 n 40 130 u
+a 0 u 0 0 35 128 hln 100 pin=A13
+a 0 u 0 0 40 130 hln 100 ERC=x
+p 2 27 142 hrn 100 A14 n 40 140 u
+a 0 u 0 0 35 138 hln 100 pin=A14
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 27 152 hrn 100 A15 n 40 150 u
+a 0 u 0 0 35 148 hln 100 pin=A15
+a 0 u 0 0 40 150 hln 100 ERC=x
+p 2 27 162 hrn 100 A16 n 40 160 u
+a 0 u 0 0 35 158 hln 100 pin=A16
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 27 172 hrn 100 A17 n 40 170 u
+a 0 u 0 0 35 168 hln 100 pin=A17
+a 0 u 0 0 40 170 hln 100 ERC=x
+p 2 27 182 hrn 100 A18 n 40 180 u
+a 0 u 0 0 35 178 hln 100 pin=A18
+a 0 u 0 0 40 180 hln 100 ERC=x
+p 2 27 192 hrn 100 A19 n 40 190 u
+a 0 u 0 0 35 188 hln 100 pin=A19
+a 0 u 0 0 40 190 hln 100 ERC=x
+p 2 27 202 hrn 100 A20 n 40 200 u
+a 0 u 0 0 35 198 hln 100 pin=A20
+a 0 u 0 0 40 200 hln 100 ERC=x
+p 2 27 212 hrn 100 B1 n 40 210 u
+a 0 u 0 0 35 208 hln 100 pin=B1
+a 0 u 0 0 40 210 hln 100 ERC=x
+p 2 27 222 hrn 100 B2 n 40 220 u
+a 0 u 0 0 35 218 hln 100 pin=B2
+a 0 u 0 0 40 220 hln 100 ERC=x
+p 2 27 232 hrn 100 B3 n 40 230 u
+a 0 u 0 0 35 228 hln 100 pin=B3
+a 0 u 0 0 40 230 hln 100 ERC=x
+p 2 27 242 hrn 100 B4 n 40 240 u
+a 0 u 0 0 35 238 hln 100 pin=B4
+a 0 u 0 0 40 240 hln 100 ERC=x
+p 2 27 252 hrn 100 B5 n 40 250 u
+a 0 u 0 0 35 248 hln 100 pin=B5
+a 0 u 0 0 40 250 hln 100 ERC=x
+p 2 27 262 hrn 100 B6 n 40 260 u
+a 0 u 0 0 35 258 hln 100 pin=B6
+a 0 u 0 0 40 260 hln 100 ERC=x
+p 2 27 272 hrn 100 B7 n 40 270 u
+a 0 u 0 0 35 268 hln 100 pin=B7
+a 0 u 0 0 40 270 hln 100 ERC=x
+p 2 27 282 hrn 100 B8 n 40 280 u
+a 0 u 0 0 35 278 hln 100 pin=B8
+a 0 u 0 0 40 280 hln 100 ERC=x
+p 2 27 292 hrn 100 B9 n 40 290 u
+a 0 u 0 0 35 288 hln 100 pin=B9
+a 0 u 0 0 40 290 hln 100 ERC=x
+p 2 27 302 hrn 100 B10 n 40 300 u
+a 0 u 0 0 35 298 hln 100 pin=B10
+a 0 u 0 0 40 300 hln 100 ERC=x
+p 2 27 312 hrn 100 B11 n 40 310 u
+a 0 u 0 0 35 308 hln 100 pin=B11
+a 0 u 0 0 40 310 hln 100 ERC=x
+p 2 27 322 hrn 100 B12 n 40 320 u
+a 0 u 0 0 35 318 hln 100 pin=B12
+a 0 u 0 0 40 320 hln 100 ERC=x
+p 2 27 332 hrn 100 B13 n 40 330 u
+a 0 u 0 0 35 328 hln 100 pin=B13
+a 0 u 0 0 40 330 hln 100 ERC=x
+p 2 27 342 hrn 100 B14 n 40 340 u
+a 0 u 0 0 35 338 hln 100 pin=B14
+a 0 u 0 0 40 340 hln 100 ERC=x
+p 2 27 352 hrn 100 B15 n 40 350 u
+a 0 u 0 0 35 348 hln 100 pin=B15
+a 0 u 0 0 40 350 hln 100 ERC=x
+p 2 27 362 hrn 100 B16 n 40 360 u
+a 0 u 0 0 35 358 hln 100 pin=B16
+a 0 u 0 0 40 360 hln 100 ERC=x
+p 2 27 372 hrn 100 B17 n 40 370 u
+a 0 u 0 0 35 368 hln 100 pin=B17
+a 0 u 0 0 40 370 hln 100 ERC=x
+p 2 27 382 hrn 100 B18 n 40 380 u
+a 0 u 0 0 35 378 hln 100 pin=B18
+a 0 u 0 0 40 380 hln 100 ERC=x
+p 2 27 392 hrn 100 B19 n 40 390 u
+a 0 u 0 0 35 388 hln 100 pin=B19
+a 0 u 0 0 40 390 hln 100 ERC=x
+p 2 27 402 hrn 100 B20 n 40 400 u
+a 0 u 0 0 35 398 hln 100 pin=B20
+a 0 u 0 0 40 400 hln 100 ERC=x
+@graphics 40 410 40 10 10
+r 0 0 0 30 410
+*symbol EDGE62M-B
+d Complete 62pin edge connector
+@type p
+@attributes
+a 1 sp 9 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 -6 644 hln 100 PART=EDGE62M-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+a 0 sp 0 0 0 10 hln 100 PKGREF=P?
+@pins
+p 2 27 12 hrn 100 A1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=A1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 A2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=A2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 A3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=A3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 A4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=A4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 A5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=A5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 A6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=A6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 A7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=A7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 A8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=A8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 A9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=A9
+a 0 u 0 0 40 90 hln 100 ERC=x
+p 2 27 102 hrn 100 A10 n 40 100 u
+a 0 u 0 0 35 98 hln 100 pin=A10
+a 0 u 0 0 40 100 hln 100 ERC=x
+p 2 27 112 hrn 100 A11 n 40 110 u
+a 0 u 0 0 35 108 hln 100 pin=A11
+a 0 u 0 0 40 110 hln 100 ERC=x
+p 2 27 122 hrn 100 A12 n 40 120 u
+a 0 u 0 0 35 118 hln 100 pin=A12
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 27 132 hrn 100 A13 n 40 130 u
+a 0 u 0 0 35 128 hln 100 pin=A13
+a 0 u 0 0 40 130 hln 100 ERC=x
+p 2 27 142 hrn 100 A14 n 40 140 u
+a 0 u 0 0 35 138 hln 100 pin=A14
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 27 152 hrn 100 A15 n 40 150 u
+a 0 u 0 0 35 148 hln 100 pin=A15
+a 0 u 0 0 40 150 hln 100 ERC=x
+p 2 27 162 hrn 100 A16 n 40 160 u
+a 0 u 0 0 35 158 hln 100 pin=A16
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 27 172 hrn 100 A17 n 40 170 u
+a 0 u 0 0 35 168 hln 100 pin=A17
+a 0 u 0 0 40 170 hln 100 ERC=x
+p 2 27 182 hrn 100 A18 n 40 180 u
+a 0 u 0 0 35 178 hln 100 pin=A18
+a 0 u 0 0 40 180 hln 100 ERC=x
+p 2 27 192 hrn 100 A19 n 40 190 u
+a 0 u 0 0 35 188 hln 100 pin=A19
+a 0 u 0 0 40 190 hln 100 ERC=x
+p 2 27 202 hrn 100 A20 n 40 200 u
+a 0 u 0 0 35 198 hln 100 pin=A20
+a 0 u 0 0 40 200 hln 100 ERC=x
+p 2 27 212 hrn 100 A21 n 40 210 u
+a 0 u 0 0 35 208 hln 100 pin=A21
+a 0 u 0 0 40 210 hln 100 ERC=x
+p 2 27 222 hrn 100 A22 n 40 220 u
+a 0 u 0 0 35 218 hln 100 pin=A22
+a 0 u 0 0 40 220 hln 100 ERC=x
+p 2 27 232 hrn 100 A23 n 40 230 u
+a 0 u 0 0 35 228 hln 100 pin=A23
+a 0 u 0 0 40 230 hln 100 ERC=x
+p 2 27 242 hrn 100 A24 n 40 240 u
+a 0 u 0 0 35 238 hln 100 pin=A24
+a 0 u 0 0 40 240 hln 100 ERC=x
+p 2 27 252 hrn 100 A25 n 40 250 u
+a 0 u 0 0 35 248 hln 100 pin=A25
+a 0 u 0 0 40 250 hln 100 ERC=x
+p 2 27 262 hrn 100 A26 n 40 260 u
+a 0 u 0 0 35 258 hln 100 pin=A26
+a 0 u 0 0 40 260 hln 100 ERC=x
+p 2 27 272 hrn 100 A27 n 40 270 u
+a 0 u 0 0 35 268 hln 100 pin=A27
+a 0 u 0 0 40 270 hln 100 ERC=x
+p 2 27 282 hrn 100 A28 n 40 280 u
+a 0 u 0 0 35 278 hln 100 pin=A28
+a 0 u 0 0 40 280 hln 100 ERC=x
+p 2 27 292 hrn 100 A29 n 40 290 u
+a 0 u 0 0 35 288 hln 100 pin=A29
+a 0 u 0 0 40 290 hln 100 ERC=x
+p 2 27 302 hrn 100 A30 n 40 300 u
+a 0 u 0 0 35 298 hln 100 pin=A30
+a 0 u 0 0 40 300 hln 100 ERC=x
+p 2 27 312 hrn 100 A31 n 40 310 u
+a 0 u 0 0 35 308 hln 100 pin=A31
+a 0 u 0 0 40 310 hln 100 ERC=x
+p 2 27 322 hrn 100 B1 n 40 320 u
+a 0 u 0 0 35 318 hln 100 pin=B1
+a 0 u 0 0 40 320 hln 100 ERC=x
+p 2 27 332 hrn 100 B2 n 40 330 u
+a 0 u 0 0 35 328 hln 100 pin=B2
+a 0 u 0 0 40 330 hln 100 ERC=x
+p 2 27 342 hrn 100 B3 n 40 340 u
+a 0 u 0 0 35 338 hln 100 pin=B3
+a 0 u 0 0 40 340 hln 100 ERC=x
+p 2 27 352 hrn 100 B4 n 40 350 u
+a 0 u 0 0 35 348 hln 100 pin=B4
+a 0 u 0 0 40 350 hln 100 ERC=x
+p 2 27 362 hrn 100 B5 n 40 360 u
+a 0 u 0 0 35 358 hln 100 pin=B5
+a 0 u 0 0 40 360 hln 100 ERC=x
+p 2 27 372 hrn 100 B6 n 40 370 u
+a 0 u 0 0 35 368 hln 100 pin=B6
+a 0 u 0 0 40 370 hln 100 ERC=x
+p 2 27 382 hrn 100 B7 n 40 380 u
+a 0 u 0 0 35 378 hln 100 pin=B7
+a 0 u 0 0 40 380 hln 100 ERC=x
+p 2 27 392 hrn 100 B8 n 40 390 u
+a 0 u 0 0 35 388 hln 100 pin=B8
+a 0 u 0 0 40 390 hln 100 ERC=x
+p 2 27 402 hrn 100 B9 n 40 400 u
+a 0 u 0 0 35 398 hln 100 pin=B9
+a 0 u 0 0 40 400 hln 100 ERC=x
+p 2 27 412 hrn 100 B10 n 40 410 u
+a 0 u 0 0 35 408 hln 100 pin=B10
+a 0 u 0 0 40 410 hln 100 ERC=x
+p 2 27 422 hrn 100 B11 n 40 420 u
+a 0 u 0 0 35 418 hln 100 pin=B11
+a 0 u 0 0 40 420 hln 100 ERC=x
+p 2 27 432 hrn 100 B12 n 40 430 u
+a 0 u 0 0 35 428 hln 100 pin=B12
+a 0 u 0 0 40 430 hln 100 ERC=x
+p 2 27 442 hrn 100 B13 n 40 440 u
+a 0 u 0 0 35 438 hln 100 pin=B13
+a 0 u 0 0 40 440 hln 100 ERC=x
+p 2 27 452 hrn 100 B14 n 40 450 u
+a 0 u 0 0 35 448 hln 100 pin=B14
+a 0 u 0 0 40 450 hln 100 ERC=x
+p 2 27 462 hrn 100 B15 n 40 460 u
+a 0 u 0 0 35 458 hln 100 pin=B15
+a 0 u 0 0 40 460 hln 100 ERC=x
+p 2 27 472 hrn 100 B16 n 40 470 u
+a 0 u 0 0 35 468 hln 100 pin=B16
+a 0 u 0 0 40 470 hln 100 ERC=x
+p 2 27 482 hrn 100 B17 n 40 480 u
+a 0 u 0 0 35 478 hln 100 pin=B17
+a 0 u 0 0 40 480 hln 100 ERC=x
+p 2 27 492 hrn 100 B18 n 40 490 u
+a 0 u 0 0 35 488 hln 100 pin=B18
+a 0 u 0 0 40 490 hln 100 ERC=x
+p 2 27 502 hrn 100 B19 n 40 500 u
+a 0 u 0 0 35 498 hln 100 pin=B19
+a 0 u 0 0 40 500 hln 100 ERC=x
+p 2 27 512 hrn 100 B20 n 40 510 u
+a 0 u 0 0 35 508 hln 100 pin=B20
+a 0 u 0 0 40 510 hln 100 ERC=x
+p 2 27 522 hrn 100 B21 n 40 520 u
+a 0 u 0 0 35 518 hln 100 pin=B21
+a 0 u 0 0 40 520 hln 100 ERC=x
+p 2 27 532 hrn 100 B22 n 40 530 u
+a 0 u 0 0 35 528 hln 100 pin=B22
+a 0 u 0 0 40 530 hln 100 ERC=x
+p 2 27 542 hrn 100 B23 n 40 540 u
+a 0 u 0 0 35 538 hln 100 pin=B23
+a 0 u 0 0 40 540 hln 100 ERC=x
+p 2 27 552 hrn 100 B24 n 40 550 u
+a 0 u 0 0 35 548 hln 100 pin=B24
+a 0 u 0 0 40 550 hln 100 ERC=x
+p 2 27 562 hrn 100 B25 n 40 560 u
+a 0 u 0 0 35 558 hln 100 pin=B25
+a 0 u 0 0 40 560 hln 100 ERC=x
+p 2 27 572 hrn 100 B26 n 40 570 u
+a 0 u 0 0 35 568 hln 100 pin=B26
+a 0 u 0 0 40 570 hln 100 ERC=x
+p 2 27 582 hrn 100 B27 n 40 580 u
+a 0 u 0 0 35 578 hln 100 pin=B27
+a 0 u 0 0 40 580 hln 100 ERC=x
+p 2 27 592 hrn 100 B28 n 40 590 u
+a 0 u 0 0 35 588 hln 100 pin=B28
+a 0 u 0 0 40 590 hln 100 ERC=x
+p 2 27 602 hrn 100 B29 n 40 600 u
+a 0 u 0 0 35 598 hln 100 pin=B29
+a 0 u 0 0 40 600 hln 100 ERC=x
+p 2 27 612 hrn 100 B30 n 40 610 u
+a 0 u 0 0 35 608 hln 100 pin=B30
+a 0 u 0 0 40 610 hln 100 ERC=x
+p 2 27 622 hrn 100 B31 n 40 620 u
+a 0 u 0 0 35 618 hln 100 pin=B31
+a 0 u 0 0 40 620 hln 100 ERC=x
+@graphics 40 630 40 10 10
+r 0 0 0 30 630
+*symbol EDGE62F-B
+d Complete 62pin socket edge connector
+@type p
+@attributes
+a 1 sp 9 0 0 0 hln 100 REFDES=J?
+a 0 sp 11 0 -6 644 hln 100 PART=EDGE62F-B
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+a 0 sp 0 0 0 10 hln 100 PKGREF=P?
+@pins
+p 2 27 12 hrn 100 A1 n 40 10 u
+a 0 u 0 0 35 8 hln 100 pin=A1
+a 0 u 0 0 40 10 hln 100 ERC=x
+p 2 27 22 hrn 100 A2 n 40 20 u
+a 0 u 0 0 35 18 hln 100 pin=A2
+a 0 u 0 0 40 20 hln 100 ERC=x
+p 2 27 32 hrn 100 A3 n 40 30 u
+a 0 u 0 0 35 28 hln 100 pin=A3
+a 0 u 0 0 40 30 hln 100 ERC=x
+p 2 27 42 hrn 100 A4 n 40 40 u
+a 0 u 0 0 35 38 hln 100 pin=A4
+a 0 u 0 0 40 40 hln 100 ERC=x
+p 2 27 52 hrn 100 A5 n 40 50 u
+a 0 u 0 0 35 48 hln 100 pin=A5
+a 0 u 0 0 40 50 hln 100 ERC=x
+p 2 27 62 hrn 100 A6 n 40 60 u
+a 0 u 0 0 35 58 hln 100 pin=A6
+a 0 u 0 0 40 60 hln 100 ERC=x
+p 2 27 72 hrn 100 A7 n 40 70 u
+a 0 u 0 0 35 68 hln 100 pin=A7
+a 0 u 0 0 40 70 hln 100 ERC=x
+p 2 27 82 hrn 100 A8 n 40 80 u
+a 0 u 0 0 35 78 hln 100 pin=A8
+a 0 u 0 0 40 80 hln 100 ERC=x
+p 2 27 92 hrn 100 A9 n 40 90 u
+a 0 u 0 0 35 88 hln 100 pin=A9
+a 0 u 0 0 40 90 hln 100 ERC=x
+p 2 27 102 hrn 100 A10 n 40 100 u
+a 0 u 0 0 35 98 hln 100 pin=A10
+a 0 u 0 0 40 100 hln 100 ERC=x
+p 2 27 112 hrn 100 A11 n 40 110 u
+a 0 u 0 0 35 108 hln 100 pin=A11
+a 0 u 0 0 40 110 hln 100 ERC=x
+p 2 27 122 hrn 100 A12 n 40 120 u
+a 0 u 0 0 35 118 hln 100 pin=A12
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 27 132 hrn 100 A13 n 40 130 u
+a 0 u 0 0 35 128 hln 100 pin=A13
+a 0 u 0 0 40 130 hln 100 ERC=x
+p 2 27 142 hrn 100 A14 n 40 140 u
+a 0 u 0 0 35 138 hln 100 pin=A14
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 27 152 hrn 100 A15 n 40 150 u
+a 0 u 0 0 35 148 hln 100 pin=A15
+a 0 u 0 0 40 150 hln 100 ERC=x
+p 2 27 162 hrn 100 A16 n 40 160 u
+a 0 u 0 0 35 158 hln 100 pin=A16
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 27 172 hrn 100 A17 n 40 170 u
+a 0 u 0 0 35 168 hln 100 pin=A17
+a 0 u 0 0 40 170 hln 100 ERC=x
+p 2 27 182 hrn 100 A18 n 40 180 u
+a 0 u 0 0 35 178 hln 100 pin=A18
+a 0 u 0 0 40 180 hln 100 ERC=x
+p 2 27 192 hrn 100 A19 n 40 190 u
+a 0 u 0 0 35 188 hln 100 pin=A19
+a 0 u 0 0 40 190 hln 100 ERC=x
+p 2 27 202 hrn 100 A20 n 40 200 u
+a 0 u 0 0 35 198 hln 100 pin=A20
+a 0 u 0 0 40 200 hln 100 ERC=x
+p 2 27 212 hrn 100 A21 n 40 210 u
+a 0 u 0 0 35 208 hln 100 pin=A21
+a 0 u 0 0 40 210 hln 100 ERC=x
+p 2 27 222 hrn 100 A22 n 40 220 u
+a 0 u 0 0 35 218 hln 100 pin=A22
+a 0 u 0 0 40 220 hln 100 ERC=x
+p 2 27 232 hrn 100 A23 n 40 230 u
+a 0 u 0 0 35 228 hln 100 pin=A23
+a 0 u 0 0 40 230 hln 100 ERC=x
+p 2 27 242 hrn 100 A24 n 40 240 u
+a 0 u 0 0 35 238 hln 100 pin=A24
+a 0 u 0 0 40 240 hln 100 ERC=x
+p 2 27 252 hrn 100 A25 n 40 250 u
+a 0 u 0 0 35 248 hln 100 pin=A25
+a 0 u 0 0 40 250 hln 100 ERC=x
+p 2 27 262 hrn 100 A26 n 40 260 u
+a 0 u 0 0 35 258 hln 100 pin=A26
+a 0 u 0 0 40 260 hln 100 ERC=x
+p 2 27 272 hrn 100 A27 n 40 270 u
+a 0 u 0 0 35 268 hln 100 pin=A27
+a 0 u 0 0 40 270 hln 100 ERC=x
+p 2 27 282 hrn 100 A28 n 40 280 u
+a 0 u 0 0 35 278 hln 100 pin=A28
+a 0 u 0 0 40 280 hln 100 ERC=x
+p 2 27 292 hrn 100 A29 n 40 290 u
+a 0 u 0 0 35 288 hln 100 pin=A29
+a 0 u 0 0 40 290 hln 100 ERC=x
+p 2 27 302 hrn 100 A30 n 40 300 u
+a 0 u 0 0 35 298 hln 100 pin=A30
+a 0 u 0 0 40 300 hln 100 ERC=x
+p 2 27 312 hrn 100 A31 n 40 310 u
+a 0 u 0 0 35 308 hln 100 pin=A31
+a 0 u 0 0 40 310 hln 100 ERC=x
+p 2 27 322 hrn 100 B1 n 40 320 u
+a 0 u 0 0 35 318 hln 100 pin=B1
+a 0 u 0 0 40 320 hln 100 ERC=x
+p 2 27 332 hrn 100 B2 n 40 330 u
+a 0 u 0 0 35 328 hln 100 pin=B2
+a 0 u 0 0 40 330 hln 100 ERC=x
+p 2 27 342 hrn 100 B3 n 40 340 u
+a 0 u 0 0 35 338 hln 100 pin=B3
+a 0 u 0 0 40 340 hln 100 ERC=x
+p 2 27 352 hrn 100 B4 n 40 350 u
+a 0 u 0 0 35 348 hln 100 pin=B4
+a 0 u 0 0 40 350 hln 100 ERC=x
+p 2 27 362 hrn 100 B5 n 40 360 u
+a 0 u 0 0 35 358 hln 100 pin=B5
+a 0 u 0 0 40 360 hln 100 ERC=x
+p 2 27 372 hrn 100 B6 n 40 370 u
+a 0 u 0 0 35 368 hln 100 pin=B6
+a 0 u 0 0 40 370 hln 100 ERC=x
+p 2 27 382 hrn 100 B7 n 40 380 u
+a 0 u 0 0 35 378 hln 100 pin=B7
+a 0 u 0 0 40 380 hln 100 ERC=x
+p 2 27 392 hrn 100 B8 n 40 390 u
+a 0 u 0 0 35 388 hln 100 pin=B8
+a 0 u 0 0 40 390 hln 100 ERC=x
+p 2 27 402 hrn 100 B9 n 40 400 u
+a 0 u 0 0 35 398 hln 100 pin=B9
+a 0 u 0 0 40 400 hln 100 ERC=x
+p 2 27 412 hrn 100 B10 n 40 410 u
+a 0 u 0 0 35 408 hln 100 pin=B10
+a 0 u 0 0 40 410 hln 100 ERC=x
+p 2 27 422 hrn 100 B11 n 40 420 u
+a 0 u 0 0 35 418 hln 100 pin=B11
+a 0 u 0 0 40 420 hln 100 ERC=x
+p 2 27 432 hrn 100 B12 n 40 430 u
+a 0 u 0 0 35 428 hln 100 pin=B12
+a 0 u 0 0 40 430 hln 100 ERC=x
+p 2 27 442 hrn 100 B13 n 40 440 u
+a 0 u 0 0 35 438 hln 100 pin=B13
+a 0 u 0 0 40 440 hln 100 ERC=x
+p 2 27 452 hrn 100 B14 n 40 450 u
+a 0 u 0 0 35 448 hln 100 pin=B14
+a 0 u 0 0 40 450 hln 100 ERC=x
+p 2 27 462 hrn 100 B15 n 40 460 u
+a 0 u 0 0 35 458 hln 100 pin=B15
+a 0 u 0 0 40 460 hln 100 ERC=x
+p 2 27 472 hrn 100 B16 n 40 470 u
+a 0 u 0 0 35 468 hln 100 pin=B16
+a 0 u 0 0 40 470 hln 100 ERC=x
+p 2 27 482 hrn 100 B17 n 40 480 u
+a 0 u 0 0 35 478 hln 100 pin=B17
+a 0 u 0 0 40 480 hln 100 ERC=x
+p 2 27 492 hrn 100 B18 n 40 490 u
+a 0 u 0 0 35 488 hln 100 pin=B18
+a 0 u 0 0 40 490 hln 100 ERC=x
+p 2 27 502 hrn 100 B19 n 40 500 u
+a 0 u 0 0 35 498 hln 100 pin=B19
+a 0 u 0 0 40 500 hln 100 ERC=x
+p 2 27 512 hrn 100 B20 n 40 510 u
+a 0 u 0 0 35 508 hln 100 pin=B20
+a 0 u 0 0 40 510 hln 100 ERC=x
+p 2 27 522 hrn 100 B21 n 40 520 u
+a 0 u 0 0 35 518 hln 100 pin=B21
+a 0 u 0 0 40 520 hln 100 ERC=x
+p 2 27 532 hrn 100 B22 n 40 530 u
+a 0 u 0 0 35 528 hln 100 pin=B22
+a 0 u 0 0 40 530 hln 100 ERC=x
+p 2 27 542 hrn 100 B23 n 40 540 u
+a 0 u 0 0 35 538 hln 100 pin=B23
+a 0 u 0 0 40 540 hln 100 ERC=x
+p 2 27 552 hrn 100 B24 n 40 550 u
+a 0 u 0 0 35 548 hln 100 pin=B24
+a 0 u 0 0 40 550 hln 100 ERC=x
+p 2 27 562 hrn 100 B25 n 40 560 u
+a 0 u 0 0 35 558 hln 100 pin=B25
+a 0 u 0 0 40 560 hln 100 ERC=x
+p 2 27 572 hrn 100 B26 n 40 570 u
+a 0 u 0 0 35 568 hln 100 pin=B26
+a 0 u 0 0 40 570 hln 100 ERC=x
+p 2 27 582 hrn 100 B27 n 40 580 u
+a 0 u 0 0 35 578 hln 100 pin=B27
+a 0 u 0 0 40 580 hln 100 ERC=x
+p 2 27 592 hrn 100 B28 n 40 590 u
+a 0 u 0 0 35 588 hln 100 pin=B28
+a 0 u 0 0 40 590 hln 100 ERC=x
+p 2 27 602 hrn 100 B29 n 40 600 u
+a 0 u 0 0 35 598 hln 100 pin=B29
+a 0 u 0 0 40 600 hln 100 ERC=x
+p 2 27 612 hrn 100 B30 n 40 610 u
+a 0 u 0 0 35 608 hln 100 pin=B30
+a 0 u 0 0 40 610 hln 100 ERC=x
+p 2 27 622 hrn 100 B31 n 40 620 u
+a 0 u 0 0 35 618 hln 100 pin=B31
+a 0 u 0 0 40 620 hln 100 ERC=x
+@graphics 40 630 40 10 10
+r 0 0 0 30 630
+*symbol DB9 ako CONNECTOR
+d Nine D-connector
+@type p
+@attributes
+a 0 s 0 0 14 8 hln 100 COMPONENT=DB9M
+*symbol DB9M ako male
+d 9 pin D connector pin
+@type p
+@attributes
+a 0 s 0 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 s 13 0 0 16 hlb 100 GATE=G?
+a 0 s 13 0 16 8 hln 100 PKGREF=P?
+*symbol DB9F ako CONNECTOR
+d Nine pin D-connector
+@type p
+@attributes
+a 0 s 13 0 0 16 hlb 100 GATE=G?
+*symbol DB25 ako CONNECTOR
+d Twenty-five pin D connector
+@type p
+@attributes
+a 0 s 0 0 14 8 hln 100 COMPONENT=DB25M
+*symbol DB25M ako male
+d 25 pin male D connector
+@type p
+@attributes
+a 0 s 0 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 s 13 0 0 16 hlb 100 GATE=G?
+a 0 s 13 0 16 8 hln 100 PKGREF=P?
+*symbol DB25F ako CONNECTOR
+d 25 pin female D connector
+@type p
+@attributes
+a 0 s 13 0 14 8 hln 100 PKGREF=P?
+*symbol DIN5
+d 5 pin DIN connector
+@type p
+@attributes
+a 0 sp 0 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 10 70 hln 100 PART=DIN5
+a 0 s 13 0 4 -2 hln 100 PKGREF=P?
+@pins
+p 0 27 12 hrn 100 pin1 n 40 10 u
+a 0 u 1 0 35 8 hln 100 pin=1
+a 0 u 0 0 30 10 hln 100 ERC=x
+a 0 u 0 0 -2 0 hln 100 float=e
+p 0 27 22 hrn 100 pin2 n 40 20 u
+a 0 u 1 0 35 18 hln 100 pin=2
+a 0 u 0 0 38 20 hln 100 ERC=x
+a 0 u 0 0 6 0 hln 100 float=e
+p 0 27 32 hrn 100 pin3 n 40 30 u
+a 0 u 1 0 35 28 hln 100 pin=3
+a 0 u 0 0 38 30 hln 100 ERC=x
+a 0 u 0 0 6 0 hln 100 float=e
+p 0 27 42 hrn 100 pin4 n 40 40 u
+a 0 u 1 0 35 38 hln 100 pin=4
+a 0 u 0 0 38 40 hln 100 ERC=x
+a 0 u 0 0 6 0 hln 100 float=e
+p 0 27 52 hrn 100 pin5 n 40 50 u
+a 0 u 1 0 35 48 hln 100 pin=5
+a 0 u 0 0 40 50 hln 100 ERC=x
+a 0 u 0 0 8 0 hln 100 float=e
+@graphics 40 60 40 10 10
+r 0 10 0 30 60
+v 0 5 50
+25 50
+;
+v 0 5 50
+0 45
+;
+v 0 5 50
+0 55
+;
+v 0 25 40
+5 40
+;
+v 0 5 40
+0 35
+;
+v 0 5 40
+0 45
+;
+v 0 25 30
+5 30
+;
+v 0 5 30
+0 35
+;
+v 0 5 30
+0 25
+;
+v 0 25 20
+5 20
+;
+v 0 5 20
+0 25
+;
+v 0 5 20
+0 15
+;
+v 0 25 10
+5 10
+;
+v 0 5 10
+0 15
+;
+v 0 5 10
+0 5
+;
+v 0 30 10
+20 10
+;
+v 0 25 20
+35 20
+;
+v 0 25 30
+30 30
+;
+v 0 20 40
+35 40
+;
+v 0 25 50
+30 50
+;
+*symbol DIN96 ako CONNECTOR
+d 96 pin DIN connector
+@type p
+@attributes
+a 0 s 13 0 14 8 hln 100 PKGREF=P?
+*symbol EDGE40 ako CONNECTOR
+d Forty pin edge connector
+@type p
+@attributes
+*symbol EDGE62 ako CONNECTOR
+d Sixty-two pin edge connector
+@type p
+@attributes
+*symbol HDR20
+d CONNECTOR PIN
+@type p
+@attributes
+a 1 s 0 0 44 12 hln 100 REFDES=P?
+a 0 s 0 0 28 14 hcb 100 GATE=G?
+a 0 s 13 0 44 12 hln 100 PKGREF=P?
+a 0 sp 0 0 0 10 hlb 100 TEMPLATE=
+a 0 s 0 0 0 10 hlb 100 PART=HDR20
+@pins
+p 0 13 12 hln 100 PIN1 n 0 10 h
+a 0 u 1 0 5 8 hrn 100 pin=1
+a 0 u 0 0 1 15 hln 100 ERC=x
+@graphics 40 20 0 10 10
+v 0 10 10
+15 5
+;
+v 0 15 5
+40 5
+;
+v 0 40 5
+40 15
+;
+v 0 40 15
+15 15
+;
+v 0 15 15
+10 10
+;
+*symbol HDR50
+d CONNECTOR PIN
+@type p
+@attributes
+a 1 s 0 0 44 12 hln 100 REFDES=P?
+a 0 s 0 0 28 14 hcb 100 GATE=G?
+a 0 s 13 0 44 12 hln 100 PKGREF=P?
+a 0 sp 0 0 0 10 hlb 100 TEMPLATE=
+a 0 s 0 0 0 10 hlb 100 PART=HDR50
+@pins
+p 0 13 12 hln 100 pin1 n 0 10 h
+a 0 u 1 0 5 8 hrn 100 pin=1
+a 0 u 0 0 1 15 hln 100 ERC=x
+@graphics 40 20 0 10 10
+v 0 10 10
+15 5
+;
+v 0 15 5
+40 5
+;
+v 0 40 5
+40 15
+;
+v 0 40 15
+15 15
+;
+v 0 15 15
+10 10
+;
+*symbol CONNECTOR b
+d CONNECTOR PIN
+@type p
+@attributes
+a 0 s 0 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 s 13 0 -6 16 hlb 100 GATE=G?
+a 0 s 13 0 14 8 hln 100 PKGREF=P?
+a 0 sp 0 0 0 10 hlb 100 TEMPLATE=
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+@pins
+p 0 17 12 hrn 100 pin1 n 30 10 u
+a 0 u 0 0 25 8 hln 100 pin=1
+a 0 u 0 0 29 5 hln 100 ERC=x
+@graphics 30 20 0 0 10
+v 0 10 10
+20 10
+;
+v 0 5 5
+10 10
+;
+v 0 5 15
+10 10
+;
+*symbol male
+d CONNECTOR PIN
+@type p
+@attributes
+a 0 s 0 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 s 13 0 0 16 hlb 100 GATE=G?
+a 0 s 13 0 16 8 hln 100 PKGREF=P?
+@pins
+p 0 17 12 hrn 100 pin1 n 30 10 u
+a 0 u 0 0 25 8 hln 100 pin=1
+a 0 u 0 0 29 5 hln 100 ERC=x
+@graphics 30 20 30 10 10
+v 0 10 10
+20 10
+;
+v 0 15 5
+10 10
+;
+v 0 15 15
+10 10
+;
+*symbol copyright b
+d Copyright
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+s 26 2 20 hln 100 The symbols in this library are for use with
+s 26 2 29 hln 100 the MicroSim Schematics program only.
+s 26 2 10 hln 100 Copyright 1991-1995, MicroSim Corporation.
+s 26 2 38 hln 100 Neither this library, nor any part of it,
+s 26 2 47 hln 100 may be copied without the express written
+s 26 2 57 hln 100 consent of MicroSim Corporation.
+r 0 0 0 230 60
+*symbol edge26
+d one pin of 26 pin edge connector
+@type p
+@attributes
+a 0 s 0 0 0 0 hln 100 REFDES=P?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 s 13 0 -6 16 hlb 100 GATE=G?
+a 0 s 13 0 14 8 hln 100 PKGREF=P?
+a 0 sp 0 0 0 10 hlb 100 TEMPLATE=
+a 0 sp 0 0 0 0 hln 100 MODEL=*ignore*
+@pins
+p 0 17 12 hrn 100 pin1 n 30 10 u
+a 0 u 0 0 25 8 hln 100 pin=1
+a 0 u 0 0 29 5 hln 100 ERC=x
+@graphics 30 20 0 0 10
+v 0 10 10
+20 10
+;
+v 0 5 5
+10 10
+;
+v 0 5 15
+10 10
+;

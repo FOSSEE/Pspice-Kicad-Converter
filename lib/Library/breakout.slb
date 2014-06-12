@@ -1,0 +1,2376 @@
+*version 9.1 1478461614
+@index
+symloc ADC10break 0 2523
+symloc ADC12break 2523 2845
+symloc ADC8break 5368 2259
+symloc Bbreak 7627 475
+symloc Cbreak 8102 467
+symloc DAC10break 8569 2210
+symloc DAC12break 10779 2476
+symloc DAC8break 13255 1949
+symloc Dbreak 15204 419
+symloc Dbreak3 15623 743
+symloc DbreakCR 16366 473
+symloc DbreakVV 16839 471
+symloc DbreakZ 17310 460
+symloc JbreakN 17770 508
+symloc JbreakP 18278 508
+symloc kbreak 18786 621
+symloc Lbreak 19407 478
+symloc MbreakN 19885 1130
+symloc MbreakN3 21015 1041
+symloc MbreakN3D 22056 1038
+symloc MbreakN4 23094 1131
+symloc MbreakN4D 24225 1128
+symloc MbreakP 25353 1130
+symloc MbreakP3 26483 1041
+symloc MbreakP3D 27524 1038
+symloc MbreakP4 28562 1131
+symloc MbreakP4D 29693 1128
+symloc POT 30821 899
+symloc QbreakL 31720 696
+symloc QbreakN 32416 513
+symloc QbreakN3 32929 514
+symloc QbreakN4 33443 711
+symloc QbreakP 34154 483
+symloc QbreakP3 34637 484
+symloc QbreakP4 35121 681
+symloc QDarBreakN 35802 569
+symloc QDarBreakP 36371 570
+symloc RAM8Kx1break 36941 3298
+symloc RAM8Kx8break 40239 4468
+symloc Rbreak 44707 496
+symloc ROM32KX8break 45203 3797
+symloc Sbreak 49000 802
+symloc Wbreak 49802 860
+symloc XFRM_NONLINEAR 50662 998
+symloc ZbreakN 51660 878
+symloc copyright 52538 568
+*symbol ADC10break
+d 10Bit ADC
+@type p
+@attributes
+a 0 sp 9 0 10 8 hln 100 REFDES=U?
+a 0 sp 11 0 -30 138 hln 100 PART=ADC10break
+a 0 sp 0 0 0 0 hln 100 MODEL=ADC10break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %IN %REF %GND %CNVRT %STAT %OVER \n+ %DB9 %DB8 %DB7 %DB6 %DB5 %DB4 %DB3 %DB2 %DB1 %DB0 %DPWR %DGND @MODEL \n+PARAMS:  MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(DPWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(DGND)=$G_DGND
+a 0 u 0 0 0 20 hlb 100 IO_LEVEL=0
+a 0 u 0 0 0 10 hlb 100 MNTYMXDLY=0
+@pins
+p 2 57 42 hrn 90 DB7 n 70 40 u
+a 0 u 1 0 65 38 hln 100 pin=16
+a 0 u 0 0 70 40 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 52 hrn 90 DB6 n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=15
+a 0 u 0 0 70 50 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 62 hrn 90 DB5 n 70 60 u
+a 0 u 1 0 65 58 hln 100 pin=14
+a 0 u 0 0 70 60 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 72 hrn 90 DB4 n 70 70 u
+a 0 u 1 0 65 68 hln 100 pin=13
+a 0 u 0 0 70 70 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 82 hrn 90 DB3 n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=12
+a 0 u 0 0 70 80 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 92 hrn 90 DB2 n 70 90 u
+a 0 u 1 0 65 88 hln 100 pin=11
+a 0 u 0 0 70 90 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 102 hrn 90 DB1 n 70 100 u
+a 0 u 1 0 65 98 hln 100 pin=10
+a 0 u 0 0 70 100 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 112 hrn 90 DB0 n 70 110 u
+a 0 u 1 0 65 108 hln 100 pin=9
+a 0 u 0 0 70 110 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 0 20 18 hln 100 DPWR n 30 0 d
+a 0 u 0 0 35 3 hcn 100 pin=6
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 40 122 hln 100 DGND n 30 140 v
+a 0 u 0 0 25 142 hcn 100 pin=7
+a 0 u 0 0 30 140 hln 100 ERC=x
+p 2 34 128 hln 100 GND n 40 140 v
+a 0 u 1 0 35 142 hcn 100 pin=8
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 13 22 hln 90 IN n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=1
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 13 42 hln 90 CNVRT n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=2
+a 0 u 0 0 0 40 hln 100 ERC=x
+p 2 13 62 hln 90 STAT n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=3
+a 0 u 0 0 0 60 hln 100 ERC=x
+p 2 13 82 hln 80 OVER n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=4
+a 0 u 0 0 0 80 hln 100 ERC=x
+p 2 13 102 hln 90 REF n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=5
+a 0 u 0 0 0 100 hln 100 ERC=x
+p 2 57 22 hrn 90 DB9 n 70 20 u
+a 0 u 1 0 65 18 hln 100 pin=18
+a 0 u 0 0 70 20 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 32 hrn 90 DB8 n 70 30 u
+a 0 u 1 0 65 28 hln 100 pin=17
+a 0 u 0 0 70 30 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+@graphics 70 140 0 20 10
+r 0 10 10 60 130
+*symbol ADC12break
+d 12Bit ADC
+@type p
+@attributes
+a 0 sp 9 0 10 8 hln 100 REFDES=U?
+a 0 sp 11 0 -30 158 hln 100 PART=ADC12break
+a 0 sp 0 0 0 0 hln 100 MODEL=ADC12break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES  %IN %REF %GND %CNVRT %STAT %OVER \n+ %DB11 %DB10 %DB9 %DB8 %DB7 %DB6 %DB5 %DB4 %DB3 %DB2 %DB1 %DB0 %DPWR %DGND \n+ @MODEL \n+PARAMS:  MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(DPWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(DGND)=$G_DGND
+a 0 u 0 0 0 10 hlb 100 MNTYMAX=0
+a 0 u 0 0 0 20 hlb 100 IO_LEVEL=0
+a 0 u 0 0 0 10 hlb 100 MNTYMXDLY=0
+@pins
+p 2 57 62 hrn 90 DB7 n 70 60 u
+a 0 u 1 0 65 58 hln 100 pin=16
+a 0 u 0 0 70 60 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 72 hrn 90 DB6 n 70 70 u
+a 0 u 1 0 65 68 hln 100 pin=15
+a 0 u 0 0 70 70 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 82 hrn 90 DB5 n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=14
+a 0 u 0 0 70 80 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 92 hrn 90 DB4 n 70 90 u
+a 0 u 1 0 65 88 hln 100 pin=13
+a 0 u 0 0 70 90 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 102 hrn 90 DB3 n 70 100 u
+a 0 u 1 0 65 98 hln 100 pin=12
+a 0 u 0 0 70 100 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 112 hrn 90 DB2 n 70 110 u
+a 0 u 1 0 65 108 hln 100 pin=11
+a 0 u 0 0 70 110 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 122 hrn 90 DB1 n 70 120 u
+a 0 u 1 0 65 118 hln 100 pin=10
+a 0 u 0 0 70 120 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 132 hrn 90 DB0 n 70 130 u
+a 0 u 1 0 65 128 hln 100 pin=9
+a 0 u 0 0 70 130 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 0 20 18 hln 100 DPWR n 30 0 d
+a 0 u 0 0 35 3 hcn 100 pin=6
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 40 142 hln 100 DGND n 30 160 v
+a 0 u 0 0 25 162 hcn 100 pin=7
+a 0 u 0 0 30 160 hln 100 ERC=x
+p 2 34 148 hln 100 GND n 40 160 v
+a 0 u 1 0 35 162 hcn 100 pin=8
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 13 22 hln 90 IN n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=1
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 13 42 hln 90 CNVRT n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=2
+a 0 u 0 0 0 40 hln 100 ERC=x
+p 2 13 62 hln 90 STAT n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=3
+a 0 u 0 0 0 60 hln 100 ERC=x
+p 2 13 82 hln 80 OVER n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=4
+a 0 u 0 0 0 80 hln 100 ERC=x
+p 2 13 102 hln 90 REF n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=5
+a 0 u 0 0 0 100 hln 100 ERC=x
+p 2 57 42 hrn 90 DB9 n 70 40 u
+a 0 u 1 0 65 38 hln 100 pin=18
+a 0 u 0 0 70 40 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 52 hrn 90 DB8 n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=17
+a 0 u 0 0 70 50 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 32 hrn 90 DB10 n 70 30 u
+a 0 u 1 0 65 28 hln 100 pin=19
+a 0 u 0 0 70 30 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 22 hrn 90 DB11 n 70 20 u
+a 0 u 1 0 65 18 hln 100 pin=20
+a 0 u 0 0 70 20 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+@graphics 70 160 0 20 10
+r 0 10 10 60 150
+r 0 70 140 70 140
+*symbol ADC8break
+d 8 Bit ADC
+@type p
+@attributes
+a 0 sp 9 0 10 8 hln 100 REFDES=U?
+a 0 sp 11 0 -20 120 hln 100 PART=ADC8break
+a 0 sp 0 0 0 0 hln 100 MODEL=ADC8break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %IN %REF %GND %CNVRT %STAT %OVER \n+ %DB7 %DB6 %DB5 %DB4 %DB3 %DB2 %DB1 %DB0 %DPWR %DGND @MODEL \n+ PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(DPWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(DGND)=$G_DGND
+a 0 u 0 0 0 20 hlb 100 IO_LEVEL=0
+a 0 u 0 0 0 10 hlb 100 MNTYMXDLY=0
+@pins
+p 2 57 22 hrn 90 DB7 n 70 20 u
+a 0 u 1 0 65 18 hln 100 pin=16
+a 0 u 0 0 70 20 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 32 hrn 90 DB6 n 70 30 u
+a 0 u 1 0 65 28 hln 100 pin=15
+a 0 u 0 0 70 30 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 42 hrn 90 DB5 n 70 40 u
+a 0 u 1 0 65 38 hln 100 pin=14
+a 0 u 0 0 70 40 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 52 hrn 90 DB4 n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=13
+a 0 u 0 0 70 50 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 62 hrn 90 DB3 n 70 60 u
+a 0 u 1 0 65 58 hln 100 pin=12
+a 0 u 0 0 70 60 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 72 hrn 90 DB2 n 70 70 u
+a 0 u 1 0 65 68 hln 100 pin=11
+a 0 u 0 0 70 70 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 82 hrn 90 DB1 n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=10
+a 0 u 0 0 70 80 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 57 92 hrn 90 DB0 n 70 90 u
+a 0 u 1 0 65 88 hln 100 pin=9
+a 0 u 0 0 70 90 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 0 20 18 hln 100 DPWR n 30 0 d
+a 0 u 0 0 35 3 hcn 100 pin=7
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 40 102 hln 100 DGND n 30 120 v
+a 0 u 0 0 25 122 hcn 100 pin=6
+a 0 u 0 0 30 120 hln 100 ERC=x
+p 2 34 108 hln 100 GND n 40 120 v
+a 0 u 1 0 35 122 hcn 100 pin=8
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 13 22 hln 90 IN n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=1
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 13 42 hln 90 CNVRT n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=2
+a 0 u 0 0 0 40 hln 100 ERC=x
+p 2 13 62 hln 90 STAT n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=3
+a 0 u 0 0 0 60 hln 100 ERC=x
+p 2 13 82 hln 80 OVER n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=4
+a 0 u 0 0 0 80 hln 100 ERC=x
+p 2 13 102 hln 90 REF n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=5
+a 0 u 0 0 0 100 hln 100 ERC=x
+@graphics 70 120 0 20 10
+r 0 10 10 60 110
+*symbol Bbreak
+d gaasfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=B^@REFDES %d %g %s @MODEL ?AREA/@AREA/
+a 0 sp 9 0 5 10 hln 100 REFDES=B?
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 10 40 hln 100 MODEL=Bbreak
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 25 10 hln 100 d n 30 0 d
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+@graphics 30 40 0 20 10
+v 0 10 20
+20 20
+;
+v 0 20 30
+30 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 10
+30 10
+;
+*symbol Cbreak
+d Capacitor breakout device
+@type p
+@attributes
+a 0 u 0 0 15 25 hln 100 VALUE=1n
+a 0 sp 13 0 20 25 hln 100 MODEL=Cbreak
+a 0 sp 9 0 15 0 hln 100 REFDES=C?
+a 0 u 0 0 0 0 hln 100 IC=
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=C^@REFDES %1 %2 @MODEL @VALUE ?IC/IC=@IC/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+p 0 17 12 hrn 100 2 n 30 10 u
+@graphics 30 20 0 10 11
+v 0 10 10
+13 10
+;
+v 0 13 5
+13 15
+;
+v 0 17 5
+17 15
+;
+v 0 17 10
+20 10
+;
+*symbol DAC10break
+d 10 Bit DAC
+@type p
+@attributes
+a 0 sp 9 0 10 8 hln 100 REFDES=U?
+a 0 sp 11 0 -26 140 hln 100 PART=DAC10break
+a 0 sp 0 0 0 0 hln 100 MODEL=DAC10break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %OUT %REF %GND \n+ %DB9 %DB8 %DB7 %DB6 %DB5 %DB4 %DB3 %DB2 %DB1 %DB0 %DPWR %DGND @MODEL \n+PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(DPWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(DGND)=$G_DGND
+a 0 u 0 0 0 20 hlb 100 IO_LEVEL=0
+a 0 u 0 0 0 10 hlb 100 MNTYMXDLY=0
+@pins
+p 2 13 42 hln 90 DB7 n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=13
+a 0 u 0 0 0 40 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 52 hln 90 DB6 n 0 50 h
+a 0 u 1 0 5 48 hrn 100 pin=12
+a 0 u 0 0 0 50 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 62 hln 90 DB5 n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=11
+a 0 u 0 0 0 60 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 72 hln 90 DB4 n 0 70 h
+a 0 u 1 0 5 68 hrn 100 pin=10
+a 0 u 0 0 0 70 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 82 hln 90 DB3 n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=9
+a 0 u 0 0 0 80 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 92 hln 90 DB2 n 0 90 h
+a 0 u 1 0 5 88 hrn 100 pin=8
+a 0 u 0 0 0 90 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 102 hln 90 DB1 n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=7
+a 0 u 0 0 0 100 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 112 hln 90 DB0 n 0 110 h
+a 0 u 1 0 5 108 hrn 100 pin=6
+a 0 u 0 0 0 110 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 0 20 18 hln 100 DPWR n 30 0 d
+a 0 u 0 0 35 3 hcn 100 pin=1
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 40 122 hln 100 DGND n 30 140 v
+a 0 u 0 0 25 142 hcn 100 pin=2
+a 0 u 0 0 30 140 hln 100 ERC=x
+p 2 34 128 hln 100 GND n 40 140 v
+a 0 u 1 0 35 142 hcn 100 pin=5
+a 0 u 0 0 40 140 hln 100 ERC=x
+p 2 57 52 hrn 90 OUT n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=3
+a 0 u 0 0 70 50 hln 100 ERC=x
+p 2 57 82 hrn 90 REF n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=4
+a 0 u 0 0 70 80 hln 100 ERC=x
+p 2 13 32 hln 100 DB8 n 0 30 h
+a 0 u 1 0 5 28 hrn 100 pin=14
+a 0 u 0 0 0 30 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 22 hln 100 DB9 n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=15
+a 0 u 0 0 0 20 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+@graphics 70 140 0 20 10
+r 0 10 10 60 130
+*symbol DAC12break
+d 10 Bit DAC
+@type p
+@attributes
+a 0 sp 9 0 10 8 hln 100 REFDES=U?
+a 0 sp 11 0 -26 159 hln 100 PART=DAC12break
+a 0 sp 0 0 0 0 hln 100 MODEL=DAC12break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %OUT %REF %GND \n+ %DB11 %DB10 %DB9 %DB8 %DB7 %DB6 %DB5 %DB4 %DB3 %DB2 %DB1 %DB0 %DPWR %DGND \n+ @MODEL \n+PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(DPWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(DGND)=$G_DGND
+a 0 u 0 0 0 20 hlb 100 IO_LEVEL=0
+a 0 u 0 0 0 10 hlb 100 MNTYMXDLY=0
+@pins
+p 2 13 62 hln 90 DB7 n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=13
+a 0 u 0 0 0 60 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 72 hln 90 DB6 n 0 70 h
+a 0 u 1 0 5 68 hrn 100 pin=12
+a 0 u 0 0 0 70 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 82 hln 90 DB5 n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=11
+a 0 u 0 0 0 80 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 92 hln 90 DB4 n 0 90 h
+a 0 u 1 0 5 88 hrn 100 pin=10
+a 0 u 0 0 0 90 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 102 hln 90 DB3 n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=9
+a 0 u 0 0 0 100 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 112 hln 90 DB2 n 0 110 h
+a 0 u 1 0 5 108 hrn 100 pin=8
+a 0 u 0 0 0 110 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 122 hln 90 DB1 n 0 120 h
+a 0 u 1 0 5 118 hrn 100 pin=7
+a 0 u 0 0 0 120 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 132 hln 90 DB0 n 0 130 h
+a 0 u 1 0 5 128 hrn 100 pin=6
+a 0 u 0 0 0 130 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 0 20 18 hln 100 DPWR n 30 0 d
+a 0 u 0 0 35 3 hcn 100 pin=1
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 40 142 hln 100 DGND n 30 160 v
+a 0 u 0 0 25 162 hcn 100 pin=2
+a 0 u 0 0 30 160 hln 100 ERC=x
+p 2 34 148 hln 100 GND n 40 160 v
+a 0 u 1 0 35 162 hcn 100 pin=5
+a 0 u 0 0 40 160 hln 100 ERC=x
+p 2 57 52 hrn 90 OUT n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=3
+a 0 u 0 0 70 50 hln 100 ERC=x
+p 2 57 82 hrn 90 REF n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=4
+a 0 u 0 0 70 80 hln 100 ERC=x
+p 2 13 52 hln 100 DB8 n 0 50 h
+a 0 u 1 0 5 48 hrn 100 pin=14
+a 0 u 0 0 0 50 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 42 hln 100 DB9 n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=15
+a 0 u 0 0 0 40 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 32 hln 100 DB10 n 0 30 h
+a 0 u 1 0 5 28 hrn 100 pin=16
+a 0 u 0 0 0 30 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 22 hln 100 DB11 n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=17
+a 0 u 0 0 0 20 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+@graphics 70 160 0 20 10
+r 0 10 10 60 150
+*symbol DAC8break
+d 8 Bit DAC
+@type p
+@attributes
+a 0 sp 9 0 10 8 hln 100 REFDES=U?
+a 0 sp 11 0 -24 120 hln 100 PART=DAC8break
+a 0 sp 0 0 0 0 hln 100 MODEL=DAC8break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %OUT %REF %GND \n+ %DB7 %DB6 %DB5 %DB4 %DB3 %DB2 %DB1 %DB0 %DPWR %DGND @MODEL \n+PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(DPWR)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(DGND)=$G_DGND
+a 0 u 0 0 0 20 hlb 100 IO_LEVEL=0
+a 0 u 0 0 0 10 hlb 100 MNTYMXDLY=0
+@pins
+p 2 13 22 hln 90 DB7 n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=13
+a 0 u 0 0 0 20 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 32 hln 90 DB6 n 0 30 h
+a 0 u 1 0 5 28 hrn 100 pin=12
+a 0 u 0 0 0 30 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 42 hln 90 DB5 n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=11
+a 0 u 0 0 0 40 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 52 hln 90 DB4 n 0 50 h
+a 0 u 1 0 5 48 hrn 100 pin=10
+a 0 u 0 0 0 50 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 62 hln 90 DB3 n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=9
+a 0 u 0 0 0 60 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 72 hln 90 DB2 n 0 70 h
+a 0 u 1 0 5 68 hrn 100 pin=8
+a 0 u 0 0 0 70 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 82 hln 90 DB1 n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=7
+a 0 u 0 0 0 80 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 92 hln 90 DB0 n 0 90 h
+a 0 u 1 0 5 88 hrn 100 pin=6
+a 0 u 0 0 0 90 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 0 20 18 hln 100 DPWR n 30 0 d
+a 0 u 0 0 35 3 hcn 100 pin=1
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 40 102 hln 100 DGND n 30 120 v
+a 0 u 0 0 25 122 hcn 100 pin=2
+a 0 u 0 0 30 120 hln 100 ERC=x
+p 2 34 108 hln 100 GND n 40 120 v
+a 0 u 1 0 35 122 hcn 100 pin=5
+a 0 u 0 0 40 120 hln 100 ERC=x
+p 2 57 52 hrn 90 OUT n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=3
+a 0 u 0 0 70 50 hln 100 ERC=x
+p 2 57 82 hrn 90 REF n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=4
+a 0 u 0 0 70 80 hln 100 ERC=x
+@graphics 70 120 0 20 10
+r 0 10 10 60 110
+*symbol Dbreak
+d diode breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 15 25 hln 100 MODEL=Dbreak
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=D^@REFDES %1 %2 @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+p 0 17 12 hrn 100 2 n 30 10 u
+@graphics 30 20 0 10 10
+v 0 20 5
+20 15
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+v 0 10 10
+12 10
+;
+*symbol Dbreak3
+d 3-terminal diode breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 VALUE=
+a 0 sp 13 0 15 45 hln 100 MODEL=Dbreak3
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %1 %2 %3 @MODEL
+a 0 s 0 0 0 20 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 8 hrn 100 PIN=1
+p 0 13 32 hln 100 2 n 0 30 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 28 hrn 100 PIN=2
+p 0 27 22 hrn 100 3 n 40 20 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 35 18 hln 100 PIN=3
+@graphics 40 40 0 10 10
+v 0 20 5
+20 15
+;
+v 0 20 25
+20 35
+;
+v 0 20 30
+30 30
+;
+v 0 30 30
+30 10
+;
+v 0 30 10
+20 10
+;
+v 0 10 10
+12 10
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+v 0 10 30
+12 30
+;
+v 0 12 25
+12 35
+20 30
+12 25
+;
+*symbol DbreakCR
+d current regulator diode breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 15 25 hln 100 MODEL=Dbreak
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=D^@REFDES %1 %2 @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+p 0 17 12 hrn 100 2 n 30 10 u
+@graphics 30 20 0 10 10
+v 0 18 5
+22 5
+;
+v 0 18 15
+22 15
+;
+v 0 20 5
+20 15
+;
+v 0 10 10
+12 10
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+*symbol DbreakVV
+d voltage-variable capacitance diode breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 15 25 hln 100 MODEL=Dbreak
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=D^@REFDES %1 %2 @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+p 0 17 12 hrn 100 2 n 30 10 u
+@graphics 30 20 0 10 10
+v 0 20 5
+20 15
+;
+a 0 24 6 22 10 24 14
+v 0 10 10
+12 10
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+*symbol DbreakZ
+d zener diode breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 15 25 hln 100 MODEL=Dbreak
+a 0 sp 9 0 15 0 hln 100 REFDES=D?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=D^@REFDES %1 %2 @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+p 0 17 12 hrn 100 2 n 30 10 u
+@graphics 30 20 0 10 10
+v 0 17 3
+20 5
+;
+v 0 20 15
+23 17
+;
+v 0 20 5
+20 15
+;
+v 0 10 10
+12 10
+;
+v 0 12 5
+12 15
+20 10
+12 5
+;
+*symbol JbreakN
+d n-channel jfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=J^@REFDES %d %g %s @MODEL ?AREA/@AREA/
+a 0 sp 9 0 5 10 hln 100 REFDES=J?
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 10 40 hln 100 MODEL=JbreakN
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+@graphics 30 40 0 20 10
+v 0 10 20
+20 20
+;
+v 0 20 30
+30 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 10
+30 10
+;
+v 0 11 18
+17 20
+11 22
+;
+*symbol JbreakP
+d p-channel jfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=J^@REFDES %d %g %s @MODEL ?AREA/@AREA/
+a 0 sp 9 0 5 10 hln 100 REFDES=J?
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 10 40 hln 100 MODEL=JbreakP
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+@graphics 30 40 0 20 10
+v 0 10 20
+20 20
+;
+v 0 20 7
+20 33
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 17 22
+11 20
+17 18
+;
+*symbol kbreak
+d Multi-winding Coupling (with CORE model)
+@type p
+@attributes
+a 1 s 9 0 22 8 hcn 100 refdes=K?
+a 1 sp 0 0 0 0 hcn 100 template=Kn^@REFDES L^@L1 ?L2|L^@L2| ?L3|\n+ L^@L3| ?L4|L^@L4| ?L5|\n+ L^@L5| ?L6|L^@L6| @COUPLING &MODEL
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 13 0 4 42 hln 100 L1=
+a 0 u 13 0 4 53 hln 100 L2=
+a 0 u 13 0 4 65 hln 100 L3=
+a 0 u 13 0 4 77 hln 100 L4=
+a 0 u 13 0 4 88 hln 100 L5=
+a 0 u 13 0 4 99 hln 100 L6=
+a 0 u 13 13 31 30 hcn 100 COUPLING=1
+a 0 sp 13 0 1 20 hln 100 MODEL=Kbreak
+a 0 sp 0 0 1 20 hln 100 PART=Kbreak
+@pins
+@graphics 40 10 0 10 10
+s 26 2 8 hln 100 K
+r 0 0 0 10 10
+*symbol Lbreak
+d inductor breakout device
+@type p
+@attributes
+a 0 u 0 0 15 25 hln 100 VALUE=
+a 0 sp 13 0 20 25 hln 100 MODEL=Lbreak
+a 0 u 0 0 0 0 hln 100 IC=
+a 0 sp 9 0 15 0 hln 100 REFDES=L?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=L^@REFDES %1 %2 @MODEL @VALUE ?IC/IC=@IC/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+p 0 47 12 hrn 100 2 n 60 10 u
+@graphics 60 20 0 10 10
+a 0 20 10 15 5 10 10
+a 0 30 10 25 5 20 10
+a 0 40 10 35 5 30 10
+a 0 50 10 45 5 40 10
+*symbol MbreakN
+d n-channel mosfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %b @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -12 40 hln 100 MODEL=MbreakN
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 42 28 hln 100 b n 40 40 v
+a 0 s 0 0 35 42 hcn 100 PIN=4
+a 0 s 0 0 40 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 29 22
+23 20
+29 18
+;
+*symbol MbreakN3
+d n-channel mosfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %s @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -18 40 hln 100 MODEL=MbreakN
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+@graphics 30 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+30 20
+;
+v 0 30 20
+30 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 29 22
+23 20
+29 18
+;
+*symbol MbreakN3D
+d n-channel mosfet (depletion) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %s @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -18 40 hln 100 MODEL=MbreakND
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+@graphics 30 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+30 20
+;
+v 0 30 20
+30 30
+;
+v 0 29 22
+23 20
+29 18
+;
+v 0 20 7
+20 33
+;
+*symbol MbreakN4
+d n-channel mosfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %b @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -16 40 hln 100 MODEL=MbreakN
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 42 28 hln 100 b n 40 40 v
+a 0 s 0 0 35 42 hcn 100 PIN=4
+a 0 s 0 0 40 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 29 22
+23 20
+29 18
+;
+*symbol MbreakN4D
+d n-channel mosfet (depletion) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %b @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -16 40 hln 100 MODEL=MbreakND
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 42 28 hln 100 b n 40 40 v
+a 0 s 0 0 35 42 hcn 100 PIN=4
+a 0 s 0 0 40 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 29 22
+23 20
+29 18
+;
+v 0 20 7
+20 33
+;
+*symbol MbreakP
+d p-channel mosfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %b @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -12 40 hln 100 MODEL=MbreakP
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 42 28 hln 100 b n 40 40 v
+a 0 s 0 0 35 42 hcn 100 PIN=4
+a 0 s 0 0 40 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 23 18
+29 20
+23 22
+;
+*symbol MbreakP3
+d p-channel mosfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %s @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -14 40 hln 100 MODEL=MbreakP
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+@graphics 30 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+30 20
+;
+v 0 30 20
+30 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 23 18
+29 20
+23 22
+;
+*symbol MbreakP3D
+d p-channel mosfet (depletion) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %s @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -14 40 hln 100 MODEL=MbreakPD
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+@pins
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+@graphics 30 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+30 20
+;
+v 0 30 20
+30 30
+;
+v 0 23 18
+29 20
+23 22
+;
+v 0 20 7
+20 33
+;
+*symbol MbreakP4
+d p-channel mosfet (enhancement) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %b @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -12 40 hln 100 MODEL=MbreakP
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 42 28 hln 100 b n 40 40 v
+a 0 s 0 0 35 42 hcn 100 PIN=4
+a 0 s 0 0 40 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 20 7
+20 13
+;
+v 0 20 17
+20 23
+;
+v 0 20 27
+20 33
+;
+v 0 23 18
+29 20
+23 22
+;
+*symbol MbreakP4D
+d p-channel mosfet (depletion) breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=M^@REFDES %d %g %s %b @MODEL ?L/ \n+ L=@L/ ?W/ \n+ W=@W/ ?AD/ \n+ AD=@AD/ ?AS/ \n+ AS=@AS/ ?PD/ \n+ PD=@PD/ ?PS/ \n+ PS=@PS/ ?NRD/ \n+ NRD=@NRD/ ?NRS/ \n+ NRS=@NRS/ ?NRG/ \n+ NRG=@NRG/ ?NRB/ \n+ NRB=@NRB/ ?M/ \n+ M=@M/
+a 0 sp 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 0 hln 100 L=
+a 0 u 0 0 0 0 hln 100 W=
+a 0 u 0 0 0 0 hln 100 AD=
+a 0 u 0 0 0 0 hln 100 AS=
+a 0 u 0 0 0 0 hln 100 PD=
+a 0 u 0 0 0 0 hln 100 PS=
+a 0 u 0 0 0 0 hln 100 NRD=
+a 0 u 0 0 0 0 hln 100 NRS=
+a 0 u 0 0 0 0 hln 100 NRG=
+a 0 u 0 0 0 0 hln 100 NRB=
+a 0 u 0 0 0 0 hln 100 M=
+a 0 sp 13 0 -12 40 hln 100 MODEL=MbreakPD
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0:11 0 0 50 hln 100 PART=
+@pins
+p 0 13 22 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 42 28 hln 100 b n 40 40 v
+a 0 s 0 0 35 42 hcn 100 PIN=4
+a 0 s 0 0 40 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 20
+40 20
+;
+v 0 40 20
+40 30
+;
+v 0 23 18
+29 20
+23 22
+;
+v 0 20 7
+20 33
+;
+*symbol POT
+d Potentiometer (generic - defaults to 1K)
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=RT^@REFDES %1 %t {(@VALUE*(1-@SET))+.001}\nRB^@REFDES %t %2 {(@VALUE*@SET)+.001}
+a 0 sp 9 0 15 0 hln 100 REFDES=R?
+a 0 u 0 0 30 28 hln 100 VALUE=1K
+a 0 u 0 0 0 20 hln 100 SET=0.5
+a 0 sp 11 0 20 25 hln 100 PART=POT
+@pins
+p 0 27 12 hrn 100 2 n 40 10 u
+a 0 s 0 0 35 8 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 s 0 0 5 8 hrn 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 22 18 hln 100 t n 20 30 v
+a 0 s 0 0 15 32 hcn 100 PIN=2
+a 0 s 0 0 20 30 hln 100 ERC=x
+@graphics 40 30 0 10 10
+v 0 22 14
+25 6
+;
+v 0 13 6
+16 14
+;
+v 0 16 14
+19 6
+;
+v 0 19 6
+22 14
+;
+v 0 25 6
+28 14
+;
+v 0 11 10
+13 6
+;
+v 0 28 14
+30 10
+;
+v 0 20 14
+19 20
+;
+v 0 21 20
+20 14
+;
+v 0 19 20
+21 20
+;
+v 0 21 20
+21 20
+;
+v 0 10 10
+11 10
+;
+v 0 20 14
+20 14
+;
+v 0 20 20
+20 14
+;
+v 0 20 14
+20 14
+;
+v 0 19 20
+19 20
+;
+*symbol QbreakL
+d pnp bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 29 22 hln 100 MODEL=QbreakL
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e [%s] @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 25 10 hln 100 c n 30 0 d
+p 0 25 50 hln 100 e n 30 50 v
+p 2 12 38 hln 100 s n 10 50 v
+a 0 s 0 0 5 52 hcn 100 PIN=4
+a 0 s 0 0 10 50 hln 100 ERC=x
+@graphics 40 50 0 20 10
+v 0 20 10
+20 30
+;
+v 0 30 10
+20 15
+;
+v 0 10 20
+20 20
+;
+v 0 30 30
+30 40
+;
+v 0 20 25
+30 30
+;
+v 0 29 27
+22 26
+27 31
+;
+v 0 10 27
+7 32
+13 32
+10 27
+;
+v 0 10 40
+10 32
+;
+v 0 7 27
+13 27
+;
+v 0 10 27
+10 20
+;
+*symbol QbreakN
+d npn bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QbreakN
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 0 50 hln 100 PART=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+10 15
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+*symbol QbreakN3
+d npn bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QbreakN
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 0 50 hln 100 PART=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+v 0 20 10
+10 15
+;
+*symbol QbreakN4
+d npn bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QbreakN
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e [%s] @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 sp 0 0 0 50 hln 100 PART=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+p 2 32 28 hln 100 s n 30 40 v
+a 0 s 0 0 25 42 hcn 100 PIN=4
+a 0 s 0 0 30 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+v 0 20 10
+10 15
+;
+v 0 30 17
+27 22
+33 22
+30 17
+;
+v 0 30 30
+30 22
+;
+v 0 27 17
+33 17
+;
+v 0 30 17
+30 10
+;
+*symbol QbreakP
+d pnp bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QbreakP
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+10 15
+;
+v 0 10 25
+20 30
+;
+v 0 19 27
+12 26
+17 31
+;
+*symbol QbreakP3
+d pnp bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QbreakP
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+@graphics 20 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+10 15
+;
+v 0 10 25
+20 30
+;
+v 0 19 27
+12 26
+17 31
+;
+*symbol QbreakP4
+d pnp bipolar transistor breakout device
+@type p
+@attributes
+a 0 u 0 0 0 0 hln 100 AREA=
+a 0 sp 13 0 5 40 hln 100 MODEL=QbreakP
+a 0 sp 9 0 5 5 hln 100 REFDES=Q?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=Q^@REFDES %c %b %e [%s] @MODEL ?AREA/@AREA/
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 22 hln 100 b n 0 20 h
+p 0 15 10 hln 100 c n 20 0 d
+p 0 15 40 hln 100 e n 20 40 v
+p 2 32 28 hln 100 s n 30 40 v
+a 0 s 0 0 25 42 hcn 100 PIN=4
+a 0 s 0 0 30 40 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 10
+10 30
+;
+v 0 20 10
+10 15
+;
+v 0 20 10
+30 10
+;
+v 0 10 25
+20 30
+;
+v 0 19 27
+12 26
+17 31
+;
+v 0 30 23
+33 18
+27 18
+30 23
+;
+v 0 30 10
+30 18
+;
+v 0 33 23
+27 23
+;
+v 0 30 23
+30 30
+;
+*symbol QDarBreakN
+d npn darlington transistor device
+@type p 8.0
+@attributes
+a 0 s 13 0 43 44 hln 100 MODEL=QDarBreakN
+a 0 sp 9 0 5 5 hln 100 REFDES=X?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %c %b %e @MODEL
+a 0 sp 0:11 0 0 60 hln 100 PART=QDarBreakN
+@pins
+p 0 5 20 hln 100 b n 0 20 h
+p 0 35 10 hln 100 c n 40 0 d
+p 0 35 50 hln 100 e n 40 50 v
+@graphics 40 50 0 20 10
+v 0 20 10
+10 15
+;
+v 0 20 30
+10 25
+;
+v 0 11 28
+18 29
+13 24
+;
+v 0 10 10
+10 30
+;
+v 0 40 20
+30 25
+;
+v 0 40 40
+30 35
+;
+v 0 31 38
+38 39
+33 34
+;
+v 0 30 20
+30 40
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+40 10
+40 20
+;
+*symbol QDarBreakP
+d pnp darlington transistor device
+@type p 8.0
+@attributes
+a 0 sp 13 0 43 44 hln 100 MODEL=QDarBreakP
+a 0 sp 9 0 5 5 hln 100 REFDES=X?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %c %b %e @MODEL
+a 0 sp 0:11 0 0 60 hln 100 PART=QDarBreakP
+@pins
+p 0 5 20 hln 100 b n 0 20 h
+p 0 35 10 hln 100 c n 40 0 d
+p 0 35 50 hln 100 e n 40 50 v
+@graphics 40 50 0 20 10
+v 0 20 30
+30 30
+;
+v 0 20 10
+40 10
+40 20
+;
+v 0 20 10
+10 15
+;
+v 0 10 25
+20 30
+;
+v 0 19 27
+12 26
+17 31
+;
+v 0 10 10
+10 30
+;
+v 0 40 20
+30 25
+;
+v 0 30 35
+40 40
+;
+v 0 39 37
+32 36
+37 41
+;
+v 0 30 20
+30 40
+;
+*symbol RAM8Kx1break
+d 8K x 1 STATIC RAM
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 38 229 hln 100 PART=RAM8Kx1break
+a 0 sp 0 0 0 0 hln 100 MODEL=RAM8Kx1break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %RE %WE \n+ %A15 %A14 %A13 %A12 %A11 %A10 %A9 %A8 %A7 %A6 %A5 %A4 %A3 %A2 %A1 %A0 \n+ %D_IN  %D_OUT %VCC %GND @MODEL \n+ PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(GND)=$G_DGND
+a 0 u 0 0 0 0 hln 100 ipin(VCC)=$G_DPWR
+a 0 up 0 0 0 10 hln 100 MNTYMXDLY=0
+a 0 up 0 0 0 20 hln 100 IO_LEVEL=0
+@pins
+p 2 13 12 hln 90 A0 n 0 10 h
+a 0 u 1 0 5 8 hrn 100 pin=1
+a 0 u 0 0 0 10 hln 100 ERC=i
+a 0 u 0 0 -50 -20 hln 100 float=n
+p 2 13 22 hln 90 A1 n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=2
+a 0 u 0 0 0 20 hln 100 ERC=i
+a 0 u 0 0 -50 -10 hln 100 float=n
+p 2 13 32 hln 90 A2 n 0 30 h
+a 0 u 1 0 5 28 hrn 100 pin=3
+a 0 u 0 0 0 30 hln 100 ERC=i
+a 0 u 0 0 -50 0 hln 100 float=n
+p 2 13 42 hln 90 A3 n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=4
+a 0 u 0 0 0 40 hln 100 ERC=i
+a 0 u 0 0 -50 10 hln 100 float=n
+p 2 13 52 hln 90 A4 n 0 50 h
+a 0 u 1 0 5 48 hrn 100 pin=5
+a 0 u 0 0 0 50 hln 100 ERC=i
+a 0 u 0 0 -50 20 hln 100 float=n
+p 2 13 62 hln 90 A5 n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=6
+a 0 u 0 0 0 60 hln 100 ERC=i
+a 0 u 0 0 -50 30 hln 100 float=n
+p 2 13 72 hln 90 A6 n 0 70 h
+a 0 u 1 0 5 68 hrn 100 pin=7
+a 0 u 0 0 0 70 hln 100 ERC=i
+a 0 u 0 0 -50 40 hln 100 float=n
+p 2 13 82 hln 90 A7 n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=8
+a 0 u 0 0 0 80 hln 100 ERC=i
+a 0 u 0 0 -50 50 hln 100 float=n
+p 2 13 92 hln 90 A8 n 0 90 h
+a 0 u 1 0 5 88 hrn 100 pin=9
+a 0 u 0 0 0 90 hln 100 ERC=i
+a 0 u 0 0 -50 60 hln 100 float=n
+p 2 13 102 hln 90 A9 n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=10
+a 0 u 0 0 0 100 hln 100 ERC=i
+a 0 u 0 0 -50 70 hln 100 float=n
+p 2 13 112 hln 90 A10 n 0 110 h
+a 0 u 1 0 5 108 hrn 100 pin=11
+a 0 u 0 0 0 110 hln 100 ERC=i
+a 0 u 0 0 -50 80 hln 100 float=n
+p 2 13 122 hln 90 A11 n 0 120 h
+a 0 u 1 0 5 118 hrn 100 pin=12
+a 0 u 0 0 0 120 hln 100 ERC=i
+a 0 u 0 0 -50 90 hln 100 float=n
+p 2 13 132 hln 90 A12 n 0 130 h
+a 0 u 1 0 5 128 hrn 100 pin=13
+a 0 u 0 0 0 130 hln 100 ERC=i
+a 0 u 0 0 -50 100 hln 100 float=n
+p 2 13 202 hln 90 RE n 0 200 h
+a 0 u 1 0 5 198 hrn 100 pin=18
+a 0 u 0 0 0 200 hln 100 ERC=i
+a 0 u 0 0 -50 170 hln 100 float=n
+p 2 13 212 hln 90 WE n 0 210 h
+a 0 u 1 0 5 208 hrn 100 pin=19
+a 0 u 0 0 0 210 hln 100 ERC=i
+a 0 u 0 0 -50 180 hln 100 float=n
+p 2 30 8 hln 90 VCC n 40 -10 d
+a 0 u 1 0 45 -7 hcn 100 pin=22
+a 0 u 0 0 40 -10 hln 100 ERC=p
+a 0 u 0 0 10 40 hln 100 float=e
+p 2 26 218 hln 90 GND n 30 230 v
+a 0 u 1 0 25 232 hcn 100 pin=20
+a 0 u 0 0 30 230 hln 100 ERC=p
+a 0 u 0 0 0 280 hln 100 float=e
+p 2 57 102 hrn 90 D_OUT n 70 100 u
+a 0 u 1 0 65 98 hln 100 pin=21
+a 0 u 0 0 70 100 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 142 hln 90 A13 n 0 140 h
+a 0 u 1 0 5 138 hrn 100 pin=14
+a 0 u 0 0 0 140 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 152 hln 90 A14 n 0 150 h
+a 0 u 1 0 5 148 hrn 100 pin=15
+a 0 u 0 0 0 150 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 162 hln 90 A15 n 0 160 h
+a 0 u 1 0 5 158 hrn 100 pin=16
+a 0 u 0 0 0 160 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+p 2 13 182 hln 90 D_IN n 0 180 h
+a 0 u 1 0 5 178 hrn 100 pin=17
+a 0 u 0 0 0 180 hln 100 ERC=x
+a 0 u 0 0 0 0 hln 100 float=n
+@graphics 70 240 0 10 10
+r 0 10 0 60 220
+*symbol RAM8Kx8break
+d 8K x 8 STATIC RAM
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 36 190 hln 100 PART=RAM8Kx8break
+a 0 sp 0 0 0 0 hln 100 MODEL=RAM8Kx8break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %RE %WE \n+ %A12 %A11 %A10 %A9 %A8 %A7 %A6 %A5 %A4 %A3 %A2 %A1 %A0 \n+ %W7 %W6 %W5 %W4 %W3 %W2 %W1 %W0 \n+ %R7 %R6 %R5 %R4 %R3 %R2 %R1 %R0 %VCC %GND @MODEL \n+ PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(GND)=$G_DGND
+a 0 u 0 0 0 0 hln 100 ipin(VCC)=$G_DPWR
+a 0 up 0 0 0 10 hln 100 MNTYMXDLY=0
+a 0 up 0 0 0 20 hln 100 IO_LEVEL=0
+@pins
+p 2 13 12 hln 90 A0 n 0 10 h
+a 0 u 1 0 5 8 hrn 100 pin=1
+a 0 u 0 0 0 10 hln 100 ERC=i
+a 0 u 0 0 -50 -20 hln 100 float=n
+p 2 13 22 hln 90 A1 n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=2
+a 0 u 0 0 0 20 hln 100 ERC=i
+a 0 u 0 0 -50 -10 hln 100 float=n
+p 2 13 32 hln 90 A2 n 0 30 h
+a 0 u 1 0 5 28 hrn 100 pin=3
+a 0 u 0 0 0 30 hln 100 ERC=i
+a 0 u 0 0 -50 0 hln 100 float=n
+p 2 13 42 hln 90 A3 n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=4
+a 0 u 0 0 0 40 hln 100 ERC=i
+a 0 u 0 0 -50 10 hln 100 float=n
+p 2 13 52 hln 90 A4 n 0 50 h
+a 0 u 1 0 5 48 hrn 100 pin=5
+a 0 u 0 0 0 50 hln 100 ERC=i
+a 0 u 0 0 -50 20 hln 100 float=n
+p 2 13 62 hln 90 A5 n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=6
+a 0 u 0 0 0 60 hln 100 ERC=i
+a 0 u 0 0 -50 30 hln 100 float=n
+p 2 13 72 hln 90 A6 n 0 70 h
+a 0 u 1 0 5 68 hrn 100 pin=7
+a 0 u 0 0 0 70 hln 100 ERC=i
+a 0 u 0 0 -50 40 hln 100 float=n
+p 2 13 82 hln 90 A7 n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=8
+a 0 u 0 0 0 80 hln 100 ERC=i
+a 0 u 0 0 -50 50 hln 100 float=n
+p 2 13 92 hln 90 A8 n 0 90 h
+a 0 u 1 0 5 88 hrn 100 pin=9
+a 0 u 0 0 0 90 hln 100 ERC=i
+a 0 u 0 0 -50 60 hln 100 float=n
+p 2 13 102 hln 90 A9 n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=10
+a 0 u 0 0 0 100 hln 100 ERC=i
+a 0 u 0 0 -50 70 hln 100 float=n
+p 2 13 112 hln 90 A10 n 0 110 h
+a 0 u 1 0 5 108 hrn 100 pin=11
+a 0 u 0 0 0 110 hln 100 ERC=i
+a 0 u 0 0 -50 80 hln 100 float=n
+p 2 13 122 hln 90 A11 n 0 120 h
+a 0 u 1 0 5 118 hrn 100 pin=12
+a 0 u 0 0 0 120 hln 100 ERC=i
+a 0 u 0 0 -50 90 hln 100 float=n
+p 2 13 132 hln 90 A12 n 0 130 h
+a 0 u 1 0 5 128 hrn 100 pin=13
+a 0 u 0 0 0 130 hln 100 ERC=i
+a 0 u 0 0 -50 100 hln 100 float=n
+p 2 13 162 hln 90 RE n 0 160 h
+a 0 u 1 0 5 158 hrn 100 pin=14
+a 0 u 0 0 0 160 hln 100 ERC=i
+a 0 u 0 0 -50 130 hln 100 float=n
+p 2 13 172 hln 90 WE n 0 170 h
+a 0 u 1 0 5 168 hrn 100 pin=15
+a 0 u 0 0 0 170 hln 100 ERC=i
+a 0 u 0 0 -50 140 hln 100 float=n
+p 2 57 12 hrn 90 R7 n 70 10 u
+a 0 u 1 0 65 8 hln 100 pin=16
+a 0 u 0 0 70 10 hln 100 ERC=b
+a 0 u 0 0 20 -20 hln 100 float=n
+p 2 57 22 hrn 90 R6 n 70 20 u
+a 0 u 1 0 65 18 hln 100 pin=17
+a 0 u 0 0 70 20 hln 100 ERC=b
+a 0 u 0 0 20 -10 hln 100 float=n
+p 2 57 32 hrn 90 R5 n 70 30 u
+a 0 u 1 0 65 28 hln 100 pin=18
+a 0 u 0 0 70 30 hln 100 ERC=b
+a 0 u 0 0 20 0 hln 100 float=n
+p 2 57 42 hrn 90 R4 n 70 40 u
+a 0 u 1 0 65 38 hln 100 pin=19
+a 0 u 0 0 70 40 hln 100 ERC=b
+a 0 u 0 0 20 10 hln 100 float=n
+p 2 57 52 hrn 90 R3 n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=20
+a 0 u 0 0 70 50 hln 100 ERC=b
+a 0 u 0 0 20 20 hln 100 float=n
+p 2 57 62 hrn 90 R2 n 70 60 u
+a 0 u 1 0 65 58 hln 100 pin=21
+a 0 u 0 0 70 60 hln 100 ERC=b
+a 0 u 0 0 20 30 hln 100 float=n
+p 2 57 72 hrn 90 R1 n 70 70 u
+a 0 u 1 0 65 68 hln 100 pin=22
+a 0 u 0 0 70 70 hln 100 ERC=b
+a 0 u 0 0 20 40 hln 100 float=n
+p 2 57 82 hrn 90 R0 n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=23
+a 0 u 0 0 70 80 hln 100 ERC=b
+a 0 u 0 0 20 50 hln 100 float=n
+p 2 30 8 hln 90 VCC n 40 -10 d
+a 0 u 1 0 45 -7 hcn 100 pin=33
+a 0 u 0 0 40 -10 hln 100 ERC=p
+a 0 u 0 0 10 40 hln 100 float=e
+p 2 26 178 hln 90 GND n 30 190 v
+a 0 u 1 0 25 192 hcn 100 pin=32
+a 0 u 0 0 30 190 hln 100 ERC=p
+a 0 u 0 0 0 240 hln 100 float=e
+p 2 57 172 hrn 100 W0 n 70 170 u
+a 0 u 1 0 65 168 hln 100 pin=31
+a 0 u 0 0 70 170 hln 100 ERC=x
+p 2 57 162 hrn 100 W1 n 70 160 u
+a 0 u 1 0 65 158 hln 100 pin=30
+a 0 u 0 0 70 160 hln 100 ERC=x
+p 2 57 152 hrn 100 W2 n 70 150 u
+a 0 u 1 0 65 148 hln 100 pin=29
+a 0 u 0 0 70 150 hln 100 ERC=x
+p 2 57 142 hrn 100 W3 n 70 140 u
+a 0 u 1 0 65 138 hln 100 pin=28
+a 0 u 0 0 70 140 hln 100 ERC=x
+p 2 57 132 hrn 100 W4 n 70 130 u
+a 0 u 1 0 65 128 hln 100 pin=27
+a 0 u 0 0 70 130 hln 100 ERC=x
+p 2 57 122 hrn 100 W5 n 70 120 u
+a 0 u 1 0 65 118 hln 100 pin=26
+a 0 u 0 0 70 120 hln 100 ERC=x
+p 2 57 112 hrn 100 W6 n 70 110 u
+a 0 u 1 0 65 108 hln 100 pin=25
+a 0 u 0 0 70 110 hln 100 ERC=x
+p 2 57 102 hrn 100 W7 n 70 100 u
+a 0 u 1 0 65 98 hln 100 pin=24
+a 0 u 0 0 70 100 hln 100 ERC=x
+@graphics 70 180 0 10 10
+r 0 10 0 60 180
+*symbol Rbreak
+d resistor breakout device
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=R^@REFDES %1 %2 @MODEL @VALUE
+a 0 sp 9 0 15 0 hln 100 REFDES=R?
+a 0 u 0 0 15 25 hln 100 VALUE=1k
+a 0 sp 13 0 20 25 hln 100 MODEL=Rbreak
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 27 12 hrn 100 2 n 40 10 u
+p 0 13 12 hln 100 1 n 0 10 h
+@graphics 40 20 0 10 10
+v 0 10 10
+11 10
+;
+v 0 11 10
+13 6
+;
+v 0 13 6
+16 14
+;
+v 0 16 14
+19 6
+;
+v 0 19 6
+22 14
+;
+v 0 22 14
+25 6
+;
+v 0 25 6
+28 14
+;
+v 0 28 14
+30 10
+;
+*symbol ROM32KX8break
+d
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 0 0 0 0 hln 100 MODEL=ROM32Kx8break
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %A14 %A13 %A12 %A11 %A10 %A9 %A8 %A7 %A6 %A5 %A4 %A3 %A2 %A1 %A0 \n+ %\OE\  %O7 %O6 %O5 %O4 %O3 %O2 %O1 %O0 %VCC %GND @MODEL \n+ PARAMS: MNTYMXDLY=@MNTYMXDLY IO_LEVEL=@IO_LEVEL
+a 0 u 0 0 0 0 hln 100 ipin(VCC)=$G_DPWR
+a 0 u 0 0 0 0 hln 100 ipin(GND)=$G_DGND
+a 0 sp 11 0 0 200 hln 100 PART=ROM32KX8break
+a 0 up 0 0 0 10 hln 100 MNTYMXDLY=0
+a 0 up 0 0 0 20 hln 100 IO_LEVEL=0
+@pins
+p 2 13 12 hln 90 A0 n 0 10 h
+a 0 u 1 0 5 8 hrn 100 pin=10
+a 0 u 0 0 0 10 hln 100 ERC=i
+a 0 u 0 0 -40 -20 hln 100 float=n
+p 2 13 22 hln 90 A1 n 0 20 h
+a 0 u 1 0 5 18 hrn 100 pin=9
+a 0 u 0 0 0 20 hln 100 ERC=i
+a 0 u 0 0 -40 -10 hln 100 float=n
+p 2 13 32 hln 90 A2 n 0 30 h
+a 0 u 1 0 5 28 hrn 100 pin=8
+a 0 u 0 0 0 30 hln 100 ERC=i
+a 0 u 0 0 -40 0 hln 100 float=n
+p 2 13 42 hln 90 A3 n 0 40 h
+a 0 u 1 0 5 38 hrn 100 pin=7
+a 0 u 0 0 0 40 hln 100 ERC=i
+a 0 u 0 0 -40 10 hln 100 float=n
+p 2 13 52 hln 90 A4 n 0 50 h
+a 0 u 1 0 5 48 hrn 100 pin=6
+a 0 u 0 0 0 50 hln 100 ERC=i
+a 0 u 0 0 -40 20 hln 100 float=n
+p 2 13 62 hln 90 A5 n 0 60 h
+a 0 u 1 0 5 58 hrn 100 pin=5
+a 0 u 0 0 0 60 hln 100 ERC=i
+a 0 u 0 0 -40 30 hln 100 float=n
+p 2 13 72 hln 90 A6 n 0 70 h
+a 0 u 1 0 5 68 hrn 100 pin=4
+a 0 u 0 0 0 70 hln 100 ERC=i
+a 0 u 0 0 -40 40 hln 100 float=n
+p 2 13 82 hln 90 A7 n 0 80 h
+a 0 u 1 0 5 78 hrn 100 pin=3
+a 0 u 0 0 0 80 hln 100 ERC=i
+a 0 u 0 0 -40 50 hln 100 float=n
+p 2 13 92 hln 90 A8 n 0 90 h
+a 0 u 1 0 5 88 hrn 100 pin=25
+a 0 u 0 0 0 90 hln 100 ERC=i
+a 0 u 0 0 -40 60 hln 100 float=n
+p 2 13 102 hln 90 A9 n 0 100 h
+a 0 u 1 0 5 98 hrn 100 pin=24
+a 0 u 0 0 0 100 hln 100 ERC=i
+a 0 u 0 0 -40 70 hln 100 float=n
+p 2 13 112 hln 90 A10 n 0 110 h
+a 0 u 1 0 5 108 hrn 100 pin=21
+a 0 u 0 0 0 110 hln 100 ERC=i
+a 0 u 0 0 -40 80 hln 100 float=n
+p 2 13 122 hln 90 A11 n 0 120 h
+a 0 u 1 0 5 118 hrn 100 pin=23
+a 0 u 0 0 0 120 hln 100 ERC=i
+a 0 u 0 0 -40 90 hln 100 float=n
+p 2 13 132 hln 90 A12 n 0 130 h
+a 0 u 1 0 5 128 hrn 100 pin=2
+a 0 u 0 0 0 130 hln 100 ERC=i
+a 0 u 0 0 -40 100 hln 100 float=n
+p 2 13 142 hln 90 A13 n 0 140 h
+a 0 u 1 0 5 138 hrn 100 pin=26
+a 0 u 0 0 0 140 hln 100 ERC=i
+a 0 u 0 0 -40 110 hln 100 float=n
+p 2 13 152 hln 90 A14 n 0 150 h
+a 0 u 1 0 5 148 hrn 100 pin=27
+a 0 u 0 0 0 150 hln 100 ERC=i
+a 0 u 0 0 -40 120 hln 100 float=n
+p 2 13 172 hln 90 \OE\ n 0 170 h
+a 0 u 1 0 5 168 hrn 100 pin=22
+a 0 u 0 0 0 170 hln 100 ERC=i
+a 0 u 0 0 -40 140 hln 100 float=n
+p 2 57 52 hrn 90 O0 n 70 50 u
+a 0 u 1 0 65 48 hln 100 pin=11
+a 0 u 0 0 70 50 hln 100 ERC=o
+a 0 u 0 0 30 20 hln 100 float=n
+p 2 57 62 hrn 90 O1 n 70 60 u
+a 0 u 1 0 65 58 hln 100 pin=12
+a 0 u 0 0 70 60 hln 100 ERC=o
+a 0 u 0 0 30 30 hln 100 float=n
+p 2 57 72 hrn 90 O2 n 70 70 u
+a 0 u 1 0 65 68 hln 100 pin=13
+a 0 u 0 0 70 70 hln 100 ERC=o
+a 0 u 0 0 30 40 hln 100 float=n
+p 2 57 82 hrn 90 O3 n 70 80 u
+a 0 u 1 0 65 78 hln 100 pin=15
+a 0 u 0 0 70 80 hln 100 ERC=o
+a 0 u 0 0 30 50 hln 100 float=n
+p 2 57 92 hrn 90 O4 n 70 90 u
+a 0 u 1 0 65 88 hln 100 pin=16
+a 0 u 0 0 70 90 hln 100 ERC=o
+a 0 u 0 0 30 60 hln 100 float=n
+p 2 57 102 hrn 90 O5 n 70 100 u
+a 0 u 1 0 65 98 hln 100 pin=17
+a 0 u 0 0 70 100 hln 100 ERC=o
+a 0 u 0 0 30 70 hln 100 float=n
+p 2 57 112 hrn 90 O6 n 70 110 u
+a 0 u 1 0 65 108 hln 100 pin=18
+a 0 u 0 0 70 110 hln 100 ERC=o
+a 0 u 0 0 30 80 hln 100 float=n
+p 2 57 122 hrn 90 O7 n 70 120 u
+a 0 u 1 0 65 118 hln 100 pin=19
+a 0 u 0 0 70 120 hln 100 ERC=o
+a 0 u 0 0 30 90 hln 100 float=n
+p 2 32 8 hln 90 VCC n 40 -10 d
+a 0 u 1 0 45 -7 hcn 100 pin=28
+a 0 u 0 0 40 -10 hln 100 ERC=p
+a 0 u 0 0 10 30 hln 100 float=e
+p 2 32 188 hln 90 GND n 40 200 v
+a 0 u 1 0 35 202 hcn 100 pin=14
+a 0 u 0 0 40 200 hln 100 ERC=p
+a 0 u 0 0 10 240 hln 100 float=e
+@graphics 70 190 0 10 10
+r 0 10 0 60 190
+*symbol Sbreak
+d Voltage-controlled switch breakout device
+@type p 8.0
+@attributes
+a 0 s 13 0 20 35 hln 100 MODEL=Sbreak
+a 0 sp 9 0 10 2 hln 100 REFDES=S?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=S^@REFDES %3 %4 %1 %2 @MODEL\nRS^@REFDES %1 %2 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=
+@graphics 40 30 0 10 10
+r 0 10 5 30 25
+v 0 25 20
+20 12
+;
+v 0 25 10
+30 10
+;
+z 26 12 12 hcn 75 1
++
+z 26 12 22 hcn 75 1
+-
+z 26 24 10 hcn 75 1
++
+z 26 24 24 hln 100 1
+-
+v 0 30 20
+25 20
+;
+*symbol Wbreak
+d Current-controlled switch breakout device
+@type p 8.0
+@attributes
+a 0 sp 13 0 10 34 hln 100 MODEL=Wbreak
+a 0 sp 9 0 10 4 hln 100 REFDES=W?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=W^@REFDES %3 %4 VW^@REFDES @MODEL\nVW^@REFDES %1 %2 0V
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 12 hln 100 1 n 0 10 h
+a 0 s 0 0 0 0 hln 100 ERC=x
+a 0 s 0 0 5 5 hln 100 PIN=1
+p 0 13 22 hln 100 2 n 0 20 h
+a 0 s 0 0 2 -10 hln 100 ERC=x
+a 0 s 0 0 7 -5 hln 100 PIN=2
+p 0 27 12 hrn 100 3 n 40 10 u
+a 0 s 0 0 -20 0 hln 100 ERC=x
+a 0 s 0 0 -15 5 hln 100 PIN=3
+p 0 27 22 hrn 100 4 n 40 20 u
+a 0 s 0 0 -22 -10 hln 100 ERC=x
+a 0 s 0 0 -17 -5 hln 100 PIN=4
+@graphics 40 30 0 10 10
+r 0 10 5 30 25
+v 0 25 20
+20 12
+;
+v 0 12 13
+14 18
+16 13
+;
+v 0 25 10
+30 10
+;
+v 0 30 20
+25 20
+;
+z 26 24 10 hcn 75 1
++
+v 0 14 10
+14 20
+;
+v 0 10 10
+14 10
+;
+v 0 10 20
+14 20
+;
+z 26 24 24 hln 100 1
+-
+*symbol XFRM_NONLINEAR
+d non-linear, magnetic core
+@type p
+@attributes
+a 0 u 0 0 15 25 hln 100 COUPLING=
+a 0 sp 9 0 20 0 hln 100 REFDES=TX?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=K^@REFDES L1^@REFDES L2^@REFDES @COUPLING @MODEL\nL1^@REFDES %1 %2 @L1_TURNS \nL2^@REFDES %3 %4 @L2_TURNS
+a 0 u 0 0 0 10 hln 100 L1_TURNS=
+a 0 u 0 0 0 20 hln 100 L2_TURNS=
+a 0 sp 13 0 0 68 hln 100 MODEL=kbreak
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+@pins
+p 0 13 2 hln 100 1 n 0 0 h
+p 0 13 62 hln 100 2 n 0 60 h
+p 0 27 2 hrn 100 3 n 40 0 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 35 -2 hln 100 pin=1
+p 0 27 62 hrn 100 4 n 40 60 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 35 58 hln 100 pin=2
+@graphics 40 60 0 0 10
+a 0 10 50 15 45 10 40
+a 0 10 40 15 35 10 30
+a 0 10 30 15 25 10 20
+a 0 10 20 15 15 10 10
+a 0 30 10 25 15 30 20
+a 0 30 20 25 25 30 30
+a 0 30 30 25 35 30 40
+a 0 30 40 25 45 30 50
+v 0 10 0
+10 10
+;
+v 0 10 50
+10 60
+;
+v 0 30 0
+30 10
+;
+v 0 30 50
+30 60
+;
+v 0 22 10
+22 50
+;
+v 0 22 50
+22 50
+;
+v 0 18 10
+18 50
+;
+v 0 18 50
+18 50
+;
+*symbol ZbreakN
+d N channel IGBT breakout symbol
+@type p
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=Z?
+a 0 sp 0 0 -8 48 hln 100 PART=ZbreakN
+a 0 sp 13 0 -14 40 hln 100 MODEL=ZbreakN
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=Z^@REFDES %C %G %E @model ?AGD|\n+ AGD=@AGD| ?AREA|\n+ AREA=@AREA| ?KP|\n+ KP=@KP| ?TAU|\n+ TAU=@TAU| ?WB|\n+ WB=@WB|
+a 0 u 0 0 0 10 hlb 100 AGD=
+a 0 u 0 0 0 20 hlb 100 AREA=
+a 0 u 0 0 0 30 hlb 100 KP=
+a 0 u 0 0 0 40 hlb 100 TAU=
+a 0 u 0 0 0 50 hlb 100 WB=
+@pins
+p 0 13 32 hln 100 G n 0 30 h
+a 0 s 0 0 5 28 hrn 100 PIN=1
+a 0 s 0 0 0 30 hln 100 ERC=x
+p 0 28 12 hln 100 C n 30 0 d
+a 0 s 0 0 35 3 hcn 100 PIN=2
+a 0 s 0 0 30 0 hln 100 ERC=x
+p 0 32 28 hln 100 E n 30 40 v
+a 0 s 0 0 25 42 hcn 100 PIN=3
+a 0 s 0 0 30 40 hln 100 ERC=x
+@graphics 30 40 0 30 10
+v 0 20 10
+20 30
+;
+v 0 17 10
+17 30
+;
+v 0 10 30
+17 30
+;
+v 0 30 10
+20 15
+;
+v 0 20 25
+30 30
+;
+v 0 21 28
+28 29
+23 24
+;
+*symbol copyright
+d Copyright
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 70 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+@graphics 230 60 0 0 10
+r 0 0 0 230 60
+z 26 2 10 hln 100 27
+Copyright 1999, OrCAD, Inc.
+z 26 2 38 hln 100 41
+Neither this library, nor any part of it,
+z 26 2 47 hln 100 41
+may be copied without the express written
+z 26 2 57 hln 100 22
+consent of OrCAD, Inc.
+z 26 2 29 hln 100 35
+the PSpice Schematics program only.
+z 26 2 20 hln 100 44
+The symbols in this library are for use with

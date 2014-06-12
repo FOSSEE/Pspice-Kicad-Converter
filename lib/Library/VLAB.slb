@@ -1,0 +1,33 @@
+*version 8.0 2223282317
+@index
+symloc COMP 0 595
+*symbol COMP
+d 3_TERMINAL_COMPARATOR
+@type p 8.0
+@attributes
+a 0 sp 9 0 0 0 hln 100 REFDES=U?
+a 0 sp 11 0 0 30 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=
+@pins
+p 0 12 12 hln 100 pin1 n 0 10 h
+a 0 s 1 0 9 8 hrn 100 PIN=+
+a 0 s 0:13 0 0 10 hln 100 ERC=x
+p 0 12 42 hln 100 pin2 n 0 40 h
+a 0 s 1 0 9 38 hrn 100 PIN=-
+a 0 s 0:13 0 0 40 hln 100 ERC=x
+p 0 68 32 hrn 100 pin3 n 80 30 u
+a 0 s 1 0 57 20 hln 100 PIN=OUT
+a 0 s 0:13 0 80 30 hln 100 ERC=x
+@graphics 80 60 0 10 10
+v 0 10 0
+70 30
+10 60
+10 0
+;
+v 0 40 50
+40 45
+;
+v 0 40 10 d_info:,,,,4/1/6/6,,,,,,,,,, 
+40 15
+;
