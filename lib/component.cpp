@@ -49,21 +49,19 @@ void Pin::print(ostream& out, int shiftx, int shifty){
 	if(orient=="u")out<<"L";			//converting the annotation to kikad format as different letters are use in pspice and kikad libraries
 	if(orient=="v")out<<"D";
 	if(orient=="d")out<<"U";
-	out<<" 60 60 0 1 ";
+	out<<" 30 30 0 1 ";
 	if(etype=="i")out<<"I"<<endl;
 	else if(etype=="o")out<<"O"<<endl;
-	else if(etype=="h")out<<"P"<<endl;
-	else if(etype=="u")out<<"P"<<endl;
 	else if(etype=="p")out<<"W"<<endl;
 	else if(etype=="x")out<<"P"<<endl;
 	else if(etype=="b")out<<"B"<<endl;
-	else out<<"w"<<endl;
+	else out<<"P"<<endl;
 }
 //print function of class component to print all the components to output's cache lib file
 void Component::print(ostream& out){
 	out<<"#\n# "<<type+nameAppend<<"\n#\nDEF "<<type+nameAppend<<" "<<type<<" 0 30 Y Y 1 F N"<<endl;	//upto DEF line printed
-	out<<"F0 \""<<type<<"\" 0 0 60 H V L CNN"<<endl;		//F0 line
-	out<<"F1 \""<<type<<"\" 0 60 60 H V L CNN"<<endl;		//F1 line
+	out<<"F0 \""<<type<<"\" 0 0 30 H V L CNN"<<endl;		//F0 line
+	out<<"F1 \""<<type<<"\" 0 60 30 H V L CNN"<<endl;		//F1 line
 	out<<"DRAW"<<endl;
 	des.print(out);   //calling print funcition of design to print design of components
 	for(int i=0; i<pins.size(); i++){

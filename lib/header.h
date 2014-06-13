@@ -13,7 +13,7 @@ using namespace std;
 
 const int MULT=10;			//Pspice coordinates are too small. They need to be scaled up 10 times to be usable in kicad.
 
-string findLibrary(string s);
+string findLibrary(string& s);
 
 string readDate(string);
 string readShortDate(string);

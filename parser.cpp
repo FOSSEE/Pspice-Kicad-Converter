@@ -15,7 +15,7 @@ int main(int argc, char* argv[]){
 	fsch.open(fname.c_str());
 	flib.open(flname.c_str());
 	
-	///cerr<<"Schematic file name: "<<fname<<endl<<"Library file name: "<<flname<<endl;
+	cerr<<"Schematic file name: "<<fname<<endl;///<<"Library file name: "<<flname<<endl;
 	
 	string textline;
 	skipTo(file, "@status");
@@ -56,6 +56,7 @@ int main(int argc, char* argv[]){
 		file.seekg(g);							//"Put that line back" and make the port ComponentInstance
 		///cerr<<"*1 "<<textline<<endl;		///DEBUG
 		ComponentInstance ci(file);
+		string citype=ci.type;
 		if(components.find(ci.type)==components.end()){
 		//If the Component that the ComponentInstance ci is an instance of has not already been made, make it.
 			string libName=findLibrary(ci.type);					//Find the Pspice library file
@@ -65,6 +66,7 @@ int main(int argc, char* argv[]){
 				///cerr<<"Lib opened "<<libName<<endl;		///DEBUG
 				Component c(PLib, ci.type);								//Make the Component
 				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
+				ci.type=citype;
 				components[ci.type]=c;									//Store the component
 				componentInstances.push_back(ci);
 			}

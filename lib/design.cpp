@@ -58,14 +58,14 @@ Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	mperpAB= -(xB-xA)/(yB-yA);
 	mperpBC= -(xB-xC)/(yB-yC);
 	//Get x and y by solving the two lines (perpendicular bisectors)
-	x=(ymBC-ymAB+mperpBC*xmBC-mperpAB*xmAB)/(mperpBC-mperpAB);
+	x=(ymBC-ymAB-mperpBC*xmBC+mperpAB*xmAB)/(-mperpBC+mperpAB);
 	y=(xmBC-xmAB + (ymAB/mperpAB)-(ymBC/mperpBC))/((1.0/mperpAB)-(1.0/mperpBC));
 	
 	//Get the radius:
 	r=sqrt((x-xA)*(x-xA) + (y-yA)*(y-yA));
 	
 	//Following code is used to decide which among A and C is the starting point (and thus determines "sa")
-	float a=(atan2(y-yA, x-xA)*10.0*180.0/M_PI), b=(atan2(y-yB, x-xB)*10.0*180.0/M_PI), c=(atan2(y-yC, x-xC)*10.0*180.0/M_PI);
+	float a=(atan2(yA-y, xA-x)*10.0*180.0/M_PI), b=(atan2(yB-y, xB-x)*10.0*180.0/M_PI), c=(atan2(yC-y, xC-x)*10.0*180.0/M_PI);
 	
 	if(b<max(a,c) && b>min(a,c)){	//b is between a and c
 		sa=min(a,c); ea=max(a,c);
@@ -78,14 +78,13 @@ Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	}
 	
 	int t;
-	t=sa; sa=ea; ea=t;
-	
-	sa+=1; ea-=1;
 	
 	xA = x + r*cos(sa*M_PI/1800.0);
 	yA = y + r*sin(sa*M_PI/1800.0);
 	xC = x + r*cos(ea*M_PI/1800.0);
 	yC = y + r*sin(ea*M_PI/1800.0);
+	
+	sa+=1; ea-=1;
 	
 	//scale and shift:
 	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty);

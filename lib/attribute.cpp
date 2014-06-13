@@ -1,7 +1,7 @@
 #include "header.h"
 
 void Attribute::print(ostream& out){
-	out<<" \""<<value<<"\" "<<char(orient + 'A' -'a')<<" "<<x<<" "<<y<<" 50  000"<<isHidden<<" "<<char(hjust+'A'-'a')<<" ";
+	out<<" \""<<value<<"\" "<<char(orient + 'A' -'a')<<" "<<x<<" "<<y<<" 30  000"<<isHidden<<" "<<char(hjust+'A'-'a')<<" ";
 	if(vjust=='n') out<<'C';
 	else out<<char(vjust+'A'-'a');
 	out<<"NN"<<endl;
