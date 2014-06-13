@@ -18,7 +18,7 @@ string findLibrary(string& s);
 string readDate(string);
 string readShortDate(string);
 string skipTo(istream&, string);
-string exec(char*);
+string exec(const char*);
 
 const string nameAppend="_PSPICE";
 
