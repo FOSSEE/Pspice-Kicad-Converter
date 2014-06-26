@@ -78,7 +78,7 @@ Component::Component(istream& in, string t){
 	int g=in.tellg();
 	//To get to the starting point of the component's type in pspice library file
 	string line=skipTo(in, "*symbol "+t);
-	//to get the pspice library of the components having it's library written elsewhere
+	//to get the pspice library of the components having its description written elsewhere
 	if(line.find("ako")!=line.npos){
 		int a=line.rfind(" ")+1;
 		t=line.substr(a, line.length()-a);

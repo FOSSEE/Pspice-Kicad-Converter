@@ -233,15 +233,6 @@ F 1 "VPULSE" H 2000 5380 30  0000 L CNN
 	1    2000 5300
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 81595368
-P 11880 8400
-F 0 "titleblk" H 23760 16800 30  0001 L CNN
-F 1 "titleblk" H 23760 16880 30  0001 L CNN
-	1    11880 8400
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	4900 4800 4900 6200
 Wire Wire Line

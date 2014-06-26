@@ -476,24 +476,6 @@ F 1 "10V" H 2200 990 30  0000 C CNN
 	1    2200 1100
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 69798315
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 68664370
-P 7400 2800
-F 0 "nodeMarker" H 14800 5600 30  0001 L CNN
-F 1 "nodeMarker" H 14800 5680 30  0001 L CNN
-	1    7400 2800
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2900 2000 2800 2000
 Wire Wire Line

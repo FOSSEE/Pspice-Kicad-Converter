@@ -170,33 +170,6 @@ F 1 "D1N4002" H 1600 1480 30  0000 L CNN
 	1    1600 1400
 	0    -1    1    0
 $EndComp
-$Comp
-L PARAM_PSPICE PM1
-U 1 1 74897763
-P 4600 400
-F 0 "PM1" H 4600 400 30  0000 L CNN
-F 1 "PARAM" H 4600 480 30  0000 L CNN
-	1    4600 400
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 87513926
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 25180540
-P 3200 1600
-F 0 "nodeMarker" H 6400 3200 30  0001 L CNN
-F 1 "nodeMarker" H 6400 3280 30  0001 L CNN
-	1    3200 1600
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	500 1800 500 2100
 Wire Wire Line

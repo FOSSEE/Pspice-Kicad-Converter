@@ -144,48 +144,12 @@ F 1 "0.01u" H 2600 3950 30  0000 L CNN
 	0    -1    1    0
 $EndComp
 $Comp
-L PARAM_PSPICE PM1
-U 1 1 10490027
-P 1300 2700
-F 0 "PM1" H 1300 2700 30  0000 L CNN
-F 1 "PARAM" H 1300 2780 30  0000 L CNN
-	1    1300 2700
-	1    0    0    1
-$EndComp
-$Comp
 L VDC_PSPICE V4
-U 1 1 73368690
+U 1 1 10490027
 P 3000 4400
 F 0 "V4" H 3000 4400 30  0000 L CNN
 F 1 "{control}" H 3000 4070 30  0000 C CNN
 	1    3000 4400
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 32520059
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 74897763
-P 3000 4100
-F 0 "nodeMarker" H 6000 8200 30  0001 L CNN
-F 1 "nodeMarker" H 6000 8280 30  0001 L CNN
-	1    3000 4100
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 87513926
-P 4300 3400
-F 0 "nodeMarker" H 8600 6800 30  0001 L CNN
-F 1 "nodeMarker" H 8600 6880 30  0001 L CNN
-	1    4300 3400
 	1    0    0    1
 $EndComp
 Wire Wire Line

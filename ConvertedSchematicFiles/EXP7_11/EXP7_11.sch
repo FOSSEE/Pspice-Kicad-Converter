@@ -134,24 +134,6 @@ F 1 "D1N4002" H 3200 1880 30  0000 L CNN
 	1    3200 1800
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 45202362
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 10490027
-P 3800 1800
-F 0 "nodeMarker" H 7600 3600 30  0001 L CNN
-F 1 "nodeMarker" H 7600 3680 30  0001 L CNN
-	1    3800 1800
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2700 1400 2700 1500
 Wire Wire Line

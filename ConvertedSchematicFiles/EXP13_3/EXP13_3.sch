@@ -80,24 +80,6 @@ F 1 "J2N3819" H 2900 2480 30  0000 L CNN
 	1    2900 2400
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 77747793
-P 11880 8400
-F 0 "titleblk" H 23760 16800 30  0001 L CNN
-F 1 "titleblk" H 23760 16880 30  0001 L CNN
-	1    11880 8400
-	1    0    0    1
-$EndComp
-$Comp
-L IMARKER_PSPICE iMarker
-U 1 1 74238335
-P 3200 2200
-F 0 "iMarker" H 6400 4400 30  0001 L CNN
-F 1 "iMarker" H 6400 4480 30  0001 L CNN
-	1    3200 2200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2300 2400 2900 2400
 Wire Wire Line

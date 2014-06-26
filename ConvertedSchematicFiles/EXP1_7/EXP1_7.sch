@@ -179,15 +179,6 @@ F 1 "ELAPLACE" H 3100 1180 30  0001 L CNN
 	1    3100 1100
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 87513926
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2500 2600 2900 2600
 Wire Wire Line

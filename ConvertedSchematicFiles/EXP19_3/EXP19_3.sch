@@ -170,51 +170,6 @@ F 1 "LM7805C" H 2600 580 30  0000 L CNN
 	1    2600 500
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 74897763
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L VDIFFMARKER_PSPICE vdiffMarker
-U 1 1 87513926
-P 800 900
-F 0 "vdiffMarker" H 1600 1800 30  0001 L CNN
-F 1 "vdiffMarker" H 1600 1880 30  0001 L CNN
-	1    800 900
-	1    0    0    1
-$EndComp
-$Comp
-L VDIFFMARKER_PSPICE vdiffMarker
-U 1 1 25180540
-P 1900 900
-F 0 "vdiffMarker" H 3800 1800 30  0001 L CNN
-F 1 "vdiffMarker" H 3800 1880 30  0001 L CNN
-	1    1900 900
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 20383426
-P 2300 500
-F 0 "nodeMarker" H 4600 1000 30  0001 L CNN
-F 1 "nodeMarker" H 4600 1080 30  0001 L CNN
-	1    2300 500
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 44089172
-P 4200 500
-F 0 "nodeMarker" H 8400 1000 30  0001 L CNN
-F 1 "nodeMarker" H 8400 1080 30  0001 L CNN
-	1    4200 500
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	800 1200 800 1300
 Wire Wire Line

@@ -188,24 +188,6 @@ F 1 "1MEG" H 3600 2990 30  0000 L CNN
 	1    3600 2900
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 25180540
-P 11880 8400
-F 0 "titleblk" H 23760 16800 30  0001 L CNN
-F 1 "titleblk" H 23760 16880 30  0001 L CNN
-	1    11880 8400
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 20383426
-P 2700 1500
-F 0 "nodeMarker" H 5400 3000 30  0001 L CNN
-F 1 "nodeMarker" H 5400 3080 30  0001 L CNN
-	1    2700 1500
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2700 1000 4000 1000
 Wire Wire Line

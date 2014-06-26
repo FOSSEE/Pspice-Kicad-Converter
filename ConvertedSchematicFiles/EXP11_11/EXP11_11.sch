@@ -143,33 +143,6 @@ F 1 "15V" H 3300 3590 30  0000 C CNN
 	1    3300 3700
 	-1    0    0    -1
 $EndComp
-$Comp
-L PARAM_PSPICE PM2
-U 1 1 10490027
-P 6100 2500
-F 0 "PM2" H 6100 2500 30  0000 L CNN
-F 1 "PARAM" H 6100 2580 30  0000 L CNN
-	1    6100 2500
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 73368690
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 32520059
-P 4400 3000
-F 0 "nodeMarker" H 8800 6000 30  0001 L CNN
-F 1 "nodeMarker" H 8800 6080 30  0001 L CNN
-	1    4400 3000
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	3300 2300 3300 2200
 Wire Wire Line

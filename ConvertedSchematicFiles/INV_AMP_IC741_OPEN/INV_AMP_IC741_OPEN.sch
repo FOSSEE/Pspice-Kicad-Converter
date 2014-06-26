@@ -143,42 +143,6 @@ F 1 "uA741" H 2100 1480 30  0000 L CNN
 	1    2100 1400
 	1    0    0    1
 $EndComp
-$Comp
-L PARAM_PSPICE PM1
-U 1 1 10490027
-P 4600 400
-F 0 "PM1" H 4600 400 30  0000 L CNN
-F 1 "PARAM" H 4600 480 30  0000 L CNN
-	1    4600 400
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 73368690
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 32520059
-P 3600 1600
-F 0 "nodeMarker" H 7200 3200 30  0001 L CNN
-F 1 "nodeMarker" H 7200 3280 30  0001 L CNN
-	1    3600 1600
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 74897763
-P 2000 1800
-F 0 "nodeMarker" H 4000 3600 30  0001 L CNN
-F 1 "nodeMarker" H 4000 3680 30  0001 L CNN
-	1    2000 1800
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2500 1300 2500 700
 Wire Wire Line

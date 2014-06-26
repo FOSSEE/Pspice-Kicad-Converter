@@ -9,10 +9,10 @@ ofstream flib;
 int main(int argc, char* argv[]){
 	ifstream file(argv[1]);
 	
-	string dirname="mkdir "+string(argv[2]);
+	string dirname="mkdir -p \""+string(argv[2])+"\"";
 	string t=exec(dirname.c_str());
 	
-	string bncmd="basename "+string(argv[2]);
+	string bncmd="basename \""+string(argv[2])+"\"";
 	string fbasename=exec(bncmd.c_str());
 	fbasename=fbasename.substr(0, fbasename.length()-1);
 	
@@ -92,7 +92,7 @@ int main(int argc, char* argv[]){
 				components[ci.type]=c;									//Store the component
 				componentInstances.push_back(ci);
 			}
-			else cerr<<"Library not found for: "<<ci.type<<endl;
+			///else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
 		else componentInstances.push_back(ci);
 		///cerr<<"Inst created "<<ci.type<<endl;			///DEBUG
@@ -125,7 +125,7 @@ int main(int argc, char* argv[]){
 				components[ci.type]=c;
 				componentInstances.push_back(ci);
 			}
-			else cerr<<"Library not found for: "<<ci.type<<endl;
+			///else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
 		else componentInstances.push_back(ci);
 		///cerr<<ci.type<<endl;			///DEBUG
@@ -164,7 +164,9 @@ int main(int argc, char* argv[]){
 	}
 	//Write schematic file footer:
 	fsch<<"$EndSCHEMATC"<<endl;
+	fsch.close();
 	
 	//Write -cache.lib file footer:
 	flib<<"#\n#End Library"<<endl;
+	flib.close();
 }

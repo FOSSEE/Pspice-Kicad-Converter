@@ -80,24 +80,6 @@ F 1 "VAC" H 800 780 30  0000 L CNN
 	1    800 700
 	1    0    0    1
 $EndComp
-$Comp
-L PARAM_PSPICE PM1
-U 1 1 77747793
-P 3000 600
-F 0 "PM1" H 3000 600 30  0000 L CNN
-F 1 "PARAM" H 3000 680 30  0000 L CNN
-	1    3000 600
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 74238335
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2000 600 1600 600
 Wire Wire Line

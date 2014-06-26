@@ -170,15 +170,6 @@ F 1 "Q2N2222" H 2000 2180 30  0001 L CNN
 	1    2000 2100
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 74897763
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2200 1100 2200 1000
 Wire Wire Line

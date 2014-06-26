@@ -197,15 +197,6 @@ F 1 "D1N4148" H 2300 2680 30  0001 L CNN
 	1    2300 2600
 	0    -1    1    0
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 20383426
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	1100 4000 1400 4000
 Wire Wire Line

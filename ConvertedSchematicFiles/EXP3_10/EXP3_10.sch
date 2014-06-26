@@ -260,15 +260,6 @@ F 1 "DigStim" H 1200 1080 30  0000 L CNN
 	1    1200 1000
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 76465782
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	4000 1000 4400 1000
 Wire Wire Line

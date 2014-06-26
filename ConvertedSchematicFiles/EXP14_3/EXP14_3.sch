@@ -224,15 +224,6 @@ F 1 "QbreakN" H 4300 3280 30  0000 L CNN
 	1    4300 3200
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 45005211
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	3000 3200 3100 3200
 Wire Wire Line

@@ -233,15 +233,6 @@ F 1 "VSIN" H 3000 780 30  0001 L CNN
 	1    3000 700
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 81595368
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	600 700 900 700
 Wire Wire Line

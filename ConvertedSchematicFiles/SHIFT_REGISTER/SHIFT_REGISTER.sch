@@ -98,42 +98,6 @@ F 1 "7494" H 2500 1180 30  0000 L CNN
 	1    2500 1100
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 99885386
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 39760492
-P 3100 1800
-F 0 "nodeMarker" H 6200 3600 30  0001 L CNN
-F 1 "nodeMarker" H 6200 3680 30  0001 L CNN
-	1    3100 1800
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 66516649
-P 1000 2500
-F 0 "nodeMarker" H 2000 5000 30  0001 L CNN
-F 1 "nodeMarker" H 2000 5080 30  0001 L CNN
-	1    1000 2500
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 29641421
-P 1200 1800
-F 0 "nodeMarker" H 2400 3600 30  0001 L CNN
-F 1 "nodeMarker" H 2400 3680 30  0001 L CNN
-	1    1200 1800
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	1000 2500 1000 2800
 Wire Wire Line

@@ -143,24 +143,6 @@ F 1 "VSIN" H 1200 1880 30  0001 L CNN
 	1    1200 1800
 	1    0    0    1
 $EndComp
-$Comp
-L PARAM_PSPICE PM1
-U 1 1 10490027
-P 900 1400
-F 0 "PM1" H 900 1400 30  0000 L CNN
-F 1 "PARAM" H 900 1480 30  0000 L CNN
-	1    900 1400
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 73368690
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2700 1300 2700 1200
 Wire Wire Line

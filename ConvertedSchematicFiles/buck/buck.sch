@@ -170,51 +170,6 @@ F 1 "MBD101" H 2100 1480 30  0000 L CNN
 	1    2100 1400
 	-1    0    0    -1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 74897763
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L VDIFFMARKER_PSPICE vdiffMarker
-U 1 1 87513926
-P 2200 1600
-F 0 "vdiffMarker" H 4400 3200 30  0001 L CNN
-F 1 "vdiffMarker" H 4400 3280 30  0001 L CNN
-	1    2200 1600
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 25180540
-P 4000 2100
-F 0 "nodeMarker" H 8000 4200 30  0001 L CNN
-F 1 "nodeMarker" H 8000 4280 30  0001 L CNN
-	1    4000 2100
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 20383426
-P 3300 1600
-F 0 "nodeMarker" H 6600 3200 30  0001 L CNN
-F 1 "nodeMarker" H 6600 3280 30  0001 L CNN
-	1    3300 1600
-	1    0    0    1
-$EndComp
-$Comp
-L VDIFFMARKER_PSPICE vdiffMarker
-U 1 1 44089172
-P 1400 1600
-F 0 "vdiffMarker" H 2800 3200 30  0001 L CNN
-F 1 "vdiffMarker" H 2800 3280 30  0001 L CNN
-	1    1400 1600
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	1900 2300 1900 2800
 Wire Wire Line

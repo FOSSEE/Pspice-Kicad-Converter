@@ -143,42 +143,6 @@ F 1 "VAC" H 1000 1780 30  0000 L CNN
 	1    1000 1700
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 10490027
-P 11880 8400
-F 0 "titleblk" H 23760 16800 30  0001 L CNN
-F 1 "titleblk" H 23760 16880 30  0001 L CNN
-	1    11880 8400
-	1    0    0    1
-$EndComp
-$Comp
-L vdb_PSPICE vdb
-U 1 1 73368690
-P 1300 1500
-F 0 "vdb" H 2600 3000 30  0001 L CNN
-F 1 "vdb" H 2600 3080 30  0001 L CNN
-	1    1300 1500
-	1    0    0    1
-$EndComp
-$Comp
-L vdb_PSPICE vdb
-U 1 1 32520059
-P 2000 1800
-F 0 "vdb" H 4000 3600 30  0001 L CNN
-F 1 "vdb" H 4000 3680 30  0001 L CNN
-	1    2000 1800
-	1    0    0    1
-$EndComp
-$Comp
-L vdb_PSPICE vdb
-U 1 1 74897763
-P 2900 1800
-F 0 "vdb" H 5800 3600 30  0001 L CNN
-F 1 "vdb" H 5800 3680 30  0001 L CNN
-	1    2900 1800
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	1200 2100 1300 2100
 Wire Wire Line

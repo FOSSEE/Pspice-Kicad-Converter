@@ -125,15 +125,6 @@ F 1 "300" H 5300 3890 30  0000 L CNN
 	1    5300 3600
 	0    -1    1    0
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 29641421
-P 11880 8400
-F 0 "titleblk" H 23760 16800 30  0001 L CNN
-F 1 "titleblk" H 23760 16880 30  0001 L CNN
-	1    11880 8400
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	4800 3900 4800 4100
 Wire Wire Line

@@ -71,60 +71,6 @@ F 1 "74393" H 1100 880 30  0000 L CNN
 	1    1100 800
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 14636915
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 77747793
-P 1100 800
-F 0 "nodeMarker" H 2200 1600 30  0001 L CNN
-F 1 "nodeMarker" H 2200 1680 30  0001 L CNN
-	1    1100 800
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 74238335
-P 1700 800
-F 0 "nodeMarker" H 3400 1600 30  0001 L CNN
-F 1 "nodeMarker" H 3400 1680 30  0001 L CNN
-	1    1700 800
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 99885386
-P 1700 900
-F 0 "nodeMarker" H 3400 1800 30  0001 L CNN
-F 1 "nodeMarker" H 3400 1880 30  0001 L CNN
-	1    1700 900
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 39760492
-P 1700 1000
-F 0 "nodeMarker" H 3400 2000 30  0001 L CNN
-F 1 "nodeMarker" H 3400 2080 30  0001 L CNN
-	1    1700 1000
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 66516649
-P 1700 1100
-F 0 "nodeMarker" H 3400 2200 30  0001 L CNN
-F 1 "nodeMarker" H 3400 2280 30  0001 L CNN
-	1    1700 1100
-	1    0    0    1
-$EndComp
 Connection ~ 1100 800
 Connection ~ 1100 800
 Connection ~ 1400 1300

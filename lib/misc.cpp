@@ -1,6 +1,7 @@
 #include "header.h"
 
 string exec(const char* cmd) {		//Function to execute a shell command.
+    ///cerr<<cmd<<endl;		///DEBUG
     FILE* pipe = popen(cmd, "r");
     if (!pipe) return "ERROR";
     char buffer[128];
@@ -58,7 +59,13 @@ string findLibrary(string &s){		//Returns the filename of the Pspice library tha
     string name=ret.substr(a, ret.npos);
     stringstream ss; ss.str(name); ss>>s;
     
+    for(int i=0; i<REMOVEDCOMPONENTS.size(); i++){	//Don't let these components be created.
+	if(s==REMOVEDCOMPONENTS[i]) return "";
+    }
+    
     int n=ret.find(':');
     ret=ret.substr(0, n);		//return the name of the first found library
+    ///cerr<<ret<<endl;			///DEBUG
+    if(ret=="lib/Library/marker.slb") return "";	//Don't want any markers to appear in the KiCad schematic.
     return ret;
 }

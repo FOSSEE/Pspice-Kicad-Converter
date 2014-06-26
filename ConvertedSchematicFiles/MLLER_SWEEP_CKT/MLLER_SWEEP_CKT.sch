@@ -152,33 +152,6 @@ F 1 "VPULSE" H 400 2680 30  0000 L CNN
 	1    400 2600
 	1    0    0    1
 $EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 73368690
-P 9700 7200
-F 0 "titleblk" H 19400 14400 30  0001 L CNN
-F 1 "titleblk" H 19400 14480 30  0001 L CNN
-	1    9700 7200
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 32520059
-P 400 2600
-F 0 "nodeMarker" H 800 5200 30  0001 L CNN
-F 1 "nodeMarker" H 800 5280 30  0001 L CNN
-	1    400 2600
-	1    0    0    1
-$EndComp
-$Comp
-L NODEMARKER_PSPICE nodeMarker
-U 1 1 74897763
-P 2400 1900
-F 0 "nodeMarker" H 4800 3800 30  0001 L CNN
-F 1 "nodeMarker" H 4800 3880 30  0001 L CNN
-	1    2400 1900
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	1000 2600 1200 2600
 Wire Wire Line

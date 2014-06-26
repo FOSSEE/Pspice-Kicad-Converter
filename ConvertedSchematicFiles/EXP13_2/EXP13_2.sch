@@ -98,24 +98,6 @@ F 1 "D1N750" H 3100 1580 30  0000 L CNN
 	1    3100 1500
 	0    1    -1    0
 $EndComp
-$Comp
-L PARAM_PSPICE PM1
-U 1 1 99885386
-P 3800 1900
-F 0 "PM1" H 3800 1900 30  0000 L CNN
-F 1 "PARAM" H 3800 1980 30  0000 L CNN
-	1    3800 1900
-	1    0    0    1
-$EndComp
-$Comp
-L TITLEBLK_PSPICE titleblk
-U 1 1 39760492
-P 11880 8400
-F 0 "titleblk" H 23760 16800 30  0001 L CNN
-F 1 "titleblk" H 23760 16880 30  0001 L CNN
-	1    11880 8400
-	1    0    0    1
-$EndComp
 Wire Wire Line
 	2100 800 2100 600
 Wire Wire Line
