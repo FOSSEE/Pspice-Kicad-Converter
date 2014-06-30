@@ -124,12 +124,17 @@ int main(int argc, char* argv[]){
 				///cerr<<"Lib opened "<<libName<<" to create "<<ci.type<<endl;				///DEBUG
 				Component c(PLib, ci.type);
 				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
+				fixComp(c, ci);
 				components[ci.type]=c;
 				componentInstances.push_back(ci);
 			}
 			///else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
-		else componentInstances.push_back(ci);
+		else{
+			Component ctemp;
+			fixComp(ctemp, ci);
+			componentInstances.push_back(ci);
+		}
 		///cerr<<ci.type<<endl;			///DEBUG
 		g=file.tellg();
 		getline(file, textline);
