@@ -69,3 +69,11 @@ string findLibrary(string &s){		//Returns the filename of the Pspice library tha
     if(ret=="lib/Library/marker.slb") return "";	//Don't want any markers to appear in the KiCad schematic.
     return ret;
 }
+
+string itos(int n){
+    stringstream ss;
+    ss<<n;
+    string s;
+    ss>>s;
+    return s;
+}

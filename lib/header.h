@@ -17,3 +17,4 @@ string readDate(string);
 string readShortDate(string);
 string skipTo(istream&, string);
 string exec(const char*);
+string itos(int);

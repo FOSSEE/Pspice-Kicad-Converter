@@ -97,6 +97,8 @@ int main(int argc, char* argv[]){
 		else componentInstances.push_back(ci);
 		///cerr<<"Inst created "<<ci.type<<endl;			///DEBUG
 		
+		componentInstances[componentInstances.size()-1].attrs[0].value="#PWR"+itos(componentInstances.size());
+		
 		//Read "Safely":
 		g=file.tellg();
 		getline(file, textline);
