@@ -1,5 +1,5 @@
-//#include "header.h"
-#include "wire.h"
+#include "header.h"
+//~ #include "wire.h"
 
 //print function of Wire class to print wire format to output schematic file as per kikad format
 void Wire::print(ostream& out){

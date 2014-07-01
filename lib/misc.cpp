@@ -1,5 +1,5 @@
-//#include "header.h"
-#include "misc.h"
+#include "header.h"
+//~ #include "misc.h"
 
 string exec(const char* cmd) {		//Function to execute a shell command.
     ///cerr<<cmd<<endl;		///DEBUG

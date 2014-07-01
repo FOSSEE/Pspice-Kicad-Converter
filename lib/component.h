@@ -3,9 +3,6 @@
 
 #include "include.h"
 
-#include "design.h"
-#include "attribute.h"
-
 class Pin{
 	public:
 	int x, y, length;					//position of pin and lentgh of the pin

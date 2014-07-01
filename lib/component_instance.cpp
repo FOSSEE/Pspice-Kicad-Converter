@@ -1,5 +1,5 @@
-//#include "header.h"
-#include "component_instance.h"
+#include "header.h"
+//~ #include "component_instance.h"
 
 //ComponentInstance class constructor to create instance
 ComponentInstance::ComponentInstance(istream& in){

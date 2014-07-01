@@ -1,7 +1,7 @@
-//#include "header.h"
-#include "component.h"
+#include "header.h"
+//~ #include "component.h"
 
-#include "misc.h"
+//~ #include "misc.h"
 //Pin constructor reading  values from corresponding component's pspice library  
 Pin::Pin(istream& in)
 {

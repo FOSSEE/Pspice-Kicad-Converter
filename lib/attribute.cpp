@@ -1,5 +1,5 @@
-//#include "header.h"
-#include "attribute.h"
+#include "header.h"
+//~ #include "attribute.h"
 
 void Attribute::print(ostream& out){
 	out<<" \""<<value<<"\" "<<char(orient + 'A' -'a')<<" "<<x<<" "<<y<<" 30  000"<<isHidden<<" "<<char(hjust+'A'-'a')<<" ";

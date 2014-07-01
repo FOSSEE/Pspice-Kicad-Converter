@@ -6,6 +6,11 @@ string proDescr="update=%s\nlast_client=eeschema\n[eeschema]\nversion=1\nLibDir=
 ofstream fsch;
 ofstream flib;
 
+const int MULT=10;			//Pspice coordinates are too small. They need to be scaled up 10 times to be usable in kicad.
+const string nameAppend="_PSPICE";
+const vector<string> REMOVEDCOMPONENTS = {"TITLEBLK", "PARAM", "readme", "VIEWPOINT", "LIB", "copyright", "WATCH1", "VECTOR", "NODESET1", "NODESET1"};
+Component _dummy_Component;
+
 int main(int argc, char* argv[]){
 	ifstream file(argv[1]);
 	
