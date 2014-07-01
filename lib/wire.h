@@ -1,3 +1,6 @@
+#ifndef WIRE_H
+#define WIRE_H
+
 #include "include.h"
 
 class Wire{
@@ -14,3 +17,5 @@ public:
 
 istream& parseWire(istream&, vector<Wire>&);					//parseWire funciton to get the positions of wire
 istream& parseConn(istream&, vector<Connector>&);				//parseConn function to get the positions of junctions
+
+#endif

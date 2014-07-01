@@ -1,5 +1,7 @@
-#include "header.h"
+//#include "header.h"
+#include "component.h"
 
+#include "misc.h"
 //Pin constructor reading  values from corresponding component's pspice library  
 Pin::Pin(istream& in)
 {
@@ -59,7 +61,7 @@ void Pin::print(ostream& out, int shiftx, int shifty){
 }
 //print function of class component to print all the components to output's cache lib file
 void Component::print(ostream& out){
-	out<<"#\n# "<<type+nameAppend<<"\n#\nDEF "<<type+nameAppend<<" "<<type<<" 0 30 Y Y 1 F N"<<endl;	//upto DEF line printed
+	out<<"#\n# "<<type<<"\n#\nDEF "<<type<<" "<<type<<" 0 30 Y Y 1 F N"<<endl;	//upto DEF line printed
 	out<<"F0 \""<<type<<"\" 0 0 30 H V L CNN"<<endl;		//F0 line
 	out<<"F1 \""<<type<<"\" 0 60 30 H V L CNN"<<endl;		//F1 line
 	out<<"DRAW"<<endl;

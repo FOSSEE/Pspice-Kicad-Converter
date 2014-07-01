@@ -1,4 +1,9 @@
+#ifndef COMPONENT_INSTANCE_H
+#define COMPONENT_INSTANCE_H
+
 #include "include.h"
+
+#include "attribute.h"
 
 class ComponentInstance{
 	public:
@@ -8,3 +13,5 @@ class ComponentInstance{
 	ComponentInstance(istream& in);		//parameterized constructor to create instances
 	void print(ostream& out);
 };
+
+#endif

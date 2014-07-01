@@ -1,4 +1,10 @@
+#ifndef COMPONENT_H
+#define COMPONENT_H
+
 #include "include.h"
+
+#include "design.h"
+#include "attribute.h"
 
 class Pin{
 	public:
@@ -19,3 +25,5 @@ class Component{
 	void makePins(istream&);			//function to create pins 
 	void print(ostream& out);			//function to write the component to output's -cache.lib file
 };
+
+#endif

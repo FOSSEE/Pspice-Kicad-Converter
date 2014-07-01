@@ -1,3 +1,6 @@
+#ifndef DESIGN_H
+#define DESIGN_H
+
 #include "include.h"
 
 class Line{					//The line class
@@ -45,3 +48,5 @@ class Design{		//This class holds vectors of lines, rectangles, circles and arcs
 	Design(istream& in);		//Constructor of the whole design. This will call the constructors of the Line, Rectangle, Arc and Circle classes.
 	void print(ostream& out);	//To print the whole DRAW section in the Kicad Library. This calls the Line::print, Circle::print etc.
 };
+
+#endif

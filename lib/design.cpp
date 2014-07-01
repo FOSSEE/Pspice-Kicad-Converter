@@ -1,4 +1,5 @@
-#include "header.h"
+//#include "header.h"
+#include "design.h"
 
 //Read header.h too.
 

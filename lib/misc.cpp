@@ -1,4 +1,5 @@
-#include "header.h"
+//#include "header.h"
+#include "misc.h"
 
 string exec(const char* cmd) {		//Function to execute a shell command.
     ///cerr<<cmd<<endl;		///DEBUG
@@ -84,7 +85,7 @@ string stripNumFromRef(const string& ref){
     return ref.substr(0, i+1);
 }
 
-void fixComp(Component& c, ComponentInstance& ci){
+void fixComp(ComponentInstance& ci, Component& c){
     string ref=stripNumFromRef(ci.attrs[0].value);
     if(ref=="Q"){
 	for(int i=0; i<c.pins.size(); i++){
@@ -110,6 +111,14 @@ void fixComp(Component& c, ComponentInstance& ci){
     }
     if(ci.type=="VPLOT1"||ci.type=="VPLOT2"||ci.type=="VPRINT1"||ci.type=="VPRINT1"||ci.type=="IPRINT"||ci.type=="IPLOT"){
 	ci.attrs[0].value="U?";
+	return;
+    }
+    if(ci.type=="AGND"||ci.type=="GND_ANALOG"){
+	ci.type="AGND";
+	return;
+    }
+    if(ci.type=="EGND"||ci.type=="GND_EARTH"){
+	ci.type="GND";
 	return;
     }
 }

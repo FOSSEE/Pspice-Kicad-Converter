@@ -1,4 +1,5 @@
-#include "header.h"
+//#include "header.h"
+#include "component_instance.h"
 
 //ComponentInstance class constructor to create instance
 ComponentInstance::ComponentInstance(istream& in){
@@ -53,7 +54,7 @@ ComponentInstance::ComponentInstance(istream& in){
 }
 //print all the components in output schematic file as per kikad format
 void ComponentInstance::print(ostream& out){
-	out<<"$Comp"<<endl<<"L "<<type+nameAppend<<" "<<attrs[0].value<<endl;
+	out<<"$Comp"<<endl<<"L "<<type<<" "<<attrs[0].value<<endl;
 	out<<"U 1 1 "<<rand()%90000000+10000000<<endl;
 	out<<"P "<<x<<" "<<y<<endl;      //printing the postion of component
 	out<<"F 0";						//upto F0 printed

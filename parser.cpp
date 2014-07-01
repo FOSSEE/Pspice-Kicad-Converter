@@ -78,26 +78,13 @@ int main(int argc, char* argv[]){
 		file.seekg(g);							//"Put that line back" and make the port ComponentInstance
 		///cerr<<"*1 "<<textline<<endl;		///DEBUG
 		ComponentInstance ci(file);
-		string citype=ci.type;
-		if(components.find(ci.type)==components.end()){
-		//If the Component that the ComponentInstance ci is an instance of has not already been made, make it.
-			string libName=findLibrary(ci.type);					//Find the Pspice library file
-			///cerr<<libName<<endl;						///DEBUG
-			if(libName!=""){
-				ifstream PLib(libName.c_str());
-				///cerr<<"Lib opened "<<libName<<endl;		///DEBUG
-				Component c(PLib, ci.type);								//Make the Component
-				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
-				ci.type=citype;
-				components[ci.type]=c;									//Store the component
-				componentInstances.push_back(ci);
-			}
-			///else cerr<<"Library not found for: "<<ci.type<<endl;
-		}
-		else componentInstances.push_back(ci);
-		///cerr<<"Inst created "<<ci.type<<endl;			///DEBUG
 		
-		componentInstances[componentInstances.size()-1].attrs[0].value="#PWR"+itos(componentInstances.size());
+		if(ci.type=="AGND"||ci.type=="GND_ANALOG"||ci.type=="GND_EARTH"||ci.type=="EGND"||ci.type=="+5V"||ci.type=="-5V"){
+			fixComp(ci);
+			componentInstances.push_back(ci);
+			///cerr<<"Inst created "<<ci.type<<endl;			///DEBUG
+			componentInstances[componentInstances.size()-1].attrs[0].value="#PWR"+itos(componentInstances.size());
+		}
 		
 		//Read "Safely":
 		g=file.tellg();
@@ -124,15 +111,17 @@ int main(int argc, char* argv[]){
 				///cerr<<"Lib opened "<<libName<<" to create "<<ci.type<<endl;				///DEBUG
 				Component c(PLib, ci.type);
 				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
-				fixComp(c, ci);
+				fixComp(ci, c);
+				c.type=c.type+nameAppend;
 				components[ci.type]=c;
+				ci.type=ci.type+nameAppend;
 				componentInstances.push_back(ci);
 			}
 			///else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
 		else{
-			Component ctemp;
-			fixComp(ctemp, ci);
+			fixComp(ci);
+			ci.type=ci.type+nameAppend;
 			componentInstances.push_back(ci);
 		}
 		///cerr<<ci.type<<endl;			///DEBUG

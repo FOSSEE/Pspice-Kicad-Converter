@@ -1,3 +1,6 @@
+#ifndef ATTRIBUTE_H
+#define ATTRIBUTE_H
+
 #include "include.h"
 
 class Attribute{			//stores one attribute of a component
@@ -20,3 +23,5 @@ class Attribute{			//stores one attribute of a component
 	Attribute(string line);
 	void print(ostream& out);	//Function that writes the attribute
 };
+
+#endif
