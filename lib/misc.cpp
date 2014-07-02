@@ -104,13 +104,16 @@ void fixComp(ComponentInstance& ci, Component& c){
 	ci.attrs[0].value="Q?";
 	return;
     }
-    if(ci.type=="VAC"||ci.type=="VDC"||ci.type=="VPULSE"){
-	if(ci.attrs[1].value=="VAC"||ci.attrs[1].value=="VDC"||ci.attrs[1].value=="VPULSE")
+    if(ci.type=="VAC"||ci.type=="VDC"||ci.type=="VPULSE"||ci.type=="VSIN"||ci.type=="VEXP"||ci.type=="VPWL"){
+	if(ci.attrs[1].value=="VAC"||ci.attrs[1].value=="VDC"||ci.attrs[1].value=="VPULSE"||ci.attrs[1].value=="VEXP")
 	    ci.attrs[1].value=ci.attrs[1].value.substr(1, ci.attrs[1].value.size()-1);
+	if(ci.attrs[1].value=="VSIN") ci.attrs[1].value="SINE";
 	return;
     }
-    if(ci.type=="VPLOT1"||ci.type=="VPLOT2"||ci.type=="VPRINT1"||ci.type=="VPRINT1"||ci.type=="IPRINT"||ci.type=="IPLOT"){
+    if(ci.type=="VPLOT1"||ci.type=="VPLOT2"||ci.type=="VPRINT1"||ci.type=="VPRINT2"||ci.type=="IPRINT"||ci.type=="IPLOT"){
 	ci.attrs[0].value="U?";
+	if(ci.type=="VPLOT2") ci.attrs[1].value="VPLOT8";
+	if(ci.type=="VPRINT2") ci.attrs[1].value="VPRINT";
 	return;
     }
     if(ci.type=="AGND"||ci.type=="GND_ANALOG"){
