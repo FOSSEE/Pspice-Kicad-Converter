@@ -45,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L EGND_PSPICE #PWR1
+L GND #PWR1
 U 1 1 14289383
 P 1500 2000
 F 0 "#PWR1" H 3000 4000 30  0001 L CNN

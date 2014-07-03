@@ -1,3 +1,12 @@
+/* The MIT License (MIT)
+
+PSpice to Oscad Schematic Converter
+Copyright (c) 2014, Siddhant Ranade and Ashlesha Atrey, FOSSEE, IIT Bombay
+
+See LICENSE.txt
+*/
+
+
 #ifndef HEADER_H
 #define HEADER_H
 
