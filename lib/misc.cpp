@@ -113,6 +113,42 @@ void fixComp(ComponentInstance& ci, Component& c){
 	ci.attrs[0].value="Q?";
 	return;
     }
+    if(ref=="E"){
+	for(int i=0; i<c.pins.size(); i++){
+	    if(c.pins[i].n=="1") {c.pins[i].n="3"; continue;}
+	    if(c.pins[i].n=="2") {c.pins[i].n="4"; continue;}
+	    if(c.pins[i].n=="3") {c.pins[i].n="1"; continue;}
+	    if(c.pins[i].n=="4") {c.pins[i].n="2"; continue;}
+	}
+	return;
+    }
+    if(ref=="F"){
+	for(int i=0; i<c.pins.size(); i++){
+	    if(c.pins[i].n=="1") {c.pins[i].n="3"; continue;}
+	    if(c.pins[i].n=="2") {c.pins[i].n="4"; continue;}
+	    if(c.pins[i].n=="3") {c.pins[i].n="1"; continue;}
+	    if(c.pins[i].n=="4") {c.pins[i].n="2"; continue;}
+	}
+	return;
+    }
+    if(ref=="G"){
+	for(int i=0; i<c.pins.size(); i++){
+	    if(c.pins[i].n=="1") {c.pins[i].n="3"; continue;}
+	    if(c.pins[i].n=="2") {c.pins[i].n="4"; continue;}
+	    if(c.pins[i].n=="3") {c.pins[i].n="1"; continue;}
+	    if(c.pins[i].n=="4") {c.pins[i].n="2"; continue;}
+	}
+	return;
+    }
+    if(ref=="H"){
+	for(int i=0; i<c.pins.size(); i++){
+	    if(c.pins[i].n=="1") {c.pins[i].n="3"; continue;}
+	    if(c.pins[i].n=="2") {c.pins[i].n="4"; continue;}
+	    if(c.pins[i].n=="3") {c.pins[i].n="1"; continue;}
+	    if(c.pins[i].n=="4") {c.pins[i].n="2"; continue;}
+	}
+	return;
+    }
     if(ci.type=="VAC"||ci.type=="VDC"||ci.type=="VPULSE"||ci.type=="VSIN"||ci.type=="VEXP"||ci.type=="VPWL"){
 	if(ci.attrs[1].value=="VAC"||ci.attrs[1].value=="VDC"||ci.attrs[1].value=="VPULSE"||ci.attrs[1].value=="VEXP")
 	    ci.attrs[1].value=ci.attrs[1].value.substr(1, ci.attrs[1].value.size()-1);
