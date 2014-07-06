@@ -94,8 +94,8 @@ string stripNumFromRef(const string& ref){
     return ref.substr(0, i+1);
 }
 
-void fixComp(ComponentInstance& ci, Component& c){
-    string ref=stripNumFromRef(ci.attrs[0].value);
+void fixComp(Component& c){
+    string& ref=c.ref;
     if(ref=="Q"){
 	for(int i=0; i<c.pins.size(); i++){
 	    if(c.pins[i].n=="e"||c.pins[i].n=="E") c.pins[i].n="1";
@@ -110,7 +110,7 @@ void fixComp(ComponentInstance& ci, Component& c){
 	    if(c.pins[i].n=="s"||c.pins[i].n=="S") c.pins[i].n="S";
 	    if(c.pins[i].n=="d"||c.pins[i].n=="D") c.pins[i].n="D";
 	}
-	ci.attrs[0].value="Q?";
+	ref="Q";
 	return;
     }
     if(ref=="E"){
@@ -147,6 +147,21 @@ void fixComp(ComponentInstance& ci, Component& c){
 	    if(c.pins[i].n=="3") {c.pins[i].n="1"; continue;}
 	    if(c.pins[i].n=="4") {c.pins[i].n="2"; continue;}
 	}
+	return;
+    }
+    if(c.type=="VPLOT1"||c.type=="VPLOT2"||c.type=="VPRINT1"||c.type=="VPRINT2"||c.type=="IPRINT"||c.type=="IPLOT"){
+	ref="U";
+	c.value=c.type;
+	if(c.type=="VPLOT2") c.value="VPLOT8";
+	if(c.type=="VPRINT2") c.value="VPRINT";
+	return;
+    }
+}
+
+void fixInst(ComponentInstance& ci){
+    string ref=stripNumFromRef(ci.attrs[0].value);
+    if(ref=="J"||ref=="M"){
+	ci.attrs[0].value="Q?";
 	return;
     }
     if(ci.type=="VAC"||ci.type=="VDC"||ci.type=="VPULSE"||ci.type=="VSIN"||ci.type=="VEXP"||ci.type=="VPWL"){

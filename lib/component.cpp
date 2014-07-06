@@ -70,7 +70,7 @@ void Pin::print(ostream& out, int shiftx, int shifty){
 }
 //print function of class component to print all the components to output's cache lib file
 void Component::print(ostream& out){
-	out<<"#\n# "<<type<<"\n#\nDEF "<<type<<" "<<type<<" 0 30 Y Y 1 F N"<<endl;	//upto DEF line printed
+	out<<"#\n# "<<type<<"\n#\nDEF "<<type<<" "<<ref<<" 0 30 Y Y 1 F N"<<endl;	//upto DEF line printed
 	out<<"F0 \""<<ref<<"\" 0 0 30 H V L CNN"<<endl;		//F0 line
 	out<<"F1 \""<<type<<"\" 0 60 30 H V L CNN"<<endl;		//F1 line
 	out<<"DRAW"<<endl;
@@ -97,12 +97,16 @@ Component::Component(istream& in, string t){
 		string line=skipTo(in, "*symbol "+t);
 	}
 	skipTo(in, "@attributes");
+	g=in.tellg();
+	getline(in, line);
 	while(line[0]=='a'){
 		Attribute attr(line);			// creating attributes by calling its constructor 
-		if(attr.name=="PKGREF") {  
-			ref=attr.value;				//assigning attributes of PKGREF to the component    
+		if(attr.name=="REFDES"||attr.name=="refdes") {  
+			ref=attr.value.substr(0, attr.value.length()-1);	//assigning attributes of PKGREF to the component    
 			//cout<<"**"<<attr.value<<endl;			///DEBUG
 		}
+		if(attr.name=="VALUE" || attr.name=="DC" || attr.name=="GAIN" || attr.name=="COEFF")
+	        value=attr.value;				//assigning attributes of above cases to the component
  		g=in.tellg();
 		getline(in, line);
 		///cerr<<"***"<<line<<endl;			///DEBUG

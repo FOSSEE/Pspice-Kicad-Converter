@@ -23,7 +23,7 @@ class Pin{
 
 class Component{
 	public:
-	string type, ref; //annotation;
+	string type, ref, value;			//annotation;
 	vector<Pin> pins;
 	Design des;							//create object of design class to access its method
 	Component();						//default constructor of Component class

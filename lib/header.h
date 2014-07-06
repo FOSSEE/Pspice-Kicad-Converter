@@ -23,6 +23,5 @@ extern const int MULT;			//Pspice coordinates are too small. They need to be sca
 
 extern const string nameAppend;
 extern const vector<string> REMOVEDCOMPONENTS;
-//~ extern Component _dummy_Component;
 
 #endif
