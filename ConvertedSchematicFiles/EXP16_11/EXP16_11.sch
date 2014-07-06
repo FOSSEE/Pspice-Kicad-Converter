@@ -51,7 +51,7 @@ P 2700 500
 F 0 "#PWR1" H 5400 1000 30  0001 L CNN
 F 1 "EGND" H 5400 1080 30  0001 L CNN
 	1    2700 500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2500 2400
 F 0 "#PWR2" H 5000 4800 30  0001 L CNN
 F 1 "EGND" H 5000 4880 30  0001 L CNN
 	1    2500 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 1200 2500
 F 0 "#PWR3" H 2400 5000 30  0001 L CNN
 F 1 "EGND" H 2400 5080 30  0001 L CNN
 	1    1200 2500
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 800 1300
 F 0 "#PWR4" H 1600 2600 30  0001 L CNN
 F 1 "EGND" H 1600 2680 30  0001 L CNN
 	1    800 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V10
@@ -87,7 +87,7 @@ P 2500 900
 F 0 "V10" H 2500 900 30  0000 L CNN
 F 1 "15V" H 2500 790 30  0000 C CNN
 	1    2500 900
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L VDC_PSPICE V11
@@ -96,16 +96,16 @@ P 2500 2000
 F 0 "V11" H 2500 2000 30  0000 L CNN
 F 1 "-15V" H 2500 1890 30  0000 C CNN
 	1    2500 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE VIN1
 U 1 1 99885386
 P 1200 1800
 F 0 "VIN1" H 1200 1800 30  0000 L CNN
-F 1 "VSIN" H 1200 1880 30  0000 L CNN
+F 1 "SINE" H 1200 1880 30  0000 L CNN
 	1    1200 1800
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R5
@@ -114,7 +114,7 @@ P 1800 1800
 F 0 "R5" H 1800 1800 30  0000 L CNN
 F 1 "{RCM}" H 1800 1850 30  0000 L CNN
 	1    1800 1800
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R7
@@ -123,7 +123,7 @@ P 1400 1300
 F 0 "R7" H 1400 1300 30  0000 L CNN
 F 1 "{R1}" H 1400 1450 30  0000 L CNN
 	1    1400 1300
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R8
@@ -132,7 +132,7 @@ P 1600 1000
 F 0 "R8" H 1600 1000 30  0000 L CNN
 F 1 "{R2}" H 1600 1150 30  0000 L CNN
 	1    1600 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R6
@@ -141,7 +141,7 @@ P 3600 1600
 F 0 "R6" H 3600 1600 30  0000 L CNN
 F 1 "10k" H 3600 1730 30  0000 L CNN
 	1    3600 1600
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L uA741_PSPICE U5
@@ -150,7 +150,7 @@ P 2100 1400
 F 0 "U5" H 2100 1400 30  0000 L CNN
 F 1 "uA741" H 2100 1480 30  0000 L CNN
 	1    2100 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2500 1000 2500 1300

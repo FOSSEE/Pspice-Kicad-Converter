@@ -17,7 +17,6 @@ ofstream flib;
 const int MULT=10;			//Pspice coordinates are too small. They need to be scaled up 10 times to be usable in kicad.
 const string nameAppend="_PSPICE";
 const vector<string> REMOVEDCOMPONENTS = {"TITLEBLK", "PARAM", "readme", "VIEWPOINT", "LIB", "copyright", "WATCH1", "VECTOR", "NODESET1", "NODESET1"};
-Component _dummy_Component;
 
 int main(int argc, char* argv[]){
 	
@@ -97,7 +96,7 @@ int main(int argc, char* argv[]){
 		ComponentInstance ci(file);
 		
 		if(ci.type=="AGND"||ci.type=="GND_ANALOG"||ci.type=="GND_EARTH"||ci.type=="EGND"||ci.type=="+5V"||ci.type=="-5V"){
-			fixComp(ci);
+			fixInst(ci);
 			componentInstances.push_back(ci);
 			///cerr<<"Inst created "<<ci.type<<endl;			///DEBUG
 			componentInstances[componentInstances.size()-1].attrs[0].value="#PWR"+itos(componentInstances.size());
@@ -128,7 +127,8 @@ int main(int argc, char* argv[]){
 				///cerr<<"Lib opened "<<libName<<" to create "<<ci.type<<endl;				///DEBUG
 				Component c(PLib, ci.type);
 				///cerr<<"Comp created "<<ci.type<<endl;	///DEBUG
-				fixComp(ci, c);
+				fixComp(c);
+				fixInst(ci);
 				c.type=c.type+nameAppend;
 				components[ci.type]=c;
 				ci.type=ci.type+nameAppend;
@@ -137,7 +137,7 @@ int main(int argc, char* argv[]){
 			///else cerr<<"Library not found for: "<<ci.type<<endl;
 		}
 		else{
-			fixComp(ci);
+			fixInst(ci);
 			ci.type=ci.type+nameAppend;
 			componentInstances.push_back(ci);
 		}

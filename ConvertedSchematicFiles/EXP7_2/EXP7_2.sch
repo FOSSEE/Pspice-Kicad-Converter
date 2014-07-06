@@ -51,7 +51,7 @@ P 4300 2200
 F 0 "#PWR1" H 8600 4400 30  0001 L CNN
 F 1 "GND_EARTH" H 8600 4480 30  0001 L CNN
 	1    4300 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VAC_PSPICE V1
@@ -60,7 +60,7 @@ P 3100 2200
 F 0 "V1" H 3100 2200 30  0001 L CNN
 F 1 "AC" H 3100 2280 30  0001 L CNN
 	1    3100 2200
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -69,7 +69,7 @@ P 2600 1600
 F 0 "R1" H 2600 1600 30  0001 L CNN
 F 1 "{R}" H 2600 1750 30  0000 L CNN
 	1    2600 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L INCLUDE_PSPICE IN1
@@ -78,7 +78,7 @@ P 4800 2300
 F 0 "IN1" H 4800 2300 30  0000 L CNN
 F 1 "INCLUDE" H 4800 2380 30  0000 L CNN
 	1    4800 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -87,7 +87,7 @@ P 4000 1600
 F 0 "C1" H 4000 1600 30  0001 L CNN
 F 1 "100u" H 4000 1650 30  0000 L CNN
 	1    4000 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -96,7 +96,7 @@ P 3300 1600
 F 0 "L1" H 3300 1600 30  0001 L CNN
 F 1 "0.01H" H 3300 1700 30  0000 L CNN
 	1    3300 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2600 1600 2600 2200

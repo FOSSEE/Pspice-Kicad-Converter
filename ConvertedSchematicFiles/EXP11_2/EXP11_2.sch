@@ -51,7 +51,7 @@ P 5900 3800
 F 0 "#PWR1" H 11800 7600 30  0001 L CNN
 F 1 "EGND" H 11800 7680 30  0001 L CNN
 	1    5900 3800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE Rr
@@ -60,7 +60,7 @@ P 5900 2500
 F 0 "Rr" H 5900 2500 30  0000 L CNN
 F 1 "100" H 5900 2750 30  0000 L CNN
 	1    5900 2500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VSIN_PSPICE VY
@@ -69,7 +69,7 @@ P 4300 3400
 F 0 "VY" H 4300 3400 30  0000 L CNN
 F 1 "SINE" H 4300 3480 30  0000 L CNN
 	1    4300 3400
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VSIN_PSPICE VB
@@ -78,7 +78,7 @@ P 2700 3400
 F 0 "VB" H 2700 3400 30  0000 L CNN
 F 1 "SINE" H 2700 3480 30  0000 L CNN
 	1    2700 3400
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VSIN_PSPICE VR
@@ -87,7 +87,7 @@ P 3500 2600
 F 0 "VR" H 3500 2600 30  0000 L CNN
 F 1 "SINE" H 3500 2680 30  0000 L CNN
 	1    3500 2600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE Rb
@@ -96,7 +96,7 @@ P 5700 3400
 F 0 "Rb" H 5700 3400 30  0000 L CNN
 F 1 "100" H 5700 3650 30  0000 L CNN
 	1    5700 3400
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L R_PSPICE Ry
@@ -105,7 +105,7 @@ P 6500 3400
 F 0 "Ry" H 6500 3400 30  0000 L CNN
 F 1 "100" H 6500 3550 30  0000 L CNN
 	1    6500 3400
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L R_PSPICE Rn
@@ -114,7 +114,7 @@ P 3800 3800
 F 0 "Rn" H 3800 3800 30  0000 L CNN
 F 1 "1E-12" H 3800 3890 30  0000 L CNN
 	1    3800 3800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	5100 4500 2500 4500

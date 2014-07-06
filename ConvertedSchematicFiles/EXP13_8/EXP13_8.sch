@@ -51,7 +51,7 @@ P 2800 400
 F 0 "#PWR1" H 5600 800 30  0001 L CNN
 F 1 "GND_EARTH" H 5600 880 30  0001 L CNN
 	1    2800 400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2400 2100
 F 0 "#PWR2" H 4800 4200 30  0001 L CNN
 F 1 "GND_EARTH" H 4800 4280 30  0001 L CNN
 	1    2400 2100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 1200 2200
 F 0 "#PWR3" H 2400 4400 30  0001 L CNN
 F 1 "GND_EARTH" H 2400 4480 30  0001 L CNN
 	1    1200 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE Rc
@@ -78,7 +78,7 @@ P 2400 900
 F 0 "Rc" H 2400 900 30  0001 L CNN
 F 1 "2.2k" H 2400 1150 30  0000 L CNN
 	1    2400 900
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L Q2N2222_PSPICE Q1
@@ -87,7 +87,7 @@ P 2200 1800
 F 0 "Q1" H 2200 1800 30  0001 L CNN
 F 1 "Q2N2222" H 2200 1880 30  0001 L CNN
 	1    2200 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V4
@@ -96,7 +96,7 @@ P 2400 800
 F 0 "V4" H 2400 800 30  0001 L CNN
 F 1 "15V" H 2400 690 30  0000 C CNN
 	1    2400 800
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L VSIN_PSPICE V1
@@ -105,7 +105,7 @@ P 1200 1800
 F 0 "V1" H 1200 1800 30  0001 L CNN
 F 1 "SINE" H 1200 1880 30  0001 L CNN
 	1    1200 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE Rb
@@ -114,7 +114,7 @@ P 1600 1800
 F 0 "Rb" H 1600 1800 30  0000 L CNN
 F 1 "100k" H 1600 1950 30  0000 L CNN
 	1    1600 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2800 400 2400 400

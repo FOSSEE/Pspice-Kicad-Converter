@@ -20,8 +20,8 @@ Pin::Pin(istream& in)
 	in>>t>>tmp>>x1>>y1>>temp>>temp>>n>>temp>>x2>>y2>>orient;
 	//cerr<<"pin reading"<<x2<<y2<<endl;
 	x=x2*MULT;					//x co-ordinate of the pin
-	y=y2*MULT;                  //y co-ordinate of the pin
-	length=max(abs(x1-x2),abs(y1-y2))*MULT;			//calculatin pin length from points of pins 
+	y=y2*(-1)*MULT;                  //y co-ordinate of the pin
+	length=max(abs(x1-x2),abs(y1-y2))*MULT;			//calculating pin length from points of pins 
 	getline(in,line);
 	int g=in.tellg();
 	getline(in,line);
@@ -55,11 +55,11 @@ void Component::makePins(istream& in)
 
 //print function of class Pin to print the pins in output's cache lib file 
 void Pin::print(ostream& out, int shiftx, int shifty){
-	out<<"X"<<" "<<"~ "<<n<<" "<<x-shiftx<<" "<<y-shifty<<" "<<length<<" ";
+	out<<"X"<<" "<<"~ "<<n<<" "<<x-shiftx<<" "<<y-(-1)*shifty<<" "<<length<<" ";
 	if(orient=="h")out<<"R";
 	if(orient=="u")out<<"L";			//converting the annotation to kikad format as different letters are use in pspice and kikad libraries
-	if(orient=="v")out<<"D";
-	if(orient=="d")out<<"U";
+	if(orient=="v")out<<"U";
+	if(orient=="d")out<<"D";
 	out<<" 30 30 0 1 ";
 	if(etype=="i")out<<"I"<<endl;
 	else if(etype=="o")out<<"O"<<endl;

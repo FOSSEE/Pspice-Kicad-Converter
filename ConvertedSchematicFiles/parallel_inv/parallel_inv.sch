@@ -51,7 +51,7 @@ P 1200 3000
 F 0 "V1" H 1200 3000 30  0000 L CNN
 F 1 "25v" H 1200 2890 30  0000 C CNN
 	1    1200 3000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L D1N914_PSPICE D1
@@ -60,7 +60,7 @@ P 2800 3500
 F 0 "D1" H 2800 3500 30  0000 L CNN
 F 1 "D1N914" H 2800 3580 30  0000 L CNN
 	1    2800 3500
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -69,7 +69,7 @@ P 1700 4100
 F 0 "L1" H 1700 4100 30  0000 L CNN
 F 1 "200u" H 1700 4250 30  0000 L CNN
 	1    1700 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -78,7 +78,7 @@ P 1500 2400
 F 0 "R1" H 1500 2400 30  0000 L CNN
 F 1 "1" H 1500 2550 30  0000 L CNN
 	1    1500 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R_LOAD
@@ -87,7 +87,7 @@ P 3900 1000
 F 0 "R_LOAD" H 3900 1000 30  0000 L CNN
 F 1 "" H 3900 1150 30  0000 L CNN
 	1    3900 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L XFRM_NONLINEAR_PSPICE 
@@ -96,7 +96,7 @@ P 4200 1700
 F 0 "" H 4200 1700 30  0000 L CNN
 F 1 "XFRM_NONLINEAR" H 4200 1780 30  0000 L CNN
 	1    4200 1700
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L XFRM_NONLINEAR_PSPICE 
@@ -105,7 +105,7 @@ P 3300 1700
 F 0 "" H 3300 1700 30  0000 L CNN
 F 1 "XFRM_NONLINEAR" H 3300 1780 30  0000 L CNN
 	1    3300 1700
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L D1N914_PSPICE D2
@@ -114,7 +114,7 @@ P 5000 3500
 F 0 "D2" H 5000 3500 30  0000 L CNN
 F 1 "D1N914" H 5000 3580 30  0000 L CNN
 	1    5000 3500
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -123,7 +123,7 @@ P 3500 2400
 F 0 "C1" H 3500 2400 30  0000 L CNN
 F 1 "10o" H 3500 2470 30  0000 L CNN
 	1    3500 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L SCR_PSPICE X2
@@ -132,7 +132,7 @@ P 4300 3100
 F 0 "X2" H 4300 3100 30  0000 L CNN
 F 1 "Scr" H 4300 3180 30  0000 L CNN
 	1    4300 3100
-	0    1    1    0
+	0    -1    1    0
 $EndComp
 $Comp
 L SCR_PSPICE X1
@@ -141,7 +141,7 @@ P 3100 3100
 F 0 "X1" H 3100 3100 30  0000 L CNN
 F 1 "Scr" H 3100 3180 30  0000 L CNN
 	1    3100 3100
-	0    1    1    0
+	0    -1    1    0
 $EndComp
 Wire Wire Line
 	1200 3400 1200 4100

@@ -51,7 +51,7 @@ P 1200 1400
 F 0 "#PWR1" H 2400 2800 30  0001 L CNN
 F 1 "EGND" H 2400 2880 30  0001 L CNN
 	1    1200 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 3500 1500
 F 0 "#PWR2" H 7000 3000 30  0001 L CNN
 F 1 "EGND" H 7000 3080 30  0001 L CNN
 	1    3500 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 2400 1500
 F 0 "#PWR3" H 4800 3000 30  0001 L CNN
 F 1 "EGND" H 4800 3080 30  0001 L CNN
 	1    2400 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -78,7 +78,7 @@ P 1200 1000
 F 0 "R1" H 1200 1000 30  0001 L CNN
 F 1 "2" H 1200 1150 30  0000 L CNN
 	1    1200 1000
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -87,7 +87,7 @@ P 3500 1100
 F 0 "C1" H 3500 1100 30  0001 L CNN
 F 1 "2.23mF" H 3500 1350 30  0000 L CNN
 	1    3500 1100
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L R_PSPICE R3
@@ -96,7 +96,7 @@ P 3100 900
 F 0 "R3" H 3100 900 30  0001 L CNN
 F 1 "0.0001" H 3100 1200 30  0000 L CNN
 	1    3100 900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ISIN_PSPICE I1
@@ -105,7 +105,7 @@ P 1900 1000
 F 0 "I1" H 1900 1000 30  0001 L CNN
 F 1 "ISIN" H 1900 1080 30  0001 L CNN
 	1    1900 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -114,25 +114,25 @@ P 2400 900
 F 0 "L1" H 2400 900 30  0001 L CNN
 F 1 "50m" H 2400 1300 30  0000 L CNN
 	1    2400 900
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VSIN_PSPICE V3
 U 1 1 66516649
 P 3000 1100
 F 0 "V3" H 3000 1100 30  0001 L CNN
-F 1 "VSIN" H 3000 1180 30  0001 L CNN
+F 1 "SINE" H 3000 1180 30  0001 L CNN
 	1    3000 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V1
 U 1 1 29641421
 P 600 1000
 F 0 "V1" H 600 1000 30  0001 L CNN
-F 1 "VSIN" H 600 1080 30  0001 L CNN
+F 1 "SINE" H 600 1080 30  0001 L CNN
 	1    600 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1200 1000 600 1000

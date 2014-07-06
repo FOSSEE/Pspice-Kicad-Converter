@@ -51,7 +51,7 @@ P 2600 400
 F 0 "#PWR1" H 5200 800 30  0001 L CNN
 F 1 "+5V" H 5200 880 30  0001 L CNN
 	1    2600 400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2300 2900
 F 0 "#PWR2" H 4600 5800 30  0001 L CNN
 F 1 "EGND" H 4600 5880 30  0001 L CNN
 	1    2300 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7410_PSPICE U2
@@ -69,7 +69,7 @@ P 2900 1000
 F 0 "U2" H 2900 1000 30  0000 L CNN
 F 1 "7410" H 2900 1080 30  0000 L CNN
 	1    2900 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7410_PSPICE U1
@@ -78,7 +78,7 @@ P 1500 1000
 F 0 "U1" H 1500 1000 30  0000 L CNN
 F 1 "7410" H 1500 1080 30  0000 L CNN
 	1    1500 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7400_PSPICE U9
@@ -87,7 +87,7 @@ P 6000 1100
 F 0 "U9" H 6000 1100 30  0000 L CNN
 F 1 "7400" H 6000 1180 30  0000 L CNN
 	1    6000 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7400_PSPICE U10
@@ -96,7 +96,7 @@ P 6000 1800
 F 0 "U10" H 6000 1800 30  0000 L CNN
 F 1 "7400" H 6000 1880 30  0000 L CNN
 	1    6000 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7410_PSPICE U1
@@ -105,7 +105,7 @@ P 1400 2000
 F 0 "U1" H 1400 2000 30  0000 L CNN
 F 1 "7410" H 1400 2080 30  0000 L CNN
 	1    1400 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7404_PSPICE U11
@@ -114,7 +114,7 @@ P 1300 3200
 F 0 "U11" H 1300 3200 30  0000 L CNN
 F 1 "7404" H 1300 3280 30  0000 L CNN
 	1    1300 3200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7400_PSPICE U7
@@ -123,7 +123,7 @@ P 4600 1100
 F 0 "U7" H 4600 1100 30  0000 L CNN
 F 1 "7400" H 4600 1180 30  0000 L CNN
 	1    4600 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7400_PSPICE U8
@@ -132,7 +132,7 @@ P 4600 1900
 F 0 "U8" H 4600 1900 30  0000 L CNN
 F 1 "7400" H 4600 1980 30  0000 L CNN
 	1    4600 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM1
@@ -141,7 +141,7 @@ P 800 1100
 F 0 "DSTM1" H 800 1100 30  0000 L CNN
 F 1 "DigStim" H 800 1180 30  0000 L CNN
 	1    800 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM3
@@ -150,7 +150,7 @@ P 800 1600
 F 0 "DSTM3" H 800 1600 30  0000 L CNN
 F 1 "DigStim" H 800 1680 30  0000 L CNN
 	1    800 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM2
@@ -159,7 +159,7 @@ P 900 2100
 F 0 "DSTM2" H 900 2100 30  0000 L CNN
 F 1 "DigStim" H 900 2180 30  0000 L CNN
 	1    900 2100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7410_PSPICE U2
@@ -168,7 +168,7 @@ P 2900 2000
 F 0 "U2" H 2900 2000 30  0000 L CNN
 F 1 "7410" H 2900 2080 30  0000 L CNN
 	1    2900 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2100 1100 2200 1100

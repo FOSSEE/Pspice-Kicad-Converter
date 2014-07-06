@@ -51,7 +51,7 @@ P 3600 2400
 F 0 "#PWR1" H 7200 4800 30  0001 L CNN
 F 1 "EGND" H 7200 4880 30  0001 L CNN
 	1    3600 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L XFRM_LINEAR_PSPICE TX1
@@ -60,7 +60,7 @@ P 3200 500
 F 0 "TX1" H 3200 500 30  0000 L CNN
 F 1 "XFRM_LINEAR" H 3200 580 30  0000 L CNN
 	1    3200 500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -69,7 +69,7 @@ P 1600 1200
 F 0 "V1" H 1600 1200 30  0000 L CNN
 F 1 "20V" H 1600 1090 30  0000 C CNN
 	1    1600 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -78,7 +78,7 @@ P 2100 900
 F 0 "C1" H 2100 900 30  0000 L CNN
 F 1 "3.3u" H 2100 1190 30  0000 L CNN
 	1    2100 900
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L C_PSPICE C2
@@ -87,7 +87,7 @@ P 2100 1800
 F 0 "C2" H 2100 1800 30  0000 L CNN
 F 1 "3.3u" H 2100 2090 30  0000 L CNN
 	1    2100 1800
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -96,7 +96,7 @@ P 2500 1500
 F 0 "R1" H 2500 1500 30  0000 L CNN
 F 1 "4" H 2500 1650 30  0000 L CNN
 	1    2500 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L SCR2T_PSPICE U3
@@ -105,7 +105,7 @@ P 2300 500
 F 0 "U3" H 2300 500 30  0000 L CNN
 F 1 "SCR2T" H 2300 580 30  0000 L CNN
 	1    2300 500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L SCR2T_PSPICE U4
@@ -114,7 +114,7 @@ P 3600 1500
 F 0 "U4" H 3600 1500 30  0000 L CNN
 F 1 "SCR2T" H 3600 1580 30  0000 L CNN
 	1    3600 1500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 Wire Wire Line
 	2100 1200 2100 1500

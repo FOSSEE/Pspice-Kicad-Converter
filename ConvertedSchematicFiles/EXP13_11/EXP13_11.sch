@@ -51,7 +51,7 @@ P 1900 1500
 F 0 "#PWR1" H 3800 3000 30  0001 L CNN
 F 1 "EGND" H 3800 3080 30  0001 L CNN
 	1    1900 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2700 1200
 F 0 "#PWR2" H 5400 2400 30  0001 L CNN
 F 1 "EGND" H 5400 2480 30  0001 L CNN
 	1    2700 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR3
@@ -69,7 +69,7 @@ P 1900 500
 F 0 "#PWR3" H 3800 1000 30  0001 L CNN
 F 1 "+5V" H 3800 1080 30  0001 L CNN
 	1    1900 500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 400 1200
 F 0 "#PWR4" H 800 2400 30  0001 L CNN
 F 1 "EGND" H 800 2480 30  0001 L CNN
 	1    400 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -87,7 +87,7 @@ P 2700 900
 F 0 "R1" H 2700 900 30  0000 L CNN
 F 1 "10k" H 2700 1170 30  0000 L CNN
 	1    2700 900
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM1
@@ -96,7 +96,7 @@ P 1300 1100
 F 0 "DSTM1" H 1300 1100 30  0000 L CNN
 F 1 "DigStim" H 1300 1180 30  0000 L CNN
 	1    1300 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L CD4016BD_PSPICE U1
@@ -105,16 +105,16 @@ P 1600 900
 F 0 "U1" H 1600 900 30  0000 L CNN
 F 1 "CD4016BD" H 1600 980 30  0000 L CNN
 	1    1600 900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V1
 U 1 1 39760492
 P 400 800
 F 0 "V1" H 400 800 30  0000 L CNN
-F 1 "VSIN" H 400 880 30  0000 L CNN
+F 1 "SINE" H 400 880 30  0000 L CNN
 	1    400 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2700 1200 2700 1300

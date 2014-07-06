@@ -51,7 +51,7 @@ P 2600 1400
 F 0 "#PWR1" H 5200 2800 30  0001 L CNN
 F 1 "EGND" H 5200 2880 30  0001 L CNN
 	1    2600 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -60,7 +60,7 @@ P 1500 900
 F 0 "V1" H 1500 900 30  0000 L CNN
 F 1 "5V" H 1500 790 30  0000 C CNN
 	1    1500 900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -69,7 +69,7 @@ P 2000 800
 F 0 "R1" H 2000 800 30  0000 L CNN
 F 1 "R" H 2000 880 30  0000 L CNN
 	1    2000 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R2
@@ -78,7 +78,7 @@ P 2600 1000
 F 0 "R2" H 2600 1000 30  0000 L CNN
 F 1 "R" H 2600 1080 30  0000 L CNN
 	1    2600 1000
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 Wire Wire Line
 	1500 900 1500 800

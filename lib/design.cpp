@@ -28,8 +28,8 @@ Line::Line(istream& in, int shiftx, int shifty){	//Constructor of Line.
 		x.push_back(t);
 		in>>t>>temp;
 		y.push_back(t);
-		x[npoints]*=MULT; y[npoints]*=MULT;			//Scale up.
-		x[npoints]-=shiftx; y[npoints]-=shifty;
+		x[npoints]*=MULT; y[npoints]*=-1*MULT;			//Scale up.
+		x[npoints]-=shiftx; y[npoints]-=-1*shifty;
 		npoints++;
 	}
 	
@@ -40,23 +40,25 @@ Rectangle::Rectangle(istream& in, int shiftx, int shifty){	//Constructor of Rect
 	//This gets called when the first character of a line is "r".
 	//This function assumes "r" and the next character (usually 0) have already been read and are NOT in the stream.
 	in>>x1>>y1>>x2>>y2;
-	x1*=MULT; y1*=MULT; x2*=MULT; y2*=MULT;
-	x1-=shiftx; x2-=shiftx; y1-=shifty; y2-=shifty;
+	x1*=MULT; y1*=-1*MULT; x2*=MULT; y2*=-1*MULT;
+	x1-=shiftx; x2-=shiftx; y1-=-1*shifty; y2-=-1*shifty;
 }
 
 Circle::Circle(istream& in, int shiftx, int shifty){	//Constructor of Circle.
 	//See Line::Line(istream& in, int shiftx, int shifty) above.
 	in>>x>>y>>r;
-	x*=MULT; y*=MULT; r*=MULT;
-	x-=shiftx; y-=shifty;
+	x*=MULT; y*=-1*MULT; r*=MULT;
+	x-=shiftx; y-=-1*shifty;
 }
 
 Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	//See Line::Line(istream& in, int shiftx, int shifty) above.
 	float xA,xB,xC,xmAB,xmBC, yA,yB,yC,ymAB,ymBC; 
 	in>>xA>>yA>>xB>>yB>>xC>>yC;		//From pspice library, get the 3 points that describe the arc.
-	//A(xA, yA) is start, B is a point on the arc, and C is end.
 	
+	yA*=-1; yB*=-1; yC*=-1;
+	
+	//A(xA, yA) is start, B is a point on the arc, and C is end.
 	//Midpoints of the arcs:
 	xmAB=(xA+xB)/2;
 	ymAB=(yA+yB)/2;
@@ -97,11 +99,11 @@ Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	sa+=1; ea-=1;
 	
 	//scale and shift:
-	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-shifty);
+	x1=((xA*MULT)-shiftx); y1=((yA*MULT)-(-1)*shifty); x2=((xC*MULT)-shiftx); y2=((yC*MULT)-(-1)*shifty);
 	//startx, starty, endx, endy are redundant. May not even be in use. Haven't been fixed.
 		
 	x*=MULT; y*=MULT; r*=MULT;
-	x-=shiftx; y-=shifty;
+	x-=shiftx; y-=(-1)*shifty;
 }
 
 Design::Design(){}

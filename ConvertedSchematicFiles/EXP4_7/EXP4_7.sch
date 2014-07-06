@@ -51,7 +51,7 @@ P 5900 700
 F 0 "#PWR1" H 11800 1400 30  0001 L CNN
 F 1 "EGND" H 11800 1480 30  0001 L CNN
 	1    5900 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 400 1500
 F 0 "#PWR2" H 800 3000 30  0001 L CNN
 F 1 "EGND" H 800 3080 30  0001 L CNN
 	1    400 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 1000 700
 F 0 "#PWR3" H 2000 1400 30  0001 L CNN
 F 1 "EGND" H 2000 1480 30  0001 L CNN
 	1    1000 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 3800 1000
 F 0 "#PWR4" H 7600 2000 30  0001 L CNN
 F 1 "EGND" H 7600 2080 30  0001 L CNN
 	1    3800 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 4400 900
 F 0 "#PWR5" H 8800 1800 30  0001 L CNN
 F 1 "EGND" H 8800 1880 30  0001 L CNN
 	1    4400 900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR6
@@ -96,7 +96,7 @@ P 3000 1700
 F 0 "#PWR6" H 6000 3400 30  0001 L CNN
 F 1 "EGND" H 6000 3480 30  0001 L CNN
 	1    3000 1700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR7
@@ -105,7 +105,7 @@ P 3600 1600
 F 0 "#PWR7" H 7200 3200 30  0001 L CNN
 F 1 "EGND" H 7200 3280 30  0001 L CNN
 	1    3600 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR8
@@ -114,7 +114,7 @@ P 4800 800
 F 0 "#PWR8" H 9600 1600 30  0001 L CNN
 F 1 "EGND" H 9600 1680 30  0001 L CNN
 	1    4800 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR9
@@ -123,7 +123,7 @@ P 5300 800
 F 0 "#PWR9" H 10600 1600 30  0001 L CNN
 F 1 "EGND" H 10600 1680 30  0001 L CNN
 	1    5300 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR10
@@ -132,7 +132,7 @@ P 2800 1900
 F 0 "#PWR10" H 5600 3800 30  0001 L CNN
 F 1 "EGND" H 5600 3880 30  0001 L CNN
 	1    2800 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR11
@@ -141,7 +141,7 @@ P 2300 1900
 F 0 "#PWR11" H 4600 3800 30  0001 L CNN
 F 1 "EGND" H 4600 3880 30  0001 L CNN
 	1    2300 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR12
@@ -150,7 +150,7 @@ P 2300 1300
 F 0 "#PWR12" H 4600 2600 30  0001 L CNN
 F 1 "EGND" H 4600 2680 30  0001 L CNN
 	1    2300 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR13
@@ -159,7 +159,7 @@ P 2800 1300
 F 0 "#PWR13" H 5600 2600 30  0001 L CNN
 F 1 "EGND" H 5600 2680 30  0001 L CNN
 	1    2800 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR14
@@ -168,7 +168,7 @@ P 3000 1400
 F 0 "#PWR14" H 6000 2800 30  0001 L CNN
 F 1 "EGND" H 6000 2880 30  0001 L CNN
 	1    3000 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR15
@@ -177,7 +177,7 @@ P 2400 700
 F 0 "#PWR15" H 4800 1400 30  0001 L CNN
 F 1 "EGND" H 4800 1480 30  0001 L CNN
 	1    2400 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR16
@@ -186,7 +186,7 @@ P 3800 700
 F 0 "#PWR16" H 7600 1400 30  0001 L CNN
 F 1 "EGND" H 7600 1480 30  0001 L CNN
 	1    3800 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR17
@@ -195,7 +195,7 @@ P 2900 700
 F 0 "#PWR17" H 5800 1400 30  0001 L CNN
 F 1 "EGND" H 5800 1480 30  0001 L CNN
 	1    2900 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L E_PSPICE E13
@@ -204,7 +204,7 @@ P 600 600
 F 0 "E13" H 600 600 30  0001 L CNN
 F 1 "E" H 600 680 30  0001 L CNN
 	1    600 600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ELAPLACE_PSPICE E4
@@ -213,7 +213,7 @@ P 2300 1800
 F 0 "E4" H 2300 1800 30  0001 L CNN
 F 1 "ELAPLACE" H 2300 1880 30  0001 L CNN
 	1    2300 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ELAPLACE_PSPICE E1
@@ -222,7 +222,7 @@ P 4800 700
 F 0 "E1" H 4800 700 30  0001 L CNN
 F 1 "ELAPLACE" H 4800 780 30  0001 L CNN
 	1    4800 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VPULSE_PSPICE V4
@@ -231,7 +231,7 @@ P 400 1100
 F 0 "V4" H 400 1100 30  0001 L CNN
 F 1 "PULSE" H 400 1180 30  0001 L CNN
 	1    400 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ESUM_PSPICE E12
@@ -240,7 +240,7 @@ P 3000 1300
 F 0 "E12" H 3000 1300 30  0001 L CNN
 F 1 "ESUM" H 3000 1380 30  0001 L CNN
 	1    3000 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ELAPLACE_PSPICE E3
@@ -249,7 +249,7 @@ P 2300 1200
 F 0 "E3" H 2300 1200 30  0001 L CNN
 F 1 "ELAPLACE" H 2300 1280 30  0001 L CNN
 	1    2300 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ESUM_PSPICE E11
@@ -258,7 +258,7 @@ P 3800 600
 F 0 "E11" H 3800 600 30  0001 L CNN
 F 1 "ESUM" H 3800 680 30  0001 L CNN
 	1    3800 600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ELAPLACE_PSPICE E14
@@ -267,7 +267,7 @@ P 2400 600
 F 0 "E14" H 2400 600 30  0001 L CNN
 F 1 "ELAPLACE" H 2400 680 30  0001 L CNN
 	1    2400 600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -276,7 +276,7 @@ P 5500 700
 F 0 "R1" H 5500 700 30  0001 L CNN
 F 1 "R" H 5500 780 30  0001 L CNN
 	1    5500 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3600 1400 3600 900

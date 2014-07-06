@@ -51,7 +51,7 @@ P 2900 5200
 F 0 "#PWR1" H 5800 10400 30  0001 L CNN
 F 1 "EGND" H 5800 10480 30  0001 L CNN
 	1    2900 5200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 4000 1400
 F 0 "#PWR2" H 8000 2800 30  0001 L CNN
 F 1 "EGND" H 8000 2880 30  0001 L CNN
 	1    4000 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 4000 2000
 F 0 "#PWR3" H 8000 4000 30  0001 L CNN
 F 1 "EGND" H 8000 4080 30  0001 L CNN
 	1    4000 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 4000 2600
 F 0 "#PWR4" H 8000 5200 30  0001 L CNN
 F 1 "EGND" H 8000 5280 30  0001 L CNN
 	1    4000 2600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 4000 3200
 F 0 "#PWR5" H 8000 6400 30  0001 L CNN
 F 1 "EGND" H 8000 6480 30  0001 L CNN
 	1    4000 3200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR6
@@ -96,7 +96,7 @@ P 4000 3800
 F 0 "#PWR6" H 8000 7600 30  0001 L CNN
 F 1 "EGND" H 8000 7680 30  0001 L CNN
 	1    4000 3800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR7
@@ -105,7 +105,7 @@ P 4000 4400
 F 0 "#PWR7" H 8000 8800 30  0001 L CNN
 F 1 "EGND" H 8000 8880 30  0001 L CNN
 	1    4000 4400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR8
@@ -114,7 +114,7 @@ P 4000 5000
 F 0 "#PWR8" H 8000 10000 30  0001 L CNN
 F 1 "EGND" H 8000 10080 30  0001 L CNN
 	1    4000 5000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR9
@@ -123,7 +123,7 @@ P 2600 300
 F 0 "#PWR9" H 5200 600 30  0001 L CNN
 F 1 "EGND" H 5200 680 30  0001 L CNN
 	1    2600 300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR10
@@ -132,7 +132,7 @@ P 1700 1000
 F 0 "#PWR10" H 3400 2000 30  0001 L CNN
 F 1 "EGND" H 3400 2080 30  0001 L CNN
 	1    1700 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR11
@@ -141,7 +141,7 @@ P 6000 3500
 F 0 "#PWR11" H 12000 7000 30  0001 L CNN
 F 1 "+5V" H 12000 7080 30  0001 L CNN
 	1    6000 3500
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L GND #PWR12
@@ -150,7 +150,7 @@ P 6200 3300
 F 0 "#PWR12" H 12400 6600 30  0001 L CNN
 F 1 "EGND" H 12400 6680 30  0001 L CNN
 	1    6200 3300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L GND #PWR13
@@ -159,7 +159,7 @@ P 5400 3700
 F 0 "#PWR13" H 10800 7400 30  0001 L CNN
 F 1 "EGND" H 10800 7480 30  0001 L CNN
 	1    5400 3700
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R2
@@ -168,7 +168,7 @@ P 2500 1000
 F 0 "R2" H 2500 1000 30  0000 L CNN
 F 1 "10k" H 2500 1110 30  0000 L CNN
 	1    2500 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -177,7 +177,7 @@ P 2500 1600
 F 0 "R1" H 2500 1600 30  0000 L CNN
 F 1 "10k" H 2500 1710 30  0000 L CNN
 	1    2500 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R3
@@ -186,7 +186,7 @@ P 2500 2300
 F 0 "R3" H 2500 2300 30  0000 L CNN
 F 1 "10k" H 2500 2410 30  0000 L CNN
 	1    2500 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R4
@@ -195,7 +195,7 @@ P 2500 2900
 F 0 "R4" H 2500 2900 30  0000 L CNN
 F 1 "10k" H 2500 3010 30  0000 L CNN
 	1    2500 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R5
@@ -204,7 +204,7 @@ P 2500 3500
 F 0 "R5" H 2500 3500 30  0000 L CNN
 F 1 "10k" H 2500 3610 30  0000 L CNN
 	1    2500 3500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R6
@@ -213,7 +213,7 @@ P 2500 4100
 F 0 "R6" H 2500 4100 30  0000 L CNN
 F 1 "10k" H 2500 4210 30  0000 L CNN
 	1    2500 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R7
@@ -222,7 +222,7 @@ P 2500 4600
 F 0 "R7" H 2500 4600 30  0000 L CNN
 F 1 "10k" H 2500 4710 30  0000 L CNN
 	1    2500 4600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R8
@@ -231,7 +231,7 @@ P 2500 5200
 F 0 "R8" H 2500 5200 30  0000 L CNN
 F 1 "10k" H 2500 5310 30  0000 L CNN
 	1    2500 5200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E1
@@ -240,7 +240,7 @@ P 3500 1300
 F 0 "E1" H 3500 1300 30  0000 L CNN
 F 1 "ETABLE" H 3500 1380 30  0000 L CNN
 	1    3500 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E2
@@ -249,7 +249,7 @@ P 3500 1900
 F 0 "E2" H 3500 1900 30  0000 L CNN
 F 1 "ETABLE" H 3500 1980 30  0000 L CNN
 	1    3500 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E3
@@ -258,7 +258,7 @@ P 3500 2500
 F 0 "E3" H 3500 2500 30  0000 L CNN
 F 1 "ETABLE" H 3500 2580 30  0000 L CNN
 	1    3500 2500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E4
@@ -267,7 +267,7 @@ P 3500 3100
 F 0 "E4" H 3500 3100 30  0000 L CNN
 F 1 "ETABLE" H 3500 3180 30  0000 L CNN
 	1    3500 3100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E5
@@ -276,7 +276,7 @@ P 3500 3700
 F 0 "E5" H 3500 3700 30  0000 L CNN
 F 1 "ETABLE" H 3500 3780 30  0000 L CNN
 	1    3500 3700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E6
@@ -285,7 +285,7 @@ P 3500 4300
 F 0 "E6" H 3500 4300 30  0000 L CNN
 F 1 "ETABLE" H 3500 4380 30  0000 L CNN
 	1    3500 4300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ETABLE_PSPICE E7
@@ -294,7 +294,7 @@ P 3500 4900
 F 0 "E7" H 3500 4900 30  0000 L CNN
 F 1 "ETABLE" H 3500 4980 30  0000 L CNN
 	1    3500 4900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 74148_PSPICE U1
@@ -303,7 +303,7 @@ P 5400 2700
 F 0 "U1" H 5400 2700 30  0000 L CNN
 F 1 "74148" H 5400 2780 30  0000 L CNN
 	1    5400 2700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE VREF
@@ -312,7 +312,7 @@ P 2300 700
 F 0 "VREF" H 2300 700 30  0000 L CNN
 F 1 "10V" H 2300 590 30  0000 C CNN
 	1    2300 700
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L VPWL_PSPICE VIN
@@ -321,7 +321,7 @@ P 1700 600
 F 0 "VIN" H 1700 600 30  0000 L CNN
 F 1 "VPWL" H 1700 680 30  0000 L CNN
 	1    1700 600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2300 700 2300 1000

@@ -51,7 +51,7 @@ P 3600 2700
 F 0 "#PWR1" H 7200 5400 30  0001 L CNN
 F 1 "GND_EARTH" H 7200 5480 30  0001 L CNN
 	1    3600 2700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 3900 1300
 F 0 "#PWR2" H 7800 2600 30  0001 L CNN
 F 1 "GND_EARTH" H 7800 2680 30  0001 L CNN
 	1    3900 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 3800 3300
 F 0 "#PWR3" H 7600 6600 30  0001 L CNN
 F 1 "GND_EARTH" H 7600 6680 30  0001 L CNN
 	1    3800 3300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 4200 3200
 F 0 "#PWR4" H 8400 6400 30  0001 L CNN
 F 1 "GND_EARTH" H 8400 6480 30  0001 L CNN
 	1    4200 3200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 5400 2900
 F 0 "#PWR5" H 10800 5800 30  0001 L CNN
 F 1 "GND_EARTH" H 10800 5880 30  0001 L CNN
 	1    5400 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -96,7 +96,7 @@ P 3600 1700
 F 0 "V1" H 3600 1700 30  0001 L CNN
 F 1 "15" H 3600 1590 30  0000 C CNN
 	1    3600 1700
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L VDC_PSPICE V2
@@ -105,7 +105,7 @@ P 3600 2700
 F 0 "V2" H 3600 2700 30  0001 L CNN
 F 1 "15" H 3600 2590 30  0000 C CNN
 	1    3600 2700
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L uA741_PSPICE U1
@@ -114,7 +114,7 @@ P 3200 1800
 F 0 "U1" H 3200 1800 30  0001 L CNN
 F 1 "uA741" H 3200 1880 30  0001 L CNN
 	1    3200 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C3
@@ -123,7 +123,7 @@ P 4800 2900
 F 0 "C3" H 4800 2900 30  0001 L CNN
 F 1 "0.1u" H 4800 3030 30  0000 L CNN
 	1    4800 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C2
@@ -132,7 +132,7 @@ P 4200 3200
 F 0 "C2" H 4200 3200 30  0001 L CNN
 F 1 "0.1u" H 4200 3190 30  0000 L CNN
 	1    4200 3200
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R5
@@ -141,7 +141,7 @@ P 3800 3300
 F 0 "R5" H 3800 3300 30  0001 L CNN
 F 1 "10k" H 3800 3330 30  0000 L CNN
 	1    3800 3300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R6
@@ -150,7 +150,7 @@ P 4600 2900
 F 0 "R6" H 4600 2900 30  0001 L CNN
 F 1 "10k" H 4600 3070 30  0000 L CNN
 	1    4600 2900
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L R_PSPICE R8
@@ -159,7 +159,7 @@ P 5400 2500
 F 0 "R8" H 5400 2500 30  0000 L CNN
 F 1 "1.1k" H 5400 2790 30  0000 L CNN
 	1    5400 2500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L R_PSPICE R7
@@ -168,7 +168,7 @@ P 5400 2000
 F 0 "R7" H 5400 2000 30  0000 L CNN
 F 1 "{RF}" H 5400 2270 30  0000 L CNN
 	1    5400 2000
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 Wire Wire Line
 	3600 1300 3900 1300

@@ -51,7 +51,7 @@ P 2000 2200
 F 0 "#PWR1" H 4000 4400 30  0001 L CNN
 F 1 "EGND" H 4000 4480 30  0001 L CNN
 	1    2000 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 4200 2800
 F 0 "#PWR2" H 8400 5600 30  0001 L CNN
 F 1 "EGND" H 8400 5680 30  0001 L CNN
 	1    4200 2800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -69,16 +69,16 @@ P 4200 1700
 F 0 "R1" H 4200 1700 30  0001 L CNN
 F 1 "100" H 4200 1970 30  0000 L CNN
 	1    4200 1700
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VSIN_PSPICE V1
 U 1 1 14636915
 P 2000 1800
 F 0 "V1" H 2000 1800 30  0001 L CNN
-F 1 "VSIN" H 2000 1880 30  0001 L CNN
+F 1 "SINE" H 2000 1880 30  0001 L CNN
 	1    2000 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -87,7 +87,7 @@ P 4200 2200
 F 0 "L1" H 4200 2200 30  0001 L CNN
 F 1 "100mh" H 4200 2590 30  0000 L CNN
 	1    4200 2200
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR2T_PSPICE U1
@@ -96,7 +96,7 @@ P 2500 1700
 F 0 "U1" H 2500 1700 30  0000 L CNN
 F 1 "SCR2T" H 2500 1780 30  0000 L CNN
 	1    2500 1700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	4200 2100 4200 2200

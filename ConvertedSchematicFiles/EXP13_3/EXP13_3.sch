@@ -51,7 +51,7 @@ P 3800 3000
 F 0 "#PWR1" H 7600 6000 30  0001 L CNN
 F 1 "EGND" H 7600 6080 30  0001 L CNN
 	1    3800 3000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE VGS
@@ -60,7 +60,7 @@ P 2300 2800
 F 0 "VGS" H 2300 2800 30  0000 L CNN
 F 1 "1V" H 2300 3190 30  0000 C CNN
 	1    2300 2800
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L VDC_PSPICE VDD
@@ -69,7 +69,7 @@ P 3800 2400
 F 0 "VDD" H 3800 2400 30  0000 L CNN
 F 1 "12V" H 3800 2710 30  0000 C CNN
 	1    3800 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L J2N3819_PSPICE Q?
@@ -78,7 +78,7 @@ P 2900 2400
 F 0 "Q?" H 2900 2400 30  0000 L CNN
 F 1 "J2N3819" H 2900 2480 30  0000 L CNN
 	1    2900 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2300 2400 2900 2400

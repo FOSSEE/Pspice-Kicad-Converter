@@ -51,7 +51,7 @@ P 500 1400
 F 0 "#PWR1" H 1000 2800 30  0001 L CNN
 F 1 "GND_EARTH" H 1000 2880 30  0001 L CNN
 	1    500 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V1
@@ -60,7 +60,7 @@ P 500 700
 F 0 "V1" H 500 700 30  0000 L CNN
 F 1 "SINE" H 500 780 30  0000 L CNN
 	1    500 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V2
@@ -69,7 +69,7 @@ P 1400 1000
 F 0 "V2" H 1400 1000 30  0000 L CNN
 F 1 "{VREF}" H 1400 1370 30  0000 C CNN
 	1    1400 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L D1N4002_PSPICE D1
@@ -78,7 +78,7 @@ P 1400 500
 F 0 "D1" H 1400 500 30  0000 L CNN
 F 1 "D1N4002" H 1400 580 30  0000 L CNN
 	1    1400 500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -87,7 +87,7 @@ P 800 500
 F 0 "C1" H 800 500 30  0000 L CNN
 F 1 "0.1U" H 800 650 30  0000 L CNN
 	1    800 500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	500 1400 500 1100

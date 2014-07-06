@@ -51,7 +51,7 @@ P 1100 4500
 F 0 "#PWR1" H 2200 9000 30  0001 L CNN
 F 1 "EGND" H 2200 9080 30  0001 L CNN
 	1    1100 4500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 700 4100
 F 0 "#PWR2" H 1400 8200 30  0001 L CNN
 F 1 "EGND" H 1400 8280 30  0001 L CNN
 	1    700 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 3900 3200
 F 0 "#PWR3" H 7800 6400 30  0001 L CNN
 F 1 "EGND" H 7800 6480 30  0001 L CNN
 	1    3900 3200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 1600 4100
 F 0 "#PWR4" H 3200 8200 30  0001 L CNN
 F 1 "EGND" H 3200 8280 30  0001 L CNN
 	1    1600 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 1600 3800
 F 0 "#PWR5" H 3200 7600 30  0001 L CNN
 F 1 "EGND" H 3200 7680 30  0001 L CNN
 	1    1600 3800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR6
@@ -96,7 +96,7 @@ P 2200 4000
 F 0 "#PWR6" H 4400 8000 30  0001 L CNN
 F 1 "EGND" H 4400 8080 30  0001 L CNN
 	1    2200 4000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR7
@@ -105,7 +105,7 @@ P 7100 4000
 F 0 "#PWR7" H 14200 8000 30  0001 L CNN
 F 1 "EGND" H 14200 8080 30  0001 L CNN
 	1    7100 4000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR8
@@ -114,7 +114,7 @@ P 7700 4100
 F 0 "#PWR8" H 15400 8200 30  0001 L CNN
 F 1 "EGND" H 15400 8280 30  0001 L CNN
 	1    7700 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR9
@@ -123,7 +123,7 @@ P 7700 3800
 F 0 "#PWR9" H 15400 7600 30  0001 L CNN
 F 1 "EGND" H 15400 7680 30  0001 L CNN
 	1    7700 3800
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L GND #PWR10
@@ -132,7 +132,7 @@ P 8100 4500
 F 0 "#PWR10" H 16200 9000 30  0001 L CNN
 F 1 "EGND" H 16200 9080 30  0001 L CNN
 	1    8100 4500
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR11
@@ -141,25 +141,25 @@ P 8600 4100
 F 0 "#PWR11" H 17200 8200 30  0001 L CNN
 F 1 "EGND" H 17200 8280 30  0001 L CNN
 	1    8600 4100
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE VIN2
 U 1 1 10490027
 P 5900 2000
 F 0 "VIN2" H 5900 2000 30  0001 L CNN
-F 1 "VSIN" H 5900 2080 30  0001 L CNN
+F 1 "SINE" H 5900 2080 30  0001 L CNN
 	1    5900 2000
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VSIN_PSPICE VIN1
 U 1 1 73368690
 P 2200 2000
 F 0 "VIN1" H 2200 2000 30  0001 L CNN
-F 1 "VSIN" H 2200 2080 30  0001 L CNN
+F 1 "SINE" H 2200 2080 30  0001 L CNN
 	1    2200 2000
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R5
@@ -168,7 +168,7 @@ P 4200 1700
 F 0 "R5" H 4200 1700 30  0001 L CNN
 F 1 "100" H 4200 1970 30  0000 L CNN
 	1    4200 1700
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X22
@@ -177,7 +177,7 @@ P 6700 2500
 F 0 "X22" H 6700 2500 30  0000 L CNN
 F 1 "SCR3T" H 6700 2580 30  0000 L CNN
 	1    6700 2500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X23
@@ -186,7 +186,7 @@ P 5500 1200
 F 0 "X23" H 5500 1200 30  0000 L CNN
 F 1 "SCR3T" H 5500 1280 30  0000 L CNN
 	1    5500 1200
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X13
@@ -195,7 +195,7 @@ P 3000 1500
 F 0 "X13" H 3000 1500 30  0000 L CNN
 F 1 "SCR3T" H 3000 1580 30  0000 L CNN
 	1    3000 1500
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X14
@@ -204,7 +204,7 @@ P 1800 2800
 F 0 "X14" H 1800 2800 30  0000 L CNN
 F 1 "SCR3T" H 1800 2880 30  0000 L CNN
 	1    1800 2800
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VPULSE_PSPICE VCYCLO1
@@ -213,7 +213,7 @@ P 1100 4100
 F 0 "VCYCLO1" H 1100 4100 30  0000 L CNN
 F 1 "PULSE" H 1100 4180 30  0000 L CNN
 	1    1100 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L SCR3T_PSPICE X15
@@ -222,7 +222,7 @@ P 3000 2800
 F 0 "X15" H 3000 2800 30  0000 L CNN
 F 1 "SCR3T" H 3000 2880 30  0000 L CNN
 	1    3000 2800
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X12
@@ -231,7 +231,7 @@ P 1800 1500
 F 0 "X12" H 1800 1500 30  0000 L CNN
 F 1 "SCR3T" H 1800 1580 30  0000 L CNN
 	1    1800 1500
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L EMULT_PSPICE E3
@@ -240,7 +240,7 @@ P 1600 3700
 F 0 "E3" H 1600 3700 30  0000 L CNN
 F 1 "EMULT" H 1600 3780 30  0000 L CNN
 	1    1600 3700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VPULSE_PSPICE VG1P
@@ -249,7 +249,7 @@ P 700 3700
 F 0 "VG1P" H 700 3700 30  0000 L CNN
 F 1 "PULSE" H 700 3780 30  0000 L CNN
 	1    700 3700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VPULSE_PSPICE VG1N
@@ -258,7 +258,7 @@ P 8600 3700
 F 0 "VG1N" H 8600 3700 30  0000 L CNN
 F 1 "PULSE" H 8600 3780 30  0000 L CNN
 	1    8600 3700
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L VPULSE_PSPICE VCYCLO2
@@ -267,7 +267,7 @@ P 8100 4100
 F 0 "VCYCLO2" H 8100 4100 30  0000 L CNN
 F 1 "PULSE" H 8100 4180 30  0000 L CNN
 	1    8100 4100
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L SCR3T_PSPICE X21
@@ -276,7 +276,7 @@ P 5500 2500
 F 0 "X21" H 5500 2500 30  0000 L CNN
 F 1 "SCR3T" H 5500 2580 30  0000 L CNN
 	1    5500 2500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X20
@@ -285,7 +285,7 @@ P 6700 1200
 F 0 "X20" H 6700 1200 30  0000 L CNN
 F 1 "SCR3T" H 6700 1280 30  0000 L CNN
 	1    6700 1200
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L EMULT_PSPICE E1
@@ -294,7 +294,7 @@ P 7700 3700
 F 0 "E1" H 7700 3700 30  0000 L CNN
 F 1 "EMULT" H 7700 3780 30  0000 L CNN
 	1    7700 3700
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 Wire Wire Line
 	2200 2000 1800 2000

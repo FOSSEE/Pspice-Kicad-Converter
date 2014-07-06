@@ -51,7 +51,7 @@ P 3100 1800
 F 0 "#PWR1" H 6200 3600 30  0001 L CNN
 F 1 "EGND" H 6200 3680 30  0001 L CNN
 	1    3100 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -60,7 +60,7 @@ P 3100 1300
 F 0 "R1" H 3100 1300 30  0000 L CNN
 F 1 "R" H 3100 1380 30  0000 L CNN
 	1    3100 1300
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L R_PSPICE R6
@@ -69,7 +69,7 @@ P 2300 2000
 F 0 "R6" H 2300 2000 30  0000 L CNN
 F 1 "1MEG" H 2300 2090 30  0000 L CNN
 	1    2300 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L IPWL_PSPICE I1
@@ -78,7 +78,7 @@ P 1400 1300
 F 0 "I1" H 1400 1300 30  0000 L CNN
 F 1 "IPWL" H 1400 1380 30  0000 L CNN
 	1    1400 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L XFRM_LINEAR_PSPICE TX1
@@ -87,7 +87,7 @@ P 2200 1200
 F 0 "TX1" H 2200 1200 30  0000 L CNN
 F 1 "XFRM_LINEAR" H 2200 1280 30  0000 L CNN
 	1    2200 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1400 1200 2200 1200

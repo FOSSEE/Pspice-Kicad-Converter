@@ -51,7 +51,7 @@ P 6000 1400
 F 0 "#PWR1" H 12000 2800 30  0001 L CNN
 F 1 "GND_ANALOG" H 12000 2880 30  0001 L CNN
 	1    6000 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L AGND #PWR2
@@ -60,7 +60,7 @@ P 6500 3500
 F 0 "#PWR2" H 13000 7000 30  0001 L CNN
 F 1 "GND_ANALOG" H 13000 7080 30  0001 L CNN
 	1    6500 3500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L AGND #PWR3
@@ -69,7 +69,7 @@ P 6300 1900
 F 0 "#PWR3" H 12600 3800 30  0001 L CNN
 F 1 "GND_ANALOG" H 12600 3880 30  0001 L CNN
 	1    6300 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -78,7 +78,7 @@ P 5300 1900
 F 0 "C1" H 5300 1900 30  0001 L CNN
 F 1 "0.1uf" H 5300 2050 30  0000 L CNN
 	1    5300 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -87,7 +87,7 @@ P 6000 1000
 F 0 "V1" H 6000 1000 30  0001 L CNN
 F 1 "5v" H 6000 890 30  0000 C CNN
 	1    6000 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C2
@@ -96,7 +96,7 @@ P 2600 2300
 F 0 "C2" H 2600 2300 30  0001 L CNN
 F 1 "22uf" H 2600 2450 30  0000 L CNN
 	1    2600 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VAC_PSPICE V2
@@ -105,7 +105,7 @@ P 2300 2700
 F 0 "V2" H 2300 2700 30  0001 L CNN
 F 1 "AC" H 2300 2780 30  0001 L CNN
 	1    2300 2700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L Q2N2222_PSPICE Q1
@@ -114,7 +114,7 @@ P 4400 2300
 F 0 "Q1" H 4400 2300 30  0001 L CNN
 F 1 "Q2N2222" H 4400 2380 30  0001 L CNN
 	1    4400 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -123,7 +123,7 @@ P 3700 2200
 F 0 "R1" H 3700 2200 30  0001 L CNN
 F 1 "220" H 3700 2370 30  0000 L CNN
 	1    3700 2200
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -132,7 +132,7 @@ P 4600 1500
 F 0 "L1" H 4600 1500 30  0001 L CNN
 F 1 "100uH" H 4600 1670 30  0000 L CNN
 	1    4600 1500
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R2
@@ -141,7 +141,7 @@ P 4600 2000
 F 0 "R2" H 4600 2000 30  0001 L CNN
 F 1 "220" H 4600 2150 30  0000 L CNN
 	1    4600 2000
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 Wire Wire Line
 	4600 1500 4600 1600

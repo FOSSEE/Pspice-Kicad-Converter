@@ -51,7 +51,7 @@ P 4300 4600
 F 0 "#PWR1" H 8600 9200 30  0001 L CNN
 F 1 "EGND" H 8600 9280 30  0001 L CNN
 	1    4300 4600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 4300 6000
 F 0 "#PWR2" H 8600 12000 30  0001 L CNN
 F 1 "EGND" H 8600 12080 30  0001 L CNN
 	1    4300 6000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 2700 6700
 F 0 "#PWR3" H 5400 13400 30  0001 L CNN
 F 1 "EGND" H 5400 13480 30  0001 L CNN
 	1    2700 6700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 2000 6000
 F 0 "#PWR4" H 4000 12000 30  0001 L CNN
 F 1 "EGND" H 4000 12080 30  0001 L CNN
 	1    2000 6000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 3900 5600
 F 0 "#PWR5" H 7800 11200 30  0001 L CNN
 F 1 "EGND" H 7800 11280 30  0001 L CNN
 	1    3900 5600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR6
@@ -96,7 +96,7 @@ P 3900 7100
 F 0 "#PWR6" H 7800 14200 30  0001 L CNN
 F 1 "EGND" H 7800 14280 30  0001 L CNN
 	1    3900 7100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR7
@@ -105,7 +105,7 @@ P 4700 5700
 F 0 "#PWR7" H 9400 11400 30  0001 L CNN
 F 1 "EGND" H 9400 11480 30  0001 L CNN
 	1    4700 5700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR8
@@ -114,7 +114,7 @@ P 4400 4300
 F 0 "#PWR8" H 8800 8600 30  0001 L CNN
 F 1 "EGND" H 8800 8680 30  0001 L CNN
 	1    4400 4300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR9
@@ -123,7 +123,7 @@ P 3000 4500
 F 0 "#PWR9" H 6000 9000 30  0001 L CNN
 F 1 "EGND" H 6000 9080 30  0001 L CNN
 	1    3000 4500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R3
@@ -132,7 +132,7 @@ P 2700 6300
 F 0 "R3" H 2700 6300 30  0000 L CNN
 F 1 "R" H 2700 6380 30  0000 L CNN
 	1    2700 6300
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L R_PSPICE R2
@@ -141,7 +141,7 @@ P 2700 5300
 F 0 "R2" H 2700 5300 30  0000 L CNN
 F 1 "R" H 2700 5380 30  0000 L CNN
 	1    2700 5300
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VDC_PSPICE V3
@@ -150,7 +150,7 @@ P 3900 6700
 F 0 "V3" H 3900 6700 30  0000 L CNN
 F 1 "15V" H 3900 6590 30  0000 C CNN
 	1    3900 6700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V5
@@ -159,7 +159,7 @@ P 4100 5700
 F 0 "V5" H 4100 5700 30  0000 L CNN
 F 1 "-15V" H 4100 5610 30  0000 C CNN
 	1    4100 5700
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L LM111_PSPICE U2
@@ -168,7 +168,7 @@ P 3500 5000
 F 0 "U2" H 3500 5000 30  0000 L CNN
 F 1 "LM111" H 3500 5080 30  0000 L CNN
 	1    3500 5000
-	1    0    0    -1
+	1    0    0    1
 $EndComp
 $Comp
 L LM111_PSPICE U3
@@ -177,7 +177,7 @@ P 3500 6400
 F 0 "U3" H 3500 6400 30  0000 L CNN
 F 1 "LM111" H 3500 6480 30  0000 L CNN
 	1    3500 6400
-	1    0    0    -1
+	1    0    0    1
 $EndComp
 $Comp
 L VDC_PSPICE V4
@@ -186,7 +186,7 @@ P 3900 4100
 F 0 "V4" H 3900 4100 30  0000 L CNN
 F 1 "-15V" H 3900 4390 30  0000 C CNN
 	1    3900 4100
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -195,7 +195,7 @@ P 2700 4300
 F 0 "R1" H 2700 4300 30  0000 L CNN
 F 1 "R" H 2700 4380 30  0000 L CNN
 	1    2700 4300
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VDC_PSPICE V2
@@ -204,7 +204,7 @@ P 3900 5200
 F 0 "V2" H 3900 5200 30  0000 L CNN
 F 1 "15V" H 3900 5050 30  0000 C CNN
 	1    3900 5200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R4
@@ -213,7 +213,7 @@ P 4600 5200
 F 0 "R4" H 4600 5200 30  0000 L CNN
 F 1 "10k" H 4600 5310 30  0000 L CNN
 	1    4600 5200
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VDC_PSPICE V6
@@ -222,7 +222,7 @@ P 3000 4100
 F 0 "V6" H 3000 4100 30  0000 L CNN
 F 1 "15V" H 3000 4410 30  0000 C CNN
 	1    3000 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VPULSE_PSPICE V1
@@ -231,7 +231,7 @@ P 2000 5300
 F 0 "V1" H 2000 5300 30  0000 L CNN
 F 1 "PULSE" H 2000 5380 30  0000 L CNN
 	1    2000 5300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	4900 4800 4900 6200

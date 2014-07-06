@@ -51,7 +51,7 @@ P 3900 3100
 F 0 "#PWR1" H 7800 6200 30  0001 L CNN
 F 1 "EGND" H 7800 6280 30  0001 L CNN
 	1    3900 3100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -60,7 +60,7 @@ P 3900 1500
 F 0 "R1" H 3900 1500 30  0001 L CNN
 F 1 "100" H 3900 1770 30  0000 L CNN
 	1    3900 1500
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -69,7 +69,7 @@ P 3900 2000
 F 0 "L1" H 3900 2000 30  0001 L CNN
 F 1 "50mh" H 3900 2430 30  0000 L CNN
 	1    3900 2000
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L D1N914_PSPICE D1
@@ -78,7 +78,7 @@ P 1800 2900
 F 0 "D1" H 1800 2900 30  0000 L CNN
 F 1 "D1N914" H 1800 2980 30  0000 L CNN
 	1    1800 2900
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L D1N914_PSPICE D2
@@ -87,16 +87,16 @@ P 3000 2900
 F 0 "D2" H 3000 2900 30  0000 L CNN
 F 1 "D1N914" H 3000 2980 30  0000 L CNN
 	1    3000 2900
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VSIN_PSPICE VIN
 U 1 1 74238335
 P 2200 2300
 F 0 "VIN" H 2200 2300 30  0001 L CNN
-F 1 "VSIN" H 2200 2380 30  0001 L CNN
+F 1 "SINE" H 2200 2380 30  0001 L CNN
 	1    2200 2300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L SCR2T_PSPICE U1
@@ -105,7 +105,7 @@ P 1800 2000
 F 0 "U1" H 1800 2000 30  0000 L CNN
 F 1 "SCR2T" H 1800 2080 30  0000 L CNN
 	1    1800 2000
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L SCR2T_PSPICE U2
@@ -114,7 +114,7 @@ P 3000 2000
 F 0 "U2" H 3000 2000 30  0000 L CNN
 F 1 "SCR2T" H 3000 2080 30  0000 L CNN
 	1    3000 2000
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 Wire Wire Line
 	1800 3100 3000 3100

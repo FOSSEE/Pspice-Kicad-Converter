@@ -51,7 +51,7 @@ P 2800 2200
 F 0 "#PWR1" H 5600 4400 30  0001 L CNN
 F 1 "EGND" H 5600 4480 30  0001 L CNN
 	1    2800 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 900 2700
 F 0 "#PWR2" H 1800 5400 30  0001 L CNN
 F 1 "EGND" H 1800 5480 30  0001 L CNN
 	1    900 2700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 700 1900
 F 0 "#PWR3" H 1400 3800 30  0001 L CNN
 F 1 "EGND" H 1400 3880 30  0001 L CNN
 	1    700 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 4300 1700
 F 0 "#PWR4" H 8600 3400 30  0001 L CNN
 F 1 "EGND" H 8600 3480 30  0001 L CNN
 	1    4300 1700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE Ri
@@ -87,16 +87,16 @@ P 1900 1200
 F 0 "Ri" H 1900 1200 30  0000 L CNN
 F 1 "2Meg" H 1900 1510 30  0000 L CNN
 	1    1900 1200
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VSIN_PSPICE V1
 U 1 1 74238335
 P 700 1400
 F 0 "V1" H 700 1400 30  0000 L CNN
-F 1 "VSIN" H 700 1480 30  0000 L CNN
+F 1 "SINE" H 700 1480 30  0000 L CNN
 	1    700 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE RL
@@ -105,7 +105,7 @@ P 4300 1300
 F 0 "RL" H 4300 1300 30  0000 L CNN
 F 1 "10k" H 4300 1610 30  0000 L CNN
 	1    4300 1300
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L R_PSPICE RF
@@ -114,7 +114,7 @@ P 2100 2400
 F 0 "RF" H 2100 2400 30  0000 L CNN
 F 1 "10k" H 2100 2550 30  0000 L CNN
 	1    2100 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L E_PSPICE E1
@@ -123,7 +123,7 @@ P 2400 1300
 F 0 "E1" H 2400 1300 30  0000 L CNN
 F 1 "-200000" H 2400 1300 30  0001 L CNN
 	1    2400 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -132,7 +132,7 @@ P 900 2200
 F 0 "R1" H 900 2200 30  0000 L CNN
 F 1 "10k" H 900 2350 30  0000 L CNN
 	1    900 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE Ro
@@ -141,7 +141,7 @@ P 2800 1300
 F 0 "Ro" H 2800 1300 30  0000 L CNN
 F 1 "75" H 2800 1450 30  0000 L CNN
 	1    2800 1300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2800 1400 2800 2200

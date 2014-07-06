@@ -51,7 +51,7 @@ P 3800 4500
 F 0 "#PWR1" H 7600 9000 30  0001 L CNN
 F 1 "EGND" H 7600 9080 30  0001 L CNN
 	1    3800 4500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L L_PSPICE L1
@@ -60,7 +60,7 @@ P 1800 2900
 F 0 "L1" H 1800 2900 30  0000 L CNN
 F 1 "" H 1800 3050 30  0000 L CNN
 	1    1800 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R_LOAD
@@ -69,7 +69,7 @@ P 3800 1600
 F 0 "R_LOAD" H 3800 1600 30  0000 L CNN
 F 1 "" H 3800 1750 30  0000 L CNN
 	1    3800 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L SCR_PSPICE X2
@@ -78,7 +78,7 @@ P 4600 3700
 F 0 "X2" H 4600 3700 30  0000 L CNN
 F 1 "Scr" H 4600 3780 30  0000 L CNN
 	1    4600 3700
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -87,7 +87,7 @@ P 3600 3400
 F 0 "C1" H 3600 3400 30  0000 L CNN
 F 1 "" H 3600 3470 30  0000 L CNN
 	1    3600 3400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L D1N914_PSPICE D1
@@ -96,7 +96,7 @@ P 2500 4100
 F 0 "D1" H 2500 4100 30  0000 L CNN
 F 1 "D1N914" H 2500 4180 30  0000 L CNN
 	1    2500 4100
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -105,7 +105,7 @@ P 1300 3400
 F 0 "V1" H 1300 3400 30  0000 L CNN
 F 1 "" H 1300 3790 30  0000 C CNN
 	1    1300 3400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L D1N914_PSPICE D2
@@ -114,7 +114,7 @@ P 5100 4100
 F 0 "D2" H 5100 4100 30  0000 L CNN
 F 1 "D1N914" H 5100 4180 30  0000 L CNN
 	1    5100 4100
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L R_PSPICE R8
@@ -123,7 +123,7 @@ P 2500 2900
 F 0 "R8" H 2500 2900 30  0000 L CNN
 F 1 "" H 2500 3050 30  0000 L CNN
 	1    2500 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L SCR_PSPICE X1
@@ -132,7 +132,7 @@ P 3000 3700
 F 0 "X1" H 3000 3700 30  0000 L CNN
 F 1 "Scr" H 3000 3780 30  0000 L CNN
 	1    3000 3700
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L XFRM_NONLINEAR_PSPICE 
@@ -141,7 +141,7 @@ P 3200 2300
 F 0 "" H 3200 2300 30  0000 L CNN
 F 1 "XFRM_NONLINEAR" H 3200 2380 30  0000 L CNN
 	1    3200 2300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L XFRM_NONLINEAR_PSPICE 
@@ -150,7 +150,7 @@ P 4100 2300
 F 0 "" H 4100 2300 30  0000 L CNN
 F 1 "XFRM_NONLINEAR" H 4100 2380 30  0000 L CNN
 	1    4100 2300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 Wire Wire Line
 	1800 2900 1300 2900

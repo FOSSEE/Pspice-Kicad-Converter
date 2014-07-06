@@ -51,7 +51,7 @@ P 4000 2700
 F 0 "#PWR1" H 8000 5400 30  0001 L CNN
 F 1 "EGND" H 8000 5480 30  0001 L CNN
 	1    4000 2700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE VCE
@@ -60,7 +60,7 @@ P 4000 2000
 F 0 "VCE" H 4000 2000 30  0000 L CNN
 F 1 "12V" H 4000 1890 30  0000 C CNN
 	1    4000 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L QbreakN_PSPICE Q1
@@ -69,7 +69,7 @@ P 2900 2200
 F 0 "Q1" H 2900 2200 30  0000 L CNN
 F 1 "QbreakN" H 2900 2280 30  0000 L CNN
 	1    2900 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L IDC_PSPICE iB
@@ -78,7 +78,7 @@ P 2400 2600
 F 0 "iB" H 2400 2600 30  0000 L CNN
 F 1 "1mA" H 2400 2990 30  0000 C CNN
 	1    2400 2600
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 Wire Wire Line
 	2900 2200 2400 2200

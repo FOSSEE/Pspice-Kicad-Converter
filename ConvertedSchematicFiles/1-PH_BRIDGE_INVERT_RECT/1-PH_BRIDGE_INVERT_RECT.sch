@@ -51,7 +51,7 @@ P 7300 4400
 F 0 "#PWR1" H 14600 8800 30  0001 L CNN
 F 1 "EGND" H 14600 8880 30  0001 L CNN
 	1    7300 4400
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 7800 4000
 F 0 "#PWR2" H 15600 8000 30  0001 L CNN
 F 1 "EGND" H 15600 8080 30  0001 L CNN
 	1    7800 4000
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 4000 3100
 F 0 "#PWR3" H 8000 6200 30  0001 L CNN
 F 1 "EGND" H 8000 6280 30  0001 L CNN
 	1    4000 3100
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE VIN
@@ -78,7 +78,7 @@ P 5800 1900
 F 0 "VIN" H 5800 1900 30  0001 L CNN
 F 1 "SINE" H 5800 1980 30  0001 L CNN
 	1    5800 1900
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L L_PSPICE L3
@@ -87,7 +87,7 @@ P 3700 1600
 F 0 "L3" H 3700 1600 30  0001 L CNN
 F 1 "50mh" H 3700 2030 30  0000 L CNN
 	1    3700 1600
-	0    1    1    0
+	0    -1    1    0
 $EndComp
 $Comp
 L R_PSPICE R6
@@ -96,7 +96,7 @@ P 3700 1100
 F 0 "R6" H 3700 1100 30  0001 L CNN
 F 1 "100" H 3700 1370 30  0000 L CNN
 	1    3700 1100
-	0    1    1    0
+	0    -1    1    0
 $EndComp
 $Comp
 L VPULSE_PSPICE VCYCLO
@@ -105,7 +105,7 @@ P 7300 4000
 F 0 "VCYCLO" H 7300 4000 30  0000 L CNN
 F 1 "PULSE" H 7300 4080 30  0000 L CNN
 	1    7300 4000
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L VPULSE_PSPICE VG1
@@ -114,7 +114,7 @@ P 7800 3600
 F 0 "VG1" H 7800 3600 30  0000 L CNN
 F 1 "PULSE" H 7800 3680 30  0000 L CNN
 	1    7800 3600
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L SCR3T_PSPICE X13
@@ -123,7 +123,7 @@ P 6600 1100
 F 0 "X13" H 6600 1100 30  0000 L CNN
 F 1 "SCR3T" H 6600 1180 30  0000 L CNN
 	1    6600 1100
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X20
@@ -132,7 +132,7 @@ P 5400 2400
 F 0 "X20" H 5400 2400 30  0000 L CNN
 F 1 "SCR3T" H 5400 2480 30  0000 L CNN
 	1    5400 2400
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L 7408_PSPICE U18
@@ -141,7 +141,7 @@ P 6900 3600
 F 0 "U18" H 6900 3600 30  0000 L CNN
 F 1 "7408" H 6900 3680 30  0000 L CNN
 	1    6900 3600
-	-1    0    0    1
+	-1    0    0    -1
 $EndComp
 $Comp
 L SCR3T_PSPICE X15
@@ -150,7 +150,7 @@ P 6600 2400
 F 0 "X15" H 6600 2400 30  0000 L CNN
 F 1 "SCR3T" H 6600 2480 30  0000 L CNN
 	1    6600 2400
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L SCR3T_PSPICE X12
@@ -159,7 +159,7 @@ P 5400 1100
 F 0 "X12" H 5400 1100 30  0000 L CNN
 F 1 "SCR3T" H 5400 1180 30  0000 L CNN
 	1    5400 1100
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 Wire Wire Line
 	3700 1500 3700 1600

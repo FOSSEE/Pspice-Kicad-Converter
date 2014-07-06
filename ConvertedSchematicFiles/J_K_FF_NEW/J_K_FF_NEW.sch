@@ -51,7 +51,7 @@ P 400 1000
 F 0 "#PWR1" H 800 2000 30  0001 L CNN
 F 1 "EGND" H 800 2080 30  0001 L CNN
 	1    400 1000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 1400 2000
 F 0 "#PWR2" H 2800 4000 30  0001 L CNN
 F 1 "EGND" H 2800 4080 30  0001 L CNN
 	1    1400 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 74107_PSPICE U1
@@ -69,7 +69,7 @@ P 1000 700
 F 0 "U1" H 1000 700 30  0000 L CNN
 F 1 "74107" H 1000 780 30  0000 L CNN
 	1    1000 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigClock_PSPICE DSTM2
@@ -78,7 +78,7 @@ P 700 1700
 F 0 "DSTM2" H 700 1700 30  0000 L CNN
 F 1 "DigClock" H 700 1780 30  0000 L CNN
 	1    700 1700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -87,7 +87,7 @@ P 1400 1600
 F 0 "V1" H 1400 1600 30  0000 L CNN
 F 1 "5V" H 1400 1490 30  0000 C CNN
 	1    1400 1600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V2
@@ -96,7 +96,7 @@ P 400 600
 F 0 "V2" H 400 600 30  0000 L CNN
 F 1 "5V" H 400 490 30  0000 C CNN
 	1    400 600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 74107_PSPICE U2
@@ -105,7 +105,7 @@ P 2100 700
 F 0 "U2" H 2100 700 30  0000 L CNN
 F 1 "74107" H 2100 780 30  0000 L CNN
 	1    2100 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 74107_PSPICE U3
@@ -114,7 +114,7 @@ P 3400 700
 F 0 "U3" H 3400 700 30  0000 L CNN
 F 1 "74107" H 3400 780 30  0000 L CNN
 	1    3400 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 74107_PSPICE U4
@@ -123,7 +123,7 @@ P 4700 700
 F 0 "U4" H 4700 700 30  0000 L CNN
 F 1 "74107" H 4700 780 30  0000 L CNN
 	1    4700 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1600 800 1800 800

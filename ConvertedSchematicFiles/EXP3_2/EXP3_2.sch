@@ -51,7 +51,7 @@ P 600 800
 F 0 "#PWR1" H 1200 1600 30  0001 L CNN
 F 1 "EGND" H 1200 1680 30  0001 L CNN
 	1    600 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 1100 1200
 F 0 "#PWR2" H 2200 2400 30  0001 L CNN
 F 1 "EGND" H 2200 2480 30  0001 L CNN
 	1    1100 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 3200 1400
 F 0 "#PWR3" H 6400 2800 30  0001 L CNN
 F 1 "EGND" H 6400 2880 30  0001 L CNN
 	1    3200 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 2900 1200
 F 0 "#PWR4" H 5800 2400 30  0001 L CNN
 F 1 "EGND" H 5800 2480 30  0001 L CNN
 	1    2900 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 1300 2300
 F 0 "#PWR5" H 2600 4600 30  0001 L CNN
 F 1 "EGND" H 2600 4680 30  0001 L CNN
 	1    1300 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR6
@@ -96,7 +96,7 @@ P 700 1900
 F 0 "#PWR6" H 1400 3800 30  0001 L CNN
 F 1 "EGND" H 1400 3880 30  0001 L CNN
 	1    700 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR7
@@ -105,7 +105,7 @@ P 2100 2000
 F 0 "#PWR7" H 4200 4000 30  0001 L CNN
 F 1 "EGND" H 4200 4080 30  0001 L CNN
 	1    2100 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR8
@@ -114,7 +114,7 @@ P 2000 800
 F 0 "#PWR8" H 4000 1600 30  0001 L CNN
 F 1 "EGND" H 4000 1680 30  0001 L CNN
 	1    2000 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -123,7 +123,7 @@ P 3200 1000
 F 0 "R1" H 3200 1000 30  0001 L CNN
 F 1 "1k" H 3200 1250 30  0000 L CNN
 	1    3200 1000
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L ESUM_PSPICE E3
@@ -132,16 +132,16 @@ P 2300 900
 F 0 "E3" H 2300 900 30  0001 L CNN
 F 1 "ESUM" H 2300 980 30  0001 L CNN
 	1    2300 900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V1
 U 1 1 45202362
 P 600 400
 F 0 "V1" H 600 400 30  0001 L CNN
-F 1 "VSIN" H 600 480 30  0001 L CNN
+F 1 "SINE" H 600 480 30  0001 L CNN
 	1    600 400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ESUM_PSPICE E2
@@ -150,7 +150,7 @@ P 1500 1700
 F 0 "E2" H 1500 1700 30  0001 L CNN
 F 1 "ESUM" H 1500 1780 30  0001 L CNN
 	1    1500 1700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ESUM_PSPICE E1
@@ -159,34 +159,34 @@ P 1400 500
 F 0 "E1" H 1400 500 30  0001 L CNN
 F 1 "ESUM" H 1400 580 30  0001 L CNN
 	1    1400 500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V3
 U 1 1 32520059
 P 700 1500
 F 0 "V3" H 700 1500 30  0001 L CNN
-F 1 "VSIN" H 700 1580 30  0001 L CNN
+F 1 "SINE" H 700 1580 30  0001 L CNN
 	1    700 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V2
 U 1 1 74897763
 P 1100 800
 F 0 "V2" H 1100 800 30  0001 L CNN
-F 1 "VSIN" H 1100 880 30  0001 L CNN
+F 1 "SINE" H 1100 880 30  0001 L CNN
 	1    1100 800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VSIN_PSPICE V4
 U 1 1 87513926
 P 1100 1900
 F 0 "V4" H 1100 1900 30  0001 L CNN
-F 1 "VSIN" H 1100 1980 30  0001 L CNN
+F 1 "SINE" H 1100 1980 30  0001 L CNN
 	1    1100 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	600 400 900 400

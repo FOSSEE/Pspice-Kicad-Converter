@@ -14,8 +14,8 @@ See LICENSE.txt
 
 class Pin{
 	public:
-	int x, y, length;					//position of pin and lentgh of the pin
-	string n, etype;				//n is the pin number and etype is the electrical type
+	int x, y, length;					//position of pin and length of the pin
+	string n, etype;					//n is the pin number and etype is the electrical type
 	string orient;						//to store the orientation of pin
 	Pin(istream& in);					//Pin constructor to set the values
 	void print(ostream&, int, int);		//to print in output cache lib file

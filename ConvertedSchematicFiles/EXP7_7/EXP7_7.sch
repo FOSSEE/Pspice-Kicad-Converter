@@ -51,7 +51,7 @@ P 2300 1900
 F 0 "#PWR1" H 4600 3800 30  0001 L CNN
 F 1 "EGND" H 4600 3880 30  0001 L CNN
 	1    2300 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2800 1900
 F 0 "#PWR2" H 5600 3800 30  0001 L CNN
 F 1 "EGND" H 5600 3880 30  0001 L CNN
 	1    2800 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 3500 1800
 F 0 "#PWR3" H 7000 3600 30  0001 L CNN
 F 1 "EGND" H 7000 3680 30  0001 L CNN
 	1    3500 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 1900 2100
 F 0 "#PWR4" H 3800 4200 30  0001 L CNN
 F 1 "EGND" H 3800 4280 30  0001 L CNN
 	1    1900 2100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR5
@@ -87,7 +87,7 @@ P 1300 1900
 F 0 "#PWR5" H 2600 3800 30  0001 L CNN
 F 1 "EGND" H 2600 3880 30  0001 L CNN
 	1    1300 1900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR6
@@ -96,7 +96,7 @@ P 1000 2100
 F 0 "#PWR6" H 2000 4200 30  0001 L CNN
 F 1 "EGND" H 2000 4280 30  0001 L CNN
 	1    1000 2100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR7
@@ -105,7 +105,7 @@ P 1200 2100
 F 0 "#PWR7" H 2400 4200 30  0001 L CNN
 F 1 "EGND" H 2400 4280 30  0001 L CNN
 	1    1200 2100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ESUM_PSPICE E2
@@ -114,7 +114,7 @@ P 1300 1800
 F 0 "E2" H 1300 1800 30  0000 L CNN
 F 1 "ESUM" H 1300 1880 30  0000 L CNN
 	1    1300 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -123,7 +123,7 @@ P 3100 1800
 F 0 "R1" H 3100 1800 30  0000 L CNN
 F 1 "R" H 3100 1880 30  0000 L CNN
 	1    3100 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L ELAPLACE_PSPICE E1
@@ -132,7 +132,7 @@ P 2300 1800
 F 0 "E1" H 2300 1800 30  0000 L CNN
 F 1 "ELAPLACE" H 2300 1880 30  0000 L CNN
 	1    2300 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VAC_PSPICE V2
@@ -141,7 +141,7 @@ P 1000 1700
 F 0 "V2" H 1000 1700 30  0000 L CNN
 F 1 "AC" H 1000 1780 30  0000 L CNN
 	1    1000 1700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1200 2100 1300 2100

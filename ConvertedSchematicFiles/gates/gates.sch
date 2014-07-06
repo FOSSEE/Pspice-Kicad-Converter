@@ -51,7 +51,7 @@ P 5300 2900
 F 0 "U1" H 5300 2900 30  0001 L CNN
 F 1 "7408" H 5300 2980 30  0001 L CNN
 	1    5300 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7432_PSPICE U2
@@ -60,7 +60,7 @@ P 5300 3500
 F 0 "U2" H 5300 3500 30  0001 L CNN
 F 1 "7432" H 5300 3580 30  0001 L CNN
 	1    5300 3500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7400_PSPICE U3
@@ -69,7 +69,7 @@ P 5300 4100
 F 0 "U3" H 5300 4100 30  0001 L CNN
 F 1 "7400" H 5300 4180 30  0001 L CNN
 	1    5300 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7402_PSPICE U4
@@ -78,7 +78,7 @@ P 5300 4700
 F 0 "U4" H 5300 4700 30  0001 L CNN
 F 1 "7402" H 5300 4780 30  0001 L CNN
 	1    5300 4700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 7486_PSPICE U5
@@ -87,7 +87,7 @@ P 5300 5300
 F 0 "U5" H 5300 5300 30  0001 L CNN
 F 1 "7486" H 5300 5380 30  0001 L CNN
 	1    5300 5300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM2
@@ -96,7 +96,7 @@ P 3800 3800
 F 0 "DSTM2" H 3800 3800 30  0001 L CNN
 F 1 "DigStim" H 3800 3880 30  0001 L CNN
 	1    3800 3800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM1
@@ -105,7 +105,7 @@ P 3800 4100
 F 0 "DSTM1" H 3800 4100 30  0000 L CNN
 F 1 "DigStim" H 3800 4180 30  0000 L CNN
 	1    3800 4100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3800 3800 3800 3500

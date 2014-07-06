@@ -51,7 +51,7 @@ P 2900 1800
 F 0 "#PWR1" H 5800 3600 30  0001 L CNN
 F 1 "EGND" H 5800 3680 30  0001 L CNN
 	1    2900 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2400 2500
 F 0 "#PWR2" H 4800 5000 30  0001 L CNN
 F 1 "EGND" H 4800 5080 30  0001 L CNN
 	1    2400 2500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 1400 2800
 F 0 "#PWR3" H 2800 5600 30  0001 L CNN
 F 1 "EGND" H 2800 5680 30  0001 L CNN
 	1    1400 2800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 400 3000
 F 0 "#PWR4" H 800 6000 30  0001 L CNN
 F 1 "EGND" H 800 6080 30  0001 L CNN
 	1    400 3000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R3
@@ -87,7 +87,7 @@ P 600 2600
 F 0 "R3" H 600 2600 30  0000 L CNN
 F 1 "R" H 600 2680 30  0000 L CNN
 	1    600 2600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L C_PSPICE C1
@@ -96,7 +96,7 @@ P 2000 1800
 F 0 "C1" H 2000 1800 30  0000 L CNN
 F 1 "0.1ms" H 2000 1750 30  0000 L CNN
 	1    2000 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L Q2N2222_PSPICE Q1
@@ -105,7 +105,7 @@ P 1200 2600
 F 0 "Q1" H 1200 2600 30  0000 L CNN
 F 1 "Q2N2222" H 1200 2680 30  0000 L CNN
 	1    1200 2600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L Q2N2222_PSPICE Q2
@@ -114,7 +114,7 @@ P 2200 2300
 F 0 "Q2" H 2200 2300 30  0000 L CNN
 F 1 "Q2N2222" H 2200 2380 30  0000 L CNN
 	1    2200 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R2
@@ -123,7 +123,7 @@ P 2400 1800
 F 0 "R2" H 2400 1800 30  0000 L CNN
 F 1 "1k" H 2400 1910 30  0000 L CNN
 	1    2400 1800
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -132,7 +132,7 @@ P 2900 1400
 F 0 "V1" H 2900 1400 30  0000 L CNN
 F 1 "10V" H 2900 1290 30  0000 C CNN
 	1    2900 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -141,7 +141,7 @@ P 1600 1900
 F 0 "R1" H 1600 1900 30  0000 L CNN
 F 1 "1k" H 1600 2050 30  0000 L CNN
 	1    1600 1900
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VPULSE_PSPICE V2
@@ -150,7 +150,7 @@ P 400 2600
 F 0 "V2" H 400 2600 30  0000 L CNN
 F 1 "PULSE" H 400 2680 30  0000 L CNN
 	1    400 2600
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1000 2600 1200 2600

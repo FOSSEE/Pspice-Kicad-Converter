@@ -51,7 +51,7 @@ P 3000 1500
 F 0 "#PWR1" H 6000 3000 30  0001 L CNN
 F 1 "GND_EARTH" H 6000 3080 30  0001 L CNN
 	1    3000 1500
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 2700 2700
 F 0 "#PWR2" H 5400 5400 30  0001 L CNN
 F 1 "GND_EARTH" H 5400 5480 30  0001 L CNN
 	1    2700 2700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 1700 2200
 F 0 "#PWR3" H 3400 4400 30  0001 L CNN
 F 1 "GND_EARTH" H 3400 4480 30  0001 L CNN
 	1    1700 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 1200 2200
 F 0 "#PWR4" H 2400 4400 30  0001 L CNN
 F 1 "GND_EARTH" H 2400 4480 30  0001 L CNN
 	1    1200 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V1
@@ -87,7 +87,7 @@ P 2700 1700
 F 0 "V1" H 2700 1700 30  0001 L CNN
 F 1 "15v" H 2700 1970 30  0000 C CNN
 	1    2700 1700
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L VDC_PSPICE V2
@@ -96,7 +96,7 @@ P 2700 2700
 F 0 "V2" H 2700 2700 30  0001 L CNN
 F 1 "15v" H 2700 2590 30  0000 C CNN
 	1    2700 2700
-	-1    0    0    -1
+	-1    0    0    1
 $EndComp
 $Comp
 L R_PSPICE R3
@@ -105,7 +105,7 @@ P 1800 1800
 F 0 "R3" H 1800 1800 30  0001 L CNN
 F 1 "R" H 1800 1880 30  0001 L CNN
 	1    1800 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R2
@@ -114,7 +114,7 @@ P 1700 2200
 F 0 "R2" H 1700 2200 30  0001 L CNN
 F 1 "R" H 1700 2280 30  0001 L CNN
 	1    1700 2200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE R1
@@ -123,7 +123,7 @@ P 2900 2900
 F 0 "R1" H 2900 2900 30  0001 L CNN
 F 1 "10k" H 2900 3050 30  0000 L CNN
 	1    2900 2900
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L uA741_PSPICE U1
@@ -132,7 +132,7 @@ P 2300 1800
 F 0 "U1" H 2300 1800 30  0001 L CNN
 F 1 "uA741" H 2300 1880 30  0001 L CNN
 	1    2300 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VAC_PSPICE VIN
@@ -141,7 +141,7 @@ P 1200 1800
 F 0 "VIN" H 1200 1800 30  0000 L CNN
 F 1 "AC" H 1200 1880 30  0000 L CNN
 	1    1200 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2700 1300 2700 1200

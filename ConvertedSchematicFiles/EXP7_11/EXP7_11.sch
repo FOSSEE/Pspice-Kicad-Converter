@@ -51,7 +51,7 @@ P 1900 2400
 F 0 "#PWR1" H 3800 4800 30  0001 L CNN
 F 1 "GND_EARTH" H 3800 4880 30  0001 L CNN
 	1    1900 2400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR2
@@ -60,7 +60,7 @@ P 3800 2300
 F 0 "#PWR2" H 7600 4600 30  0001 L CNN
 F 1 "EGND" H 7600 4680 30  0001 L CNN
 	1    3800 2300
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR3
@@ -69,7 +69,7 @@ P 3200 2300
 F 0 "#PWR3" H 6400 4600 30  0001 L CNN
 F 1 "GND_EARTH" H 6400 4680 30  0001 L CNN
 	1    3200 2300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L GND #PWR4
@@ -78,7 +78,7 @@ P 3200 1400
 F 0 "#PWR4" H 6400 2800 30  0001 L CNN
 F 1 "GND_EARTH" H 6400 2880 30  0001 L CNN
 	1    3200 1400
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L R_PSPICE RL
@@ -87,7 +87,7 @@ P 3800 1900
 F 0 "RL" H 3800 1900 30  0000 L CNN
 F 1 "10k" H 3800 2190 30  0000 L CNN
 	1    3800 1900
-	0    -1    1    0
+	0    1    1    0
 $EndComp
 $Comp
 L VDC_PSPICE V+
@@ -96,16 +96,16 @@ P 2800 2300
 F 0 "V+" H 2800 2300 30  0001 L CNN
 F 1 "15v" H 2800 2210 30  0000 C CNN
 	1    2800 2300
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L VSIN_PSPICE VIN
 U 1 1 99885386
 P 1900 2000
 F 0 "VIN" H 1900 2000 30  0001 L CNN
-F 1 "VSIN" H 1900 2080 30  0001 L CNN
+F 1 "SINE" H 1900 2080 30  0001 L CNN
 	1    1900 2000
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L VDC_PSPICE V-
@@ -114,7 +114,7 @@ P 2700 1400
 F 0 "V-" H 2700 1400 30  0001 L CNN
 F 1 "-15v" H 2700 1630 30  0000 C CNN
 	1    2700 1400
-	0    1    -1    0
+	0    -1    -1    0
 $EndComp
 $Comp
 L uA741_PSPICE U1
@@ -123,7 +123,7 @@ P 2300 2000
 F 0 "U1" H 2300 2000 30  0000 L CNN
 F 1 "uA741" H 2300 2080 30  0000 L CNN
 	1    2300 2000
-	1    0    0    -1
+	1    0    0    1
 $EndComp
 $Comp
 L D1N4002_PSPICE D3
@@ -132,7 +132,7 @@ P 3200 1800
 F 0 "D3" H 3200 1800 30  0000 L CNN
 F 1 "D1N4002" H 3200 1880 30  0000 L CNN
 	1    3200 1800
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2700 1400 2700 1500

@@ -51,6 +51,6 @@ P 1000 1100
 F 0 "IN1" H 1000 1100 30  0000 L CNN
 F 1 "INCLUDE" H 1000 1180 30  0000 L CNN
 	1    1000 1100
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $EndSCHEMATC

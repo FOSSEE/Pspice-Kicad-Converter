@@ -51,7 +51,7 @@ P 2800 1200
 F 0 "#PWR1" H 5600 2400 30  0001 L CNN
 F 1 "EGND" H 5600 2480 30  0001 L CNN
 	1    2800 1200
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L DigStim_PSPICE DSTM1
@@ -60,7 +60,7 @@ P 2400 700
 F 0 "DSTM1" H 2400 700 30  0000 L CNN
 F 1 "DigStim" H 2400 780 30  0000 L CNN
 	1    2400 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 $Comp
 L 74393_PSPICE U1
@@ -69,7 +69,7 @@ P 2500 700
 F 0 "U1" H 2500 700 30  0000 L CNN
 F 1 "74393" H 2500 780 30  0000 L CNN
 	1    2500 700
-	1    0    0    1
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2400 700 2500 700
