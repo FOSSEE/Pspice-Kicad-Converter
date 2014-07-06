@@ -71,7 +71,7 @@ void Pin::print(ostream& out, int shiftx, int shifty){
 //print function of class component to print all the components to output's cache lib file
 void Component::print(ostream& out){
 	out<<"#\n# "<<type<<"\n#\nDEF "<<type<<" "<<type<<" 0 30 Y Y 1 F N"<<endl;	//upto DEF line printed
-	out<<"F0 \""<<type<<"\" 0 0 30 H V L CNN"<<endl;		//F0 line
+	out<<"F0 \""<<ref<<"\" 0 0 30 H V L CNN"<<endl;		//F0 line
 	out<<"F1 \""<<type<<"\" 0 60 30 H V L CNN"<<endl;		//F1 line
 	out<<"DRAW"<<endl;
 	des.print(out);   //calling print funcition of design to print design of components
@@ -96,8 +96,18 @@ Component::Component(istream& in, string t){
 		in.seekg(g);
 		string line=skipTo(in, "*symbol "+t);
 	}
-	
-	//cout<<waste<<endl;			///DEBUG
+	skipTo(in, "@attributes");
+	while(line[0]=='a'){
+		Attribute attr(line);			// creating attributes by calling its constructor 
+		if(attr.name=="PKGREF") {  
+			ref=attr.value;				//assigning attributes of PKGREF to the component    
+			//cout<<"**"<<attr.value<<endl;			///DEBUG
+		}
+ 		g=in.tellg();
+		getline(in, line);
+		///cerr<<"***"<<line<<endl;			///DEBUG
+	}
+	in.seekg(g);
 	//to get to the starting point of the pins of the type required 
 	skipTo(in, "@pins");
 	makePins(in);			//calling makepins function to create pins
