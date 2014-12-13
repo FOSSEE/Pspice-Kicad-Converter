@@ -26,8 +26,14 @@ Line::Line(istream& in, int shiftx, int shifty){	//Constructor of Line.
 		ss.str(temp);
 		ss>>t;
 		x.push_back(t);
-		in>>t>>temp;
+		in>>t;
 		y.push_back(t);
+		
+		//The first line, i.e. the one that contains the 'v' might have d_info: at the end. Destroy that, just to be sure.
+		string tmp;
+		getline(in, tmp);
+		
+		in>>temp;
 		x[npoints]*=MULT; y[npoints]*=-1*MULT;			//Scale up.
 		x[npoints]-=shiftx; y[npoints]-=-1*shifty;
 		npoints++;
@@ -40,6 +46,11 @@ Rectangle::Rectangle(istream& in, int shiftx, int shifty){	//Constructor of Rect
 	//This gets called when the first character of a line is "r".
 	//This function assumes "r" and the next character (usually 0) have already been read and are NOT in the stream.
 	in>>x1>>y1>>x2>>y2;
+	
+	//The line that contains the 'r' might have d_info: at the end. Destroy that, just to be sure.
+	string tmp;
+	getline(in, tmp);
+	
 	x1*=MULT; y1*=-1*MULT; x2*=MULT; y2*=-1*MULT;
 	x1-=shiftx; x2-=shiftx; y1-=-1*shifty; y2-=-1*shifty;
 }
@@ -47,6 +58,11 @@ Rectangle::Rectangle(istream& in, int shiftx, int shifty){	//Constructor of Rect
 Circle::Circle(istream& in, int shiftx, int shifty){	//Constructor of Circle.
 	//See Line::Line(istream& in, int shiftx, int shifty) above.
 	in>>x>>y>>r;
+	
+	//The line that contains the 'c' might have d_info: at the end. Destroy that, just to be sure.
+	string tmp;
+	getline(in, tmp);
+	
 	x*=MULT; y*=-1*MULT; r*=MULT;
 	x-=shiftx; y-=-1*shifty;
 }
@@ -55,6 +71,10 @@ Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	//See Line::Line(istream& in, int shiftx, int shifty) above.
 	float xA,xB,xC,xmAB,xmBC, yA,yB,yC,ymAB,ymBC; 
 	in>>xA>>yA>>xB>>yB>>xC>>yC;		//From pspice library, get the 3 points that describe the arc.
+	
+	//The line that contains the 'c' might have d_info: at the end. Destroy that, just to be sure.
+	string tmp;
+	getline(in, tmp);
 	
 	yA*=-1; yB*=-1; yC*=-1;
 	
@@ -106,6 +126,19 @@ Arc::Arc(istream& in, int shiftx, int shifty){			//Constructor of Arc.
 	x-=shiftx; y-=(-1)*shifty;
 }
 
+Text::Text(istream& in, int shiftx, int shifty){	//Constructor of Circle.
+	//See Line::Line(istream& in, int shiftx, int shifty) above.
+	in>>x>>y>>orient;
+	
+	//The line that contains the 't' has more words. Destroy them.
+	string tmp;
+	getline(in, tmp);
+	
+	getline(in, text);
+	x*=MULT; y*=-1*MULT;
+	x-=shiftx; y-=-1*shifty;
+}
+
 Design::Design(){}
 
 Design::Design(istream& in){		//Constructor of Design.
@@ -126,34 +159,43 @@ Design::Design(istream& in){		//Constructor of Design.
 		g=in.tellg();			//Get the position of the read head, so that we can go back to this position if we read something that's not supposed to be read.
 		in>>t;			//Get the first character of the description, store in "t". This character gives what shape it is.
 		//The second character is useless.
+		
+		if(in.eof()) break;
+		
 		if(t=='v'){				//If the character is 'v' then it's the description of a (poly)Line. Create the line and then store it.
 			in>>tint;
 			Line l(in, shiftx, shifty);
 			lines.push_back(l);
-			//l.print(cerr);					///DEBUG
+			///l.print(cerr);					///DEBUG
 		}
-		else if(t=='r'){
+		else if(t=='r'){		//Rectangle
 			in>>tint;
 			Rectangle r(in, shiftx, shifty);
 			rects.push_back(r);
-			//l.print(cerr);					///DEBUG
+			///r.print(cerr);					///DEBUG
 		}
-		else if(t=='c'){
+		else if(t=='c'){		//Circle
 			in>>tint;
 			Circle c(in, shiftx, shifty);
 			circles.push_back(c);
-			//l.print(cerr);					///DEBUG
+			///c.print(cerr);					///DEBUG
 		}
-		else if(t=='a'){
+		else if(t=='a'){		//Arc
 			in>>tint;
 			Arc a(in, shiftx, shifty);
 			arcs.push_back(a);
-			//l.print(cerr);					///DEBUG
+			///a.print(cerr);					///DEBUG
+		}
+		else if(t=='z'){		//Text
+			in>>tint;
+			Text t(in, shiftx, shifty);
+			texts.push_back(t);
+			///t.print(cerr);					///DEBUG
 		}
 		else {
 			getline(in, tmp);		//If t is neither 'v', 'r', 'c' nor 'a', just read the whole line (to skip it)
-			//cerr<<t<<" "<<tmp<<endl;				///DEBUG
-			//cin.ignore();							///DEBUG
+			///cerr<<t<<" "<<tmp<<endl;				///DEBUG
+			///cin.ignore();							///DEBUG
 			g=in.tellg();
 		}
 	}
@@ -182,6 +224,13 @@ void Arc::print(ostream& out){
 	out<<"A "<<x<<" "<<y<<" "<<r<<" "<<sa<<" "<<ea<<" "<<" 0 1 0 N "<<x1<<" "<<y1<<" "<<x2<<" "<<y2<<" "<<endl;
 }
 
+void Text::print(ostream& out){
+	out<<"T ";
+	if(orient[0]=='h') out<<"0 ";
+	else if(orient[0]=='v') out<<"900 ";
+	out<<x<<" "<<y<<" "<<30<<" 0 0 0 "<<text<<endl;
+}
+
 void Design::print(ostream& out){		//Write the whole DRAW section of the kicad library file.
 //This just calls the print methods of all the various objects contained in the vectors.
 	for(int i=0; i<lines.size(); i++){
@@ -195,5 +244,8 @@ void Design::print(ostream& out){		//Write the whole DRAW section of the kicad l
 	}
 	for(int i=0; i<arcs.size(); i++){
 		arcs[i].print(out);
+	}
+	for(int i=0; i<texts.size(); i++){
+		texts[i].print(out);
 	}
 }

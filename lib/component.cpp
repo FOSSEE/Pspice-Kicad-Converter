@@ -21,7 +21,8 @@ Pin::Pin(istream& in)
 	//cerr<<"pin reading"<<x2<<y2<<endl;
 	x=x2*MULT;					//x co-ordinate of the pin
 	y=y2*(-1)*MULT;                  //y co-ordinate of the pin
-	length=max(abs(x1-x2),abs(y1-y2))*MULT;			//calculating pin length from points of pins 
+//	length=max(abs(x1-x2),abs(y1-y2))*MULT;			//calculating pin length from points of pins 
+	length=10*MULT;
 	getline(in,line);
 	int g=in.tellg();
 	getline(in,line);
@@ -115,8 +116,8 @@ Component::Component(istream& in, string t){
 	//to get to the starting point of the pins of the type required 
 	skipTo(in, "@pins");
 	makePins(in);			//calling makepins function to create pins
-	//cout<<"Pins Made"<<endl;			///DEBUG
+	///cerr<<"Pins Made"<<endl;			///DEBUG
 	Design d(in);			//calling Design constructor to create design
-	//cout<<"Design Made"<<endl;			///DEBUG
+	///cerr<<"Design Made"<<endl;			///DEBUG
 	des=d;
 }

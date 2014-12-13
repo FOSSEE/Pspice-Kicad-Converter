@@ -10,3 +10,4 @@ END
 
 cat LICENSE.txt
 g++ -std=c++0x parser.cpp lib/attribute.cpp lib/component_instance.cpp lib/misc.cpp lib/component.cpp lib/design.cpp lib/wire.cpp -o converter
+g++ -std=c++0x libParser.cpp lib/attribute.cpp lib/component_instance.cpp lib/misc.cpp lib/component.cpp lib/design.cpp lib/wire.cpp -o libConverter

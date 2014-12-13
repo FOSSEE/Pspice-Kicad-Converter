@@ -34,6 +34,13 @@ string readDate(string line){
 	return ret;
 }
 
+string readDate(){
+	string cmd="date +\"%A %d %B %Y %I:%M:%S %p %Z\"";
+	string ret=exec(cmd.c_str());
+	ret=ret.substr(0, ret.length()-1);		//ignore the last character, which is \n
+	return ret;
+}
+
 string readShortDate(string line){
 	int n=line.find(';');
 	string datetemp=line.substr(n+1, 10);
@@ -49,8 +56,12 @@ first occurence (after the current position) of string s in istream& in and read
 	string tmp="";
 	//cout<<s<<"*"<<endl;
 	while(tmp.find(s)==string::npos){
-		getline(input, tmp);
-		//cout<<tmp<<"**"<<endl;
+	    ///cout<<tmp<<"**"<<endl;
+	    getline(input, tmp);
+	    if(input.eof()) {
+		///cerr<<"skipTo error"<<endl;
+		return string("ERROR");
+	    }
 	}
 	return tmp;
 }

@@ -44,6 +44,14 @@ class Arc{
 	void print(ostream& out);			//See Line::print above
 };
 
+class Text{
+	public:
+	int x, y;					//(x, y) and (x2, y2) are the coordinates of two opposite vertices of the rectangle.
+	string text, orient;
+	Text(istream& in, int shiftx, int shifty);		//Constructor. Similar to Line::Line(istream&, int, int)
+	void print(ostream& out);			//Function that writes the "S" record in the Draw section.
+};
+
 class Design{		//This class holds vectors of lines, rectangles, circles and arcs, things that together form the whole design.
 	public:
 	int shiftx, shifty;			/*In pspice libraries, all the coordinates are given w.r.t. some point.
@@ -53,6 +61,7 @@ class Design{		//This class holds vectors of lines, rectangles, circles and arcs
 	vector<Rectangle> rects;
 	vector<Circle> circles;
 	vector<Arc> arcs;
+	vector<Text> texts;
 	Design();					//Default constructor. Empty.
 	Design(istream& in);		//Constructor of the whole design. This will call the constructors of the Line, Rectangle, Arc and Circle classes.
 	void print(ostream& out);	//To print the whole DRAW section in the Kicad Library. This calls the Line::print, Circle::print etc.
