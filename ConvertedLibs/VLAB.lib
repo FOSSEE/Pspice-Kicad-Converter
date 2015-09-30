@@ -1,4 +1,4 @@
-EESchema-LIBRARY Version 2.3  Date: Monday 07 July 2014 04:34:20 PM IST
+EESchema-LIBRARY Version 2.3  Date: Wednesday 30 September 2015 12:24:35 PM IST
 #encoding utf-8
 #
 # COMP_PSPICE
@@ -10,9 +10,9 @@ DRAW
 P 4 0 1 0  100 100 700 -200 100 -500 100 100 N
 P 2 0 1 0  400 -400 400 -350 N
 P 2 0 1 0  400 0 400 -50 N
-X ~ pin1 0 0 120 R 30 30 0 1 P
-X ~ pin2 0 -300 120 R 30 30 0 1 P
-X ~ pin3 800 -200 120 L 30 30 0 1 P
+X ~ pin1 0 0 100 R 30 30 0 1 P
+X ~ pin2 0 -300 100 R 30 30 0 1 P
+X ~ pin3 800 -200 100 L 30 30 0 1 P
 ENDDRAW
 ENDDEF
 #
