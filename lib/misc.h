@@ -14,10 +14,6 @@ See LICENSE.txt
 //#include "component.h"
 //#include "component_instance.h"
 
-string findLibrary(string& s);
-string readDate(string);
-string readDate();
-string readShortDate(string);
 string skipTo(istream&, string);
 string exec(const char*);
 string itos(int);

@@ -8,7 +8,7 @@ See LICENSE.txt
 
 #include "lib/header.h"
 
-string libDescr="EESchema-LIBRARY Version 2.3  Date: %s\n#encoding utf-8\n";
+string libDescr="EESchema-LIBRARY Version 2.3  Date: \n#encoding utf-8\n";
 
 ofstream flib;
 
@@ -36,14 +36,9 @@ int main(int argc, char* argv[]){
 	
 	cerr<<"Library file name: "<<flname<<endl;
 	
-	//Get the current date
-	string date = readDate();
-	
 	//Write .lib header:
-	d=libDescr.find("%s");
-	string libDescription=libDescr.replace(d, 2, date);
 	
-	flib<<libDescription;
+	flib<<libDescr;
 	
 	string line=skipTo(file, "*symbol");
 	while(line!="ERROR"){
