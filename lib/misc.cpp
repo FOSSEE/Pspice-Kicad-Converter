@@ -10,18 +10,34 @@ See LICENSE.txt
 #include "header.h"
 //~ #include "misc.h"
 
-string exec(const char* cmd) {		//Function to execute a shell command.
-    ///cerr<<cmd<<endl;		///DEBUG
-    FILE* pipe = popen(cmd, "r");
-    if (!pipe) return "ERROR";
-    char buffer[128];
-    string result = "";
-    while(!feof(pipe)) {
-    	if(fgets(buffer, 128, pipe) != NULL)
-    		result += buffer;
-    }
-    pclose(pipe);
-    return result;
+//~ string exec(const char* cmd) {		//Function to execute a shell command.
+    //~ ///cerr<<cmd<<endl;		///DEBUG
+    //~ FILE* pipe = popen(cmd, "r");
+    //~ if (!pipe) return "__ERROR__";
+    //~ char buffer[128];
+    //~ string result = "";
+    //~ while(!feof(pipe)) {
+    	//~ if(fgets(buffer, 128, pipe) != NULL)
+    		//~ result += buffer;
+    //~ }
+    //~ pclose(pipe);
+    //~ return result;
+//~ }
+
+string basename(string filename, int fMode=0){
+	size_t found = filename.find_last_of("/\\");
+	if(found==filename.length()-1){
+		filename=filename.substr(0, filename.length()-1);
+		found = filename.find_last_of("/\\");
+	}
+	string path=filename.substr(0,found);
+	string base=filename.substr(found+1);
+	size_t dot = base.rfind(".");
+	size_t dot2 =filename.rfind(".");
+	if(fMode==1) return base.substr(0, dot);			// mode 1 returns basename without extension
+	else if(fMode==2) return path;						// mode 2 returns path
+	else if(fMode==3) return filename.substr(0, dot2);	// mode 3 returns full path and name without extension
+	else return base;									// returns basename by default
 }
 
 string skipTo(istream& input, string s){		/*Find the line containing the 
@@ -33,7 +49,7 @@ first occurence (after the current position) of string s in istream& in and read
 	    getline(input, tmp);
 	    if(input.eof()) {
 		///cerr<<"skipTo error"<<endl;
-		return string("ERROR");
+		return string("__ERROR__");
 	    }
 	}
 	return tmp;

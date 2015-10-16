@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 01 March 2000 09:18:33 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP18_3-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "01 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -117,8 +116,17 @@ F 1 "750" H 2200 1010 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L Q2N2222_PSPICE Q1
+L PARAM_PSPICE PM1
 U 1 1 66516649
+P 3800 300
+F 0 "PM1" H 3800 300 30  0000 L CNN
+F 1 "PARAM" H 3800 380 30  0000 L CNN
+	1    3800 300
+	1    0    0    -1
+$EndComp
+$Comp
+L Q2N2222_PSPICE Q1
+U 1 1 29641421
 P 1500 800
 F 0 "Q1" H 1500 800 30  0000 L CNN
 F 1 "Q2N2222" H 1500 880 30  0000 L CNN
@@ -127,12 +135,21 @@ F 1 "Q2N2222" H 1500 880 30  0000 L CNN
 $EndComp
 $Comp
 L D1N750_PSPICE D1
-U 1 1 29641421
+U 1 1 45202362
 P 1500 1900
 F 0 "D1" H 1500 1900 30  0000 L CNN
 F 1 "D1N750" H 1500 1980 30  0000 L CNN
 	1    1500 1900
 	0    -1    -1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 10490027
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2700 1100 2700 1200

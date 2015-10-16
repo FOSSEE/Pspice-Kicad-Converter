@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Monday 06 March 2000 08:42:21 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP2_13-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "06 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -81,8 +80,17 @@ F 1 "SINE" H 1300 3380 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L 2N5444_PSPICE X1
+L PARAM_PSPICE PM1
 U 1 1 77747793
+P 3800 3500
+F 0 "PM1" H 3800 3500 30  0000 L CNN
+F 1 "PARAM" H 3800 3580 30  0000 L CNN
+	1    3800 3500
+	1    0    0    -1
+$EndComp
+$Comp
+L 2N5444_PSPICE X1
+U 1 1 74238335
 P 2500 3100
 F 0 "X1" H 2500 3100 30  0000 L CNN
 F 1 "2N5444" H 2500 3180 30  0000 L CNN
@@ -91,7 +99,7 @@ F 1 "2N5444" H 2500 3180 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE RL
-U 1 1 74238335
+U 1 1 99885386
 P 2500 3800
 F 0 "RL" H 2500 3800 30  0000 L CNN
 F 1 "20" H 2500 4090 30  0000 L CNN
@@ -99,8 +107,17 @@ F 1 "20" H 2500 4090 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
+L PARAM_PSPICE PM2
+U 1 1 39760492
+P 3800 4000
+F 0 "PM2" H 3800 4000 30  0001 L CNN
+F 1 "PARAM" H 3800 4080 30  0001 L CNN
+	1    3800 4000
+	1    0    0    -1
+$EndComp
+$Comp
 L R_PSPICE R4
-U 1 1 99885386
+U 1 1 66516649
 P 1700 4600
 F 0 "R4" H 1700 4600 30  0000 L CNN
 F 1 "1K" H 1700 4910 30  0000 L CNN
@@ -109,7 +126,7 @@ F 1 "1K" H 1700 4910 30  0000 L CNN
 $EndComp
 $Comp
 L C_PSPICE C1
-U 1 1 39760492
+U 1 1 29641421
 P 1100 4400
 F 0 "C1" H 1100 4400 30  0000 L CNN
 F 1 "1U" H 1100 4610 30  0000 L CNN
@@ -118,7 +135,7 @@ F 1 "1U" H 1100 4610 30  0000 L CNN
 $EndComp
 $Comp
 L VPULSE_PSPICE VGATE
-U 1 1 66516649
+U 1 1 45202362
 P 900 4500
 F 0 "VGATE" H 900 4500 30  0000 L CNN
 F 1 "PULSE" H 900 4580 30  0000 L CNN
@@ -127,11 +144,38 @@ F 1 "PULSE" H 900 4580 30  0000 L CNN
 $EndComp
 $Comp
 L E_PSPICE E1
-U 1 1 29641421
+U 1 1 10490027
 P 1900 3400
 F 0 "E1" H 1900 3400 30  0000 L CNN
 F 1 "E" H 1900 3480 30  0000 L CNN
 	1    1900 3400
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 73368690
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 32520059
+P 1500 2900
+F 0 "nodeMarker" H 3000 5800 30  0001 L CNN
+F 1 "nodeMarker" H 3000 5880 30  0001 L CNN
+	1    1500 2900
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 74897763
+P 2500 3800
+F 0 "nodeMarker" H 5000 7600 30  0001 L CNN
+F 1 "nodeMarker" H 5000 7680 30  0001 L CNN
+	1    2500 3800
 	1    0    0    -1
 $EndComp
 Wire Wire Line

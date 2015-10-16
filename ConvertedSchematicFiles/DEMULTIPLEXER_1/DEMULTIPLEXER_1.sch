@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 27 June 1999 01:55:42 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/DEMULTIPLEXER_1-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "27 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -104,6 +103,87 @@ U 1 1 99885386
 P 1000 2000
 F 0 "DSTM4" H 1000 2000 30  0000 L CNN
 F 1 "DigStim" H 1000 2080 30  0000 L CNN
+	1    1000 2000
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 39760492
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 66516649
+P 2500 2200
+F 0 "nodeMarker" H 5000 4400 30  0001 L CNN
+F 1 "nodeMarker" H 5000 4480 30  0001 L CNN
+	1    2500 2200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 29641421
+P 2500 2100
+F 0 "nodeMarker" H 5000 4200 30  0001 L CNN
+F 1 "nodeMarker" H 5000 4280 30  0001 L CNN
+	1    2500 2100
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 45202362
+P 2500 2000
+F 0 "nodeMarker" H 5000 4000 30  0001 L CNN
+F 1 "nodeMarker" H 5000 4080 30  0001 L CNN
+	1    2500 2000
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 10490027
+P 1800 700
+F 0 "nodeMarker" H 3600 1400 30  0001 L CNN
+F 1 "nodeMarker" H 3600 1480 30  0001 L CNN
+	1    1800 700
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 73368690
+P 1900 400
+F 0 "nodeMarker" H 3800 800 30  0001 L CNN
+F 1 "nodeMarker" H 3800 880 30  0001 L CNN
+	1    1900 400
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 32520059
+P 3600 1600
+F 0 "nodeMarker" H 7200 3200 30  0001 L CNN
+F 1 "nodeMarker" H 7200 3280 30  0001 L CNN
+	1    3600 1600
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 74897763
+P 3600 1200
+F 0 "nodeMarker" H 7200 2400 30  0001 L CNN
+F 1 "nodeMarker" H 7200 2480 30  0001 L CNN
+	1    3600 1200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 87513926
+P 1000 2000
+F 0 "nodeMarker" H 2000 4000 30  0001 L CNN
+F 1 "nodeMarker" H 2000 4080 30  0001 L CNN
 	1    1000 2000
 	1    0    0    -1
 $EndComp

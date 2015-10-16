@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tuesday 22 June 1999 01:03:25 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP8_11-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -250,6 +249,24 @@ F 0 "D4" H 3200 3600 30  0000 L CNN
 F 1 "D1N4002" H 3200 3680 30  0000 L CNN
 	1    3200 3600
 	-1    0    0    1
+$EndComp
+$Comp
+L PARAM_PSPICE PM1
+U 1 1 26956429
+P 1400 4200
+F 0 "PM1" H 1400 4200 30  0000 L CNN
+F 1 "PARAM" H 1400 4280 30  0000 L CNN
+	1    1400 4200
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 76465782
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3200 4000 3300 4000

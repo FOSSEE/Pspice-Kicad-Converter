@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Saturday 26 June 1999 03:59:49 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/TRAN_MONOASTABLE_2-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "26 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -207,8 +206,17 @@ F 1 "Q2N2222" H 1900 3480 30  0001 L CNN
 	-1    0    0    -1
 $EndComp
 $Comp
-L D1N4002_PSPICE D3
+L PARAM_PSPICE PM1
 U 1 1 44089172
+P 2900 3900
+F 0 "PM1" H 2900 3900 30  0001 L CNN
+F 1 "PARAM" H 2900 3980 30  0001 L CNN
+	1    2900 3900
+	1    0    0    -1
+$EndComp
+$Comp
+L D1N4002_PSPICE D3
+U 1 1 53455736
 P 4000 3300
 F 0 "D3" H 4000 3300 30  0001 L CNN
 F 1 "D1N4002" H 4000 3380 30  0001 L CNN
@@ -217,7 +225,7 @@ F 1 "D1N4002" H 4000 3380 30  0001 L CNN
 $EndComp
 $Comp
 L R_PSPICE R1
-U 1 1 53455736
+U 1 1 45005211
 P 4100 2900
 F 0 "R1" H 4100 2900 30  0001 L CNN
 F 1 "10k" H 4100 2870 30  0000 L CNN
@@ -226,10 +234,37 @@ F 1 "10k" H 4100 2870 30  0000 L CNN
 $EndComp
 $Comp
 L VPWL_PSPICE V6
-U 1 1 45005211
+U 1 1 81595368
 P 4500 3900
 F 0 "V6" H 4500 3900 30  0001 L CNN
 F 1 "VPWL" H 4500 3980 30  0001 L CNN
+	1    4500 3900
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 34702567
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 26956429
+P 4500 2900
+F 0 "nodeMarker" H 9000 5800 30  0001 L CNN
+F 1 "nodeMarker" H 9000 5880 30  0001 L CNN
+	1    4500 2900
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 76465782
+P 4500 3900
+F 0 "nodeMarker" H 9000 7800 30  0001 L CNN
+F 1 "nodeMarker" H 9000 7880 30  0001 L CNN
 	1    4500 3900
 	1    0    0    -1
 $EndComp

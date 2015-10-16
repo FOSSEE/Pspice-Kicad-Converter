@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thursday 15 July 1999 09:53:19 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/xexp16-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "15 Jul 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -72,7 +71,7 @@ F 1 "" H 3800 1750 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L SCR_PSPICE X2
+L Scr_PSPICE X2
 U 1 1 14636915
 P 4600 3700
 F 0 "X2" H 4600 3700 30  0000 L CNN
@@ -126,7 +125,7 @@ F 1 "" H 2500 3050 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L SCR_PSPICE X1
+L Scr_PSPICE X1
 U 1 1 29641421
 P 3000 3700
 F 0 "X1" H 3000 3700 30  0000 L CNN
@@ -151,6 +150,15 @@ F 0 "" H 4100 2300 30  0000 L CNN
 F 1 "XFRM_NONLINEAR" H 4100 2380 30  0000 L CNN
 	1    4100 2300
 	0    -1    -1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 73368690
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1800 2900 1300 2900

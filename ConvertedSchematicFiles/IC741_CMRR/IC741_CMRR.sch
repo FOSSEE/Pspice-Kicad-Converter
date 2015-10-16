@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Monday 21 June 1999 08:33:19 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/IC741_CMRR-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "21 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -124,6 +123,33 @@ F 0 "R6" H 3600 1600 30  0000 L CNN
 F 1 "1000k" H 3600 1890 30  0000 L CNN
 	1    3600 1600
 	0    1    1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 29641421
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 45202362
+P 1700 1600
+F 0 "nodeMarker" H 3400 3200 30  0001 L CNN
+F 1 "nodeMarker" H 3400 3280 30  0001 L CNN
+	1    1700 1600
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 10490027
+P 3600 1600
+F 0 "nodeMarker" H 7200 3200 30  0001 L CNN
+F 1 "nodeMarker" H 7200 3280 30  0001 L CNN
+	1    3600 1600
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	2500 1300 2500 700

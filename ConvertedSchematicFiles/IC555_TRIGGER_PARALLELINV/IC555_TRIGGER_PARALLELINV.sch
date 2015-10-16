@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 25 July 1999 07:44:45 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/IC555_TRIGGER_PARALLELINV-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "25 Jul 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -153,8 +152,17 @@ F 1 "10k" H 4900 3830 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L D1N4002_PSPICE D6
+L PARAM_PSPICE PM1
 U 1 1 73368690
+P 4900 2700
+F 0 "PM1" H 4900 2700 30  0000 L CNN
+F 1 "PARAM" H 4900 2780 30  0000 L CNN
+	1    4900 2700
+	1    0    0    -1
+$EndComp
+$Comp
+L D1N4002_PSPICE D6
+U 1 1 32520059
 P 5300 3300
 F 0 "D6" H 5300 3300 30  0000 L CNN
 F 1 "D1N4002" H 5300 3380 30  0000 L CNN
@@ -163,12 +171,21 @@ F 1 "D1N4002" H 5300 3380 30  0000 L CNN
 $EndComp
 $Comp
 L D1N4002_PSPICE D7
-U 1 1 32520059
+U 1 1 74897763
 P 5600 3600
 F 0 "D7" H 5600 3600 30  0000 L CNN
 F 1 "D1N4002" H 5600 3680 30  0000 L CNN
 	1    5600 3600
 	-1    0    0    1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 87513926
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3000 3900 3000 3500

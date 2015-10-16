@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Friday 02 July 1999 05:56:38 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP3_7-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "02 Jul 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -243,8 +242,17 @@ F 1 "ESUM" H 3000 1380 30  0001 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L ELAPLACE_PSPICE E3
+L PARAM_PSPICE PM1
 U 1 1 34702567
+P 2800 2500
+F 0 "PM1" H 2800 2500 30  0001 L CNN
+F 1 "PARAM" H 2800 2580 30  0001 L CNN
+	1    2800 2500
+	1    0    0    -1
+$EndComp
+$Comp
+L ELAPLACE_PSPICE E3
+U 1 1 26956429
 P 2300 1200
 F 0 "E3" H 2300 1200 30  0001 L CNN
 F 1 "ELAPLACE" H 2300 1280 30  0001 L CNN
@@ -253,7 +261,7 @@ F 1 "ELAPLACE" H 2300 1280 30  0001 L CNN
 $EndComp
 $Comp
 L ESUM_PSPICE E11
-U 1 1 26956429
+U 1 1 76465782
 P 3800 600
 F 0 "E11" H 3800 600 30  0001 L CNN
 F 1 "ESUM" H 3800 680 30  0001 L CNN
@@ -262,7 +270,7 @@ F 1 "ESUM" H 3800 680 30  0001 L CNN
 $EndComp
 $Comp
 L ELAPLACE_PSPICE E14
-U 1 1 76465782
+U 1 1 61021530
 P 2400 600
 F 0 "E14" H 2400 600 30  0001 L CNN
 F 1 "ELAPLACE" H 2400 680 30  0001 L CNN
@@ -271,11 +279,20 @@ F 1 "ELAPLACE" H 2400 680 30  0001 L CNN
 $EndComp
 $Comp
 L E_PSPICE E13
-U 1 1 61021530
+U 1 1 18722862
 P 600 600
 F 0 "E13" H 600 600 30  0001 L CNN
 F 1 "E" H 600 680 30  0001 L CNN
 	1    600 600
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 63665123
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

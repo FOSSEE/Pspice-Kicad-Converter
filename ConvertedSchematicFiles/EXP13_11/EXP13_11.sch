@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Friday 09 July 1999 05:51:08 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP13_11-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "09 Jul 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -108,12 +107,30 @@ F 1 "CD4016BD" H 1600 980 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L VSIN_PSPICE V1
+L PARAM_PSPICE PM1
 U 1 1 39760492
+P 4000 400
+F 0 "PM1" H 4000 400 30  0000 L CNN
+F 1 "PARAM" H 4000 480 30  0000 L CNN
+	1    4000 400
+	1    0    0    -1
+$EndComp
+$Comp
+L VSIN_PSPICE V1
+U 1 1 66516649
 P 400 800
 F 0 "V1" H 400 800 30  0000 L CNN
 F 1 "SINE" H 400 880 30  0000 L CNN
 	1    400 800
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 29641421
+P 11880 8400
+F 0 "titleblk" H 23760 16800 30  0001 L CNN
+F 1 "titleblk" H 23760 16880 30  0001 L CNN
+	1    11880 8400
 	1    0    0    -1
 $EndComp
 Wire Wire Line

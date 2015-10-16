@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thursday 02 March 2000 12:48:30 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP1_5-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "02 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -232,6 +231,78 @@ F 0 "R5" H 1400 1400 30  0001 L CNN
 F 1 "R" H 1400 1480 30  0001 L CNN
 	1    1400 1400
 	0    1    1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 81595368
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 34702567
+P 800 700
+F 0 "nodeMarker" H 1600 1400 30  0001 L CNN
+F 1 "nodeMarker" H 1600 1480 30  0001 L CNN
+	1    800 700
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 26956429
+P 1600 700
+F 0 "nodeMarker" H 3200 1400 30  0001 L CNN
+F 1 "nodeMarker" H 3200 1480 30  0001 L CNN
+	1    1600 700
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 76465782
+P 2400 700
+F 0 "nodeMarker" H 4800 1400 30  0001 L CNN
+F 1 "nodeMarker" H 4800 1480 30  0001 L CNN
+	1    2400 700
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 61021530
+P 3300 700
+F 0 "nodeMarker" H 6600 1400 30  0001 L CNN
+F 1 "nodeMarker" H 6600 1480 30  0001 L CNN
+	1    3300 700
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 18722862
+P 1400 1400
+F 0 "nodeMarker" H 2800 2800 30  0001 L CNN
+F 1 "nodeMarker" H 2800 2880 30  0001 L CNN
+	1    1400 1400
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 63665123
+P 2300 1400
+F 0 "nodeMarker" H 4600 2800 30  0001 L CNN
+F 1 "nodeMarker" H 4600 2880 30  0001 L CNN
+	1    2300 1400
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 85174067
+P 3200 1400
+F 0 "nodeMarker" H 6400 2800 30  0001 L CNN
+F 1 "nodeMarker" H 6400 2880 30  0001 L CNN
+	1    3200 1400
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	600 1100 900 1100

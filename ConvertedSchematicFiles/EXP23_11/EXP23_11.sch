@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 23 June 1999 05:36:31 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP23_11-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "23 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -162,8 +161,26 @@ F 1 "{CF}" H 4300 1770 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L R_PSPICE R3
+L PARAM_PSPICE PM3
 U 1 1 32520059
+P 1200 1400
+F 0 "PM3" H 1200 1400 30  0000 L CNN
+F 1 "PARAM" H 1200 1480 30  0000 L CNN
+	1    1200 1400
+	1    0    0    -1
+$EndComp
+$Comp
+L PARAM_PSPICE PM1
+U 1 1 74897763
+P 1200 800
+F 0 "PM1" H 1200 800 30  0000 L CNN
+F 1 "PARAM" H 1200 880 30  0000 L CNN
+	1    1200 800
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R3
+U 1 1 87513926
 P 5000 2600
 F 0 "R3" H 5000 2600 30  0001 L CNN
 F 1 "10k" H 5000 2730 30  0000 L CNN
@@ -172,11 +189,29 @@ F 1 "10k" H 5000 2730 30  0000 L CNN
 $EndComp
 $Comp
 L VPULSE_PSPICE VIN
-U 1 1 74897763
+U 1 1 25180540
 P 1400 2000
 F 0 "VIN" H 1400 2000 30  0000 L CNN
 F 1 "PULSE" H 1400 2080 30  0000 L CNN
 	1    1400 2000
+	1    0    0    -1
+$EndComp
+$Comp
+L PARAM_PSPICE PM4
+U 1 1 20383426
+P 800 2500
+F 0 "PM4" H 800 2500 30  0000 L CNN
+F 1 "PARAM" H 800 2580 30  0000 L CNN
+	1    800 2500
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 44089172
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

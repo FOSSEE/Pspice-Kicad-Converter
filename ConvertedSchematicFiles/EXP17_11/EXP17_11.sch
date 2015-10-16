@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 23 June 1999 12:08:41 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP17_11-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "23 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -213,6 +212,42 @@ P 3300 1700
 F 0 "D2" H 3300 1700 30  0000 L CNN
 F 1 "D1N4002" H 3300 1780 30  0000 L CNN
 	1    3300 1700
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 53455736
+P 11880 8400
+F 0 "titleblk" H 23760 16800 30  0001 L CNN
+F 1 "titleblk" H 23760 16880 30  0001 L CNN
+	1    11880 8400
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 45005211
+P 1500 1500
+F 0 "nodeMarker" H 3000 3000 30  0001 L CNN
+F 1 "nodeMarker" H 3000 3080 30  0001 L CNN
+	1    1500 1500
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 81595368
+P 5000 1700
+F 0 "nodeMarker" H 10000 3400 30  0001 L CNN
+F 1 "nodeMarker" H 10000 3480 30  0001 L CNN
+	1    5000 1700
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 34702567
+P 3600 1700
+F 0 "nodeMarker" H 7200 3400 30  0001 L CNN
+F 1 "nodeMarker" H 7200 3480 30  0001 L CNN
+	1    3600 1700
 	1    0    0    -1
 $EndComp
 Wire Wire Line

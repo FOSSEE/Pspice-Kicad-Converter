@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 01 March 2000 08:34:07 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP16_3-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "01 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -54,8 +53,17 @@ F 1 "EGND" H 10000 3280 30  0001 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L R_PSPICE R1
+L PARAM_PSPICE PM1
 U 1 1 46930886
+P 5600 400
+F 0 "PM1" H 5600 400 30  0000 L CNN
+F 1 "PARAM" H 5600 480 30  0000 L CNN
+	1    5600 400
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R1
+U 1 1 71692777
 P 4300 1000
 F 0 "R1" H 4300 1000 30  0000 L CNN
 F 1 "136" H 4300 1150 30  0000 L CNN
@@ -64,7 +72,7 @@ F 1 "136" H 4300 1150 30  0000 L CNN
 $EndComp
 $Comp
 L VPWL_PSPICE V1
-U 1 1 71692777
+U 1 1 14636915
 P 3900 1100
 F 0 "V1" H 3900 1100 30  0000 L CNN
 F 1 "VPWL" H 3900 1180 30  0000 L CNN
@@ -73,7 +81,7 @@ F 1 "VPWL" H 3900 1180 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE R2
-U 1 1 14636915
+U 1 1 77747793
 P 5800 1100
 F 0 "R2" H 5800 1100 30  0000 L CNN
 F 1 "{" H 5800 1430 30  0000 L CNN
@@ -82,12 +90,21 @@ F 1 "{" H 5800 1430 30  0000 L CNN
 $EndComp
 $Comp
 L D1N750_PSPICE D1
-U 1 1 77747793
+U 1 1 74238335
 P 5000 1400
 F 0 "D1" H 5000 1400 30  0000 L CNN
 F 1 "D1N750" H 5000 1480 30  0000 L CNN
 	1    5000 1400
 	0    -1    -1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 99885386
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3900 1500 3900 1600

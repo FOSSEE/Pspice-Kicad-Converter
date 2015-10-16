@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 20 June 1999 05:26:20 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP7_10-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "20 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -207,8 +206,17 @@ F 1 "555D" H 5300 3180 30  0001 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L R_PSPICE R8
+L PARAM_PSPICE PM1
 U 1 1 44089172
+P 3400 1900
+F 0 "PM1" H 3400 1900 30  0001 L CNN
+F 1 "PARAM" H 3400 1980 30  0001 L CNN
+	1    3400 1900
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R8
+U 1 1 53455736
 P 3300 2700
 F 0 "R8" H 3300 2700 30  0000 L CNN
 F 1 "10k" H 3300 2970 30  0000 L CNN
@@ -217,12 +225,21 @@ F 1 "10k" H 3300 2970 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE RL
-U 1 1 53455736
+U 1 1 45005211
 P 6600 3200
 F 0 "RL" H 6600 3200 30  0001 L CNN
 F 1 "R" H 6600 3280 30  0001 L CNN
 	1    6600 3200
 	0    1    1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 81595368
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1500 2500 1600 2500

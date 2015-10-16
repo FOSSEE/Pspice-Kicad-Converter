@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 08 March 2000 02:41:03 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP1_12-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "08 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -81,8 +80,35 @@ F 1 "1Meg" H 1500 1100 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L VSIN_PSPICE V1
+L PARAM_PSPICE PM1
 U 1 1 77747793
+P 2700 700
+F 0 "PM1" H 2700 700 30  0001 L CNN
+F 1 "PARAM" H 2700 780 30  0001 L CNN
+	1    2700 700
+	1    0    0    -1
+$EndComp
+$Comp
+L PARAM_PSPICE PM2
+U 1 1 74238335
+P 2700 1400
+F 0 "PM2" H 2700 1400 30  0001 L CNN
+F 1 "PARAM" H 2700 1480 30  0001 L CNN
+	1    2700 1400
+	1    0    0    -1
+$EndComp
+$Comp
+L PARAM_PSPICE PM3
+U 1 1 99885386
+P 3500 1000
+F 0 "PM3" H 3500 1000 30  0001 L CNN
+F 1 "PARAM" H 3500 1080 30  0001 L CNN
+	1    3500 1000
+	1    0    0    -1
+$EndComp
+$Comp
+L VSIN_PSPICE V1
+U 1 1 39760492
 P 1100 800
 F 0 "V1" H 1100 800 30  0001 L CNN
 F 1 "SINE" H 1100 880 30  0001 L CNN
@@ -91,7 +117,7 @@ F 1 "SINE" H 1100 880 30  0001 L CNN
 $EndComp
 $Comp
 L VSIN_PSPICE V2
-U 1 1 74238335
+U 1 1 66516649
 P 1100 1600
 F 0 "V2" H 1100 1600 30  0001 L CNN
 F 1 "SINE" H 1100 1680 30  0001 L CNN
@@ -100,11 +126,20 @@ F 1 "SINE" H 1100 1680 30  0001 L CNN
 $EndComp
 $Comp
 L INCLUDE_PSPICE IN1
-U 1 1 99885386
+U 1 1 29641421
 P 2800 2300
 F 0 "IN1" H 2800 2300 30  0001 L CNN
 F 1 "INCLUDE" H 2800 2380 30  0001 L CNN
 	1    2800 2300
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 45202362
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

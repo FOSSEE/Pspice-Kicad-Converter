@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 27 February 2000 11:34:45 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP13_1-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "27 Feb 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -87,6 +86,15 @@ P 2200 1200
 F 0 "TX1" H 2200 1200 30  0000 L CNN
 F 1 "XFRM_LINEAR" H 2200 1280 30  0000 L CNN
 	1    2200 1200
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 74238335
+P 11880 8400
+F 0 "titleblk" H 23760 16800 30  0001 L CNN
+F 1 "titleblk" H 23760 16880 30  0001 L CNN
+	1    11880 8400
 	1    0    0    -1
 $EndComp
 Wire Wire Line

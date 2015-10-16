@@ -14,8 +14,9 @@ See LICENSE.txt
 //#include "component.h"
 //#include "component_instance.h"
 
+string basename(string, int);
 string skipTo(istream&, string);
-string exec(const char*);
+//~ string exec(const char*);
 string itos(int);
 string stripNumFromRef(const string&);
 void fixComp(Component&);

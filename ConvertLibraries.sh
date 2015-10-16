@@ -1,4 +1,2 @@
-for f in lib/Library/*
-	do
-		./libConverter $f
-	done
+cd ConvertedLibs
+../libConverter ../lib/Library/*

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 01 March 2000 08:12:28 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP6_3-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "01 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -63,8 +62,17 @@ F 1 "SINE" H 700 780 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L R_PSPICE R1
+L PARAM_PSPICE PM1
 U 1 1 71692777
+P 2700 500
+F 0 "PM1" H 2700 500 30  0000 L CNN
+F 1 "PARAM" H 2700 580 30  0000 L CNN
+	1    2700 500
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R1
+U 1 1 14636915
 P 900 500
 F 0 "R1" H 900 500 30  0000 L CNN
 F 1 "R" H 900 580 30  0000 L CNN
@@ -73,7 +81,7 @@ F 1 "R" H 900 580 30  0000 L CNN
 $EndComp
 $Comp
 L VDC_PSPICE V2
-U 1 1 14636915
+U 1 1 77747793
 P 1600 1000
 F 0 "V2" H 1600 1000 30  0000 L CNN
 F 1 "{VREF}" H 1600 1370 30  0000 C CNN
@@ -82,12 +90,39 @@ F 1 "{VREF}" H 1600 1370 30  0000 C CNN
 $EndComp
 $Comp
 L D1N4002_PSPICE D1
-U 1 1 77747793
+U 1 1 74238335
 P 1600 500
 F 0 "D1" H 1600 500 30  0000 L CNN
 F 1 "D1N4002" H 1600 580 30  0000 L CNN
 	1    1600 500
 	0    1    1    0
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 99885386
+P 11880 8400
+F 0 "titleblk" H 23760 16800 30  0001 L CNN
+F 1 "titleblk" H 23760 16880 30  0001 L CNN
+	1    11880 8400
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 39760492
+P 700 600
+F 0 "nodeMarker" H 1400 1200 30  0001 L CNN
+F 1 "nodeMarker" H 1400 1280 30  0001 L CNN
+	1    700 600
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 66516649
+P 1600 500
+F 0 "nodeMarker" H 3200 1000 30  0001 L CNN
+F 1 "nodeMarker" H 3200 1080 30  0001 L CNN
+	1    1600 500
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1600 1000 1600 800

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 08 March 2000 12:23:53 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP16_13-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "08 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -135,8 +134,17 @@ F 1 "25v" H 1200 2890 30  0000 C CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L R_PSPICE R1
+L PARAM_PSPICE PM2
 U 1 1 45202362
+P 6200 3300
+F 0 "PM2" H 6200 3300 30  0000 L CNN
+F 1 "PARAM" H 6200 3380 30  0000 L CNN
+	1    6200 3300
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R1
+U 1 1 10490027
 P 1600 1900
 F 0 "R1" H 1600 1900 30  0000 L CNN
 F 1 "0.1" H 1600 2050 30  0000 L CNN
@@ -145,7 +153,7 @@ F 1 "0.1" H 1600 2050 30  0000 L CNN
 $EndComp
 $Comp
 L C_PSPICE C1
-U 1 1 10490027
+U 1 1 73368690
 P 3500 2400
 F 0 "C1" H 3500 2400 30  0000 L CNN
 F 1 "16u" H 3500 2470 30  0000 L CNN
@@ -154,7 +162,7 @@ F 1 "16u" H 3500 2470 30  0000 L CNN
 $EndComp
 $Comp
 L COUPLED_INDUCTOR_PSPICE TX25
-U 1 1 73368690
+U 1 1 32520059
 P 3400 1900
 F 0 "TX25" H 3400 1900 30  0000 L CNN
 F 1 "COUPLED_INDUCTOR" H 3400 1980 30  0000 L CNN
@@ -163,7 +171,7 @@ F 1 "COUPLED_INDUCTOR" H 3400 1980 30  0000 L CNN
 $EndComp
 $Comp
 L COUPLED_INDUCTOR_PSPICE TX26
-U 1 1 32520059
+U 1 1 74897763
 P 4300 1900
 F 0 "TX26" H 4300 1900 30  0000 L CNN
 F 1 "COUPLED_INDUCTOR" H 4300 1980 30  0000 L CNN
@@ -172,7 +180,7 @@ F 1 "COUPLED_INDUCTOR" H 4300 1980 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE R15
-U 1 1 74897763
+U 1 1 87513926
 P 4100 1100
 F 0 "R15" H 4100 1100 30  0000 L CNN
 F 1 "100k" H 4100 1250 30  0000 L CNN
@@ -181,12 +189,66 @@ F 1 "100k" H 4100 1250 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE R16
-U 1 1 87513926
+U 1 1 25180540
 P 5400 1500
 F 0 "R16" H 5400 1500 30  0000 L CNN
 F 1 "1meg" H 5400 1850 30  0000 L CNN
 	1    5400 1500
 	0    1    1    0
+$EndComp
+$Comp
+L PARAM_PSPICE PM3
+U 1 1 20383426
+P 6100 2400
+F 0 "PM3" H 6100 2400 30  0000 L CNN
+F 1 "PARAM" H 6100 2480 30  0000 L CNN
+	1    6100 2400
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 44089172
+P 11880 8400
+F 0 "titleblk" H 23760 16800 30  0001 L CNN
+F 1 "titleblk" H 23760 16880 30  0001 L CNN
+	1    11880 8400
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 53455736
+P 4300 2400
+F 0 "vdiffMarker" H 8600 4800 30  0001 L CNN
+F 1 "vdiffMarker" H 8600 4880 30  0001 L CNN
+	1    4300 2400
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 45005211
+P 3100 2400
+F 0 "vdiffMarker" H 6200 4800 30  0001 L CNN
+F 1 "vdiffMarker" H 6200 4880 30  0001 L CNN
+	1    3100 2400
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 81595368
+P 3400 1500
+F 0 "vdiffMarker" H 6800 3000 30  0001 L CNN
+F 1 "vdiffMarker" H 6800 3080 30  0001 L CNN
+	1    3400 1500
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 34702567
+P 4900 1500
+F 0 "vdiffMarker" H 9800 3000 30  0001 L CNN
+F 1 "vdiffMarker" H 9800 3080 30  0001 L CNN
+	1    4900 1500
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3100 3800 3700 3800

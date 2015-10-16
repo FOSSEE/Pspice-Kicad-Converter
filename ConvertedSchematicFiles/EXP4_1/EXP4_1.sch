@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thursday 24 February 2000 09:30:10 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP4_1-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "24 Feb 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""

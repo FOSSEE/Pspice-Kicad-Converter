@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 20 June 1999 11:23:13 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP10_10-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "20 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -207,8 +206,17 @@ F 1 "1Meg" H 3700 2490 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L R_PSPICE R1
+L PARAM_PSPICE PM1
 U 1 1 44089172
+P 4600 400
+F 0 "PM1" H 4600 400 30  0000 L CNN
+F 1 "PARAM" H 4600 480 30  0000 L CNN
+	1    4600 400
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R1
+U 1 1 53455736
 P 2200 1000
 F 0 "R1" H 2200 1000 30  0000 L CNN
 F 1 "3.9k" H 2200 1290 30  0000 L CNN
@@ -217,7 +225,7 @@ F 1 "3.9k" H 2200 1290 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE R2
-U 1 1 53455736
+U 1 1 45005211
 P 3100 1000
 F 0 "R2" H 3100 1000 30  0000 L CNN
 F 1 "3.9k" H 3100 1290 30  0000 L CNN
@@ -226,7 +234,7 @@ F 1 "3.9k" H 3100 1290 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE RE
-U 1 1 45005211
+U 1 1 81595368
 P 2700 2600
 F 0 "RE" H 2700 2600 30  0000 L CNN
 F 1 "1.5k" H 2700 2910 30  0000 L CNN
@@ -234,8 +242,17 @@ F 1 "1.5k" H 2700 2910 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
+L PARAM_PSPICE PM2
+U 1 1 34702567
+P 4900 1200
+F 0 "PM2" H 4900 1200 30  0000 L CNN
+F 1 "PARAM" H 4900 1280 30  0000 L CNN
+	1    4900 1200
+	1    0    0    -1
+$EndComp
+$Comp
 L J2N3819_PSPICE Q?
-U 1 1 81595368
+U 1 1 26956429
 P 1900 1800
 F 0 "Q?" H 1900 1800 30  0000 L CNN
 F 1 "J2N3819" H 1900 1880 30  0000 L CNN
@@ -244,12 +261,21 @@ F 1 "J2N3819" H 1900 1880 30  0000 L CNN
 $EndComp
 $Comp
 L J2N3819_PSPICE Q?
-U 1 1 34702567
+U 1 1 76465782
 P 3400 1800
 F 0 "Q?" H 3400 1800 30  0000 L CNN
 F 1 "J2N3819" H 3400 1880 30  0000 L CNN
 	1    3400 1800
 	-1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 61021530
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3100 900 3100 1000

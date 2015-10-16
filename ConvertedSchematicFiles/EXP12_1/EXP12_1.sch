@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 27 February 2000 11:16:56 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP12_1-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "27 Feb 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -189,8 +188,17 @@ F 1 "1V" H 5200 690 30  0000 C CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L R_PSPICE RTH
+L PARAM_PSPICE PM1
 U 1 1 25180540
+P 5400 1600
+F 0 "PM1" H 5400 1600 30  0001 L CNN
+F 1 "PARAM" H 5400 1680 30  0001 L CNN
+	1    5400 1600
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE RTH
+U 1 1 20383426
 P 3600 1700
 F 0 "RTH" H 3600 1700 30  0001 L CNN
 F 1 "2.4" H 3600 1850 30  0000 L CNN
@@ -199,7 +207,7 @@ F 1 "2.4" H 3600 1850 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE RL
-U 1 1 20383426
+U 1 1 44089172
 P 2700 800
 F 0 "RL" H 2700 800 30  0001 L CNN
 F 1 "{RL}" H 2700 1100 30  0000 L CNN
@@ -208,7 +216,7 @@ F 1 "{RL}" H 2700 1100 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE RL1
-U 1 1 44089172
+U 1 1 53455736
 P 4500 1900
 F 0 "RL1" H 4500 1900 30  0001 L CNN
 F 1 "{RL}" H 4500 2200 30  0000 L CNN
@@ -217,7 +225,7 @@ F 1 "{RL}" H 4500 2200 30  0000 L CNN
 $EndComp
 $Comp
 L VDC_PSPICE VTH
-U 1 1 53455736
+U 1 1 45005211
 P 3400 1800
 F 0 "VTH" H 3400 1800 30  0001 L CNN
 F 1 "36V" H 3400 1690 30  0000 C CNN
@@ -226,11 +234,20 @@ F 1 "36V" H 3400 1690 30  0000 C CNN
 $EndComp
 $Comp
 L INCLUDE_PSPICE IN1
-U 1 1 45005211
+U 1 1 81595368
 P 1900 300
 F 0 "IN1" H 1900 300 30  0001 L CNN
 F 1 "INCLUDE" H 1900 380 30  0001 L CNN
 	1    1900 300
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 34702567
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

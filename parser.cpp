@@ -23,17 +23,10 @@ int main(int argc, char* argv[]){
 	
 	ifstream file(argv[1]);
 	
-	string dirname="mkdir -p \""+string(argv[2])+"\"";
-	string t=exec(dirname.c_str());
-	
-	string bncmd="basename \""+string(argv[2])+"\"";
-	string fbasename=exec(bncmd.c_str());
-	fbasename=fbasename.substr(0, fbasename.length()-1);
-	
 	//Generate the output files
-	string fname=string(argv[2])+"/"+fbasename+string(".sch");
-	string fprojname=string(argv[2])+"/"+fbasename+string(".proj");
-	string fproname=string(argv[2])+"/"+fbasename+string(".pro");
+	string fname=string(argv[2]);
+	string fprojname = basename(fname, 3) + ".proj";
+	string fproname = basename(fname, 3) + ".pro";
 	
 	fsch.open(fname.c_str());
 	
@@ -46,7 +39,7 @@ int main(int argc, char* argv[]){
 	
 	//Write the .proj file:
 	ofstream fproj(fprojname.c_str());
-	fproj<<"schematicFile "<<fbasename<<".sch"<<endl;
+	fproj<<"schematicFile "<<basename(fname, 0)<<".sch"<<endl;
 	fproj.close();
 	
 	//Write the .pro file:

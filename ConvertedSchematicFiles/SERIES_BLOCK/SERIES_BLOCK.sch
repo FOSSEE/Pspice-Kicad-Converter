@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Monday 19 July 1999 12:30:29 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/SERIES_BLOCK-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "19 Jul 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -63,7 +62,7 @@ F 1 "EGND" H 17200 8880 30  0001 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L SCR_PSPICE X2
+L Scr_PSPICE X2
 U 1 1 71692777
 P 3100 2900
 F 0 "X2" H 3100 2900 30  0000 L CNN
@@ -108,7 +107,7 @@ F 1 "DC" H 1600 2770 30  0000 C CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L SCR_PSPICE X1
+L Scr_PSPICE X1
 U 1 1 39760492
 P 2200 2500
 F 0 "X1" H 2200 2500 30  0000 L CNN
@@ -144,7 +143,7 @@ F 1 "50uH" H 8600 2870 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L SCR_PSPICE X2
+L Scr_PSPICE X2
 U 1 1 10490027
 P 8600 3700
 F 0 "X2" H 8600 3700 30  0000 L CNN
@@ -171,12 +170,21 @@ F 1 "DC" H 6500 3110 30  0000 C CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L SCR_PSPICE X1
+L Scr_PSPICE X1
 U 1 1 74897763
 P 7300 2400
 F 0 "X1" H 7300 2400 30  0000 L CNN
 F 1 "Scr" H 7300 2480 30  0000 L CNN
 	1    7300 2400
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 87513926
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

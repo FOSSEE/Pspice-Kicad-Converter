@@ -1,4 +1,4 @@
-update=Saturday 26 June 1999 03:09:30 PM IST
+update= 
 last_client=eeschema
 [eeschema]
 version=1

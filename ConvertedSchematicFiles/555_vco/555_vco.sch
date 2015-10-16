@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sunday 01 August 1999 10:04:00 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/555_vco-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "01 Aug 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -144,12 +143,48 @@ F 1 "0.01u" H 2600 3950 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L VDC_PSPICE V4
+L PARAM_PSPICE PM1
 U 1 1 10490027
+P 1300 2700
+F 0 "PM1" H 1300 2700 30  0000 L CNN
+F 1 "PARAM" H 1300 2780 30  0000 L CNN
+	1    1300 2700
+	1    0    0    -1
+$EndComp
+$Comp
+L VDC_PSPICE V4
+U 1 1 73368690
 P 3000 4400
 F 0 "V4" H 3000 4400 30  0000 L CNN
 F 1 "{control}" H 3000 4070 30  0000 C CNN
 	1    3000 4400
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 32520059
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 74897763
+P 3000 4100
+F 0 "nodeMarker" H 6000 8200 30  0001 L CNN
+F 1 "nodeMarker" H 6000 8280 30  0001 L CNN
+	1    3000 4100
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 87513926
+P 4300 3400
+F 0 "nodeMarker" H 8600 6800 30  0001 L CNN
+F 1 "nodeMarker" H 8600 6880 30  0001 L CNN
+	1    4300 3400
 	1    0    0    -1
 $EndComp
 Wire Wire Line

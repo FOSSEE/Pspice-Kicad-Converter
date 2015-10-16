@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday 01 March 2000 10:03:05 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/EXP7_4-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "01 Mar 2000"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -162,8 +161,17 @@ F 1 "20v" H 3700 490 30  0000 C CNN
 	-1    0    0    1
 $EndComp
 $Comp
-L R_PSPICE R10
+L PARAM_PSPICE PM1
 U 1 1 32520059
+P 5500 400
+F 0 "PM1" H 5500 400 30  0001 L CNN
+F 1 "PARAM" H 5500 480 30  0001 L CNN
+	1    5500 400
+	1    0    0    -1
+$EndComp
+$Comp
+L R_PSPICE R10
+U 1 1 74897763
 P 3600 1700
 F 0 "R10" H 3600 1700 30  0000 L CNN
 F 1 "6.8k" H 3600 2050 30  0000 L CNN
@@ -172,7 +180,7 @@ F 1 "6.8k" H 3600 2050 30  0000 L CNN
 $EndComp
 $Comp
 L Q2N3904_PSPICE Q19
-U 1 1 74897763
+U 1 1 87513926
 P 3400 1500
 F 0 "Q19" H 3400 1500 30  0000 L CNN
 F 1 "Q2N3904" H 3400 1580 30  0000 L CNN
@@ -181,7 +189,7 @@ F 1 "Q2N3904" H 3400 1580 30  0000 L CNN
 $EndComp
 $Comp
 L C_PSPICE C7
-U 1 1 87513926
+U 1 1 25180540
 P 4100 1200
 F 0 "C7" H 4100 1200 30  0001 L CNN
 F 1 "{Cf}" H 4100 1010 30  0000 L CNN
@@ -190,7 +198,7 @@ F 1 "{Cf}" H 4100 1010 30  0000 L CNN
 $EndComp
 $Comp
 L C_PSPICE C10
-U 1 1 25180540
+U 1 1 20383426
 P 4800 1200
 F 0 "C10" H 4800 1200 30  0001 L CNN
 F 1 "{Cf}" H 4800 1210 30  0000 L CNN
@@ -199,11 +207,20 @@ F 1 "{Cf}" H 4800 1210 30  0000 L CNN
 $EndComp
 $Comp
 L C_PSPICE C11
-U 1 1 20383426
+U 1 1 44089172
 P 5400 1200
 F 0 "C11" H 5400 1200 30  0001 L CNN
 F 1 "{Cf}" H 5400 1250 30  0000 L CNN
 	1    5400 1200
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 53455736
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

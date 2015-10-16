@@ -14,11 +14,13 @@ for f in SchematicFiles/*.sch
 	do
 		of=`basename $f`
 		ofname="${of%.*}"
-		./converter $f ConvertedSchematicFiles/$ofname
+		mkdir -p ConvertedSchematicFiles/$ofname
+		./converter $f ConvertedSchematicFiles/$ofname/$ofname.sch
 	done
 for f in SchematicFiles/*.SCH
 	do
 		of=`basename $f`
 		ofname="${of%.*}"
-		./converter $f ConvertedSchematicFiles/$ofname
+		mkdir -p ConvertedSchematicFiles/$ofname
+		./converter $f ConvertedSchematicFiles/$ofname/$ofname.sch
 	done

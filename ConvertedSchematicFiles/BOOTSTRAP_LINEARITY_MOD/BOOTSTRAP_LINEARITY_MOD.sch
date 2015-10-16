@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tuesday 08 June 1999 05:25:49 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/BOOTSTRAP_LINEARITY_MOD-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "08 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -195,6 +194,15 @@ P 400 4000
 F 0 "V3" H 400 4000 30  0001 L CNN
 F 1 "PULSE" H 400 4080 30  0001 L CNN
 	1    400 4000
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 20383426
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
 	1    0    0    -1
 $EndComp
 Wire Wire Line

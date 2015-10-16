@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thursday 24 June 1999 07:52:28 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/DUAL_TRACK_PWR_SPLY_op_amp-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "24 Jun 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -187,6 +186,60 @@ F 0 "U10" H 2000 4100 30  0000 L CNN
 F 1 "LM7905C" H 2000 4180 30  0000 L CNN
 	1    2000 4100
 	-1    0    0    1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 25180540
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 20383426
+P 5300 800
+F 0 "nodeMarker" H 10600 1600 30  0001 L CNN
+F 1 "nodeMarker" H 10600 1680 30  0001 L CNN
+	1    5300 800
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 44089172
+P 5400 4100
+F 0 "nodeMarker" H 10800 8200 30  0001 L CNN
+F 1 "nodeMarker" H 10800 8280 30  0001 L CNN
+	1    5400 4100
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 53455736
+P 5400 2400
+F 0 "nodeMarker" H 10800 4800 30  0001 L CNN
+F 1 "nodeMarker" H 10800 4880 30  0001 L CNN
+	1    5400 2400
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 45005211
+P 600 1300
+F 0 "nodeMarker" H 1200 2600 30  0001 L CNN
+F 1 "nodeMarker" H 1200 2680 30  0001 L CNN
+	1    600 1300
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 81595368
+P 600 2800
+F 0 "nodeMarker" H 1200 5600 30  0001 L CNN
+F 1 "nodeMarker" H 1200 5680 30  0001 L CNN
+	1    600 2800
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	3500 1700 3500 1600

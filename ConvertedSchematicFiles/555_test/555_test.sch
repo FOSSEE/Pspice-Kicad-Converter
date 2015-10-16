@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thursday 22 July 1999 07:42:41 PM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/555_test-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 Jul 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -288,7 +287,7 @@ F 1 "1K" H 9100 1250 30  0000 L CNN
 	0    1    1    0
 $EndComp
 $Comp
-L SCR_PSPICE X2
+L Scr_PSPICE X2
 U 1 1 63665123
 P 7900 1000
 F 0 "X2" H 7900 1000 30  0000 L CNN
@@ -297,12 +296,111 @@ F 1 "Scr" H 7900 1080 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L VPULSE_PSPICE V3
+L PARAM_PSPICE PM2
 U 1 1 85174067
+P 2900 800
+F 0 "PM2" H 2900 800 30  0000 L CNN
+F 1 "PARAM" H 2900 880 30  0000 L CNN
+	1    2900 800
+	1    0    0    -1
+$EndComp
+$Comp
+L PARAM_PSPICE PM3
+U 1 1 28703135
+P 2900 1300
+F 0 "PM3" H 2900 1300 30  0001 L CNN
+F 1 "PARAM" H 2900 1380 30  0001 L CNN
+	1    2900 1300
+	1    0    0    -1
+$EndComp
+$Comp
+L VPULSE_PSPICE V3
+U 1 1 31513929
 P 3400 4100
 F 0 "V3" H 3400 4100 30  0000 L CNN
 F 1 "PULSE" H 3400 4180 30  0000 L CNN
 	1    3400 4100
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 11979802
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 65634022
+P 7600 3100
+F 0 "vdiffMarker" H 15200 6200 30  0001 L CNN
+F 1 "vdiffMarker" H 15200 6280 30  0001 L CNN
+	1    7600 3100
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 15723058
+P 4200 3700
+F 0 "nodeMarker" H 8400 7400 30  0001 L CNN
+F 1 "nodeMarker" H 8400 7480 30  0001 L CNN
+	1    4200 3700
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 29133069
+P 5400 2500
+F 0 "vdiffMarker" H 10800 5000 30  0001 L CNN
+F 1 "vdiffMarker" H 10800 5080 30  0001 L CNN
+	1    5400 2500
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 55898167
+P 5400 3100
+F 0 "vdiffMarker" H 10800 6200 30  0001 L CNN
+F 1 "vdiffMarker" H 10800 6280 30  0001 L CNN
+	1    5400 3100
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 79961393
+P 4900 3400
+F 0 "nodeMarker" H 9800 6800 30  0001 L CNN
+F 1 "nodeMarker" H 9800 6880 30  0001 L CNN
+	1    4900 3400
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 29018456
+P 7300 2500
+F 0 "vdiffMarker" H 14600 5000 30  0001 L CNN
+F 1 "vdiffMarker" H 14600 5080 30  0001 L CNN
+	1    7300 2500
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 98175011
+P 8900 1000
+F 0 "vdiffMarker" H 17800 2000 30  0001 L CNN
+F 1 "vdiffMarker" H 17800 2080 30  0001 L CNN
+	1    8900 1000
+	1    0    0    -1
+$EndComp
+$Comp
+L vdiffMarker_PSPICE vdiffMarker
+U 1 1 46478042
+P 8800 1700
+F 0 "vdiffMarker" H 17600 3400 30  0001 L CNN
+F 1 "vdiffMarker" H 17600 3480 30  0001 L CNN
+	1    8800 1700
 	1    0    0    -1
 $EndComp
 Wire Wire Line

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thursday 05 August 1999 09:28:00 AM IST
+EESchema Schematic File Version 2  date 
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:ConvertedSchematicFiles/TRAN_VCO-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "05 Aug 1999"
+Date ""
 Rev ""
 Comp ""
 Comment1 ""
@@ -162,8 +161,17 @@ F 1 "0.1U" H 4100 1450 30  0000 L CNN
 	1    0    0    -1
 $EndComp
 $Comp
-L D1N4148_PSPICE D5
+L PARAM_PSPICE PM1
 U 1 1 32520059
+P 5400 200
+F 0 "PM1" H 5400 200 30  0000 L CNN
+F 1 "PARAM" H 5400 280 30  0000 L CNN
+	1    5400 200
+	1    0    0    -1
+$EndComp
+$Comp
+L D1N4148_PSPICE D5
+U 1 1 74897763
 P 2800 1300
 F 0 "D5" H 2800 1300 30  0000 L CNN
 F 1 "D1N4148" H 2800 1380 30  0000 L CNN
@@ -172,7 +180,7 @@ F 1 "D1N4148" H 2800 1380 30  0000 L CNN
 $EndComp
 $Comp
 L D1N4148_PSPICE D6
-U 1 1 74897763
+U 1 1 87513926
 P 4700 1300
 F 0 "D6" H 4700 1300 30  0000 L CNN
 F 1 "D1N4148" H 4700 1380 30  0000 L CNN
@@ -181,7 +189,7 @@ F 1 "D1N4148" H 4700 1380 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE R2
-U 1 1 87513926
+U 1 1 25180540
 P 4000 1100
 F 0 "R2" H 4000 1100 30  0001 L CNN
 F 1 "1.8k" H 4000 1090 30  0000 L CNN
@@ -190,7 +198,7 @@ F 1 "1.8k" H 4000 1090 30  0000 L CNN
 $EndComp
 $Comp
 L R_PSPICE R1
-U 1 1 25180540
+U 1 1 20383426
 P 3500 1100
 F 0 "R1" H 3500 1100 30  0001 L CNN
 F 1 "1.8k" H 3500 1150 30  0000 L CNN
@@ -199,11 +207,47 @@ F 1 "1.8k" H 3500 1150 30  0000 L CNN
 $EndComp
 $Comp
 L VPWL_PSPICE V9
-U 1 1 20383426
+U 1 1 44089172
 P 4200 400
 F 0 "V9" H 4200 400 30  0000 L CNN
 F 1 "VPWL" H 4200 480 30  0000 L CNN
 	1    4200 400
+	1    0    0    -1
+$EndComp
+$Comp
+L titleblk_PSPICE titleblk
+U 1 1 53455736
+P 9700 7200
+F 0 "titleblk" H 19400 14400 30  0001 L CNN
+F 1 "titleblk" H 19400 14480 30  0001 L CNN
+	1    9700 7200
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 45005211
+P 5100 1300
+F 0 "nodeMarker" H 10200 2600 30  0001 L CNN
+F 1 "nodeMarker" H 10200 2680 30  0001 L CNN
+	1    5100 1300
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 81595368
+P 2300 1300
+F 0 "nodeMarker" H 4600 2600 30  0001 L CNN
+F 1 "nodeMarker" H 4600 2680 30  0001 L CNN
+	1    2300 1300
+	1    0    0    -1
+$EndComp
+$Comp
+L nodeMarker_PSPICE nodeMarker
+U 1 1 34702567
+P 3900 400
+F 0 "nodeMarker" H 7800 800 30  0001 L CNN
+F 1 "nodeMarker" H 7800 880 30  0001 L CNN
+	1    3900 400
 	1    0    0    -1
 $EndComp
 Wire Wire Line
